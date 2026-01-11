@@ -1,6 +1,6 @@
 stages:
   download:
-    cmd: python download_datasets/download_datasets_all.py --datasets ${datasets}
+    cmd: python -m download_datasets.download_datasets_all --datasets ${datasets}
     deps:
       - download_datasets/download_datasets_all.py
       - params.yaml
@@ -9,11 +9,11 @@ stages:
     params:
       - datasets
 
-  preprocess_dataset:
-    cmd: python preprocess_dataset/preprocess_datasets_all.py --datasets ${datasets}
+  preprocess_datasets:
+    cmd: python -m preprocess_datasets.preprocess_datasets_all --datasets ${datasets}
     deps:
       - downloads/
-      - preprocess_dataset/preprocess_datasets_all.py
+      - preprocess_datasets/preprocess_datasets_all.py
     outs:
       - datasets/
     params:

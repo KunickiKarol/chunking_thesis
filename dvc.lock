@@ -1,0 +1,44 @@
+schema: '2.0'
+stages:
+  download:
+    cmd: python -m download_datasets.download_datasets_all --datasets NovelQA
+    deps:
+    - path: download_datasets/download_datasets_all.py
+      hash: md5
+      md5: 322d7b79819aee8175620878a49bc29e
+      size: 1610
+    - path: params.yaml
+      hash: md5
+      md5: 5fa0211e8cd2180bd29909b3cb878733
+      size: 19
+    params:
+      params.yaml:
+        datasets: NovelQA
+    outs:
+    - path: downloads/
+      hash: md5
+      md5: 12a50cbf25311fc52de6fe22498a61ef.dir
+      size: 109578337
+      nfiles: 157
+  preprocess_datasets:
+    cmd: python -m preprocess_datasets.preprocess_datasets_all --datasets 
+      NovelQA
+    deps:
+    - path: downloads/
+      hash: md5
+      md5: 12a50cbf25311fc52de6fe22498a61ef.dir
+      size: 109578337
+      nfiles: 157
+    - path: preprocess_datasets/preprocess_datasets_all.py
+      hash: md5
+      md5: 6930438bccdce024ac3a55c603e846f3
+      size: 1016
+    params:
+      params.yaml:
+        datasets: NovelQA
+    outs:
+    - path: datasets/
+      hash: md5
+      md5: f5e5d0137f84887b08ba5d55193fc304.dir
+      size: 62732692
+      nfiles: 149

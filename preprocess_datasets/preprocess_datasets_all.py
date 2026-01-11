@@ -4,12 +4,12 @@ from pathlib import Path
 from dotenv import load_dotenv
 
 # jawne importy datasetów
-from preprocess_datasets.NovelQA import download as preprocess_NovelQA
+from .novelQA import preprocess as preprocess_NovelQA
 
 # 1️⃣ Wczytanie zmiennych środowiskowych z .env
 load_dotenv()
-DATASET_DIR = Path(os.getenv("DATASET_DIR")
-DATASET_DIR.mkdir(parents=True, exist_ok=True)
+DATASETS_DIR = Path(os.getenv("DATASETS_DIR"))
+DATASETS_DIR.mkdir(parents=True, exist_ok=True)
 
 # 2️⃣ Parsowanie argumentów z wiersza poleceń
 parser = argparse.ArgumentParser()
@@ -18,7 +18,7 @@ args = parser.parse_args()
 
 # 3️⃣ Iteracja po datasetach
 for dataset in args.datasets:
-    dataset_path = DATASET_DIR / dataset
+    dataset_path = DATASETS_DIR / dataset
     if dataset_path.exists() and any(dataset_path.iterdir()):
         print(f"{dataset} już pobrany w {dataset_path}, pomijam.")
         continue
@@ -27,6 +27,7 @@ for dataset in args.datasets:
 
     # 4️⃣ Wywołanie jawnie importowanej funkcji
     if dataset == "NovelQA":
-        preprocess_NovelQA(DOWNLOADS_DIR)
+        preprocess_NovelQA()
     else:
         print(f"Nie ma obsługi pobierania dla datasetu {dataset}")
+
