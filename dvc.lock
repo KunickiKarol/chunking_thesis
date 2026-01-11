@@ -9,8 +9,8 @@ stages:
       size: 1135
     - path: params.yaml
       hash: md5
-      md5: 576e5246bf3b378f78caef9f86c669fa
-      size: 150
+      md5: 46b05c75d653a93b724d040b259c86a7
+      size: 136
     params:
       params.yaml:
         datasets: NovelQA
@@ -42,3 +42,30 @@ stages:
       md5: f5e5d0137f84887b08ba5d55193fc304.dir
       size: 62732692
       nfiles: 149
+  chunking_text:
+    cmd: python -m chunking.chunking_text_all --datasets NovelQA --chunking 
+      fixed-size
+    deps:
+    - path: chunking/chunking_text_all.py
+      hash: md5
+      md5: 2c0138858725b871097a823f2aa8092c
+      size: 1344
+    - path: datasets/
+      hash: md5
+      md5: f5e5d0137f84887b08ba5d55193fc304.dir
+      size: 62732692
+      nfiles: 149
+    params:
+      params.yaml:
+        chunking:
+          chunking_types: fixed-size
+          tokenizer_model_name: gpt2
+          chunk_size: 500
+          chunk_overlap: 50
+        datasets: NovelQA
+    outs:
+    - path: chunks/
+      hash: md5
+      md5: 9f141d048516df37bea42e02477f7e8f.dir
+      size: 63284540
+      nfiles: 60

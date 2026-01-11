@@ -20,7 +20,7 @@ stages:
       - datasets
 
   chunking_text:
-    cmd: python -m chunking.chunking_text_all --datasets ${datasets} --chunking ${chunking.chunking_methods}
+    cmd: python -m chunking.chunking_text_all --datasets ${datasets} --chunking ${chunking.chunking_types}
     deps:
       - datasets/
       - chunking/chunking_text_all.py
