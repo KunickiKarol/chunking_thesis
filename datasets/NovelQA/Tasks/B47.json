@@ -1,0 +1,277 @@
+{
+    "Q0624": {
+        "Aspect": "character",
+        "Complexity": "sh",
+        "Question": "Who saw Jinny kiss Louis?",
+        "Options": {
+            "A": "Bernard",
+            "B": "Rhoda",
+            "C": "Susan.",
+            "D": "Neville"
+        }
+    },
+    "Q0625": {
+        "Aspect": "character",
+        "Complexity": "sh",
+        "Question": "Who speaks with an Australian accent?",
+        "Options": {
+            "A": "Robert",
+            "B": "David",
+            "C": "Emily",
+            "D": "Louis."
+        }
+    },
+    "Q0626": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "What's the job of Louis's father?",
+        "Options": {
+            "A": "He is a teacher at a local school.",
+            "B": "He is a lawyer in Sydney.",
+            "C": "He is a banker in Brisbane.",
+            "D": "He works as a doctor in Melbourne."
+        }
+    },
+    "Q0627": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "How did Percival die?",
+        "Options": {
+            "A": "He drowned during a storm at sea.",
+            "B": "He succumbed to a fatal illness while traveling.",
+            "C": "He was killed in a duel with a rival knight.",
+            "D": "His horse tripped and he fell down from it."
+        }
+    },
+    "Q0628": {
+        "Aspect": "character",
+        "Complexity": "sh",
+        "Question": "Who went to India?",
+        "Options": {
+            "A": "Percival.",
+            "B": "Benjamin",
+            "C": "Oliver",
+            "D": "Sophia"
+        }
+    },
+    "Q0629": {
+        "Aspect": "settg",
+        "Complexity": "sh",
+        "Question": "What did Bernard see when he leaned over the parapet?",
+        "Options": {
+            "A": "The sail of a distant boat.",
+            "B": "A flock of seagulls diving.",
+            "C": "The fin of a porpoise.",
+            "D": "The tail of a whale."
+        }
+    },
+    "Q0630": {
+        "Aspect": "plot",
+        "Complexity": "dtl",
+        "Question": "What kind of tribute did Neville give to Percival?",
+        "Options": {
+            "A": "Withered and blackened violets.",
+            "B": "Fresh and blooming roses.",
+            "C": "A tattered old photograph.",
+            "D": "A handwritten poem on parchment."
+        }
+    },
+    "Q0631": {
+        "Aspect": "relat",
+        "Complexity": "mh",
+        "Question": "How did Bernard feel about his relationship with his friends?",
+        "Options": {
+            "A": "He felt superior to his friends and often found himself guiding them through life.",
+            "B": "He believed that his friends were holding him back from achieving his true potential.",
+            "C": "He felt that he was shaped by them and they all share in the same life. For Bernard, all personalities are multiple: we are not self-sufficient, self-created entities.",
+            "D": "He felt completely independent and believed that his personality was entirely self-formed without any influence from his friends."
+        }
+    },
+    "Q0632": {
+        "Aspect": "character",
+        "Complexity": "sh",
+        "Question": "Who traveled to Spain?",
+        "Options": {
+            "A": "Ben",
+            "B": "Laurie",
+            "C": "David",
+            "D": "Rhoda."
+        }
+    },
+    "Q0633": {
+        "Aspect": "character",
+        "Complexity": "sh",
+        "Question": "Who loves reading Catullus?",
+        "Options": {
+            "A": "Bernard",
+            "B": "Neville.",
+            "C": "Louis",
+            "D": "Rhoda"
+        }
+    },
+    "Q0634": {
+        "Aspect": "meaning",
+        "Complexity": "sh",
+        "Question": "Why the apple tree becomes inextricably linked to Neville's knowledge of death?",
+        "Options": {
+            "A": "Because Neville carved the initials of a lost loved one into the apple tree, symbolizing his personal encounter with death.",
+            "B": "Because Neville is looking at the apple tree as he overhears the servants at the school discussing a local murder.",
+            "C": "Because Neville associates the blossoming of the apple tree with the cycle of life and death, as he learned of a family member's passing during spring.",
+            "D": "Because Neville read a poem about death while sitting under the apple tree, which made him contemplate mortality."
+        }
+    },
+    "Q0635": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "What happened to Susan's mother?",
+        "Options": {
+            "A": "She moved to another country for work.",
+            "B": "She died of cancer.",
+            "C": "She started her own business.",
+            "D": "She won a prestigious literary award."
+        }
+    },
+    "Q0636": {
+        "Aspect": "settg",
+        "Complexity": "sh",
+        "Question": "How did Bernard behave when he went to school for the first time?",
+        "Options": {
+            "A": "He acted nervous and unsure.",
+            "B": "He was overly excited and boisterous.",
+            "C": "He behaved composed and easy.",
+            "D": "He seemed distracted and uninterested."
+        }
+    },
+    "Q0637": {
+        "Aspect": "character",
+        "Complexity": "sh",
+        "Question": "In the novel The Waves, who is the headmaster?",
+        "Options": {
+            "A": "Old Crane",
+            "B": "Mr. Ross",
+            "C": "Principal Owens",
+            "D": "Dr. Saunders"
+        }
+    },
+    "Q0638": {
+        "Aspect": "plot",
+        "Complexity": "mh",
+        "Question": "What did Old Crane look like?",
+        "Options": {
+            "A": "He is gaunt and pale, with a nose sharp as a knife's edge and a chin smooth and unmarked, like a polished stone.",
+            "B": "His appearance is disheveled, with a nose bent like a broken branch and a chin marred by a jagged scar, resembling a cliff face.",
+            "C": "He is rotund with a ruddy complexion, his nose round like a hilltop at dawn, and his chin bears a dimple, reminiscent of a gentle valley.",
+            "D": "He is sleek and altogether too shiny and black, like some statue in a public garden. And on the left side of his drum-like waistcoat hangs a crucifix. He also has a nose like a mountain at sunset and a blue cleft in his chin, like a wooded ravine, which some tripper has fired; like a wooded ravine seen from the train window."
+        }
+    },
+    "Q0639": {
+        "Aspect": "relat",
+        "Complexity": "mh",
+        "Question": "What's the relationship between Louis and Rhoda?",
+        "Options": {
+            "A": "They are siblings.",
+            "B": "They are lovers.",
+            "C": "They are classmates.",
+            "D": "They are strangers."
+        }
+    },
+    "Q0640": {
+        "Aspect": "settg",
+        "Complexity": "sh",
+        "Question": "What happened to Bernard when Percival died?",
+        "Options": {
+            "A": "His son was born.",
+            "B": "He got married.",
+            "C": "He received a prestigious award.",
+            "D": "He inherited a large sum of money."
+        }
+    },
+    "Q0641": {
+        "Aspect": "settg",
+        "Complexity": "dtl",
+        "Question": "What kind of flower was on the table of the restarurant where Bernard and Percival had dinner together?",
+        "Options": {
+            "A": "The pink rose",
+            "B": "The white lily",
+            "C": "The yellow tulip",
+            "D": "The red carnation."
+        }
+    },
+    "Q0642": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "What was Bernard's attitude towards death at the end of the story?",
+        "Options": {
+            "A": "He was overwhelmed by the fear of death.",
+            "B": "He decided to face death fearlessly.",
+            "C": "He accepted death but with a sense of defeat.",
+            "D": "He remained indifferent to the concept of death."
+        }
+    },
+    "Q0643": {
+        "Aspect": "meaning",
+        "Complexity": "sh",
+        "Question": "Why Rhoda was left in the kitchen?",
+        "Options": {
+            "A": "Because she was too shy to present her answer in front of the class.",
+            "B": "Because she was caught cheating during the test and had to stay behind as punishment.",
+            "C": "Because she finished her work early and was asked to help in the kitchen.",
+            "D": "Because she failed to figure out the problem while all the others handed in their answers."
+        }
+    },
+    "Q0644": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "How did Susan feel at her first night in school?",
+        "Options": {
+            "A": "She felt excited and curious.",
+            "B": "She was overwhelmed with happiness and contentment.",
+            "C": "She felt sad and uncomfortable.",
+            "D": "She experienced a sense of adventure and enthusiasm."
+        }
+    },
+    "Q0645": {
+        "Aspect": "character",
+        "Complexity": "dtl",
+        "Question": "In the novel The Waves, who is a hunchback?",
+        "Options": {
+            "A": "Miss Lambert.",
+            "B": "Mr. Parry",
+            "C": "Mrs. Constable",
+            "D": "Louis"
+        }
+    },
+    "Q0646": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "What does Jinny hate?",
+        "Options": {
+            "A": "She hates darkness, sleep and night.",
+            "B": "She dislikes bright lights and mornings",
+            "C": "She detests silence, stillness, and dusk",
+            "D": "She loathes noise, activity, and daylight"
+        }
+    },
+    "Q0647": {
+        "Aspect": "character",
+        "Complexity": "sh",
+        "Question": "In the novel The Waves, who asipres to become a poet?",
+        "Options": {
+            "A": "Bernard",
+            "B": "Louis",
+            "C": "Neville.",
+            "D": "Rhoda"
+        }
+    },
+    "Q0648": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel The Waves, how many times does the scene of Mrs. Constable squeezing the sponge appear in the book? Please find them out. ",
+        "Options": {
+            "A": "Two",
+            "B": "Four.",
+            "C": "Three",
+            "D": "Five"
+        }
+    }
+}

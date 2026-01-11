@@ -1,0 +1,354 @@
+{
+    "Q1496": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel Never Let Me Go, has the word or phrase panicked appeared? If so, how many times does it appear in the text?",
+        "Options": {
+            "A": "Yes, 2 times appeared",
+            "B": "Yes, 4 times appeared",
+            "C": "Yes, 3 times appeared",
+            "D": "Yes, 1 time appeared"
+        }
+    },
+    "Q1497": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel Never Let Me Go, has the object polo shirt appeared? If so, how many times does it appear in the text?",
+        "Options": {
+            "A": "Yes, 3 times appeared",
+            "B": "Yes, 8 times appeared",
+            "C": "Yes, 1 time appeared",
+            "D": "Yes, 6 times appeared"
+        }
+    },
+    "Q1498": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel Never Let Me Go, has the place clothes shop appeared? If so, how many times does it appear in the text?",
+        "Options": {
+            "A": "No, it has never appeared",
+            "B": "Yes, 2 times appeared",
+            "C": "Yes, 3 times appeared",
+            "D": "Yes, 1 time appeared"
+        }
+    },
+    "Q1499": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel Never Let Me Go, has the sentence Poetry's important appeared? If so, how many times does this sentence appear in the text?",
+        "Options": {
+            "A": "No, it has never appeared",
+            "B": "Yes, 2 times appeared",
+            "C": "Yes, 1 time appeared",
+            "D": "Yes, 3 times appeared"
+        }
+    },
+    "Q1500": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "Has the character Martin appeared? If so, how many times does he appear in the text?",
+        "Options": {
+            "A": "No, Martin is never mentioned in the text",
+            "B": "Yes, 2 times appeared",
+            "C": "Yes, 7 times appeared",
+            "D": "Yes, over 20 times appeared"
+        }
+    },
+    "Q1501": {
+        "Aspect": "span",
+        "Complexity": "mh",
+        "Question": "In the novel Never Let Me Go, in which cities, or countries does this story take place?",
+        "Options": {
+            "A": "Oxford",
+            "B": "Manchester",
+            "C": "Hailsham",
+            "D": "Edinburgh"
+        }
+    },
+    "Q1502": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "How many times has Tommy worn the light blue polo shirt?",
+        "Options": {
+            "A": "Yes, 1 time appeared",
+            "B": "No, never appeared",
+            "C": "Yes, 3 times appeared",
+            "D": "Yes, 2 times appeared"
+        }
+    },
+    "Q1503": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "How many times have Tommy and Kath looking all over?",
+        "Options": {
+            "A": "No, never mentioned",
+            "B": "Yes, 3 times appeared",
+            "C": "Yes, 1 time appeared",
+            "D": "Yes, 2 times appeared"
+        }
+    },
+    "Q1504": {
+        "Aspect": "relat",
+        "Complexity": "sh",
+        "Question": "Please give me an alias of Tommy.",
+        "Options": {
+            "A": "imitators",
+            "B": "clones (or students)",
+            "C": "one of the twins",
+            "D": "professor"
+        }
+    },
+    "Q1505": {
+        "Aspect": "relat",
+        "Complexity": "dtl",
+        "Question": "What is the relationship between Tommy and Clones?",
+        "Options": {
+            "A": "Tommy is a guardian of the Clones",
+            "B": "Tommy is a close friend to the Clones",
+            "C": "Tommy and Clones are same person",
+            "D": "Tommy is a mentor to the Clones"
+        }
+    },
+    "Q1506": {
+        "Aspect": "meaning",
+        "Complexity": "mh",
+        "Question": "In the novel Never Let Me Go, explain the meaning or implication of the symbol or metaphor 'shifting next to me ' within one sentence.",
+        "Options": {
+            "A": "Shifting indicates a character's discomfort and desire to leave the current situation.",
+            "B": "Shifting represents the character's transformation from a state of ignorance to a state of awareness.",
+            "C": "Shifting symbolizes the passage of time as characters remain static in their environment.",
+            "D": "Shifting is used to describe something which is made up of parts that are continuously moving and changing position in relation to other parts."
+        }
+    },
+    "Q1507": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel Never Let Me Go, have some characters ever had sex? If so, how many times does it happen in the text?",
+        "Options": {
+            "A": "Yes, only once appeared",
+            "B": "Yes, 5 times appeared",
+            "C": "Yes, 3 times appeared",
+            "D": "Yes, 2 times appeared"
+        }
+    },
+    "Q1508": {
+        "Aspect": "span",
+        "Complexity": "mh",
+        "Question": "In which year does the earliest event happen, and in which year does the latest even happen?",
+        "Options": {
+            "A": "1948, 1950",
+            "B": "1960, 1962",
+            "C": "1956, 1958",
+            "D": "1952, 1954"
+        }
+    },
+    "Q1509": {
+        "Aspect": "character",
+        "Complexity": "mh",
+        "Question": "Tommy is used to be positive or negative and finally becomes a negative or positive one. Tell in one sentence that which episode marks this character's change.",
+        "Options": {
+            "A": "Tommy's transformation occurs when he realizes his artwork won't significantly influence his future, leading to a sense of resignation and calm.",
+            "B": "Tommy's change is marked by the moment he discovers the truth about donations and begins to accept his fate with a newfound maturity.",
+            "C": "At Hailsham, Tommy becomes an outcast among his peers because, unlike them, he lacks artistic ability. He develops a violent temper, often throwing tantrums in response to teasing from his peers.",
+            "D": "The shift in Tommy's demeanor is highlighted during a football match where he injures himself, leading to a period of introspection and behavioral change."
+        }
+    },
+    "Q1510": {
+        "Aspect": "meaning",
+        "Complexity": "dtl",
+        "Question": "In the novel Never Let Me Go, in which chapter does there exist a sentence with the same or similar meaning as 'continuously moving and changing position'?",
+        "Options": {
+            "A": "Chapter 7",
+            "B": "Chapter 15",
+            "C": "Chapter 13, 19, 21",
+            "D": "Chapter 22"
+        }
+    },
+    "Q1511": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "How many times has the author mentioned the word or phrase 'pond-weed' in the novel Never Let Me Go?",
+        "Options": {
+            "A": "No, it does not appear in the text",
+            "B": "Yes, 1 time appeared",
+            "C": "Yes, 2 times appeared",
+            "D": "Yes, 3 times appeared"
+        }
+    },
+    "Q1512": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel Never Let Me Go, has the object licence appeared? If so, how many times does it appear in the text?",
+        "Options": {
+            "A": "Yes, 3 times appeared",
+            "B": "Yes, 1 time appeared",
+            "C": "No, it has not appeared",
+            "D": "Yes, 2 times appeared"
+        }
+    },
+    "Q1513": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel Never Let Me Go, has the place garden appeared? If so, how many times does it appear in the text?",
+        "Options": {
+            "A": "Yes, 2 times appeared",
+            "B": "Yes, 3 times appeared",
+            "C": "Yes, 1 time appeared",
+            "D": "No, it has not appeared"
+        }
+    },
+    "Q1514": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel Never Let Me Go, has the sentence That you're deeply in love appeared? If so, how many times does this sentence appear in the text?",
+        "Options": {
+            "A": "No, it does not appear in the text",
+            "B": "Yes, 2 times appeared",
+            "C": "Yes, 3 times appeared",
+            "D": "Yes, 1 time appeared"
+        }
+    },
+    "Q1515": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel Never Let Me Go, how many times has Madame read minds?",
+        "Options": {
+            "A": "Yes, 1 time appeared",
+            "B": "No, she has never read minds",
+            "C": "Yes, but it is not specified how many times",
+            "D": "Yes, multiple times throughout the novel"
+        }
+    },
+    "Q1516": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "How many times have Tommy and Kath were selfish?",
+        "Options": {
+            "A": "No, they were never selfish",
+            "B": "Yes, 3 times appeared",
+            "C": "Yes, 1 time appeared",
+            "D": "Yes, but it's not clear how many times"
+        }
+    },
+    "Q1517": {
+        "Aspect": "relat",
+        "Complexity": "mh",
+        "Question": "Who are in the guardian team at Hailsham?",
+        "Options": {
+            "A": "Charlotte, Hannah, Miss Lucy",
+            "B": "Tommy, Ruth, Miss Jody",
+            "C": "Hannah, Miss Emily, Rodney",
+            "D": "Emily, Geraldine, Lucy"
+        }
+    },
+    "Q1518": {
+        "Aspect": "relat",
+        "Complexity": "mh",
+        "Question": "What is the relationship between Tommy and Kath?",
+        "Options": {
+            "A": "Tommy is Kathy's brother and they share a familial bond.",
+            "B": "Kathy and Tommy are just friends and former classmates from Hailsham.",
+            "C": "Kathy becomes Tommy's carer-and-girlfriend. They visit Madame and have a chat with her and Miss Emily, their old head guardian from Hailsham.",
+            "D": "Tommy is Kathy's rival, and they compete for recognition from their teachers."
+        }
+    },
+    "Q1519": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel Never Let Me Go, has the word or phrase ordeal appeared? If so, how many times does it appear in the text?",
+        "Options": {
+            "A": "Yes, 2 times appeared",
+            "B": "Yes, 1 time appeared",
+            "C": "Yes, 3 times appeared",
+            "D": "Yes, 4 times appeared"
+        }
+    },
+    "Q1520": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel Never Let Me Go, has the object pencil case appeared? If so, how many times does it appear in the text?",
+        "Options": {
+            "A": "No, it is never mentioned",
+            "B": "Yes, 8 time appeared",
+            "C": "Yes, 2 times appeared",
+            "D": "Yes, 15 times appeared"
+        }
+    },
+    "Q1521": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel Never Let Me Go, has the place toilet appeared? If so, how many times does it appear in the text?",
+        "Options": {
+            "A": "No, it does not appear in the text",
+            "B": "Yes, 1 time appeared",
+            "C": "Yes, 4 times appeared",
+            "D": "Yes, 2 times appeared"
+        }
+    },
+    "Q1522": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "Has the word or phrase Roman appeared? If so, how many times does it appear in the text?",
+        "Options": {
+            "A": "Yes, 1 time appeared",
+            "B": "No, it does not appear in the text",
+            "C": "Yes, 2 times appeared",
+            "D": "Yes, 3 times appeared"
+        }
+    },
+    "Q1523": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel Never Let Me Go, has the object fan appeared? If so, how many times does it appear in the text?",
+        "Options": {
+            "A": "No, it does not appear in the text",
+            "B": "Yes, 1 time appeared",
+            "C": "Yes, 2 times appeared",
+            "D": "Yes, 3 times appeared"
+        }
+    },
+    "Q1524": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel Never Let Me Go, has the place bathroom appeared? If so, how many times does it appear in the text?",
+        "Options": {
+            "A": "Yes, 2 times appeared",
+            "B": "Yes, 6 times appeared",
+            "C": "Yes, 4 times appeared",
+            "D": "Yes, 3 times appeared"
+        }
+    },
+    "Q1525": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel Never Let Me Go, has the word or phrase War and Peace  appeared? If so, how many times does it appear in the text?",
+        "Options": {
+            "A": "No, it does not appear in the text",
+            "B": "Yes, 1 time appeared",
+            "C": "Yes, 2 times appeared",
+            "D": "Yes, 3 times appeared"
+        }
+    },
+    "Q1526": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel Never Let Me Go, has the object sycamores appeared? If so, how many times does it appear in the text?",
+        "Options": {
+            "A": "Yes, 3 times appeared",
+            "B": "Yes, 2 times appeared",
+            "C": "No, it has not appeared",
+            "D": "Yes, 1 time appeared"
+        }
+    },
+    "Q1527": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel Never Let Me Go, has the object metal appeared? If so, how many times does it appear in the text?",
+        "Options": {
+            "A": "Yes, 2 times appeared",
+            "B": "Yes, 6 times appeared",
+            "C": "Yes, 4 times appeared",
+            "D": "Yes, 3 times appeared"
+        }
+    }
+}

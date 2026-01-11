@@ -1,0 +1,620 @@
+{
+    "Q0147": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "Has Justine killed William? If so, how many times has this plot happened?",
+        "Answer": "No, never",
+        "Options": {
+            "A": "Yes, once",
+            "B": "No, never",
+            "C": "Yes, twice",
+            "D": "Yes, three times"
+        },
+        "Gold": "B",
+        "Evidences": {
+            "E0232": {
+                "Evidence": "'He struggled violently. 'Let me go,' he cried; 'monster! ugly wretch! you wish to eat me, and tear me to pieces-You are an ogre-Let me go, or I will tell my papa.'' 'Boy, you will never see your father again; you must come with me.'' 'Hideous monster! let me go. My papa is a Syndic-he is M. Frankenstein-he will punish you. You dare not keep me.'' 'Frankenstein! you belong then to my enemy-to him towards whom I have sworn eternal revenge; you shall be my first victim.''The child still struggled, and loaded me with epithets which carried despair to my heart; I grasped his throat to silence him, and in a moment he lay dead at my feet.'I gazed on my victim, and my heart swelled with exultation and hellish triumph: clapping my hands, I exclaimed, 'I, too, can create desolation; my enemy is not invulnerable: this death will carry despair to him, and a thousand other miseries shall torment and destroy him.'",
+                "TokenIndex": "60254",
+                "Match": "exact",
+                "Sent": "I do not intend to hurt you; listen to me.' 'He struggled violently."
+            }
+        }
+    },
+    "Q0148": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "How many times has Robert written letters to his sister?",
+        "Answer": "11",
+        "Options": {
+            "A": "11",
+            "B": "9",
+            "C": "12",
+            "D": "10"
+        },
+        "Gold": "A",
+        "Evidences": {
+            "E0233": {
+                "Evidence": "AUGUST 2.6TH, 17-.You have read this strange and terrific story, Margaret; and do you not feel your blood congeal with horror like that which even now curdles mine?",
+                "TokenIndex": "92089",
+                "Match": "bm25",
+                "Sent": "You have read this strange and terrific story, Margaret; and do you not feel your blood congeal with horror, like that which even now curdles mine?"
+            },
+            "E0234": {
+                "Evidence": "SEPTEMBER 2ND. My beloved Sister,-I write to you encompassed by peril and ignorant whether I am ever doomed to see again dear England, and the dearer friends that inhabit it. ",
+                "TokenIndex": "65637",
+                "Match": "exact",
+                "Sent": "It was in the latter end of September that I again quitted my native country."
+            },
+            "E0235": {
+                "Evidence": "SEPTEMBER 5TH. A scene has just passed of such uncommon interest that although it is highly probable that these papers may never reach you, yet I cannot forbear recording it.",
+                "TokenIndex": "65637",
+                "Match": "exact",
+                "Sent": "It was in the latter end of September that I again quitted my native country."
+            },
+            "E0236": {
+                "Evidence": "SEPTEMBER 7TH. The die is cast; I have consented to return if we are not destroyed.",
+                "TokenIndex": "65637",
+                "Match": "exact",
+                "Sent": "It was in the latter end of September that I again quitted my native country."
+            },
+            "E0237": {
+                "Evidence": "SEPTEMBER 12TH. It is past; I am returning to England. I have lost my hopes of utility and glory;-I have lost my friend.",
+                "TokenIndex": "65637",
+                "Match": "exact",
+                "Sent": "It was in the latter end of September that I again quitted my native country."
+            },
+            "E0238": {
+                "Evidence": "ST. PETERSBURGH, DEC. 11 TH, 17- To MRS. SAVILLE, ENGLAND You will rejoice to hear that no disaster has accompanied the commencement of an enterprise which you have regarded with such evil forebodings.",
+                "TokenIndex": "0",
+                "Match": "bm25",
+                "Sent": "Frankenstein; or, the Modern Prometheus by Mary Wollstonecraft (Godwin) Shelley Letter 1 _To Mrs."
+            },
+            "E0239": {
+                "Evidence": "ARCHANGEL, MARCH 28TH, 17-. To MRS. SAVILLE, ENGLAND How slowly the time passes here, encompassed as I am by frost and snow!",
+                "TokenIndex": "1606",
+                "Match": "exact",
+                "Sent": "Saville, England._ Archangel, 28th March, 17'."
+            },
+            "E0240": {
+                "Evidence": "JULY 7TH, 17-. To MRS. SAVILLE, ENGLAND My dear Sister, I write a few lines in haste, to say that I am safe, and well advanced on my voyage.",
+                "TokenIndex": "3329",
+                "Match": "exact",
+                "Sent": "Saville, England._ July 7th, 17'."
+            },
+            "E0241": {
+                "Evidence": "AUGUST 5TH, 17-To MRS. SAVILLE, ENGLAND So strange an accident has happened to us that I cannot forbear recording it, although it is very probable that you will see me before these papers can come into your possession.",
+                "TokenIndex": "3075",
+                "Match": "bm25",
+                "Sent": "Saville, England._ August 5th, 17'. So strange an accident has happened to us that I cannot forbear recording it, although it is very probable that you will see me before these papers can come into your possession. Last Monday (July 31st) we were nearly surrounded by ice, which closed in the ship on all sides, scarcely leaving her the sea-room in which she floated."
+            },
+            "E0242": {
+                "Evidence": "AUGUST 13TH, 17-My affection for my guest increases every day. He excites at once my admiration and my pity to an astonishing degree.",
+                "TokenIndex": "5535",
+                "Match": "bm25",
+                "Sent": "He excites at once my admiration and my pity to an astonishing degree."
+            },
+            "E0243": {
+                "Evidence": "AUGUST 19TH, 17-. Yesterday the stranger said to me, 'You may easily perceive, Captain Walton that I have suffered great and unparalleled misfortunes.",
+                "TokenIndex": "3748",
+                "Match": "exact",
+                "Sent": "Saville, England._ August 5th, 17'."
+            }
+        }
+    },
+    "Q0149": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "How many times have Victor and Justine met each other after Justine was accused?",
+        "Answer": "2 or 3",
+        "Options": {
+            "A": "0 times",
+            "B": "2 or 3",
+            "C": "1 time",
+            "D": "More than 5 times"
+        },
+        "Gold": "B",
+        "Evidences": {
+            "E0244": {
+                "Evidence": "The appearance of Justine was calm. She was dressed in mourning; and her countenance, always engaging, was rendered, by the solemnity of her feelings, exquisitely beautiful. Yet she appeared confident in innocence, and did not tremble, although gazed on and execrated by thousands; for all the kindness which her beauty might otherwise have excited, was obliterated in the minds of the spectators by the imagination of the enormity she was supposed to have committed. ",
+                "TokenIndex": "31207",
+                "Match": "exact",
+                "Sent": "The appearance of Justine was calm."
+            },
+            "E0245": {
+                "Evidence": "We entered the gloomy prison-chamber, and beheld Justine sitting on some straw at the farther end; her hands were manacled, and her head rested on her knees. She rose on seeing us enter; and when we were left alone with her, she threw herself at the feet of Elizabeth, weeping bitterly. My cousin wept also. ",
+                "TokenIndex": "33449",
+                "Match": "exact",
+                "Sent": "We entered the gloomy prison chamber and beheld Justine sitting on some straw at the farther end; her hands were manacled, and her head rested on her knees."
+            },
+            "E0246": {
+                "Evidence": "And on the morrow Justine died. Elizabeth's heart-rending eloquence failed to move the judges from their settled conviction in the criminality of the saintly sufferer. My passionate and indignant appeals were lost upon them. And when I received their cold answers, and heard the harsh unfeeling reasoning of these men, my purposed avowal died away on my lips. Thus I might proclaim myself a madman, but not revoke the sentence passed upon my wretched victim. She perished on the scaffold as a murderess!",
+                "TokenIndex": "34711",
+                "Match": "exact",
+                "Sent": "Live, and be happy, and make others so.' And on the morrow Justine died."
+            }
+        }
+    },
+    "Q0150": {
+        "Aspect": "relat",
+        "Complexity": "mh",
+        "Question": "Who are in the Felix's family?",
+        "Answer": "Felix, De Lacey, Agatha, (Safie)",
+        "Options": {
+            "A": "Felix, De Lacey, Agatha, William",
+            "B": "Felix, De Lacey, Elizabeth, Safie",
+            "C": "Felix, De Lacey, Justine, Agatha",
+            "D": "Felix, De Lacey, Agatha, (Safie)"
+        },
+        "Gold": "D",
+        "Evidences": {
+            "E0247": {
+                "Evidence": "It was not thus with Felix. He was always the saddest of the group; and, even to my unpractised senses, he appeared to have suffered more deeply than his friends. ",
+                "TokenIndex": "46123",
+                "Match": "exact",
+                "Sent": "The youth and his companion had each of them several names, but the old man had only one, which was _father._ The girl was called _sister_ or _Agatha,_ and the youth _Felix, brother,_ or _son_."
+            },
+            "E0248": {
+                "Evidence": "The name of the old man was De Lacey. He was descended from a good family in France, where he had lived for many years in affluence, respected by his superiors and beloved by his equals. ",
+                "TokenIndex": "50559",
+                "Match": "exact",
+                "Sent": "'The name of the old man was De Lacey."
+            },
+            "E0249": {
+                "Evidence": "The youth and his companion had each of them several names, but the old man had only one, which was father. The girl was called sister, or Agatha. ",
+                "TokenIndex": "46123",
+                "Match": "exact",
+                "Sent": "The youth and his companion had each of them several names, but the old man had only one, which was _father._ The girl was called _sister_ or _Agatha,_ and the youth _Felix, brother,_ or _son_."
+            },
+            "E0250": {
+                "Evidence": "She fell, however, into good hands. The Italian had mentioned the name of the spot for which they were bound; and, after her death, the woman of the house in which they had lived took care that Safie should arrive in safety at the cottage of her lover.",
+                "TokenIndex": "52819",
+                "Match": "exact",
+                "Sent": "She fell, however, into good hands."
+            }
+        }
+    },
+    "Q0151": {
+        "Aspect": "relat",
+        "Complexity": "mh",
+        "Question": "Please list 3 aliases or designations of the monster created by Victor.",
+        "Answer": "the daemon, devil, the wretch",
+        "Options": {
+            "A": "fiend, the monster Prometheus, Henry of the Woods",
+            "B": "the creature, the Martyr, Victor's 'My more-than-sister'",
+            "C": "phantom, the youngest, the explorer",
+            "D": "the daemon, devil, the wretch"
+        },
+        "Gold": "D",
+        "Evidences": {
+            "E0251": {
+                "Evidence": "This aroused the stranger's attention; and he asked a multitude of questions concerning the route which the daemon,i as he called him, had pursued. Soon after, when he was alone with me, he said,-'I have, doubtless, excited your curiosity, as well as that of these good people; but you are too considerate to make inquiries.' ",
+                "TokenIndex": "3711",
+                "Match": "bm25",
+                "Sent": "Soon after, when he was alone with me, he said, 'I have, doubtless, excited your curiosity, as well as that of these good people; but you are too considerate to make inquiries.' 'Certainly; it would indeed be very impertinent and inhuman in me to trouble you with any inquisitiveness of mine.' 'And yet you rescued me from a strange and perilous situation; you have benevolently restored me to life.' Soon after this he inquired if I thought that the breaking up of the ice had destroyed the other sledge."
+            },
+            "E0252": {
+                "Evidence": "'Devil,' I exclaimed, 'do you dare approach me? and do not you fear the fierce vengeance of my arm wreaked on your miserable head? Begone, vile insect! or rather, stay, that I may trample you to dust! and, oh! that I could, with the extinction of your miserable existence, restore those victims whom you have so diabolically murdered!'  ",
+                "TokenIndex": "31207",
+                "Match": "bm25",
+                "Sent": "And do not you fear the fierce vengeance of my arm wreaked on your miserable head? Begone, vile insect!"
+            },
+            "E0253": {
+                "Evidence": "How can I describe my emotions at this catastrophe, or how delineate the wretch whom with such infinite pains and care I had endeavoured to form?",
+                "TokenIndex": "19485",
+                "Match": "exact",
+                "Sent": "How can I describe my emotions at this catastrophe, or how delineate the wretch whom with such infinite pains and care I had endeavoured to form?"
+            }
+        }
+    },
+    "Q0152": {
+        "Aspect": "relat",
+        "Complexity": "mh",
+        "Question": "What is the relationship between Elizabeth and the 'daemon'?",
+        "Answer": "Elizabeth is the 'daemon' creator - Victor's sister, wife. And finally, Elizabeth is killed by the 'daemon'",
+        "Options": {
+            "A": "Elizabeth is the 'daemon's' adopted sister and confidante",
+            "B": "Elizabeth is the 'daemon's' biological mother and protector",
+            "C": "Elizabeth is the 'daemon's' distant cousin and mentor",
+            "D": "Elizabeth is the 'daemon' creator - Victor's sister, wife. And finally, Elizabeth is killed by the 'daemon'"
+        },
+        "Gold": "D",
+        "Evidences": {
+            "E0254": {
+                "Evidence": "As I heard it, the whole truth rushed into my mind, my arms dropped, the motion of every muscle and fibre was suspended; I could feel the blood trickling in my veins and tingling in the extremities of my limbs. This state lasted but for an instant; the scream was repeated, and I rushed into the room.Great God! why did I not then expire! Why am I here to relate the destruction of the best hope and the purest creature of earth? She was there, lifeless and inanimate, thrown across the bed, her head hanging down, and her pale and distorted features half covered by her hair. Everywhere I turn I see the same figure-her bloodless arms and relaxed form flung by the murderer on its bridal bier. Could I behold this and live? Alas! life is obstinate and clings closest where it is most hated. For a moment only did I lose recollection; I fell senseless on the ground.When I recovered, I found myself surrounded by the people of the inn; their countenances expressed a breathless terror: but the horror of others appeared only as a mockery, a shadow of the feelings that oppressed me. I escaped from them to the room where lay the body of Elizabeth, my love, my wife, so lately living, so dear, so worthy. She had been moved from the posture in which I had first beheld her; and now, as she lay, her head upon her arm, and a handkerchief thrown across her face and neck, I might have supposed her asleep. I rushed towards her, and embraced her with ardour; but the deadly languor and coldness of the limbs told me that what I now held in my arms had ceased to be the Elizabeth whom I had loved and cherished. The murderous mark of the fiend's grasp was on her neck, and the breath had ceased to issue from her lips.",
+                "TokenIndex": "85310",
+                "Match": "exact",
+                "Sent": "As I heard it, the whole truth rushed into my mind, my arms dropped, the motion of every muscle and fibre was suspended; I could feel the blood trickling in my veins and tingling in the extremities of my limbs."
+            }
+        }
+    },
+    "Q0153": {
+        "Aspect": "meaning",
+        "Complexity": "mh",
+        "Question": "In the novel Frankenstein, explain the meaning or implication of the symbol or metaphor 'to make the being (the monster) a gigantic statue (about eight feet in height)' within one sentence.",
+        "Answer": "The monster is full of 'masculinity' in terms of size and strength, but his life status does seem to have a repressed and unaccepted 'femininity'. This implication is contradictory and ironic.",
+        "Options": {
+            "A": "The monster is full of 'masculinity' in terms of size and strength, but his life status does seem to have a repressed and unaccepted 'femininity'. This implication is contradictory and ironic.",
+            "B": "The monster's large stature represents his overwhelming power and ability to dominate nature, reflecting humanity's hubris in attempting to control life itself.",
+            "C": "The creature's size symbolizes the vast intellectual capacity and potential for enlightenment that Victor Frankenstein imbued within his creation.",
+            "D": "The gigantic form of the monster is a metaphor for the immense loneliness and isolation he experiences, as his size sets him apart from all human beings."
+        },
+        "Gold": "A",
+        "Evidences": {
+            "E0255": {
+                "Evidence": "As the minuteness of the parts formed a great hinderance to my speed, I resolved, contrary to my first intention, to make the being of a gigantic stature; that is to say, about eight feet in height, and proportionably large. After having formed this determination, and having spent some months in successfully collecting and arranging my materials, I began. ",
+                "TokenIndex": "13613",
+                "Match": "bm25",
+                "Sent": "As the minuteness of the parts formed a great hindrance to my speed, I resolved, contrary to my first intention, to make the being of a gigantic stature, that is to say, about eight feet in height, and proportionably large."
+            },
+            "E0256": {
+                "Evidence": "If the multitude of mankind knew of my existence, they would do as you do, and arm themselves for my destruction. Shall I not then hate them who abhor me? I will keep no terms with my enemies. ",
+                "TokenIndex": "40456",
+                "Match": "exact",
+                "Sent": "If the multitude of mankind knew of my existence, they would do as you do, and arm themselves for my destruction."
+            },
+            "E0257": {
+                "Evidence": "Remember, thou hast made me more powerful than thyself; my height is superior to thine; my joints more supple. But I will not be tempted to set myself in opposition to thee.",
+                "TokenIndex": "40033",
+                "Match": "exact",
+                "Sent": "Remember, thou hast made me more powerful than thyself; my height is superior to thine, my joints more supple."
+            }
+        }
+    },
+    "Q0154": {
+        "Aspect": "span",
+        "Complexity": "mh",
+        "Question": "In which year does the earliest event happen, and in which year does the latest even happen?",
+        "Answer": "mainly happened in  some days' narration (17XX), when Robert was around 28 years old",
+        "Options": {
+            "A": "mainly happened in some days' narration (18XX), when Robert was around 28 years old",
+            "B": "mainly happened in  some days' narration (17XX), when Robert was around 28 years old",
+            "C": "mainly happened in some days' narration (17XX), when Robert was around 38 years old",
+            "D": "mainly happened in some days' narration (17XX), when Robert was around 18 years old"
+        },
+        "Gold": "B",
+        "Evidences": {
+            "E0258": {
+                "Evidence": "Now I am twenty-eight, and am in reality more illiterate than many schoolboys of fifteen. ",
+                "TokenIndex": "2027",
+                "Match": "exact",
+                "Sent": "Now I am twenty-eight and am in reality more illiterate than many schoolboys of fifteen."
+            },
+            "E0259": {
+                "Evidence": "ARCHANGEL, MARCH 28TH, 17-.",
+                "TokenIndex": "1606",
+                "Match": "exact",
+                "Sent": "Saville, England._ Archangel, 28th March, 17'."
+            }
+        }
+    },
+    "Q0155": {
+        "Aspect": "character",
+        "Complexity": "mh",
+        "Question": "The monster is used to be positive and finally becomes a negative one. Tell in one sentence that which episode marks this character's change.",
+        "Answer": "from when Felix treated him unkindly or from when the monster got shot after doing a benevolence",
+        "Options": {
+            "A": "from when he first saw his own reflection in the water",
+            "B": "from when Felix treated him unkindly or from when the monster got shot after doing a benevolence",
+            "C": "from when Victor destroyed the female creature he was making",
+            "D": "from when he met William and realized they were related"
+        },
+        "Gold": "B",
+        "Evidences": {
+            "E0260": {
+                "Evidence": "CURSED, CURSED CREATOR! Why did I live? Why, in that instant, did I not extinguish the spark of existence which you had so wantonly bestowed? I know not; despair had not yet taken possession of me; my feelings were those of rage and revenge. I could with pleasure have destroyed the cottage and its inhabitants, and have glutted myself with their shrieks and misery.'When night came, I quitted my retreat, and wandered in the wood; and now, no longer restrained by the fear of discovery, I gave vent to my anguish in fearful howlings. I was like a wild beast that had broken the toils; destroying the objects that obstructed me, and ranging through the wood with a stag-like swiftness. ",
+                "TokenIndex": "56907",
+                "Match": "exact",
+                "Sent": "I saw him on the point of repeating his blow, when, overcome by pain and anguish, I quitted the cottage, and in the general tumult escaped unperceived to my hovel.'   Chapter 16  'Cursed, cursed creator!"
+            },
+            "E0261": {
+                "Evidence": "Felix darted forward, and with supernatural force tore me from his father, to whose knees I clung: in a transport of fury, he dashed me to the ground and struck me violently with a stick. I could have torn him limb from limb, as the lion rends the antelope. But my heart sunk within me as with bitter sickness, and I refrained. I saw him on the point of repeating his blow, when, overcome by pain and anguish, I quitted the cottage and in the general tumult escaped unperceived to my hovel.' ",
+                "TokenIndex": "56823",
+                "Match": "exact",
+                "Sent": "Felix darted forward, and with supernatural force tore me from his father, to whose knees I clung, in a transport of fury, he dashed me to the ground and struck me violently with a stick."
+            },
+            "E0262": {
+                "Evidence": "She continued her course along the precipitous sides of the river, when suddenly her foot slipt, and she fell into the rapid stream. I rushed from my hiding-place; and, with extreme labour from the force of the current, saved her, and dragged her to shore. She was senseless; and I endeavoured by every means in my power to restore animation, when I was suddenly interrupted by the approach of a rustic, who was probably the person from whom she had playfully fled. On seeing me, he darted towards me, and tearing the girl from my arms, hastened towards the deeper parts of the wood. I followed speedily, I hardly knew why; but when the man saw me draw near, he aimed a gun, which he carried, at my body, and fired. I sunk to the ground, and my injurer, with increased swiftness, escaped into the wood. 'This was then the reward of my benevolence! I had saved a human being from destruction, and, as a recompense, I now writhed under the miserable pain of a wound, which shattered the flesh and bone. The feelings of kindness and gentleness which I had entertained but a few moments before gave place to hellish rage and gnashing of teeth. Inflamed by pain, I vowed eternal hatred and vengeance to all mankind. But the agony of my wound overcame me; my pulses paused, and I fainted.",
+                "TokenIndex": "45913",
+                "Match": "bm25",
+                "Sent": "I had saved a human being from destruction, and as a recompense I now writhed under the miserable pain of a wound which shattered the flesh and bone."
+            }
+        }
+    },
+    "Q0156": {
+        "Aspect": "meaning",
+        "Complexity": "dtl",
+        "Question": "In the novel Frankenstein, in which chapter does there exist a sentence with the same or similar meaning as 'I was kind and good before, and it was only through misfortune that I became cruel and vicious. Give me happiness, and I will become kind again.'?",
+        "Answer": "chapter 10",
+        "Options": {
+            "A": "chapter 8",
+            "B": "chapter 15",
+            "C": "chapter 21",
+            "D": "chapter 10"
+        },
+        "Gold": "D",
+        "Evidences": {
+            "E0263": {
+                "Evidence": "I was benevolent and good; misery made me a fiend. Make me happy, and I shall again be virtuous.",
+                "TokenIndex": "40208",
+                "Match": "exact",
+                "Sent": "I was benevolent and good; misery made me a fiend."
+            }
+        }
+    },
+    "Q0157": {
+        "Aspect": "plot",
+        "Complexity": "dtl",
+        "Question": "In which chapter does Mr Beaufort appear?",
+        "Answer": "chapter 1",
+        "Options": {
+            "A": "chapter 3",
+            "B": "chapter 5",
+            "C": "chapter 1",
+            "D": "chapter 7"
+        },
+        "Gold": "C",
+        "Evidences": {
+            "E0264": {
+                "Evidence": "This man, whose name was Beaufort, was of a proud and unbending disposition, and could not bear to live in poverty and oblivion in the same country where he had formerly been distinguished for his rank and magnificence. Having paid his debts, therefore, in the most honourable manner, he retreated with his daughter to the town of Lucerne, where he lived unknown and in wretchedness. My father loved Beaufort with the truest friendship, and was deeply grieved by his retreat in these unfortunate circumstances. He bitterly deplored the false pride which led his friend to a conduct so little worthy of the affection that united them. He lost no time in endeavouring to seek him out, with the hope of persuading him to begin the world again through his credit and assistance. Beaufort had taken effectual measures to conceal himself; and it was ten months before my father discovered his abode. Overjoyed at this discovery, he hastened to the house, which was situated in a mean street, near the Reuss. But when he entered, misery and despair alone welcomed him. Beaufort had saved but a very small sum of money from the wreck of his fortunes; but it was sufficient to provide him with sustenance for some months, and in the meantime he hoped to procure some respectableemployment in a merchant's house. The interval was, consequently, spent in inaction; his grief only became more deep and rankling when he had leisure for reflection; and at length it took so fast hold of his mind that at the end of three months he lay on a bed of sickness, incapable of any exertion. His daughter attended him with the greatest tenderness; but she saw with despair that their little fund was rapidly decreasing, and that there was no other prospect of support. But Caroline Beaufort possessed a mind of an uncommon mould; and her courage rose to support her in her adversity. She procured plain work,k she plaited straw; and by various means contrived to earn a pittance scarcely sufficient to support life. Several months passed in this manner. Her father grew worse; her time was more entirely occupied in attending him; her means of subsistence decreased; and in the tenth month her father died in her arms, leaving her an orphan and a beggar. This last blow overcame her; and she knelt by Beaufort's coffin, weeping bitterly, when my father entered the chamber.",
+                "TokenIndex": "7512",
+                "Match": "exact",
+                "Sent": "This man, whose name was Beaufort, was of a proud and unbending disposition and could not bear to live in poverty and oblivion in the same country where he had formerly been distinguished for his rank and magnificence."
+            }
+        }
+    },
+    "Q0158": {
+        "Aspect": "meaning",
+        "Complexity": "sh",
+        "Question": "In the novel Frankenstein, explain the meaning or implication of the symbol or metaphor 'lightning or thunderstorm' within one sentence.",
+        "Answer": "It represents destruction and foreshadows future tragedy and decay. (the power of nature over human ambitions) [OL]",
+        "Options": {
+            "A": "It represents destruction and foreshadows future tragedy and decay. (the power of nature over human ambitions) [OL]",
+            "B": "It symbolizes enlightenment and the pursuit of knowledge.",
+            "C": "It signifies the birth of new life and the beginning of a prosperous era.",
+            "D": "It represents the calm and peace that follows Victor's scientific endeavors."
+        },
+        "Gold": "A",
+        "Evidences": {
+            "E0265": {
+                "Evidence": "hen I was about fifteen years old we had retired to our house near Belrive, when we witnessed a most violent and terrible thunderstorm. It advanced from behind the mountains of Jura; and the thunder burst at once with frightful loudness from various quarters of the heavens. I remained, while the storm lasted, watching its progress with curiosity and delight. As I stood at the door, on a sudden I beheld a stream of fire issue from an old and beautiful oak which stood about twenty yards from our house; and so soon as the dazzling light vanished the oak had disappeared, and nothing remained but a blasted stump. When we visited it the next morning, we found the tree shattered in a singular manner. It was not splintered by the shock, but entirely reduced to thin ribands of wood. I never beheld anything so utterly destroyed. ",
+                "TokenIndex": "9008",
+                "Match": "bm25",
+                "Sent": "I remained, while the storm lasted, watching its progress with curiosity and delight. As I stood at the door, on a sudden I beheld a stream of fire issue from an old and beautiful oak which stood about twenty yards from our house; and so soon as the dazzling light vanished, the oak had disappeared, and nothing remained but a blasted stump."
+            }
+        }
+    },
+    "Q0159": {
+        "Aspect": "meaning",
+        "Complexity": "sh",
+        "Question": "In the novel Frankenstein, explain the meaning or implication of the symbol or metaphor 'the another full title The Modern Prometheus' within one sentence.",
+        "Answer": "In Greek mythology, Prometheus gave fire to people and received a harsh penalty from the gods for his altruistic doings. Similarly, Victor attempts to give humanity the secret of life, but gets severely punished for it: the creature he makes devastates his loved ones and his life.",
+        "Options": {
+            "A": "In Greek mythology, Prometheus was known for his cunning and trickery, which is reflected in Victor's deceptive nature as he hides his creation from society.",
+            "B": "In Greek mythology, Prometheus gave fire to people and received a harsh penalty from the gods for his altruistic doings. Similarly, Victor attempts to give humanity the secret of life, but gets severely punished for it: the creature he makes devastates his loved ones and his life.",
+            "C": "Prometheus was a figure of great strength and power, symbolizing Victor Frankenstein's physical dominance over the creature he created.",
+            "D": "Prometheus was celebrated as a hero for his defiance, representing how Victor Frankenstein is ultimately honored for his bold scientific advancements."
+        },
+        "Gold": "B",
+        "Evidences": {
+            "E0266": {
+                "Evidence": "the full title 'Frankenstein' or 'The Modern Prometheus'",
+                "TokenIndex": "0",
+                "Match": "bm25",
+                "Sent": "Frankenstein; or, the Modern Prometheus by Mary Wollstonecraft (Godwin) Shelley Letter 1 _To Mrs."
+            }
+        }
+    },
+    "Q0160": {
+        "Aspect": "meaning",
+        "Complexity": "dtl",
+        "Question": "In the novel Frankenstein, in which chapter does there exist a sentence with the same or similar meaning as 'A person with a perfect personality should always maintain a calm mind, and must not disturb his inner peace due to a momentary impulse or sudden desire. I think that even the search for knowledge cannot violate this principle.'?",
+        "Answer": "chapter 4",
+        "Options": {
+            "A": "chapter 2",
+            "B": "chapter 7",
+            "C": "chapter 4",
+            "D": "chapter 10"
+        },
+        "Gold": "C",
+        "Evidences": {
+            "E0267": {
+                "Evidence": "A human being in perfection ought always to preserve a calm and peaceful mind, and never to allow passion or a transitory desire to disturb his tranquillity. I do not think that the pursuit of knowledge is an exception to this rule.",
+                "TokenIndex": "18870",
+                "Match": "exact",
+                "Sent": "A human being in perfection ought always to preserve a calm and peaceful mind and never to allow passion or a transitory desire to disturb his tranquillity."
+            }
+        }
+    },
+    "Q0161": {
+        "Aspect": "meaning",
+        "Complexity": "dtl",
+        "Question": "In the novel Frankenstein, in which chapter does there exist a sentence with the same or similar meaning as 'Having been threatened with death for several hours just now, my mind was suspenseful and restless, and my physical strength was exhausted. At this time, I was almost exhausted physically and mentally. This sudden and unmistakable ray of life flowed into my heart like a warm current of joy, and I couldn't help but burst into tears.'?",
+        "Answer": "chapter 20",
+        "Options": {
+            "A": "chapter 17",
+            "B": "chapter 23",
+            "C": "chapter 9",
+            "D": "chapter 20"
+        },
+        "Gold": "D",
+        "Evidences": {
+            "E0268": {
+                "Evidence": "Almost spent, as I was, by fatigue, and the dreadful suspense I endured for several hours, this sudden certainty of life rushed like a flood of warm joy to my heart, and tears gushed from my eyes.",
+                "TokenIndex": "74580",
+                "Match": "exact",
+                "Sent": "Almost spent, as I was, by fatigue and the dreadful suspense I endured for several hours, this sudden certainty of life rushed like a flood of warm joy to my heart, and tears gushed from my eyes."
+            }
+        }
+    },
+    "Q0162": {
+        "Aspect": "character",
+        "Complexity": "dtl",
+        "Question": "In which chapter(s) is/are Safie mentioned?",
+        "Answer": "Chapter XIII, (Chapter XIV) ,(Chapter XXIV)",
+        "Options": {
+            "A": "Chapter XIII, (Chapter XIV) ,(Chapter XXIV)",
+            "B": "Chapter III",
+            "C": "Chapter VIII",
+            "D": "Chapter XVII"
+        },
+        "Gold": "A",
+        "Evidences": {
+            "E0269": {
+                "Evidence": "It was on one of these days, when my cottagers periodically rested from labour-the old man played on his guitar, and the children listened to him-that I observed the countenance of Felix was melancholy beyond expression; he sighed frequently; and once his father paused in his music, and I conjectured by his manner that he inquired the cause of his son's sorrow. Felix replied in a cheerful accent, and the old man was recommencing his music when some one tapped at the door.' ",
+                "TokenIndex": "37682",
+                "Match": "bm25",
+                "Sent": "My senses were gratified and refreshed by a thousand scents of delight and a thousand sights of beauty. 'It was on one of these days, when my cottagers periodically rested from labour'the old man played on his guitar, and the children listened to him'that I observed the countenance of Felix was melancholy beyond expression; he sighed frequently, and once his father paused in his music, and I conjectured by his manner that he inquired the cause of his son's sorrow."
+            },
+            "E0270": {
+                "Evidence": "'She arrived in safety at a town about twenty leagues from the cottage of De Lacey, when her attendant fell dangerously ill. Safie nursed her with the most devoted affection; but the poor girl died, and the Arabian was left alone, unacquainted with the language of the country, and utterly ignorant of the customs of the world. She fell, however, into good hands. The Italian had mentioned the name of the spot for which they were bound; and, after her death, the woman of the house in which they had lived took care that Safie should arrive in safety at the cottage of her lover.'",
+                "TokenIndex": "52742",
+                "Match": "exact",
+                "Sent": "'She arrived in safety at a town about twenty leagues from the cottage of De Lacey, when her attendant fell dangerously ill."
+            }
+        }
+    },
+    "Q0163": {
+        "Aspect": "character",
+        "Complexity": "dtl",
+        "Question": "In which chapter(s) is/are Kirwin mentioned?",
+        "Answer": "(Chapter20); Chapter 21",
+        "Options": {
+            "A": "(Chapter20); Chapter 21",
+            "B": "Chapter 18",
+            "C": "Chapter 22",
+            "D": "Chapter 19"
+        },
+        "Gold": "A",
+        "Evidences": {
+            "E0271": {
+                "Evidence": "Mr. Kirwin, on hearing this evidence, desired that I should be taken into the room where the body lay for interment, that it might be observed what effect the sight of it would produce upon me. ",
+                "TokenIndex": "0",
+                "Match": "bm25",
+                "Sent": "Frankenstein; or, the Modern Prometheus by Mary Wollstonecraft (Godwin) Shelley Letter 1 _To Mrs."
+            },
+            "E0272": {
+                "Evidence": "Fortunately, as I spoke my native language, Mr. Kirwin alone understood me; but my gestures and bitter cries were sufficient to affright the other witnesses. ",
+                "TokenIndex": "76705",
+                "Match": "exact",
+                "Sent": "Fortunately, as I spoke my native language, Mr."
+            },
+            "E0273": {
+                "Evidence": "Such were my thoughts when the door of my apartment was opened and Mr. Kirwin entered. ",
+                "TokenIndex": "77680",
+                "Match": "exact",
+                "Sent": "Such were my thoughts when the door of my apartment was opened and Mr."
+            },
+            "E0274": {
+                "Evidence": "Mr. Kirwin came in and insisted that my strength should not be exhausted by too much exertion. But the appearance of my father was to me like that of my good angel, and I gradually recovered my health. ",
+                "TokenIndex": "0",
+                "Match": "bm25",
+                "Sent": "Frankenstein; or, the Modern Prometheus by Mary Wollstonecraft (Godwin) Shelley Letter 1 _To Mrs."
+            }
+        }
+    },
+    "Q0164": {
+        "Aspect": "settg",
+        "Complexity": "sh",
+        "Question": "Where does the monster created by Frankenstein learn to read and speak?",
+        "Answer": "near the cottage of Felix's family",
+        "Options": {
+            "A": "in the university library where Victor studied",
+            "B": "at the De Lacey family's home in Geneva",
+            "C": "near the cottage of Felix's family",
+            "D": "inside an abandoned chapel in the woods"
+        },
+        "Gold": "C",
+        "Evidences": {
+            "E0275": {
+                "Evidence": "My days were spent in close attention, that I might more speedily master the language; and I may boast that I improved more rapidly than the Arabian, who understood very little, and conversed in broken accents, whilst I comprehended and could imitate almost every word that was spoken. While I improved in speech, I also learned the science of letters, as it was taught to the stranger; and this opened before me a wide field for wonder and delight.",
+                "TokenIndex": "49144",
+                "Match": "exact",
+                "Sent": "'My days were spent in close attention, that I might more speedily master the language; and I may boast that I improved more rapidly than the Arabian, who understood very little and conversed in broken accents, whilst I comprehended and could imitate almost every word that was spoken."
+            }
+        }
+    },
+    "Q0165": {
+        "Aspect": "settg",
+        "Complexity": "dtl",
+        "Question": "When Frankenstein first met Mr. Kirwin, how many women gave their evidence?",
+        "Answer": "Two",
+        "Options": {
+            "A": "One",
+            "B": "Two",
+            "C": "Three",
+            "D": "Four"
+        },
+        "Gold": "B",
+        "Evidences": {
+            "E0276": {
+                "Evidence": "A woman deposed that she lived near the beach, and was standing at the door of her cottage, waiting for the return of the fishermen, about an hour before she heard of the discovery of the body, when she saw a boat, with only one man in it, push off from that part of the shore where the corpse was afterwards found. Another woman confirmed the account of the fishermen having brought the body into her house; it was not cold. They put it into a bed, and rubbed it; and Daniel went to the town for an apothecary, but life was quite gone.",
+                "TokenIndex": "76011",
+                "Match": "exact",
+                "Sent": "A woman deposed that she lived near the beach and was standing at the door of her cottage, waiting for the return of the fishermen, about an hour before she heard of the discovery of the body, when she saw a boat with only one man in it push off from that part of the shore where the corpse was afterwards found."
+            }
+        }
+    },
+    "Q0166": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "Before Frankenstein returned home from his study at the university of Ingolstadt for the first time, what did he learn that made him cry?",
+        "Answer": "the death of his brother William",
+        "Options": {
+            "A": "the death of his brother William",
+            "B": "the marriage of Elizabeth",
+            "C": "the illness of his father",
+            "D": "the destruction of his laboratory"
+        },
+        "Gold": "A",
+        "Evidences": {
+            "E0277": {
+                "Evidence": " 'William is dead! - that sweet child, whose smiles delighted and warmed my heart, who was so gentle, yet so gay! Victor, he is murdered! 'I will not attempt to console you; but will simply relate the circumstances of the transaction.'",
+                "TokenIndex": "26359",
+                "Match": "exact",
+                "Sent": "'William is dead!'that sweet child, whose smiles delighted and warmed my heart, who was so gentle, yet so gay!"
+            }
+        }
+    },
+    "Q0167": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "What does the monster want from Frankenstein in Chapter 16 after the monster tells that the monster is kicked out of the cottage in Chapter 15?",
+        "Answer": "The monster wants Frankenstein to create a (female) companion of the same species for the monster",
+        "Options": {
+            "A": "The monster wants Frankenstein to apologize for creating him and make amends",
+            "B": "The monster wants Frankenstein to create a (female) companion of the same species for the monster",
+            "C": "The monster demands that Frankenstein destroy all evidence of his experiments",
+            "D": "The monster seeks revenge on Frankenstein by asking him to surrender himself to the authorities for his crimes"
+        },
+        "Gold": "B",
+        "Evidences": {
+            "E0278": {
+                "Evidence": "For some days I haunted the spot where these scenes had taken place; sometimes wishing to see you, sometimes resolved to quit the world and its miseries for ever. At length I wandered towards these mountains, and have ranged through their immense recesses, consumed by a burning passion which you alone can gratify. We may not part until you have promised to comply with my requisition. I am alone, and miserable; man will not associate with me; but one as deformed and horrible as myself would not deny herself to me. My companion must be of the same species, and have the same defects. This being you must create.",
+                "TokenIndex": "61046",
+                "Match": "exact",
+                "Sent": "'For some days I haunted the spot where these scenes had taken place, sometimes wishing to see you, sometimes resolved to quit the world and its miseries for ever."
+            }
+        }
+    },
+    "Q0168": {
+        "Aspect": "character",
+        "Complexity": "sh",
+        "Question": "The character Frankenstein first appeared in which letter the captain wrote to Mrs. Saville?",
+        "Answer": "Letter IV",
+        "Options": {
+            "A": "Letter I",
+            "B": "Letter II",
+            "C": "Letter III",
+            "D": "Letter IV"
+        },
+        "Gold": "D",
+        "Evidences": {
+            "E0279": {
+                "Evidence": "On perceiving me, the stranger addressed me in English, although with a foreign accent. 'Before I come on board your vessel,' said he, 'will you have the kindness to inform me whither you are bound?",
+                "TokenIndex": "4321",
+                "Match": "exact",
+                "Sent": "When I appeared on deck the master said, 'Here is our captain, and he will not allow you to perish on the open sea.' On perceiving me, the stranger addressed me in English, although with a foreign accent."
+            }
+        }
+    }
+}

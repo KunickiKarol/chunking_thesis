@@ -1,0 +1,112 @@
+{
+    "Q2190": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "Has Kittey ever been to Waddington's house to visit his wife? If so, how many times has this plot happened?",
+        "Options": {
+            "A": "No, never",
+            "B": "Yes, twice",
+            "C": "Yes, once",
+            "D": "Yes, more than 3"
+        }
+    },
+    "Q2191": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "How many times has Kitty kissed Walter?",
+        "Options": {
+            "A": "0",
+            "B": "2",
+            "C": "1",
+            "D": "3"
+        }
+    },
+    "Q2192": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "How many times have Kitty met Charles and his wife?",
+        "Options": {
+            "A": "1",
+            "B": "3",
+            "C": "2",
+            "D": "4"
+        }
+    },
+    "Q2193": {
+        "Aspect": "relat",
+        "Complexity": "mh",
+        "Question": "In the novel The Painted Veil, who are in the convent?",
+        "Options": {
+            "A": "Sœur St. Joseph, Sœur St.Anselme, St. Francis Xavier, St. Martin.",
+            "B": "St. Fane, St. Garstin, Sœur St. Therese",
+            "C": "Only one, Sœur St. Catherine",
+            "D": "St. Waddington, St. Townsend, St. Benedict"
+        }
+    },
+    "Q2194": {
+        "Aspect": "relat",
+        "Complexity": "mh",
+        "Question": "What is the relationship between Kitty and Mrs. Garstin?",
+        "Options": {
+            "A": "Mrs. Garstin is her sister.",
+            "B": "Mrs. Garstin is her aunt.",
+            "C": "Mrs. Garstin is her mother.",
+            "D": "Mrs. Garstin is her friend."
+        }
+    },
+    "Q2195": {
+        "Aspect": "meaning",
+        "Complexity": "sh",
+        "Question": "In the novel The Painted Veil, explain the meaning or implication of the symbol or metaphor 'the dog it was that died' within one sentence.",
+        "Options": {
+            "A": "It signifies Walter's realization that his life was insignificant and unnoticed like that of a dog's death.",
+            "B": "It represents Walter's belief that Kitty's infidelity was a minor, inconsequential event similar to a dog's demise.",
+            "C": "It means that Walter wanted to punish Kitty but he himself was punished at last.",
+            "D": "It suggests that Walter felt he was sacrificing himself for a greater cause, akin to a dog dying in place of its owner."
+        }
+    },
+    "Q2196": {
+        "Aspect": "character",
+        "Complexity": "mh",
+        "Question": "Kitty is used to be negative and finally becomes a positive one. Tell in one sentence that which episode marks this character's change.",
+        "Options": {
+            "A": "After Kitty's first encounter with the local magistrate, she felt inspired to change her ways.",
+            "B": "Once Kitty witnessed the death of a patient due to cholera, she realized the value of life and changed.",
+            "C": "Kitty's transformation occurred when she received a letter from her lover, urging her to become a better person.",
+            "D": "After Kitty went to the convent, she decided to help the nuns there."
+        }
+    },
+    "Q2197": {
+        "Aspect": "meaning",
+        "Complexity": "dtl",
+        "Question": "In the novel The Painted Veil, in which chapter does there exist a sentence with the same or similar meaning as 'The past has gone; let bygones be bygones'?",
+        "Options": {
+            "A": "Chapter 80.",
+            "B": "Chapter 65",
+            "C": "Chapter 72",
+            "D": "Chapter 87"
+        }
+    },
+    "Q2198": {
+        "Aspect": "character",
+        "Complexity": "dtl",
+        "Question": "In which chapter(s) is/are Doris mentioned?",
+        "Options": {
+            "A": "8, 10, 11, 61, 78, 79, 80.",
+            "B": "5, 7, 12",
+            "C": "23, 45, 62",
+            "D": "14, 27, 33"
+        }
+    },
+    "Q2199": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel The Painted Veil, has the word or phrase 'her abstracted gaze scarcely noticed' appeared? If so, how many times does it appear in the text?",
+        "Options": {
+            "A": "No, never",
+            "B": "Yes, twice",
+            "C": "Yes, three times",
+            "D": "Yes, once"
+        }
+    }
+}

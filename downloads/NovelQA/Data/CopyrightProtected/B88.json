@@ -1,0 +1,200 @@
+{
+    "Q2143": {
+        "Aspect": "plot",
+        "Complexity": "mh",
+        "Question": "What is between the two armchairs in the living room of Sir Magnus' house?",
+        "Options": {
+            "A": "An antique globe.",
+            "B": "A mahogany coffee table.",
+            "C": "A Victorian fireplace.",
+            "D": "A brass floor lamp."
+        }
+    },
+    "Q2144": {
+        "Aspect": "meaning",
+        "Complexity": "mh",
+        "Question": "Why did the police break into the room in the Lodge House?",
+        "Options": {
+            "A": "Because they heard a scream from inside the room.",
+            "B": "Because they suspected there was a bomb in the room.",
+            "C": "Because they couldn't find the key.",
+            "D": "Because they were chasing a suspect who ran into the room."
+        }
+    },
+    "Q2145": {
+        "Aspect": "settg",
+        "Complexity": "sh",
+        "Question": "When did Susan enter Alan Conway's house after he died?",
+        "Options": {
+            "A": "Four days after his death.",
+            "B": "The day after his death.",
+            "C": "Two weeks after his death.",
+            "D": "On the day of his funeral."
+        }
+    },
+    "Q2146": {
+        "Aspect": "character",
+        "Complexity": "sh",
+        "Question": "Who did Alan Conway pay homage to in his book Magpie Murders?",
+        "Options": {
+            "A": "Arthur Conan Doyle",
+            "B": "Dorothy L. Sayers",
+            "C": "Raymond Chandler",
+            "D": "Agatha Christie"
+        }
+    },
+    "Q2147": {
+        "Aspect": "character",
+        "Complexity": "sh",
+        "Question": "Who suggested Alan Conway write the first Atticus Pucnd novel?",
+        "Options": {
+            "A": "His agent Charles Clover",
+            "B": "His editor Susan Ryeland",
+            "C": "His wife Melissa.",
+            "D": "His friend James Fraser"
+        }
+    },
+    "Q2148": {
+        "Aspect": "plot",
+        "Complexity": "dtl",
+        "Question": "What position did Jemica hold in the Cloverleaf Books?",
+        "Options": {
+            "A": "Charles' personal assistant.",
+            "B": "Charles' first secretary.",
+            "C": "Charles' third secretary.",
+            "D": "Charles' manuscript editor."
+        }
+    },
+    "Q2149": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "What secret message did Alan Conway want to convey in the titles of his nine books?",
+        "Options": {
+            "A": "The initials of the titles of his nine books constitute the words 'an anagram'.",
+            "B": "The initials of the titles spell out Alan Conway's name.",
+            "C": "The titles of the books reveal the location of Conway's hidden manuscript.",
+            "D": "The book titles together form a confession to a real-life crime."
+        }
+    },
+    "Q2150": {
+        "Aspect": "settg",
+        "Complexity": "mh",
+        "Question": "What did Mary keep when the dog Bella died?",
+        "Options": {
+            "A": "Its leash.",
+            "B": "Its collar.",
+            "C": "Its favorite toy.",
+            "D": "A lock of its fur."
+        }
+    },
+    "Q2151": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "How many novels is Magpie Murders in the Atticus Pucnd series?",
+        "Options": {
+            "A": "Number seven.",
+            "B": "Number nine.",
+            "C": "Number ten.",
+            "D": "Number twelve."
+        }
+    },
+    "Q2152": {
+        "Aspect": "settg",
+        "Complexity": "dtl",
+        "Question": "When was the church of Saxby-on-Avon originally built?",
+        "Options": {
+            "A": "In 14th century.",
+            "B": "In 16th century.",
+            "C": "In 18th century.",
+            "D": "In 12th century."
+        }
+    },
+    "Q2153": {
+        "Aspect": "character",
+        "Complexity": "dtl",
+        "Question": "Who arranged the flowers every Sunday in the church of Saxby-on-Avon?",
+        "Options": {
+            "A": "Betty",
+            "B": "Susan",
+            "C": "Mary.",
+            "D": "Alice"
+        }
+    },
+    "Q2154": {
+        "Aspect": "meaning",
+        "Complexity": "sh",
+        "Question": "Why did the hearse of Mary went past the entrance to Pye Hall?",
+        "Options": {
+            "A": "Because the driver was unfamiliar with the area and missed the turn.",
+            "B": "Because there was only one main road and could avoid a detour.",
+            "C": "Because there was a roadblock on the usual route that forced a change in direction.",
+            "D": "Because the funeral procession was paying homage to the deceased's favorite place."
+        }
+    },
+    "Q2155": {
+        "Aspect": "character",
+        "Complexity": "sh",
+        "Question": "Who is the doctor after Dr Rennard left the surgery?",
+        "Options": {
+            "A": "Dr. James Fraser, the local veterinarian",
+            "B": "Dr. Helen Castor, a newcomer to the village",
+            "C": "Dr. Geoffrey Thompson, the retired dentist",
+            "D": "Her daughter Emilia Redwing."
+        }
+    },
+    "Q2156": {
+        "Aspect": "character",
+        "Complexity": "sh",
+        "Question": "Who was on behalf of the Bath constabulary concerning the death of Sir Magnus Pye?",
+        "Options": {
+            "A": "Raymond Chubb.",
+            "B": "Detective Sergeant Neil Partridge",
+            "C": "Inspector John Bellamy",
+            "D": "Sergeant Christine Phelps"
+        }
+    },
+    "Q2157": {
+        "Aspect": "character",
+        "Complexity": "sh",
+        "Question": "Who is the brother of Clarissa Pye?",
+        "Options": {
+            "A": "Lord Peter",
+            "B": "Dr. Redwing",
+            "C": "Mr. Fraser",
+            "D": "Sir Magnus."
+        }
+    },
+    "Q2158": {
+        "Aspect": "meaning",
+        "Complexity": "sh",
+        "Question": "Why didn't Clarissa inherit the house though she was born first?",
+        "Options": {
+            "A": "Because Clarissa chose to leave the estate to pursue a different life and didn't want the house.",
+            "B": "Because the will was lost and the estate was passed to the next male relative by default.",
+            "C": "Because her father didn't want to pass the estate to a girl so he lied that the boy was born first.",
+            "D": "Because Clarissa was deemed unfit to inherit the estate due to her poor health."
+        }
+    },
+    "Q2159": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "How many employees are there in the company Cloverleaf?",
+        "Options": {
+            "A": "Twenty-five employees.",
+            "B": "Thirty employees.",
+            "C": "Ten employees.",
+            "D": "Only fifteen."
+        }
+    },
+    "Q2160": {
+        "Aspect": "meaning",
+        "Complexity": "sh",
+        "Question": "Why did Andreas borrow money from Charles?",
+        "Options": {
+            "A": "To support his own hotel Polydorus.",
+            "B": "To invest in a new restaurant venture.",
+            "C": "To pay off gambling debts.",
+            "D": "To finance a business partner's startup."
+        }
+    }
+}

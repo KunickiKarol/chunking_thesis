@@ -1,0 +1,222 @@
+{
+    "Q0386": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "Has Orlando waking up from a long sleep and his/her biological sex changes? If so, how many times has this plot happened?",
+        "Options": {
+            "A": "Yes, 2",
+            "B": "Yes, 3",
+            "C": "Yes, 1",
+            "D": "No, never"
+        }
+    },
+    "Q0387": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "How many times has Nicholas Greene directly or indirectly evaluated Orlando's literary works or literary achievement?",
+        "Options": {
+            "A": "3",
+            "B": "2",
+            "C": "4",
+            "D": "5"
+        }
+    },
+    "Q0388": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "How many times have Orlando and Shelmerdine been with each other alone in the woods?",
+        "Options": {
+            "A": "1",
+            "B": "3",
+            "C": "2",
+            "D": "4"
+        }
+    },
+    "Q0389": {
+        "Aspect": "relat",
+        "Complexity": "sh",
+        "Question": "Who are in the society of 'poor creature' in Drury Lane?",
+        "Options": {
+            "A": "Nell, Prue, Kitty, Rose",
+            "B": "Sasha, Elizabeth, Clorinda, Molly",
+            "C": "Euphrosyne, Nicholas, Lucy",
+            "D": "Orlando, Jane"
+        }
+    },
+    "Q0390": {
+        "Aspect": "relat",
+        "Complexity": "mh",
+        "Question": "What is the relationship between Orlando and Sasha?",
+        "Options": {
+            "A": "They are siblings.",
+            "B": "They are rivals.",
+            "C": "They are business partners.",
+            "D": "They are lovers."
+        }
+    },
+    "Q0391": {
+        "Aspect": "meaning",
+        "Complexity": "sh",
+        "Question": "In the novel Orlando, explain the meaning or implication of the symbol or metaphor 'When Orlando call his husband by his second name' within one sentence.",
+        "Options": {
+            "A": "It should signify Orlando is in a solitary mood and his husband Shelmerdine is separation and isolation.",
+            "B": "It indicates their deepening romantic connection and mutual understanding.",
+            "C": "It represents a moment of joy and celebration in their relationship.",
+            "D": "It signifies a call to adventure and the beginning of a new journey together."
+        }
+    },
+    "Q0392": {
+        "Aspect": "span",
+        "Complexity": "mh",
+        "Question": "In which year does the earliest event happen, and in which year does the latest even happen?",
+        "Options": {
+            "A": "around 1600 (during the reign of James I);1930",
+            "B": "around 1586 (during the reign of Elizabeth I);1928",
+            "C": "around 1558 (during the reign of Mary I);1900",
+            "D": "around 1625 (during the reign of Charles I);1950"
+        }
+    },
+    "Q0393": {
+        "Aspect": "meaning",
+        "Complexity": "dtl",
+        "Question": "In the novel Orlando, in which chapter does there exist a sentence with the same or similar meaning as 'She speaks so charmingly, so witty, so wisely, but, unfortunately, she always speaks French, which loses its color when translated.'?",
+        "Options": {
+            "A": "chapter one",
+            "B": "chapter two",
+            "C": "chapter three",
+            "D": "chapter four"
+        }
+    },
+    "Q0394": {
+        "Aspect": "character",
+        "Complexity": "dtl",
+        "Question": "In which chapter is Carpenter mentioned?",
+        "Options": {
+            "A": "chapter three",
+            "B": "chapter five",
+            "C": "chapter eight",
+            "D": "chapter two"
+        }
+    },
+    "Q0395": {
+        "Aspect": "meaning",
+        "Complexity": "sh",
+        "Question": "Explain the meaning or implication of the symbol or metaphor 'the clouds over London in chapter four within one sentence, which appears in the novel Orlando.",
+        "Options": {
+            "A": "the clouds indicate unhappiness at the oppressive nature of Victorian rules and social conventions, especially for women like Orlando. (the sunlight can never come in through the clouds. The clouds over London which move in at the end of chapter four mark the end of the eighteenth and beginning of the nineteenth century. They symbolize the suffocation and oppressiveness Orlando feels in the Victorian age.) [OL]",
+            "B": "The clouds represent Orlando's excitement for the technological advancements of the Victorian era",
+            "C": "The clouds symbolize the clear and rational thinking that characterized the Enlightenment period just before the Victorian age",
+            "D": "The clouds are a metaphor for the literal weather changes that Orlando enjoys observing in London."
+        }
+    },
+    "Q0396": {
+        "Aspect": "meaning",
+        "Complexity": "mh",
+        "Question": "Explain the meaning or implication of the symbol or metaphor 'Orlando's manor house' within one sentence, which appears in the novel Orlando.",
+        "Options": {
+            "A": "Orlando's large home is mentioned frequently throughout the novel. It appears as a static and safe element in a chaotic and changing world. (The house symbolically has 365 bedrooms and fifty-two stairways. The number of days in a year, and the number of weeks in a year, respectively.) [OL]",
+            "B": "Orlando's manor represents the protagonist's fluctuating gender identity, with its numerous rooms symbolizing the various facets of Orlando's character.",
+            "C": "The manor house in Orlando signifies the passage of time, with each room representing a different era in Orlando's long life.",
+            "D": "The house is a metaphor for Orlando's wealth and social status, emphasizing the character's aristocratic background and the privileges that come with it."
+        }
+    },
+    "Q0397": {
+        "Aspect": "character",
+        "Complexity": "dtl",
+        "Question": "In the novel Orlando, in which chapter does there exist a sentence with the same or similar meaning as ''Because it seems that writing is not with our fingers, but with our whole body and mind, and Orlando is like this. The nerves that control the pen involve every fiber of our body, scratching the heart, scratching the liver, tearing the heart and lungs.'?",
+        "Options": {
+            "A": "chapter 3",
+            "B": "chapter 5",
+            "C": "chapter 6",
+            "D": "chapter 2"
+        }
+    },
+    "Q0398": {
+        "Aspect": "meaning",
+        "Complexity": "dtl",
+        "Question": "In the novel Orlando, in which chapter does there exist a sentence with the same or similar meaning as ''Rather than being a shooting star that burns out its brilliance but leaves no trace of ashes, it is better to live silently, leaving behind an arch, a nursery, and a wall full of fruits.'?",
+        "Options": {
+            "A": "chapter 3",
+            "B": "chapter 2",
+            "C": "chapter 5",
+            "D": "chapter 8"
+        }
+    },
+    "Q0399": {
+        "Aspect": "character",
+        "Complexity": "dtl",
+        "Question": "In which chapter is Mr. Swift mentioned?",
+        "Options": {
+            "A": "Chapter Four",
+            "B": "Chapter Eight",
+            "C": "Chapter Ten",
+            "D": "Chapter Six"
+        }
+    },
+    "Q0400": {
+        "Aspect": "character",
+        "Complexity": "dtl",
+        "Question": "In which chapter is James (not King James in the novel) mentioned?",
+        "Options": {
+            "A": "Chapter Three",
+            "B": "Chapter Eight",
+            "C": "Chapter One",
+            "D": "Chapter Six"
+        }
+    },
+    "Q0401": {
+        "Aspect": "settg",
+        "Complexity": "sh",
+        "Question": "Where does Green put her manuscript when he finishes evaluating Orlando's works for the second time?",
+        "Options": {
+            "A": "He slid it into his back pocket, careful not to crease the pages.",
+            "B": "He rolled it up and tucked it under his arm, nodding in satisfaction.",
+            "C": "He placed it inside a leather briefcase, snapping it shut with a click.",
+            "D": "He put it into a parcel and flattened it into his breast pocket."
+        }
+    },
+    "Q0402": {
+        "Aspect": "settg",
+        "Complexity": "sh",
+        "Question": "It is at what time of the day when Orlando and Shelmerdine are alone in the woods for the first time?",
+        "Options": {
+            "A": "It was morning, just after sunrise.",
+            "B": "It was afternoon, during the peak of the day.",
+            "C": "It was evening, yet not time to dress.",
+            "D": "It was midnight, under the cover of darkness."
+        }
+    },
+    "Q0403": {
+        "Aspect": "character",
+        "Complexity": "sh",
+        "Question": "Where is the Marshall and Snelgrove store in London that Orlando, who was proposed by the Archduke in Chapter 4, went to in Chapter 6?",
+        "Options": {
+            "A": "In Regent Street",
+            "B": "On Bond Street",
+            "C": "In Oxford Street",
+            "D": "At Piccadilly Circus"
+        }
+    },
+    "Q0404": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "Did Orlando finish buying the items on the shopping list after seeing the illusion about Sasha?",
+        "Options": {
+            "A": "Yes, she did, but she forgot to buy something else not on the list.",
+            "B": "No, but she decided the items were no longer necessary and didn't buy anything.",
+            "C": "No, she didn't.",
+            "D": "Yes, she bought everything but got the wrong brand of bath salts."
+        }
+    },
+    "Q0405": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "What do Orlando often chat with friends in the court before the change of Orlando's sex?",
+        "Options": {
+            "A": "politics, a battle, a feast",
+            "B": "gardening, a play, a painting, a ship",
+            "C": "some topics about a dog, a horse, a woman, a game of cards...",
+            "D": "music, a dance, a festival, a book"
+        }
+    }
+}

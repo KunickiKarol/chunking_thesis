@@ -1,0 +1,233 @@
+{
+    "Q0885": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "Has Clive ever changed his sexuality? If so, how many times has this plot happened?",
+        "Options": {
+            "A": "No, never",
+            "B": "Yes, 2",
+            "C": "Yes, 3",
+            "D": "Yes, 1"
+        }
+    },
+    "Q0886": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "How many times has Maurice kissed or been kissed by Clive?",
+        "Options": {
+            "A": "5",
+            "B": "3",
+            "C": "7",
+            "D": "2"
+        }
+    },
+    "Q0887": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "How many times have Maurice and Mr. Lasker Jones treated Maurice's 'illness'?",
+        "Options": {
+            "A": "3",
+            "B": "2",
+            "C": "4",
+            "D": "5"
+        }
+    },
+    "Q0888": {
+        "Aspect": "relat",
+        "Complexity": "mh",
+        "Question": "Who are in the Maurice's family?",
+        "Options": {
+            "A": "Maurice, Mrs Hall, Ada, George",
+            "B": "Maurice, Mrs Hall, Ada, Kitty",
+            "C": "Maurice, Mrs Hall, Ada, Miss Durham",
+            "D": "Maurice, Mrs Hall, Kitty, Mr. Hall"
+        }
+    },
+    "Q0889": {
+        "Aspect": "relat",
+        "Complexity": "mh",
+        "Question": "What is the relationship between Maurice and Archibald?",
+        "Options": {
+            "A": "Archibald is the husband of Maurice's ex-boyfriend Clive's sister",
+            "B": "Archibald is Maurice's cousin who disapproves of his lifestyle",
+            "C": "Archibald is the tutor of Maurice at the university they both attend",
+            "D": "Archibald is the local vicar who often debates with Maurice on philosophical matters"
+        }
+    },
+    "Q0890": {
+        "Aspect": "meaning",
+        "Complexity": "sh",
+        "Question": "In the novel Maurice, explain the meaning or implication of the symbol or metaphor 'one road' in 'I can only get to him down one road' said by Clive within one sentence.",
+        "Options": {
+            "A": "'one road' symbolizes Clive's limited understanding of art from an intellectual perspective only",
+            "B": "'one road' is a metaphor for Clive's appreciation and desire for the same sex. And he probably hates pictures with families and kids.",
+            "C": "'one road' represents Clive's singular focus on his career, excluding all other aspects of life",
+            "D": "'one road' is a metaphor for Clive's journey through life, suggesting he has only one path to follow without any deviations"
+        }
+    },
+    "Q0891": {
+        "Aspect": "span",
+        "Complexity": "mh",
+        "Question": "In which year does the earliest event happen, and in which year does the latest even happen?",
+        "Options": {
+            "A": "From when Maurice is sixteen until he is around thirty",
+            "B": "From when Maurice is twelve until he is around twenty-two",
+            "C": "From when Maurice is fourteen until he is around twenty-four or twenty-five",
+            "D": "From when Maurice is eighteen until he is around twenty-eight"
+        }
+    },
+    "Q0892": {
+        "Aspect": "character",
+        "Complexity": "mh",
+        "Question": "Clive is used to be positive  and finally becomes a negative one. Tell in one sentence that which episode marks this character's change.",
+        "Options": {
+            "A": "Clive decides to leave Maurice for a life of solitude and self-reflection in the countryside, abandoning his social status.",
+            "B": "Clive's transformation is marked by his decision to pursue a political career, aligning himself with progressive movements of the time.",
+            "C": "Clive changes his sexuality and his dissipating queer consciousness when he tries to embrace the 'mainstream' of the upper class under patriarchy.",
+            "D": "Clive's character shifts when he chooses to focus on his academic pursuits, leaving behind his personal relationships and societal expectations."
+        }
+    },
+    "Q0893": {
+        "Aspect": "meaning",
+        "Complexity": "dtl",
+        "Question": "In the novel Maurice, in which chapter does there exist a sentence with the same or similar meaning as 'It seemed he had not been Maurice since he had come to Penge, but had become a mass of voices which he could almost hear now squabbling within him. Not a single voice, however, was Clive's: Maurice had come to this point.'?",
+        "Options": {
+            "A": "chapter 28",
+            "B": "chapter 42",
+            "C": "chapter 33",
+            "D": "chapter 35"
+        }
+    },
+    "Q0894": {
+        "Aspect": "plot",
+        "Complexity": "dtl",
+        "Question": "In which chapter does Mr Ducie appear?",
+        "Options": {
+            "A": "chapter 2",
+            "B": "chapter 1 and chapter 43",
+            "C": "chapter 15",
+            "D": "chapter 30"
+        }
+    },
+    "Q0895": {
+        "Aspect": "meaning",
+        "Complexity": "sh",
+        "Question": "In the novel Maurice, explain the meaning or implication of the symbol or metaphor 'Maurice's hand is like a corpse's' within one sentence.",
+        "Options": {
+            "A": "Maurice's touch is cold and lifeless, indicating his lack of genuine romantic interest in women due to his subconscious homosexual orientation.",
+            "B": "Maurice's hand symbolizes his fear of death and the existential dread that permeates his interactions with others.",
+            "C": "The metaphor suggests that Maurice is emotionally detached and unable to form meaningful connections with the people around him, especially women.",
+            "D": "Maurice pretends to have a kind of affection for women, which seems the proper thing to do as heterosexual men before his queer conciousness awakes."
+        }
+    },
+    "Q0896": {
+        "Aspect": "meaning",
+        "Complexity": "mh",
+        "Question": "In the novel Maurice, explain the meaning or implication of the symbol or metaphor Dickie's body within one sentence.",
+        "Options": {
+            "A": "Dickie's body represents Maurice's aspirations for a conventional life and his struggle to fit into societal norms.",
+            "B": "Dickie's body is the target of Maurice's carnal desire, which witnesses Maurice's Struggle with the body and spirit.",
+            "C": "Dickie's body symbolizes the innocence and purity that Maurice longs to protect and preserve in a harsh world.",
+            "D": "Dickie's body is a metaphor for the intellectual enlightenment that Maurice seeks through his relationships with others."
+        }
+    },
+    "Q0897": {
+        "Aspect": "character",
+        "Complexity": "dtl",
+        "Question": "In the novel Maurice, in which chapter does there exist a sentence with the same or similar meaning as 'I swear with all my heart that I hope to regain my health. I wish I could become like other men, not be such a rascal who is despised by everyone.'?",
+        "Options": {
+            "A": "chapter 10",
+            "B": "chapter 41",
+            "C": "chapter 23",
+            "D": "chapter 35"
+        }
+    },
+    "Q0898": {
+        "Aspect": "meaning",
+        "Complexity": "dtl",
+        "Question": "In the novel Maurice, in which chapter does there exist a sentence with the same or similar meaning as 'But he saw only the fading light and the dead earth. He has never confessed, and has no belief in any gods. He knows that the past is as meaningless as the present, and offers refuge for cowards.'?",
+        "Options": {
+            "A": "chapter 35",
+            "B": "chapter 28",
+            "C": "chapter 42",
+            "D": "chapter 50"
+        }
+    },
+    "Q0899": {
+        "Aspect": "plot",
+        "Complexity": "dtl",
+        "Question": "In which chapter does Miss Olcott appear?",
+        "Options": {
+            "A": "chapter 5",
+            "B": "chapter 12",
+            "C": "chapter 15",
+            "D": "chapter 8"
+        }
+    },
+    "Q0900": {
+        "Aspect": "plot",
+        "Complexity": "dtl",
+        "Question": "In which chapter does Lasker Jones appear?",
+        "Options": {
+            "A": "chapter 36; chapter 41",
+            "B": "chapter 30",
+            "C": "chapter 33",
+            "D": "chapter 45"
+        }
+    },
+    "Q0901": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "Which of Maurice' family members did Clive first desire after changing his sexual orientation?",
+        "Options": {
+            "A": "Kitty",
+            "B": "Mrs. Durham",
+            "C": "Anne",
+            "D": "Ada"
+        }
+    },
+    "Q0902": {
+        "Aspect": "character",
+        "Complexity": "sh",
+        "Question": "Whose letter did Maurice show Mr. Lasker during his second visit to Lasker?",
+        "Options": {
+            "A": "Clive's",
+            "B": "Durham's",
+            "C": "Risley's",
+            "D": "Alec's"
+        }
+    },
+    "Q0903": {
+        "Aspect": "character",
+        "Complexity": "sh",
+        "Question": "Who was the first person Maurice and Clive met after their second kiss?",
+        "Options": {
+            "A": "a gardener",
+            "B": "a tutor",
+            "C": "a visitor",
+            "D": "a housemaid"
+        }
+    },
+    "Q0904": {
+        "Aspect": "meaning",
+        "Complexity": "sh",
+        "Question": "Why did Mr. Ducie talk to Maurice in the British Museum?",
+        "Options": {
+            "A": "He wanted to discuss a piece of art with Maurice because he mistook him for a curator.",
+            "B": "He recognized Maurice as a former colleague from the museum where they both worked.",
+            "C": "He was conducting a survey on visitors' experiences at the British Museum and thought Maurice could provide insights.",
+            "D": "He thought Maurice was once a student in his school."
+        }
+    },
+    "Q0905": {
+        "Aspect": "meaning",
+        "Complexity": "sh",
+        "Question": "After starting the job career, why did Maurice hate being interrupted by intervention on Wednesday?",
+        "Options": {
+            "A": "Because he would sleep at Clive's little flat in town",
+            "B": "Because he had a standing appointment with his therapist in the city",
+            "C": "Because he attended a weekly book club meeting that he cherished",
+            "D": "Because he took piano lessons at a music school downtown"
+        }
+    }
+}

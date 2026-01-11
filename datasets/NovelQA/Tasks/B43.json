@@ -1,0 +1,706 @@
+{
+    "Q1319": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel Wuthering Heights, has the word or phrase 'reckon on' appeared? If so, how many times does it appear in the text?",
+        "Options": {
+            "A": "Yes, 1",
+            "B": "Yes, 5",
+            "C": "No, never",
+            "D": "Yes, 3"
+        }
+    },
+    "Q1320": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel Wuthering Heights, has the word or phrase 'have a ramble' appeared? If so, how many times does it appear in the text?",
+        "Options": {
+            "A": "Yes, 1",
+            "B": "No, never",
+            "C": "Yes, 2",
+            "D": "Yes, 3"
+        }
+    },
+    "Q1321": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel Wuthering Heights, has the word or phrase 'growing indignation' appeared? If so, how many times does it appear in the text?",
+        "Options": {
+            "A": "No, never",
+            "B": "Yes, 1",
+            "C": "Yes, 2",
+            "D": "Yes, 3"
+        }
+    },
+    "Q1322": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel Wuthering Heights, has the word or phrase 'after a pause' appeared? If so, how many times does it appear in the text?",
+        "Options": {
+            "A": "No, never",
+            "B": "Yes, 2",
+            "C": "Yes, 1",
+            "D": "Yes, 3"
+        }
+    },
+    "Q1323": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel Wuthering Heights, has the word or phrase 'find an opportunity' appeared? If so, how many times does it appear in the text?",
+        "Options": {
+            "A": "No, never",
+            "B": "Yes, 1",
+            "C": "Yes, 3",
+            "D": "Yes, 2"
+        }
+    },
+    "Q1324": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel Wuthering Heights, has the object tin cullenders appeared? If so, how many times does it appear in the text?",
+        "Options": {
+            "A": "No, never",
+            "B": "Yes, 2",
+            "C": "Yes, 1",
+            "D": "Yes, 3"
+        }
+    },
+    "Q1325": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "Has the object Bible appeared? If so, how many times does it appear in the text?",
+        "Options": {
+            "A": "Yes, 9",
+            "B": "Yes, 5",
+            "C": "Yes, 12",
+            "D": "Yes, 7"
+        }
+    },
+    "Q1326": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel Wuthering Heights, has the object canisters appeared? If so, how many times does it appear in the text?",
+        "Options": {
+            "A": "Yes, 1",
+            "B": "Yes, 5",
+            "C": "No, never",
+            "D": "Yes, 3"
+        }
+    },
+    "Q1327": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel Wuthering Heights, has the object cuckoo appeared? If so, how many times does it appear in the text?",
+        "Options": {
+            "A": "No, never",
+            "B": "Yes, 1",
+            "C": "Yes, 3",
+            "D": "Yes, 2"
+        }
+    },
+    "Q1328": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel Wuthering Heights, has the object thunder appeared? If so, how many times does it appear in the text?",
+        "Options": {
+            "A": "Yes, 3",
+            "B": "Yes, 7",
+            "C": "Yes, 2",
+            "D": "Yes, 5"
+        }
+    },
+    "Q1329": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "Has the place Liverpool appeared? If so, how many times does it appear in the text?",
+        "Options": {
+            "A": "Yes, 1",
+            "B": "Yes, 2",
+            "C": "Yes, 4",
+            "D": "Yes, 3"
+        }
+    },
+    "Q1330": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel Wuthering Heights, has the place wash-house appeared? If so, how many times does it appear in the text?",
+        "Options": {
+            "A": "Yes, 1",
+            "B": "Yes, 3",
+            "C": "Yes, 4",
+            "D": "Yes, 2"
+        }
+    },
+    "Q1331": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "Has the place Penistone Crags appeared? If so, how many times does it appear in the text?",
+        "Options": {
+            "A": "Yes, 8",
+            "B": "Yes, 5",
+            "C": "Yes, 12",
+            "D": "Yes, 3"
+        }
+    },
+    "Q1332": {
+        "Aspect": "span",
+        "Complexity": "mh",
+        "Question": "In the novel Wuthering Heights, in which countries does this story take place?",
+        "Options": {
+            "A": "Scotland",
+            "B": "Ireland",
+            "C": "France",
+            "D": "England."
+        }
+    },
+    "Q1333": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel Wuthering Heights, has the sentence ' Go- ' appeared? If so, how many times does this sentence appear in the text?",
+        "Options": {
+            "A": "No, never",
+            "B": "Yes, 2",
+            "C": "Yes, 1",
+            "D": "Yes, 3"
+        }
+    },
+    "Q1334": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "Has the character older Mrs. Earnshaw appeared in the text of the novelWuthering Heights? If so, how many times does he/she/they appear in the text?",
+        "Options": {
+            "A": "Yes, 1",
+            "B": "Yes, 5",
+            "C": "Yes, 3",
+            "D": "No, never"
+        }
+    },
+    "Q1335": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "Has the character Mrs. Earnshaw appeared in the text of the novel Wuthering Heights? If so, how many times does he/she/they appear in the text?",
+        "Options": {
+            "A": "Yes, 3 times",
+            "B": "Yes, 6 times",
+            "C": "Yes, 10 times",
+            "D": "No. Never"
+        }
+    },
+    "Q1336": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "How many times has Mr. Linton given Mrs. Linton crocuses?",
+        "Options": {
+            "A": "Twice",
+            "B": "Once",
+            "C": "3 times",
+            "D": "Never"
+        }
+    },
+    "Q1337": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "How many times has Joseph stepped forward?",
+        "Options": {
+            "A": "0",
+            "B": "2",
+            "C": "1",
+            "D": "3"
+        }
+    },
+    "Q1338": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "How many times has the Mrs. Dean felt convinced?",
+        "Options": {
+            "A": "3",
+            "B": "2",
+            "C": "4",
+            "D": "5"
+        }
+    },
+    "Q1339": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "How many times has the Mr. Heathcliff wiped his forehead?",
+        "Options": {
+            "A": "0",
+            "B": "1",
+            "C": "2",
+            "D": "3"
+        }
+    },
+    "Q1340": {
+        "Aspect": "relat",
+        "Complexity": "mh",
+        "Question": "What is the relationship between the ruffianly bitch and the four-footed fiends?",
+        "Options": {
+            "A": "The ruffianly bitch is the mother of four-footed fiends.",
+            "B": "The ruffianly bitch is the enemy of four-footed fiends.",
+            "C": "The ruffianly bitch is the offspring of four-footed fiends.",
+            "D": "The ruffianly bitch is the sister of four-footed fiends."
+        }
+    },
+    "Q1341": {
+        "Aspect": "relat",
+        "Complexity": "mh",
+        "Question": "What is the relationship between Mrs. Dean and Mrs. Heathcliff?",
+        "Options": {
+            "A": "Mrs. Heathcliff is Mrs. Dean's sister",
+            "B": "Mrs. Heathcliff is Mrs. Dean's niece",
+            "C": "Mrs. Heathcliff is Mrs. Dean's former neighbor",
+            "D": "Mrs. Heathcliff is Mrs. Dean's late master's daughter"
+        }
+    },
+    "Q1342": {
+        "Aspect": "relat",
+        "Complexity": "mh",
+        "Question": "What is the relationship between Mrs. Heathcliff and Heathcliff?",
+        "Options": {
+            "A": "Mrs. Heathcliff is Heathcliff's daughter-in-law.",
+            "B": "Mrs. Heathcliff is Heathcliff's sister.",
+            "C": "Mrs. Heathcliff is Heathcliff's niece.",
+            "D": "Mrs. Heathcliff is Heathcliff's cousin."
+        }
+    },
+    "Q1343": {
+        "Aspect": "relat",
+        "Complexity": "dtl",
+        "Question": "Please list 3 aliases or designations of Catherine.",
+        "Options": {
+            "A": "Fragile beauty, Catherine Grange, Catherine Joseph",
+            "B": "Catherine Earnshaw, Catherine Heathcliff, Catherine Linton",
+            "C": "Kind-hearted survant, Catherine Dean, Catherine Lockwood",
+            "D": "Enigmatic loner, Catherine Hareton, Vengeful lover"
+        }
+    },
+    "Q1344": {
+        "Aspect": "relat",
+        "Complexity": "mh",
+        "Question": "Please list 3 aliases or designations of Mrs. Heathcliff.",
+        "Options": {
+            "A": "The haunted soul, the gentle nymph, the fragile beauty",
+            "B": "The lost soul, the sorceress, the angelic daughter",
+            "C": "The tormented lover, the merry widow, the cruel sister",
+            "D": "The beneficent fairy, the little witch, the widow"
+        }
+    },
+    "Q1345": {
+        "Aspect": "relat",
+        "Complexity": "mh",
+        "Question": "How many people are there in Earnshaw's family? Who are they?",
+        "Options": {
+            "A": "5, Mr. Earnshaw, Hindley, Cathy, Heathcliff, and Mrs. Earnshaw.",
+            "B": "6, Mr. Earnshaw, Hindley, Cathy, I (the narrator), Heathcliff, Mr. Earnshaw's sister-in-law.",
+            "C": "4, Mr. Earnshaw, Hindley, Cathy, and Heathcliff.",
+            "D": "7, Mr. Earnshaw, Hindley, Cathy, I (the narrator), Heathcliff, Mrs. Earnshaw, and Joseph."
+        }
+    },
+    "Q1346": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "How many times have Mrs. Earnshaw and Heathcliff met each other (or appear together)?",
+        "Options": {
+            "A": "1",
+            "B": "0",
+            "C": "2",
+            "D": "3"
+        }
+    },
+    "Q1347": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "How many times have old Mr. Earnshaw and Catherine communicated with each other?",
+        "Options": {
+            "A": "1",
+            "B": "0",
+            "C": "2",
+            "D": "3"
+        }
+    },
+    "Q1348": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "How many times have Mrs. Earnshaw and Catherine communicated with each other?",
+        "Options": {
+            "A": "0",
+            "B": "1",
+            "C": "2",
+            "D": "3"
+        }
+    },
+    "Q1349": {
+        "Aspect": "meaning",
+        "Complexity": "dtl",
+        "Question": "Explain the meaning or implication of the symbol or metaphor 'cloud' within one sentence, which appears in Chapter II of the novel Wuthering Heights.",
+        "Options": {
+            "A": "It signifies the arrival of unexpected guests at the Heights.",
+            "B": "It represents the inner turmoil of the character speaking.",
+            "C": "It means that everyone sit so grim and taciturn.",
+            "D": "It symbolizes the joy and happiness that permeates the atmosphere at Wuthering Heights."
+        }
+    },
+    "Q1350": {
+        "Aspect": "meaning",
+        "Complexity": "sh",
+        "Question": "Explain the meaning or implication of the symbol or metaphor 'window' within one sentence, which appears in Chapter II of the novel Wuthering Heights.",
+        "Options": {
+            "A": "The window symbolizes the transparent barrier that Heathcliff cannot cross, reflecting his internal struggle and unattainable desires.",
+            "B": "Its meaning is to convey the opposites and obstacles of two very different worlds: the two worlds outside and inside the window, which in the early stage of the novel represent freedom and confinement, eventually evolve into the double world of life and death of Catherine and Heathcliff.",
+            "C": "The window represents the clear vision and understanding that characters in the novel have about their fates and the consequences of their actions.",
+            "D": "The window is a metaphor for the open communication and strong connections between the characters at Wuthering Heights, especially between Catherine and Heathcliff."
+        }
+    },
+    "Q1351": {
+        "Aspect": "span",
+        "Complexity": "mh",
+        "Question": "In which year does the earliest event happen, and in which year does the latest event happen?",
+        "Options": {
+            "A": "1757-1803",
+            "B": "1760-1801",
+            "C": "1749-1802",
+            "D": "1770-1810"
+        }
+    },
+    "Q1352": {
+        "Aspect": "character",
+        "Complexity": "sh",
+        "Question": "Hindley is used to be positive and finally becomes a negative one. Tell in one sentence that which episode marks this character's change.",
+        "Options": {
+            "A": "After his wife Frances died giving birth to Hareton.",
+            "B": "When he lost the ownership of Wuthering Heights to Heathcliff.",
+            "C": "After his father brought Heathcliff home.",
+            "D": "Upon the death of his sister Catherine."
+        }
+    },
+    "Q1353": {
+        "Aspect": "meaning",
+        "Complexity": "dtl",
+        "Question": "In the novel Wuthering Heights, in which chapter does there exist a sentence with the same or similar meaning as 'His treatment of the latter was sufficient to turn a saint into a devil. '?",
+        "Options": {
+            "A": "Chapter V",
+            "B": "Chapter VIII.",
+            "C": "Chapter XII",
+            "D": "Chapter XV"
+        }
+    },
+    "Q1354": {
+        "Aspect": "meaning",
+        "Complexity": "dtl",
+        "Question": "In the novel Wuthering Heights, in which chapter does there exist a sentence with the same or similar meaning as 'He responded with a nod. '?",
+        "Options": {
+            "A": "Chapter I.",
+            "B": "Chapter III.",
+            "C": "Chapter X.",
+            "D": "Chapter XVII."
+        }
+    },
+    "Q1355": {
+        "Aspect": "meaning",
+        "Complexity": "dtl",
+        "Question": "In the novel Wuthering Heights, in which chapter does there exist a sentence with the same or similar meaning as 'There never was such a gloomy, depressing scene as the once cheery house presented. '?",
+        "Options": {
+            "A": "Chapter IX.",
+            "B": "Chapter XIV.",
+            "C": "Chapter XVII.",
+            "D": "Chapter XXI."
+        }
+    },
+    "Q1356": {
+        "Aspect": "meaning",
+        "Complexity": "dtl",
+        "Question": "In the novel Wuthering Heights, in which chapter does there exist a sentence with the same or similar meaning as 'I turned and unlocked the panels in order to achieve this. '?",
+        "Options": {
+            "A": "Chapter V.",
+            "B": "Chapter IX.",
+            "C": "Chapter XII.",
+            "D": "Chapter III."
+        }
+    },
+    "Q1357": {
+        "Aspect": "meaning",
+        "Complexity": "dtl",
+        "Question": "In the novel Wuthering Heights, in which chapter does there exist a sentence with the same or similar meaning as 'She quickly stood up and balanced herself on the chair's arm. '?",
+        "Options": {
+            "A": "Chapter IX.",
+            "B": "Chapter XV.",
+            "C": "Chapter XX.",
+            "D": "Chapter XIII."
+        }
+    },
+    "Q1358": {
+        "Aspect": "character",
+        "Complexity": "mh",
+        "Question": "Who is Jabez Branderham?",
+        "Options": {
+            "A": "He is a reverend.",
+            "B": "He is a farmer.",
+            "C": "He is a schoolmaster.",
+            "D": "He is a lawyer."
+        }
+    },
+    "Q1359": {
+        "Aspect": "character",
+        "Complexity": "mh",
+        "Question": "In the novel Wuthering Heights, who is the curate?",
+        "Options": {
+            "A": "The curate was the master of Wuthering Heights and looked after the property's finances",
+            "B": "The curateserved as the local physician, tending to the health of the villagers",
+            "C": "The curate was the person who teaches the little Lintons and Earnshaws, and farms his bit of land himself.",
+            "D": "The curate managed the village inn and provided lodging for travelers passing through the area"
+        }
+    },
+    "Q1360": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel Wuthering Heights, has someone ever been mentioned to scream in the novel? If so, how many times have they been mentioned to scream?",
+        "Options": {
+            "A": "Yes, 1",
+            "B": "Yes, 2",
+            "C": "Yes, 3",
+            "D": "Yes, 4"
+        }
+    },
+    "Q1361": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "How many times has the author mentioned Catherine crying in the novel?",
+        "Options": {
+            "A": "8 times",
+            "B": "12 times",
+            "C": "10 times",
+            "D": "15 times"
+        }
+    },
+    "Q1362": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "How many times have Hindley and Mr. Earnshaw played and drunk together?",
+        "Options": {
+            "A": "2",
+            "B": "3",
+            "C": "1",
+            "D": "4"
+        }
+    },
+    "Q1363": {
+        "Aspect": "relat",
+        "Complexity": "mh",
+        "Question": "Who are in the The Earnshaw family?",
+        "Options": {
+            "A": "Hareton Earnshaw, Hindley Earnshaw, Mr. Earnshaw, Mrs. Earnshaw",
+            "B": "Edgar Linton, Heathcliff Earnshaw, Nelly Earnshaw",
+            "C": "Edgar Linton, Isabella Linton",
+            "D": "Lockwood Earnshaw, Catherine Earnshaw"
+        }
+    },
+    "Q1364": {
+        "Aspect": "relat",
+        "Complexity": "dtl",
+        "Question": "What is the relationship between Catherine Linton and Catherine Earnshaw Linton?",
+        "Options": {
+            "A": "Catherine Linton is Catherine Earnshaw Linton's daughter",
+            "B": "Catherine Linton is married to Catherine Earnshaw Linton",
+            "C": "Catherine Linton is Catherine Earnshaw Linton's sister",
+            "D": "Catherine Linton, and Catherine Earnshaw Linton are same person"
+        }
+    },
+    "Q1365": {
+        "Aspect": "meaning",
+        "Complexity": "dtl",
+        "Question": "In the novel Wuthering Heights, in which chapter does there exist a sentence with the same or similar meaning as 'He had previously been lively and in good health, but his strength departed abruptly. As he became restricted to the corner by the chimney, his irritability worsened considerably.?",
+        "Options": {
+            "A": "Chapter 5",
+            "B": "Chapter 8",
+            "C": "Chapter 12",
+            "D": "Chapter 15"
+        }
+    },
+    "Q1366": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel Wuthering Heights, has the author described someone praying? If so, how many times has the author mentioned about this?",
+        "Options": {
+            "A": "Yes, 1",
+            "B": "Yes, 5",
+            "C": "Yes, 2",
+            "D": "Yes, 3"
+        }
+    },
+    "Q1367": {
+        "Aspect": "meaning",
+        "Complexity": "dtl",
+        "Question": "In the novel Wuthering Heights, in which chapter does there exist a sentence with the same or similar meaning as ' Upon crossing the threshold, each object she laid her eyes upon seemed to bring her joy, as did every unfolding event around her-except for the preparations for the burial and the presence of the mourners.?",
+        "Options": {
+            "A": "Chapter 4",
+            "B": "Chapter 9",
+            "C": "Chapter 12",
+            "D": "Chapter 6"
+        }
+    },
+    "Q1368": {
+        "Aspect": "character",
+        "Complexity": "mh",
+        "Question": "Who is Frances Earnshaw?",
+        "Options": {
+            "A": "Frances Earnshaw is a minor character in Emily Bront's Wuthering Heights. She is the wife of Hindley Earnshaw and the mother of Hareton Earnshaw. A mysterious woman who Hindley fell in love with and married, Frances arrives at Wuthering Heights as a simpering woman but later dies after the birth of her only child.",
+            "B": "Frances Earnshaw is the sister of Catherine Earnshaw and a love interest of Heathcliff.",
+            "C": "Frances Earnshaw is the governess at Thrushcross Grange who becomes romantically involved with Edgar Linton.",
+            "D": "Frances Earnshaw is the eldest daughter of Mr. Earnshaw and the original owner of Wuthering Heights before Heathcliff's acquisition."
+        }
+    },
+    "Q1369": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel Wuthering Heights, has someone ever been mentioned to make the subtle action 'to lift ones eyes / eyebrows'? If so, how many times has this subtle action been mentioned by the author?",
+        "Options": {
+            "A": "Yes, 1",
+            "B": "Yes, 5",
+            "C": "Yes, 2",
+            "D": "Yes, 6"
+        }
+    },
+    "Q1370": {
+        "Aspect": "meaning",
+        "Complexity": "dtl",
+        "Question": "In the novel Wuthering Heights, in which chapter does there exist a sentence with the same or similar meaning as 'I discarded the habit, revealing a magnificent plaid silk dress, accompanied by white trousers and polished shoes. As her eyes gleamed with joy upon the exuberant approach of the bounding dogs, she hesitated to caress them, fearing their exuberance might soil her splendid attire.'?",
+        "Options": {
+            "A": "Chapter 5",
+            "B": "Chapter 12",
+            "C": "Chapter 7",
+            "D": "Chapter 15"
+        }
+    },
+    "Q1371": {
+        "Aspect": "meaning",
+        "Complexity": "mh",
+        "Question": "In the novel Wuthering Heights, explain the meaning or implication of the symbol or metaphor 'the weather' within one sentence.",
+        "Options": {
+            "A": "The weather in Wuthering Heights is merely a backdrop for the story and does not have any deeper significance.",
+            "B": "Analyze the use of metaphor in Emily Bronte's Wuthering Heights:-One of the most prominent metaphors in the novel is the weather. The weather is used to reflect the moods and emotions of the characters. For example, when Heathcliff is in a good mood, the weather is described as bright and sunny.",
+            "C": "The weather in the novel is a constant element that remains unchanged, symbolizing the unchanging nature of the characters.",
+            "D": "In Wuthering Heights, the weather is used to predict future events in the plot, acting as a form of foreshadowing."
+        }
+    },
+    "Q1372": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel Wuthering Heights, has someone ever been mentioned 'to shout'? If so, how many times has this plot been mentioned?",
+        "Options": {
+            "A": "Yes, 9",
+            "B": "Yes, 7",
+            "C": "Yes, 11",
+            "D": "Yes, 5"
+        }
+    },
+    "Q1373": {
+        "Aspect": "meaning",
+        "Complexity": "dtl",
+        "Question": "In the novel Wuthering Heights, in which chapter does there exist a sentence with the same or similar meaning as ' One beautiful June morning, my initial adorable little charge, and the final descendant of the long-standing Earnshaw lineage, came into the world.'?",
+        "Options": {
+            "A": "Chapter 5",
+            "B": "Chapter 8",
+            "C": "Chapter 12",
+            "D": "Chapter 16"
+        }
+    },
+    "Q1374": {
+        "Aspect": "relat",
+        "Complexity": "mh",
+        "Question": "What is the relationship between Mr. Hindley Earnshaw and Hareton Earnshaw?",
+        "Options": {
+            "A": "Mr. Hindley Earnshaw was the uncle of Hareton Earnshaw",
+            "B": "Mr. Hindley Earnshaw was the brother of Hareton Earnshaw",
+            "C": "Mr. Hindley Earnshaw was the cousin of Hareton Earnshaw",
+            "D": "Mr. Hindley Earnshaw was the father of Hareton Earnshaw"
+        }
+    },
+    "Q1375": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel Wuthering Heights, has the author mentioned someone being slapped? If so, how many times has the author mentioned this action?",
+        "Options": {
+            "A": "Yes, 1",
+            "B": "Yes, 3",
+            "C": "Yes, 2",
+            "D": "Yes, 4"
+        }
+    },
+    "Q1376": {
+        "Aspect": "meaning",
+        "Complexity": "dtl",
+        "Question": "In the novel Wuthering Heights, in which chapter does there exist a sentence with the same or similar meaning as 'Hareton, in his father's embrace, was crying and thrashing vigorously, his screams growing even louder as he was carried upstairs and raised over the banister.'?",
+        "Options": {
+            "A": "Chapter 7",
+            "B": "Chapter 9",
+            "C": "Chapter 12",
+            "D": "Chapter 15"
+        }
+    },
+    "Q1377": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel Wuthering Heights, has someone ever been mentioned to 'get punishment'? If so, how many times has this plot been mentioned?",
+        "Options": {
+            "A": "5",
+            "B": "3",
+            "C": "6",
+            "D": "4"
+        }
+    },
+    "Q1378": {
+        "Aspect": "meaning",
+        "Complexity": "dtl",
+        "Question": "In the novel Wuthering Heights, in which chapter does there exist a sentence with the same or similar meaning as 'I accompanied Miss Catherine and myself to Thrushcross Grange. Much to my pleasant surprise, her behavior far exceeded my cautious expectations.'",
+        "Options": {
+            "A": "Chapter 10",
+            "B": "Chapter 7",
+            "C": "Chapter 12",
+            "D": "Chapter 15"
+        }
+    },
+    "Q1379": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel Wuthering Heights, has someone felt excited? If so, how many times has this plot happened?",
+        "Options": {
+            "A": "Yes, 5",
+            "B": "Yes, 9",
+            "C": "Yes, 3",
+            "D": "Yes, 7"
+        }
+    },
+    "Q1380": {
+        "Aspect": "meaning",
+        "Complexity": "dtl",
+        "Question": "In the novel Wuthering Heights, in which chapter does there exist a sentence with the same or similar meaning as 'It was around the time that my story had progressed to: a brilliant, chilly afternoon; the earth exposed, and the path firm and parched.'?",
+        "Options": {
+            "A": "Chapter 11",
+            "B": "Chapter 9",
+            "C": "Chapter 15",
+            "D": "Chapter 18"
+        }
+    },
+    "Q1381": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel Wuthering Heights, has someone ever been mentioned to 'get injured'? If so, how many times has this plot been mentioned?",
+        "Options": {
+            "A": "Yes, 2",
+            "B": "Yes, 4",
+            "C": "Yes, 5",
+            "D": "Yes, 3"
+        }
+    },
+    "Q1382": {
+        "Aspect": "meaning",
+        "Complexity": "dtl",
+        "Question": "In the novel Wuthering Heights, in which chapter does there exist a sentence with the same or similar meaning as 'Thrashing around, she escalated her feverish state to madness, ripping at the pillow with her teeth. Then, in her fiery anguish, she implored me to open the window as she raised herself up.'?",
+        "Options": {
+            "A": "Chapter 9",
+            "B": "Chapter 12",
+            "C": "Chapter 15",
+            "D": "Chapter 18"
+        }
+    }
+}

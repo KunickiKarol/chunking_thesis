@@ -1,0 +1,321 @@
+{
+    "Q1528": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel Emma, has any quarrel happened in the novel? If so, how many times has it happened?",
+        "Options": {
+            "A": "Yes, 2",
+            "B": "Yes, 3",
+            "C": "Yes, 4",
+            "D": "Yes, 5"
+        }
+    },
+    "Q1529": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "Has the author mentioned Miss Bates crying in the novel Emma? If so, how many times?",
+        "Options": {
+            "A": "Yes, 3",
+            "B": "Yes, twice",
+            "C": "Yes, 5",
+            "D": "Yes, once"
+        }
+    },
+    "Q1530": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "How many times have Emma and Harriet walked together?",
+        "Options": {
+            "A": "2",
+            "B": "3",
+            "C": "1",
+            "D": "4"
+        }
+    },
+    "Q1531": {
+        "Aspect": "relat",
+        "Complexity": "mh",
+        "Question": "Who are in the The Elton family?",
+        "Options": {
+            "A": "Mrs. Elton, Mr. Elton, Miss Elton",
+            "B": "Mrs. Elton, Mr. Elton, Mr. John Elton",
+            "C": "Mrs. Elton, Mr. Elton, Miss Augusta Elton",
+            "D": "Mrs. Elton, Mr. Elton"
+        }
+    },
+    "Q1532": {
+        "Aspect": "meaning",
+        "Complexity": "dtl",
+        "Question": "In the novel Emma, in which chapter does there exist a sentence with the same or similar meaning as 'Mr. Woodhouse was entirely unaware of the schemes taking shape against him within the heart of the man he was warmly receiving. He held genuine hopes that the man hadn't caught a cold from his journey.?",
+        "Options": {
+            "A": "Chapter 8",
+            "B": "Chapter 21",
+            "C": "Chapter 32",
+            "D": "Chapter 14"
+        }
+    },
+    "Q1533": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel Emma, has the author descirbed someone dancing? If so, how many times has the author described this action?",
+        "Options": {
+            "A": "Yes, 7",
+            "B": "Yes, 5",
+            "C": "Yes, 8",
+            "D": "Yes, 10"
+        }
+    },
+    "Q1534": {
+        "Aspect": "meaning",
+        "Complexity": "dtl",
+        "Question": "In the novel Emma, in which chapter does there exist a sentence with the same or similar meaning as 'Yet, everything was perused-yet, with constancy, mindfulness, and without the slightest commentary; and barring one fleeting gaze directed at her, swiftly averted, due to the apprehension of causing distress-no recollection of Box Hill appeared to endure.'?",
+        "Options": {
+            "A": "Chapter 12",
+            "B": "Chapter 21",
+            "C": "Chapter 15",
+            "D": "Chapter 18"
+        }
+    },
+    "Q1535": {
+        "Aspect": "character",
+        "Complexity": "dtl",
+        "Question": "Who is Miss Richardson?",
+        "Options": {
+            "A": "Miss Richardson was the gardener",
+            "B": "Miss Richardson was the local baker",
+            "C": "Miss Richardson was the teacher",
+            "D": "Miss Richardson was the village seamstress"
+        }
+    },
+    "Q1536": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel Emma, has some main characters ever been mentioned to 'be killed' by the author? If so, how many times has this plot been mentioned?",
+        "Options": {
+            "A": "No, never",
+            "B": "Yes, 2",
+            "C": "Yes, 1",
+            "D": "Yes, 3"
+        }
+    },
+    "Q1537": {
+        "Aspect": "meaning",
+        "Complexity": "dtl",
+        "Question": "In the novel Emma, in which chapter does there exist a sentence with the same or similar meaning as 'Isabella provided a reasonably accurate description of her visitor. Upon the visitor's initial arrival, Isabella perceived her to be in low spirits, a reaction that seemed entirely understandable given the need to consult a dentist. However, once that matter was resolved, Harriet did not appear to have changed from the person Isabella had known before.'?",
+        "Options": {
+            "A": "Chapter 12",
+            "B": "Chapter 21",
+            "C": "Chapter 17",
+            "D": "Chapter 29"
+        }
+    },
+    "Q1538": {
+        "Aspect": "meaning",
+        "Complexity": "dtl",
+        "Question": "In the novel Emma, in which chapter does there exist a sentence with the same or similar meaning as 'The alteration was truly unsettling. Emma pondered this on a morning, recognizing it as something bound to stir up a lot of turmoil and sorrow within her. However, her contemplation was interrupted as Mr. Knightley entered, effectively pushing aside her troubling musings.'?",
+        "Options": {
+            "A": "Chapter 12",
+            "B": "Chapter 23",
+            "C": "Chapter 18",
+            "D": "Chapter 35"
+        }
+    },
+    "Q1539": {
+        "Aspect": "relat",
+        "Complexity": "mh",
+        "Question": "What is the relationship between Mr. Knightley and Emma?",
+        "Options": {
+            "A": "Mr. Knightley was Emma's distant cousin",
+            "B": "Mr. Knightley was the oldest friend of Emma",
+            "C": "Mr. Knightley was the new vicar in town",
+            "D": "Mr. Knightley was Emma's formal tutor"
+        }
+    },
+    "Q1540": {
+        "Aspect": "meaning",
+        "Complexity": "dtl",
+        "Question": "In the novel Emma, in which chapter does there exist a sentence with the same or similar meaning as 'Upon initially broaching the topic, his misery was of such magnitude that it verged on a sense of almost irredeemable hopelessness.'?",
+        "Options": {
+            "A": "Chapter 7",
+            "B": "Chapter 12",
+            "C": "Chapter 19",
+            "D": "Chapter 24"
+        }
+    },
+    "Q1541": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "How many times has Harriet run to Emma?",
+        "Options": {
+            "A": "2",
+            "B": "1",
+            "C": "3",
+            "D": "4"
+        }
+    },
+    "Q1542": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel Emma, has someone ever been mentioned to get punished? If so, how many times has this plot been mentioned?",
+        "Options": {
+            "A": "Yes, 2",
+            "B": "Yes, 5",
+            "C": "Yes, 4",
+            "D": "Yes, 3"
+        }
+    },
+    "Q1543": {
+        "Aspect": "character",
+        "Complexity": "dtl",
+        "Question": "In the novel Emma, in which chapter does there exist a sentence with the same or similar meaning as People's inherent inclinations are often favorably inclined towards individuals caught in intriguing circumstances. As such, a youthful individual who either enters matrimony or passes away can expect to be spoken of in a benevolent manner.",
+        "Options": {
+            "A": "Chapter 2",
+            "B": "Chapter 4",
+            "C": "Chapter 8",
+            "D": "Chapter 11"
+        }
+    },
+    "Q1544": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel Emma, has someone ever been mentioned to make the subtle action 'to drink tea'? If so, how many times has this plot been mentioned?",
+        "Options": {
+            "A": "Yes, 2",
+            "B": "Yes, 1",
+            "C": "Yes, 3",
+            "D": "Yes, 4"
+        }
+    },
+    "Q1545": {
+        "Aspect": "meaning",
+        "Complexity": "dtl",
+        "Question": "In the novel Emma, in which chapter does there exist a sentence with the same or similar meaning as 'Jane's curiosity wasn't of such an absorbing nature as to completely consume her attention.'?",
+        "Options": {
+            "A": "Chapter 5",
+            "B": "Chapter 8",
+            "C": "Chapter 3",
+            "D": "Chapter 12"
+        }
+    },
+    "Q1546": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel Emma, has someone ever been mentioned to get injured? If so, how many times has this plot been mentioned?",
+        "Options": {
+            "A": "Yes, 2",
+            "B": "Yes, 3",
+            "C": "Yes, 4",
+            "D": "Yes, 5"
+        }
+    },
+    "Q1547": {
+        "Aspect": "meaning",
+        "Complexity": "dtl",
+        "Question": "In the novel Emma, in which chapter does there exist a sentence with the same or similar meaning as 'She had found herself in fortunate care, experiencing only kindness from the Campbells, and receiving a superb education.'?",
+        "Options": {
+            "A": "Chapter 4",
+            "B": "Chapter 6",
+            "C": "Chapter 2",
+            "D": "Chapter 10"
+        }
+    },
+    "Q1548": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "Through how many generations had Mr. Weston's family been rising into gentility and property?",
+        "Options": {
+            "A": "For the last four or five generations",
+            "B": "For the last two or three generations",
+            "C": "Since the previous generation only",
+            "D": "For over six generations"
+        }
+    },
+    "Q1549": {
+        "Aspect": "settg",
+        "Complexity": "dtl",
+        "Question": "Emma has been meaning to read more ever since when?",
+        "Options": {
+            "A": "She was twelve years old",
+            "B": "She finished high school",
+            "C": "She turned eighteen",
+            "D": "She started university"
+        }
+    },
+    "Q1550": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "How does Emma feel about Miss Taylor's marriage?",
+        "Options": {
+            "A": "Emma is indifferent to Miss Taylor's marriage, as she believes it will not affect their relationship",
+            "B": "Emma feels a deep sense of loss and sorrow at Miss Taylor's marriage, as it marks the end of their close companionship",
+            "C": "Emma is overjoyed at Miss Taylor's marriage, seeing it as an opportunity for her own personal growth",
+            "D": "Emma feels relieved by Miss Taylor's marriage, as she considers it a chance to make new connections in society"
+        }
+    },
+    "Q1551": {
+        "Aspect": "plot",
+        "Complexity": "dtl",
+        "Question": "At which age had Emma the misfortune of being able to answer questions which puzzled her sister at seventeen?",
+        "Options": {
+            "A": "Eight years old",
+            "B": "Twelve years old",
+            "C": "Fifteen years old",
+            "D": "Ten years old"
+        }
+    },
+    "Q1552": {
+        "Aspect": "plot",
+        "Complexity": "dtl",
+        "Question": "Fill in the blank according to original text: 'during the ten days of their stay at Hartfield it was not to be expected-she did not herself expect-that any thing beyond occasional, fortuitous assistance could be afforded by her to the lovers.'",
+        "Options": {
+            "A": "seven months",
+            "B": "ten days",
+            "C": "fourteen years",
+            "D": "twenty days"
+        }
+    },
+    "Q1553": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "The only visit from Frank Churchill for how many days?",
+        "Options": {
+            "A": "Ten days",
+            "B": "Eight days",
+            "C": "Twelve days",
+            "D": "Fifteen days"
+        }
+    },
+    "Q1554": {
+        "Aspect": "plot",
+        "Complexity": "dtl",
+        "Question": "What was the color of Harriet Smith's eyes?",
+        "Options": {
+            "A": "green",
+            "B": "brown",
+            "C": "hazel",
+            "D": "blue"
+        }
+    },
+    "Q1555": {
+        "Aspect": "plot",
+        "Complexity": "dtl",
+        "Question": "How many children did Mr. and Mrs. John Knightley have?",
+        "Options": {
+            "A": "three",
+            "B": "five",
+            "C": "four",
+            "D": "six"
+        }
+    },
+    "Q1556": {
+        "Aspect": "character",
+        "Complexity": "dtl",
+        "Question": "Emma was called downstairs to Mr. Weston, who could not stay five minutes, and wanted particularly to speak with her after about how many days of Mrs. Churchill's decease?",
+        "Options": {
+            "A": "Five days",
+            "B": "Ten days",
+            "C": "Fifteen days",
+            "D": "Twenty days"
+        }
+    }
+}

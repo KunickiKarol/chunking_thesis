@@ -1,0 +1,112 @@
+{
+    "Q0973": {
+        "Aspect": "settg",
+        "Complexity": "dtl",
+        "Question": "What Mrs. Campbell saw in the afternoon when there was scarce an hour without two or three rainbows, and the mist liftin' and droppin' again, as if it was set to music?",
+        "Options": {
+            "A": "few",
+            "B": "countless",
+            "C": "mony",
+            "D": "several"
+        }
+    },
+    "Q0974": {
+        "Aspect": "settg",
+        "Complexity": "dtl",
+        "Question": "What was on the other side of the parish when groups from the cottages took different ways...the carriage from the Castle swept round the hill to the other side of the parish?",
+        "Options": {
+            "A": "Scottish Kirk",
+            "B": "Roman Catholic Church",
+            "C": "English Chapel",
+            "D": "Methodist Meeting House"
+        }
+    },
+    "Q0975": {
+        "Aspect": "settg",
+        "Complexity": "sh",
+        "Question": "Where Colin was going at his first outset into independent life; and very independent life was that which awaited the country lad in Glasgow?",
+        "Options": {
+            "A": "he was going to the University.",
+            "B": "he was going to work in the shipyards.",
+            "C": "he was joining a merchant's office.",
+            "D": "he was apprenticing with a local craftsman."
+        }
+    },
+    "Q0976": {
+        "Aspect": "settg",
+        "Complexity": "sh",
+        "Question": "To which country Colin was sent the author comments as where the unfortunates to go?",
+        "Options": {
+            "A": "New Zealand",
+            "B": "Canada",
+            "C": "South Africa",
+            "D": "Australia"
+        }
+    },
+    "Q0977": {
+        "Aspect": "settg",
+        "Complexity": "sh",
+        "Question": "How old Little Johnnie were when the mother's imagination leaped over ten years?",
+        "Options": {
+            "A": "Six years old",
+            "B": "Four years old",
+            "C": "Eight years old",
+            "D": "Ten years old"
+        }
+    },
+    "Q0978": {
+        "Aspect": "character",
+        "Complexity": "sh",
+        "Question": "How many miles did Colin walk in that afternoon over the wholesome heather?",
+        "Options": {
+            "A": "five miles",
+            "B": "fifteen miles",
+            "C": "ten miles",
+            "D": "twenty miles"
+        }
+    },
+    "Q0979": {
+        "Aspect": "settg",
+        "Complexity": "dtl",
+        "Question": "How many minutes after Lauderdale and Colin walked past the Colosseum on their way to the railway, being bound to Frascati (for this was before the days when the vulgar highway of commerce had entered within the walls of Rome), a certain wavering smile on his lip, a certain colour on his cheeks, betrayed as plainly that he was bound on a lover's errand, as if it had been said in words?",
+        "Options": {
+            "A": "5 minutes",
+            "B": "15 minutes",
+            "C": "20 minutes",
+            "D": "30 minutes"
+        }
+    },
+    "Q0980": {
+        "Aspect": "settg",
+        "Complexity": "sh",
+        "Question": "Upon which road had Lauderdale and Colin not gone far when Lauderdale drew aside a little and stepped across the boundary of furze and wild thorn and bramble bushes which separated it from the hillside?",
+        "Options": {
+            "A": "white and dusty road",
+            "B": "narrow cobblestone path",
+            "C": "shaded forest trail",
+            "D": "winding riverside lane"
+        }
+    },
+    "Q0981": {
+        "Aspect": "character",
+        "Complexity": "sh",
+        "Question": "Mrs. Campbell said about whom when he becomes a man he'll make his own company, or I'm mistaken?",
+        "Options": {
+            "A": "Archie",
+            "B": "Colin",
+            "C": "Duncan",
+            "D": "Robert"
+        }
+    },
+    "Q0982": {
+        "Aspect": "character",
+        "Complexity": "dtl",
+        "Question": "What did Colin eat for dinner when he walked about ten miles that afternoon over the wholesome heather?",
+        "Options": {
+            "A": "could not eat any dinner",
+            "B": "a hearty stew",
+            "C": "some bread and cheese",
+            "D": "a plate of mutton chops"
+        }
+    }
+}

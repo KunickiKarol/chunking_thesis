@@ -1,0 +1,233 @@
+{
+    "Q0169": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel The Book Thief, has the author described someone slapping someone else? If so, how many times has the author described it?",
+        "Options": {
+            "A": "Yes, 3",
+            "B": "Yes, 7",
+            "C": "Yes, 5",
+            "D": "Yes, 9"
+        }
+    },
+    "Q0170": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "How many times has Max cried?",
+        "Options": {
+            "A": "3 times",
+            "B": "Twice",
+            "C": "4 times",
+            "D": "5 times"
+        }
+    },
+    "Q0171": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "How many times have Liesel and Max cried together?",
+        "Options": {
+            "A": "2",
+            "B": "1",
+            "C": "3",
+            "D": "4"
+        }
+    },
+    "Q0172": {
+        "Aspect": "relat",
+        "Complexity": "mh",
+        "Question": "Who are in the The Steiner Family?",
+        "Options": {
+            "A": "Kurt Steiner, Johann Steiner",
+            "B": "Heidi Steiner, Marie Steiner",
+            "C": "Alex Steiner, Rudy Steiner",
+            "D": "Thomas Steiner, Anna Steiner"
+        }
+    },
+    "Q0173": {
+        "Aspect": "relat",
+        "Complexity": "mh",
+        "Question": "Please list 3 aliases or designations of Rudy Steiner.",
+        "Options": {
+            "A": "The papa, painted man, Rudolf",
+            "B": "Foster father, Racer, the neighborhood friend",
+            "C": "Sauker, Jesse Owens, Ruddy",
+            "D": "The shopkeeper, Sticky Fingers, the younger sibling"
+        }
+    },
+    "Q0174": {
+        "Aspect": "relat",
+        "Complexity": "dtl",
+        "Question": "What is the relationship between Jesse Owens and Rudy Steiner?",
+        "Options": {
+            "A": "Rudy Steiner and Jesse Owens are the same person",
+            "B": "Rudy Steiner idolizes Jesse Owens and emulates him by running at the track",
+            "C": "Jesse Owens is Rudy Steiner's coach and mentor in athletics",
+            "D": "Jesse Owens is a rival athlete competing against Rudy Steiner in the Olympics"
+        }
+    },
+    "Q0175": {
+        "Aspect": "meaning",
+        "Complexity": "dtl",
+        "Question": "In the novel The Book Thief, in which chapter does there exist a sentence with the same or similar meaning as 'She held deep affection for her papa, Hans Hubermann, and even her foster mother, despite enduring abusive behavior and hurtful verbal assaults.'?",
+        "Options": {
+            "A": "Chapter THE TOWN WALKER",
+            "B": "Chapter THE JOY OF CIGARETTES",
+            "C": "Chapter THE WHISTLER",
+            "D": "Chapter THE FLOATING BOOK (PART I)"
+        }
+    },
+    "Q0176": {
+        "Aspect": "span",
+        "Complexity": "mh",
+        "Question": "In which year does the earliest event happen, and in which year does the latest even happen?",
+        "Options": {
+            "A": "1892, 1945",
+            "B": "1889,  1942",
+            "C": "1910, 1943",
+            "D": "1901, 1940"
+        }
+    },
+    "Q0177": {
+        "Aspect": "character",
+        "Complexity": "mh",
+        "Question": "Rudy Steiner is used to be negative and finally becomes a positive one? Tell in one sentence that which episode marks this character's change.",
+        "Options": {
+            "A": "Rudy's transformation is marked by his act of stealing food to help his starving family",
+            "B": "Rudy's change is highlighted when he wins the race at Hitler Youth carnival but is disqualified for cheating",
+            "C": "Rudy was not fair and had got the penalty at the beginning of novel and then we can see that it is explained that Rudy was perfectly normal",
+            "D": "Rudy's character shift is evident when he paints himself black and pretends to be Jesse Owens, showing his rebellious nature."
+        }
+    },
+    "Q0178": {
+        "Aspect": "meaning",
+        "Complexity": "dtl",
+        "Question": "In the novel The Book Thief, in which chapter does there exist a sentence with the same or similar meaning as 'Different opinions were expressed, but Rosa Hubermann asserted that the seeds were planted during the previous year's Christmas.?",
+        "Options": {
+            "A": "Chapter THE FLOATING BOOK (PART I)",
+            "B": "Chapter THE SNOWMAN",
+            "C": "Chapter THE ACCORDIONIST",
+            "D": "Chapter THE WAY HOME"
+        }
+    },
+    "Q0179": {
+        "Aspect": "character",
+        "Complexity": "mh",
+        "Question": "Who is the leader of the antagonists in the novel The Book Theif?",
+        "Options": {
+            "A": "Adolf Hitler: The Fuhrer (leader) of Nazi Germany.",
+            "B": "Hans Hubermann: A compassionate house painter.",
+            "C": "Max Vandenburg: The Jewish fist-fighter hiding in the Hubermanns' basement.",
+            "D": "Death: The novel's narrator."
+        }
+    },
+    "Q0180": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel The Book Thief, has the author described someone doing the action 'snoring'? If so, how many times has this plot happened?",
+        "Options": {
+            "A": "Yes, 2",
+            "B": "Yes, 7",
+            "C": "Yes, 3",
+            "D": "Yes, 5"
+        }
+    },
+    "Q0181": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel The Book Thief, how many main characters are mentioned to be killed?",
+        "Options": {
+            "A": "Yes, 5",
+            "B": "Yes, 10",
+            "C": "Yes, 12",
+            "D": "Yes, 3"
+        }
+    },
+    "Q0182": {
+        "Aspect": "meaning",
+        "Complexity": "dtl",
+        "Question": "In the novel The Book Thief, in which chapter does there exist a sentence with the same or similar meaning as 'A photograph of an intensely stern Fuhrer hung askew, battered and bruised, amidst the debris-strewn floor.'?",
+        "Options": {
+            "A": "Chapter THE ACCORDIONIST",
+            "B": "Chapter THE FLOATING BOOK (PART I)",
+            "C": "Chapter THE END OF THE WORLD",
+            "D": "Chapter DEATH'S DIARY: 1942"
+        }
+    },
+    "Q0183": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel The Book Thief, has someone ever been mentioned to scream in the novel? If so, how many times have they been mentioned to scream?",
+        "Options": {
+            "A": "Yes, 2",
+            "B": "Yes, 4",
+            "C": "Yes, 6",
+            "D": "Yes, 3"
+        }
+    },
+    "Q0184": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "How many times has Liesel  helped?",
+        "Options": {
+            "A": "2",
+            "B": "5",
+            "C": "3",
+            "D": "4"
+        }
+    },
+    "Q0185": {
+        "Aspect": "relat",
+        "Complexity": "mh",
+        "Question": "What is the relationship between Hans Hubermann and Liesel?",
+        "Options": {
+            "A": "Hans Hubermann is Liesel's uncle",
+            "B": "Hans Hubermann is Liesel's biological father",
+            "C": "Hans Hubermann is Liesel's brother",
+            "D": "Hans Hubermann is Liesel's foster father"
+        }
+    },
+    "Q0186": {
+        "Aspect": "meaning",
+        "Complexity": "dtl",
+        "Question": "In the novel The Book Thief, in which chapter does there exist a sentence with the same or similar meaning as 'Upon impact, the earth bore three deep gashes, inflicted by the crashing force. The once majestic wings now resembled severed limbs, transformed into sawn-off arms.'?",
+        "Options": {
+            "A": "Chapter THE ECLIPSE",
+            "B": "Chapter THE ACCORDIONIST",
+            "C": "Chapter THE FLOATING BOOK (PART I)",
+            "D": "Chapter DEATH AND CHOCOLATE"
+        }
+    },
+    "Q0187": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "How many times have Rudy and Liesel waited on Himmel Street?  ",
+        "Options": {
+            "A": "0",
+            "B": "2",
+            "C": "1",
+            "D": "3"
+        }
+    },
+    "Q0188": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel The Book Thief, has someone ever been mentioned to make the action 'kick at others'? If so, how many times has this plot been mentioned?",
+        "Options": {
+            "A": "Yes, 3",
+            "B": "Yes, 5",
+            "C": "Yes, 7",
+            "D": "Yes, 6"
+        }
+    },
+    "Q0189": {
+        "Aspect": "meaning",
+        "Complexity": "dtl",
+        "Question": "In the novel The Book Thief, in which chapter does there exist a sentence with the same or similar meaning as 'As she entered the kitchen, Mama and Papa awaited her with their stooped figures and well-preserved countenances.'?",
+        "Options": {
+            "A": "Chapter DOMINOES",
+            "B": "Chapter PUNISHMENT",
+            "C": "Chapter PEACE",
+            "D": "Chapter REVELATION"
+        }
+    }
+}

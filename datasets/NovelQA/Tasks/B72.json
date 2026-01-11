@@ -1,0 +1,255 @@
+{
+    "Q2282": {
+        "Aspect": "meaning",
+        "Complexity": "sh",
+        "Question": "Why did Futaki come to visit Schmidt secretly?",
+        "Options": {
+            "A": "To discuss the harvest plans.",
+            "B": "To borrow some tools.",
+            "C": "To split up the money.",
+            "D": "To warn Schmidt about the authorities."
+        }
+    },
+    "Q2283": {
+        "Aspect": "meaning",
+        "Complexity": "sh",
+        "Question": "Why did Mrs Schmidt hid the bills?",
+        "Options": {
+            "A": "Because she didn't trust her husband with money.",
+            "B": "Because she was saving up for a secret vacation.",
+            "C": "Because the neibor Miss Halics was watching them.",
+            "D": "Because she wanted to donate them to charity secretly."
+        }
+    },
+    "Q2284": {
+        "Aspect": "character",
+        "Complexity": "sh",
+        "Question": "In the novel Satantango, who went to the bar after splitting the money?",
+        "Options": {
+            "A": "Mr. Kraner",
+            "B": "Mrs. Schmidt.",
+            "C": "Miss Lang",
+            "D": "Mr. Schmidt"
+        }
+    },
+    "Q2285": {
+        "Aspect": "plot",
+        "Complexity": "dtl",
+        "Question": "In the novel Satantango, what is the color of the desk in the chef's office?",
+        "Options": {
+            "A": "Dark-brown.",
+            "B": "Light-gray",
+            "C": "Black",
+            "D": "Cherry-red"
+        }
+    },
+    "Q2286": {
+        "Aspect": "settg",
+        "Complexity": "sh",
+        "Question": "What was the first thing the chef did when the two summoned pleaded?",
+        "Options": {
+            "A": "He got up and took a pill.",
+            "B": "He poured himself a glass of water.",
+            "C": "He started to prepare a meal.",
+            "D": "He asked them to leave the room."
+        }
+    },
+    "Q2287": {
+        "Aspect": "settg",
+        "Complexity": "sh",
+        "Question": "When was Petrina and Irimias required to arrive at the company?",
+        "Options": {
+            "A": "At eight o'clock.",
+            "B": "At seven o'clock.",
+            "C": "At nine o'clock.",
+            "D": "At ten o'clock."
+        }
+    },
+    "Q2288": {
+        "Aspect": "meaning",
+        "Complexity": "sh",
+        "Question": "Why the chef became angry suddenly when Petrina and Irimias visited him?",
+        "Options": {
+            "A": "Because they went to the wrong office and interupted the chef.",
+            "B": "Because they criticized his cooking skills.",
+            "C": "Because they arrived late to the appointment.",
+            "D": "Because they failed to address him with proper respect."
+        }
+    },
+    "Q2289": {
+        "Aspect": "plot",
+        "Complexity": "dtl",
+        "Question": "In the novel Satantango, what section was the chef in charge of?",
+        "Options": {
+            "A": "The RP section.",
+            "B": "The HP section.",
+            "C": "The CP section.",
+            "D": "The MP section."
+        }
+    },
+    "Q2290": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "What were in the corner of the room that the chef led Petrina and Irimias to?",
+        "Options": {
+            "A": "A wooden bench, a rocking chair, and a bookshelf.",
+            "B": "A leather sofa, two armchairs and a smoking table.",
+            "C": "A glass coffee table, four cushioned stools, and a floor lamp.",
+            "D": "A fabric loveseat, a desk with a typewriter, and a coat rack."
+        }
+    },
+    "Q2291": {
+        "Aspect": "meaning",
+        "Complexity": "sh",
+        "Question": "Why were Petrina and Irimias summoned?",
+        "Options": {
+            "A": "To discuss their involvement in a local crime.",
+            "B": "To receive new instructions for an upcoming mission.",
+            "C": "To negotiate the terms of their employment.",
+            "D": "Because their absence endangered the project."
+        }
+    },
+    "Q2292": {
+        "Aspect": "plot",
+        "Complexity": "dtl",
+        "Question": "What was the color of Petrina's shoes that he wore on the day he was summoned?",
+        "Options": {
+            "A": "Bright yellow.",
+            "B": "Deep red.",
+            "C": "Midnight blue.",
+            "D": "Emerald green."
+        }
+    },
+    "Q2293": {
+        "Aspect": "plot",
+        "Complexity": "dtl",
+        "Question": "What kind of clothes did Petrina wear on the day he was summoned?",
+        "Options": {
+            "A": "Velvet trousers and a silk blouse.",
+            "B": "Cotton pants and a woolen sweater.",
+            "C": "Satin britches and an undershirt.",
+            "D": "Leather jeans and a tank top."
+        }
+    },
+    "Q2294": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "In the novel Satantango, what were at the end of the corridor outside the doctor's office?",
+        "Options": {
+            "A": "Two doors and one way led to the outside.",
+            "B": "A single door leading to a storage room",
+            "C": "Three windows overlooking the garden",
+            "D": "A staircase going up to the second floor"
+        }
+    },
+    "Q2295": {
+        "Aspect": "character",
+        "Complexity": "sh",
+        "Question": "In the novel Satantango, who did the doctor see when he looked out of the window?",
+        "Options": {
+            "A": "Futaki.",
+            "B": "Mrs. Schmidt",
+            "C": "The postman",
+            "D": "Halics"
+        }
+    },
+    "Q2296": {
+        "Aspect": "settg",
+        "Complexity": "dtl",
+        "Question": "In the novel Satantango, what kind of book was the doctor reading when he was in his office?",
+        "Options": {
+            "A": "A medical textbook on human anatomy and physiology.",
+            "B": "A geographical book about the history of the earth.",
+            "C": "A novel about an epic space adventure.",
+            "D": "A collection of poems from the Romantic era."
+        }
+    },
+    "Q2297": {
+        "Aspect": "meaning",
+        "Complexity": "mh",
+        "Question": "Why did Mrs. Kraner quit her job?",
+        "Options": {
+            "A": "Because she had a disagreement with her employer.",
+            "B": "Because she was offered a better job elsewhere.",
+            "C": "Because she wanted to spend more time with her family.",
+            "D": "Because the bus service stopped where she worked and she couln't go anywhere."
+        }
+    },
+    "Q2298": {
+        "Aspect": "character",
+        "Complexity": "sh",
+        "Question": "In the novel Satantango, who had the kink of keeping a record and profile of the things people who he saw were doing?",
+        "Options": {
+            "A": "The postman",
+            "B": "The baker",
+            "C": "Mrs. Kraner",
+            "D": "The doctor."
+        }
+    },
+    "Q2299": {
+        "Aspect": "settg",
+        "Complexity": "sh",
+        "Question": "In the novel Satantango, what was the doctor drinking when he was in his office?",
+        "Options": {
+            "A": "Whiskey",
+            "B": "Vodka",
+            "C": "Tea",
+            "D": "Palinka."
+        }
+    },
+    "Q2300": {
+        "Aspect": "plot",
+        "Complexity": "dtl",
+        "Question": "In the novel Satantango, what is the doctor's case made of?",
+        "Options": {
+            "A": "Leather.",
+            "B": "Canvas",
+            "C": "Metal",
+            "D": "Plastic"
+        }
+    },
+    "Q2301": {
+        "Aspect": "meaning",
+        "Complexity": "sh",
+        "Question": "In the novel Satantango, why didn't the doctor choose the shortest way to go to the bar?",
+        "Options": {
+            "A": "He was afraid of getting lost on the way.",
+            "B": "He wanted to enjoy the scenic route.",
+            "C": "To avoid people he didn't want to see.",
+            "D": "He was trying to get more exercise by walking a longer distance."
+        }
+    },
+    "Q2302": {
+        "Aspect": "meaning",
+        "Complexity": "sh",
+        "Question": "In the novel Satantango, why didn't the doctor smoke his own cigars when he was in the mill?",
+        "Options": {
+            "A": "Because his cigars were soaked in the rain.",
+            "B": "Because he had given all his cigars away to the workers at the mill.",
+            "C": "Because he was trying to quit smoking for health reasons.",
+            "D": "Because he had lost his cigars while on his way to the mill."
+        }
+    },
+    "Q2303": {
+        "Aspect": "character",
+        "Complexity": "sh",
+        "Question": "Who is the youngest of the Horgos children?",
+        "Options": {
+            "A": "Attila",
+            "B": "Esti",
+            "C": "Istvan",
+            "D": "Reka"
+        }
+    },
+    "Q2304": {
+        "Aspect": "character",
+        "Complexity": "sh",
+        "Question": "Who was Halics' landlord?",
+        "Options": {
+            "A": "Kerekes.",
+            "B": "Szabó",
+            "C": "Horváth",
+            "D": "Nagy"
+        }
+    }
+}

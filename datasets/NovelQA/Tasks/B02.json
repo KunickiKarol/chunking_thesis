@@ -1,0 +1,277 @@
+{
+    "Q0190": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel Winesburg, Ohio, has the word or phrase grassy appeared? If so, how many times does it appear in the text?",
+        "Options": {
+            "A": "Yes, 2",
+            "B": "Yes, 4",
+            "C": "Yes, 5",
+            "D": "Yes, 3"
+        }
+    },
+    "Q0191": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel Winesburg, Ohio, has the word or phrase peculiar appeared? If so, how many times does it appear in the text?",
+        "Options": {
+            "A": "Yes, 2",
+            "B": "Yes, 4",
+            "C": "Yes, 5",
+            "D": "Yes, 3"
+        }
+    },
+    "Q0192": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel Winesburg, Ohio, has the word or phrase glory appeared? If so, how many times does it appear in the text?",
+        "Options": {
+            "A": "Yes, 3",
+            "B": "Yes, 1",
+            "C": "No, the word 'glory' does not appear in the text.",
+            "D": "Yes, 2. The word 'glory' appears twice in the text."
+        }
+    },
+    "Q0193": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel Winesburg, Ohio, has the word or phrase rambling appeared? If so, how many times does it appear in the text?",
+        "Options": {
+            "A": "No, never",
+            "B": "Yes, 1",
+            "C": "Yes, 2",
+            "D": "Yes, 3"
+        }
+    },
+    "Q0194": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel Winesburg, Ohio, has the object gingham dress appeared? If so, how many times does it appear in the text?",
+        "Options": {
+            "A": "Yes, 1",
+            "B": "No, never",
+            "C": "Yes, 3",
+            "D": "Yes, 2"
+        }
+    },
+    "Q0195": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "Has the object the Bible appeared? If so, how many times does it appear in the text?",
+        "Options": {
+            "A": "Yes, 4",
+            "B": "Yes, 2",
+            "C": "Yes, 5",
+            "D": "Yes, 3"
+        }
+    },
+    "Q0196": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel Winesburg, Ohio, has the object skates appeared? If so, how many times does it appear in the text?",
+        "Options": {
+            "A": "No, never",
+            "B": "Yes, 1",
+            "C": "Yes, 2",
+            "D": "Yes, 3"
+        }
+    },
+    "Q0197": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel Winesburg, Ohio, has the object guinea hen appeared? If so, how many times does it appear in the text?",
+        "Options": {
+            "A": "Yes, 1",
+            "B": "No, never",
+            "C": "Yes, 2",
+            "D": "Yes, 3"
+        }
+    },
+    "Q0198": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "Has the place Brooklyn appeared? If so, how many times does it appear in the text?",
+        "Options": {
+            "A": "No, never",
+            "B": "Yes, 2",
+            "C": "Yes, 1",
+            "D": "Yes, 3"
+        }
+    },
+    "Q0199": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "Has the place Indiana appeared? If so, how many times does it appear in the text?",
+        "Options": {
+            "A": "No, never",
+            "B": "Yes, 1",
+            "C": "Yes, 3",
+            "D": "Yes, 2"
+        }
+    },
+    "Q0200": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "Has the place Oregon appeared? If so, how many times does it appear in the text?",
+        "Options": {
+            "A": "No, never",
+            "B": "Yes, 2",
+            "C": "Yes, 1",
+            "D": "Yes, 3"
+        }
+    },
+    "Q0201": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "In the novel Winesburg, Ohio, in which countrie does this story take place?",
+        "Options": {
+            "A": "America",
+            "B": "England",
+            "C": "France",
+            "D": "Germany"
+        }
+    },
+    "Q0202": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "Has the sentence 'All over his body James Bond was alive.' appeared? If so, how many times does this sentence appear in the text?",
+        "Options": {
+            "A": "Yes, it appears once.",
+            "B": "Yes, it appears twice.",
+            "C": "Yes, it appears three times.",
+            "D": "No. It has not appeared."
+        }
+    },
+    "Q0203": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel Winesburg, Ohio, has the sentence 'The boy sat on the ground with the lamb in his arms.' appeared? If so, how many times does this sentence appear in the text?",
+        "Options": {
+            "A": "Yes, Chapter<The Teacher>",
+            "B": "Yes, Chapter<Loneliness>",
+            "C": "Yes, Chapter<Terror>",
+            "D": "Yes, Chapter<The Thinker>"
+        }
+    },
+    "Q0204": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "Has the character Will Hurley appeared? If so, how many times does he/she/they appear in the text?",
+        "Options": {
+            "A": "No, never",
+            "B": "Yes, 1",
+            "C": "Yes, 2",
+            "D": "Yes, 3"
+        }
+    },
+    "Q0205": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "Has the character Sylvester West appeared? If so, how many times does he/she/they appear in the text?",
+        "Options": {
+            "A": "Yes, 1",
+            "B": "No, never",
+            "C": "Yes, 2",
+            "D": "Yes, 3"
+        }
+    },
+    "Q0206": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "How many times has Hal Winters  picked up the corn?",
+        "Options": {
+            "A": "3",
+            "B": "1",
+            "C": "5",
+            "D": "0"
+        }
+    },
+    "Q0207": {
+        "Aspect": "relat",
+        "Complexity": "mh",
+        "Question": "What is the relationship between Alice Hindman and Bush Milton?",
+        "Options": {
+            "A": "Bush Milton is Alice's uncle",
+            "B": "Bush Milton is Alice's former teacher",
+            "C": "Bush Milton is Alice's stepfather",
+            "D": "Bush Milton is Alice's brother"
+        }
+    },
+    "Q0208": {
+        "Aspect": "relat",
+        "Complexity": "dtl",
+        "Question": "What is the relationship between John Spaniard and the nursery man?",
+        "Options": {
+            "A": "John Spaniard is the nursery man's employee.",
+            "B": "John Spaniard is the nursery man's brother.",
+            "C": "They are the same person.",
+            "D": "John Spaniard is the nursery man's neighbor."
+        }
+    },
+    "Q0209": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "How many times have Doctor Parcival and George Willard met each other (or appear together)?",
+        "Options": {
+            "A": "3",
+            "B": "7",
+            "C": "5",
+            "D": "2"
+        }
+    },
+    "Q0210": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "How many times have George Willard and Shorty Crandall communicated with each other?",
+        "Options": {
+            "A": "0",
+            "B": "2",
+            "C": "1",
+            "D": "3"
+        }
+    },
+    "Q0211": {
+        "Aspect": "meaning",
+        "Complexity": "dtl",
+        "Question": "In the novel Winesburg, Ohio, in which chapter does there exist a sentence with the same or similar meaning as 'The Banker White built a brick mansion on Buckeye Street, which grasps others attention'?",
+        "Options": {
+            "A": "Chapter <The Thinker>",
+            "B": "Chapter <The Teacher>",
+            "C": "Chapter <The Philosopher>",
+            "D": "Chapter <The Strength of God>"
+        }
+    },
+    "Q0212": {
+        "Aspect": "meaning",
+        "Complexity": "dtl",
+        "Question": "In the novel Winesburg, Ohio, in which chapter does there exist a sentence with the same or similar meaning as 'He was dejected because he didn't feel a sense of belonging in the town, however he was not so depressed because he didn't think it's his fault.'?",
+        "Options": {
+            "A": "Chapter <The Philosopher>",
+            "B": "Chapter <The Teacher>",
+            "C": "Chapter <The Thinker>",
+            "D": "Chapter <The Strength of God>"
+        }
+    },
+    "Q0213": {
+        "Aspect": "character",
+        "Complexity": "dtl",
+        "Question": "In which chapter(s) is/are Abner Groff mentioned?",
+        "Options": {
+            "A": "Chapter<The Book of the Grotesque>",
+            "B": "Chapter<Loneliness>",
+            "C": "Chapter<The Strength of God>",
+            "D": "Chapter<Mother> and Chapter<The Thinker>"
+        }
+    },
+    "Q0214": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "Has the word or phrase 'become round hard balls' appeared in the text of the novel Winesburg, Ohio? If so, how many times does it appear in the text?",
+        "Options": {
+            "A": "Yes, 1",
+            "B": "Yes, 2",
+            "C": "No. The phrase does not appear in the text.",
+            "D": "Yes, the phrase appears three times in the text."
+        }
+    }
+}

@@ -1,0 +1,220 @@
+{
+    "Q0431": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel Light in August, has any event eveer been celebrated? If so, how many times has this plot happened?",
+        "Options": {
+            "A": "No, never",
+            "B": "Yes, 2",
+            "C": "Yes, 3",
+            "D": "Yes, 1"
+        }
+    },
+    "Q0432": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel Light in August, different people have been working as the 'cook'. How many different people have been mentioned to be or used to be the 'cook'?",
+        "Options": {
+            "A": "1",
+            "B": "3",
+            "C": "5",
+            "D": "2"
+        }
+    },
+    "Q0433": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "How many times have Byron and Christmas went together down town?",
+        "Options": {
+            "A": "2",
+            "B": "1",
+            "C": "3",
+            "D": "4"
+        }
+    },
+    "Q0434": {
+        "Aspect": "meaning",
+        "Complexity": "dtl",
+        "Question": "In the novel Light in August, in which chapter does there exist a sentence with the same or similar meaning as 'Hightower occupies an ancient swivel chair, while Byron sits across from him in a straight-backed chair.'?",
+        "Options": {
+            "A": "Chapter 6",
+            "B": "Chapter 4",
+            "C": "Chapter 9",
+            "D": "Chapter 12"
+        }
+    },
+    "Q0435": {
+        "Aspect": "span",
+        "Complexity": "mh",
+        "Question": "In which year does the earliest event happen, and in which year does the latest even happen?",
+        "Options": {
+            "A": "1863,  1866",
+            "B": "1859, 1872",
+            "C": "1860, 1865",
+            "D": "1862, 1867"
+        }
+    },
+    "Q0436": {
+        "Aspect": "meaning",
+        "Complexity": "dtl",
+        "Question": "In the novel Light in August, in which chapter does there exist a sentence with the same or similar meaning as ''Except that's quite a daring choice for a man to display on his face in public,' one remarked. 'He could inadvertently use it in a place where it wouldn't be well-received.'.?",
+        "Options": {
+            "A": "Chapter 5",
+            "B": "Chapter 8",
+            "C": "Chapter 11",
+            "D": "Chapter 2"
+        }
+    },
+    "Q0437": {
+        "Aspect": "character",
+        "Complexity": "mh",
+        "Question": "Who is Percy Grimm?",
+        "Options": {
+            "A": "Percy Grimm - the local preacher who tries to save Joe Christmas's soul",
+            "B": "Percy Grimm - the town's doctor who provides an alibi for Joe Christmas",
+            "C": "Percy Grimm - the captain of the State National Guard who kills Joe Christmas and castrates him.",
+            "D": "Percy Grimm - the sheriff's deputy who arrests Joe Christmas but later helps him escape"
+        }
+    },
+    "Q0438": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel Light in August, has someone ever been mentioned to make the subtle action 'snore'? If so, how many times has this plot been mentioned?",
+        "Options": {
+            "A": "Yes, 5",
+            "B": "Yes, 3",
+            "C": "Yes, 7",
+            "D": "Yes, 9"
+        }
+    },
+    "Q0439": {
+        "Aspect": "meaning",
+        "Complexity": "dtl",
+        "Question": "In the novel Light in August, in which chapter does there exist a sentence with the same or similar meaning as 'After departing from the sheriff's office, he positioned himself under the portico, oriented towards the southern side of the square..'?",
+        "Options": {
+            "A": "Chapter 12",
+            "B": "Chapter 21",
+            "C": "Chapter 18",
+            "D": "Chapter 15"
+        }
+    },
+    "Q0440": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel Light in August, has someone ever been mentioned to scream in the novel? If so, how many times have they been mentioned to scream?",
+        "Options": {
+            "A": "Yes, 7",
+            "B": "Yes, 11",
+            "C": "Yes, 9",
+            "D": "Yes, 5"
+        }
+    },
+    "Q0441": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "How many times has Byron sang a song?",
+        "Options": {
+            "A": "1",
+            "B": "0",
+            "C": "2",
+            "D": "3"
+        }
+    },
+    "Q0442": {
+        "Aspect": "relat",
+        "Complexity": "mh",
+        "Question": "What is the relationship between  Joe Christmas and Joe Brown?",
+        "Options": {
+            "A": "They are brothers.",
+            "B": "They are cousins.",
+            "C": "'He's a funny fellow.' Again he looks a little aside from her interested face. 'His partner's a sight, too, Brown. He used to work here too. But they done quit now, both of them. Which aint nobody's loss, I reckon.'",
+            "D": "They are father and son."
+        }
+    },
+    "Q0443": {
+        "Aspect": "meaning",
+        "Complexity": "dtl",
+        "Question": "In the novel Light in August, in which chapter does there exist a sentence with the same or similar meaning as 'In Mottstown, on that unforgettable Friday when Christmas seemed to have been captured, resided an elderly couple known as the Hines.'?",
+        "Options": {
+            "A": "Chapter 12",
+            "B": "Chapter 18",
+            "C": "Chapter 15",
+            "D": "Chapter 21"
+        }
+    },
+    "Q0444": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "How many times have Mrs Armstid and Lena entered the kitchen to cook together?",
+        "Options": {
+            "A": "0",
+            "B": "2",
+            "C": "1",
+            "D": "3"
+        }
+    },
+    "Q0445": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel Light in August, has someone ever been mentioned to kick at others? If so, how many times has this plot been mentioned?",
+        "Options": {
+            "A": "Yes, 3",
+            "B": "Yes, 1",
+            "C": "Yes, 2",
+            "D": "Yes, 4"
+        }
+    },
+    "Q0446": {
+        "Aspect": "meaning",
+        "Complexity": "dtl",
+        "Question": "In the novel Light in August, in which chapter does there exist a sentence with the same or similar meaning as 'Christmas struck a match, igniting the cigarette, and with a flick of his wrist, he sent the flame soaring towards the open door, where it disappeared into thin air.'?",
+        "Options": {
+            "A": "Chapter 3",
+            "B": "Chapter 8",
+            "C": "Chapter 5",
+            "D": "Chapter 12"
+        }
+    },
+    "Q0447": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "How many times has Byron fallen down?",
+        "Options": {
+            "A": "2",
+            "B": "1",
+            "C": "3",
+            "D": "4"
+        }
+    },
+    "Q0448": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "Has the word or phrase 'on that afternoon three years ago' appeared? If so, how many times does it appear in the text?",
+        "Options": {
+            "A": "No, never",
+            "B": "Yes, 1",
+            "C": "Yes, 2",
+            "D": "Yes, 4"
+        }
+    },
+    "Q0449": {
+        "Aspect": "meaning",
+        "Complexity": "sh",
+        "Question": "In the novel Light in August, does there exist a sentence with the same or similar meaning as 'Traveling away among strangers like that, a young man needs time to get settled down .'?",
+        "Options": {
+            "A": "Yes",
+            "B": "No"
+        }
+    },
+    "Q0450": {
+        "Aspect": "plot",
+        "Complexity": "mh",
+        "Question": "With the amount of money that Brown wins in Jefferson, how many mules can such an amount of money buy at the price that Armstid wants to sell his mule at the begining of the novel?",
+        "Options": {
+            "A": "With 60 dollars Brown wins, 6 mules can be bought at Armstid's price of 10 dollars.",
+            "B": "With 60 dollars Brown wins, 12 mules can be bought at Armstid's price of 5 dollars.",
+            "C": "With 60 dollars Brown wins, 20 mules can be bought at Armstid's price of 3 dollars.",
+            "D": "With 60 dollars Brown wins, 30 mules can be bought at Armstid's price of 2 dollars."
+        }
+    }
+}

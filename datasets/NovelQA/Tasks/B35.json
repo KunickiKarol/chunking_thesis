@@ -1,0 +1,255 @@
+{
+    "Q1563": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel The Pilgrim's Progress, has someone ever been mentioned to yell? If so, how many times has this plot been mentioned?",
+        "Options": {
+            "A": "Yes, 1",
+            "B": "Yes, 3",
+            "C": "Yes, 4",
+            "D": "Yes, 2"
+        }
+    },
+    "Q1564": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "How many times has Demas cried?",
+        "Options": {
+            "A": "1",
+            "B": "2",
+            "C": "3",
+            "D": "4"
+        }
+    },
+    "Q1565": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "How many times have Chris and Pliable fallen?",
+        "Options": {
+            "A": "2",
+            "B": "1",
+            "C": "3",
+            "D": "0"
+        }
+    },
+    "Q1566": {
+        "Aspect": "relat",
+        "Complexity": "mh",
+        "Question": "Who are in the Christiana's family?",
+        "Options": {
+            "A": "James, Mercy, Samuel",
+            "B": "Joseph, Prudence, Piety",
+            "C": "Samson, Hopeful, Great-heart",
+            "D": "Matthew, Christian, Christiana"
+        }
+    },
+    "Q1567": {
+        "Aspect": "relat",
+        "Complexity": "dtl",
+        "Question": "What is the relationship between Pli. and Pliable?",
+        "Options": {
+            "A": "Pli. is Pliable's brother",
+            "B": "Pli. And Pliable are same person",
+            "C": "Pli. is Pliable's neighbor",
+            "D": "Pli. is Pliable's enemy"
+        }
+    },
+    "Q1568": {
+        "Aspect": "meaning",
+        "Complexity": "dtl",
+        "Question": "In the novel The Pilgrim's Progress, in which chapter does there exist a sentence with the same or similar meaning as  Chris. This could be due to its cunning nature, as a person's heart might offer solace, holding onto the anticipation of something for which there is still no basis for hope.?",
+        "Options": {
+            "A": "Chapter 5",
+            "B": "Chapter 8",
+            "C": "Chapter 12",
+            "D": "Chapter 10"
+        }
+    },
+    "Q1569": {
+        "Aspect": "span",
+        "Complexity": "mh",
+        "Question": "In which year does the earliest event happen, and in which year does the latest even happen?",
+        "Options": {
+            "A": "1638, 1698",
+            "B": "1618, 1678",
+            "C": "1648, 1708",
+            "D": "1628, 1688"
+        }
+    },
+    "Q1570": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel The Pilgrim's Progress, has any quarrel ever happened? If so, how many times has this plot happened?",
+        "Options": {
+            "A": "Yes, 3",
+            "B": "Yes, 2",
+            "C": "Yes, 4",
+            "D": "Yes, 5"
+        }
+    },
+    "Q1571": {
+        "Aspect": "meaning",
+        "Complexity": "dtl",
+        "Question": "In the novel The Pilgrim's Progress, in which chapter does there exist a sentence with the same or similar meaning as  In my dream, I witnessed that at this moment, the pilgrims had successfully traversed the Enchanted Ground and were now stepping into the land of Beulah. The atmosphere there was incredibly delightful and refreshing, with the path leading them straight through this region. They took pleasure in their time there for a while.?",
+        "Options": {
+            "A": "Chapter 11",
+            "B": "Chapter 8",
+            "C": "Chapter 9",
+            "D": "Chapter 12"
+        }
+    },
+    "Q1572": {
+        "Aspect": "character",
+        "Complexity": "mh",
+        "Question": "Who is Lord Wyndward?",
+        "Options": {
+            "A": "Lord Wyndward was a guide to the Celestial City",
+            "B": "Lord Wyndward was a deceitful character",
+            "C": "Lord Wyndward was the keeper of the Wicket Gate",
+            "D": "Lord Wyndward was the head of the family"
+        }
+    },
+    "Q1573": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel The Pilgrim's Progress, has someone ever been mentioned to kill someone or some animals by the author? If so, how many times has this plot been mentioned?",
+        "Options": {
+            "A": "Yes, 6",
+            "B": "Yes, 3",
+            "C": "Yes, 5",
+            "D": "Yes, 7"
+        }
+    },
+    "Q1574": {
+        "Aspect": "character",
+        "Complexity": "dtl",
+        "Question": "In the novel The Pilgrim's Progress, in which chapter does there exist a sentence with the same or similar meaning as   Wonderful. Forgiveness for an action committed is acquired by someone on behalf of another who requires it, not by the person who is forgiven. As someone else has put it, I have secured this forgiveness through a particular path.?",
+        "Options": {
+            "A": "Chapter 7",
+            "B": "Chapter 10",
+            "C": "Chapter 14",
+            "D": "Chapter 18"
+        }
+    },
+    "Q1575": {
+        "Aspect": "meaning",
+        "Complexity": "sh",
+        "Question": "In the novel The Pilgrim's Progress, explain the meaning or implication of the symbol or metaphor 'the Pilgrim's Progress' within one sentence.",
+        "Options": {
+            "A": "The Pilgrim's Progress is a detailed historical account of a real pilgrimage that took place in the 17th century.",
+            "B": "The Pilgrim's Progress is primarily a political satire aimed at critiquing the English government during Bunyan's time.",
+            "C": "It is in the verse preface to The Pilgrim's Progress that Bunyan defends not only his use of 'fable' in the text but also his use of metaphor and allegory as vehicles for conveying spiritual 'Truth'.",
+            "D": "The Pilgrim's Progress is an adventure novel that celebrates the human spirit's quest for personal treasure and worldly success."
+        }
+    },
+    "Q1576": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel The Pilgrim's Progress, has someone ever been mentioned to shout at others? If so, how many times has this plot been mentioned?",
+        "Options": {
+            "A": "Yes, 2",
+            "B": "Yes, 4",
+            "C": "Yes, 3",
+            "D": "Yes, 5"
+        }
+    },
+    "Q1577": {
+        "Aspect": "meaning",
+        "Complexity": "dtl",
+        "Question": "In the novel The Pilgrim's Progress, in which chapter does there exist a sentence with the same or similar meaning as  However, you stumbled initially in this matter. When he invited me to accompany you up to this point, that would have been the opportune moment for you to implore him, asking him to allow me to accompany you all the way. Surely, he would have acquiesced to your plea.?",
+        "Options": {
+            "A": "Chapter 3",
+            "B": "Chapter 5",
+            "C": "Chapter 7",
+            "D": "Chapter 9"
+        }
+    },
+    "Q1578": {
+        "Aspect": "relat",
+        "Complexity": "mh",
+        "Question": "What is the relationship between Matthew and Christiana?",
+        "Options": {
+            "A": "Matthew was the husband of Christiana",
+            "B": "Matthew was the brother of Christiana",
+            "C": "Matthew was the father of Christiana",
+            "D": "Matthew was the son of Christiana"
+        }
+    },
+    "Q1579": {
+        "Aspect": "meaning",
+        "Complexity": "dtl",
+        "Question": "In the novel The Pilgrim's Progress, in which chapter does there exist a sentence with the same or similar meaning as  The sons closely resemble their father in every way and aspire to follow in his footsteps. In fact, whenever they come across a spot where the seasoned traveler has rested or discover any trace of his footprints, it fills their hearts with happiness, and they eagerly desire to rest or walk in the exact same places.?",
+        "Options": {
+            "A": "Chapter 5",
+            "B": "Chapter 9",
+            "C": "Chapter 7",
+            "D": "Chapter 12"
+        }
+    },
+    "Q1580": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "How many times has Christian taken leaves?",
+        "Options": {
+            "A": "2",
+            "B": "1",
+            "C": "3",
+            "D": "4"
+        }
+    },
+    "Q1581": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel The Pilgrim's Progress, has someone ever been mentioned to 'get punished'? If so, how many times has this plot been mentioned?",
+        "Options": {
+            "A": "Yes, 1",
+            "B": "Yes, 3",
+            "C": "Yes, 2",
+            "D": "Yes, 4"
+        }
+    },
+    "Q1582": {
+        "Aspect": "meaning",
+        "Complexity": "dtl",
+        "Question": "In the novel The Pilgrim's Progress, in which chapter does there exist a sentence with the same or similar meaning as Presently, Christiana directed her four daughters to entrust their little ones to the guardianship of this Man. Her intention was for them to find shelter, nurturing, assistance, and sustenance by these waters, ensuring that none of their offspring would be deprived in the times ahead.",
+        "Options": {
+            "A": "Chapter 5",
+            "B": "Chapter 10",
+            "C": "Chapter 12",
+            "D": "Chapter 8"
+        }
+    },
+    "Q1583": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel The Pilgrim's Progress, has any injury to someone ever happened? If so, how many times has this plot happened?",
+        "Options": {
+            "A": "Yes, 2",
+            "B": "Yes, 5",
+            "C": "Yes, 3",
+            "D": "Yes, 4"
+        }
+    },
+    "Q1584": {
+        "Aspect": "meaning",
+        "Complexity": "dtl",
+        "Question": "In the novel The Pilgrim's Progress, in which chapter does there exist a sentence with the same or similar meaning as  The location had become entirely overgrown with brambles and thorns, except for sporadic spots where an enchanted shelter had taken root. If an individual were to sit within it or rest inside, there arises a speculation, as some suggest, regarding whether they would ever stand or awaken again in this realm.?",
+        "Options": {
+            "A": "Chapter 9",
+            "B": "Chapter 5",
+            "C": "Chapter 12",
+            "D": "Chapter 16"
+        }
+    },
+    "Q1585": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel The Pilgrim's Progress, has the author described someone worshipping? If so, how many times has the author mentioned about this action?",
+        "Options": {
+            "A": "Yes, 5",
+            "B": "No. No one worshipped, possibly because they are all irreligious.",
+            "C": "No. No one worshipped in this novel because their policy forbids this.",
+            "D": "Yes, 8"
+        }
+    }
+}

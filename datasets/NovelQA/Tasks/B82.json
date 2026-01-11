@@ -1,0 +1,343 @@
+{
+    "Q0725": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel A Game of Thrones, has the author described someone 'spring to his feet'? If so, how many times has the author described this?",
+        "Options": {
+            "A": "No, never",
+            "B": "Yes, 2",
+            "C": "Yes, once",
+            "D": "Yes, 3"
+        }
+    },
+    "Q0726": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "How many times has the author mentioned Bran to 'jumped off and ran'?",
+        "Options": {
+            "A": "3",
+            "B": "2",
+            "C": "4",
+            "D": "5"
+        }
+    },
+    "Q0727": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "How many times have the author described that 'Arya and Sansa been safely back in Winterfell'?",
+        "Options": {
+            "A": "once",
+            "B": "never",
+            "C": "twice",
+            "D": "three times"
+        }
+    },
+    "Q0728": {
+        "Aspect": "relat",
+        "Complexity": "mh",
+        "Question": "Who are in the Stark family?",
+        "Options": {
+            "A": "Eddard, Jon Snow, Bran Stark, Sansa Stark, Arya Stark, Robert Baratheon, Jon Arryn",
+            "B": "Robb Stark, Catelyn Stark, Rickon Stark",
+            "C": "Theon Greyjoy, Hodor, Catelyn Tully",
+            "D": "Tyrion Lannister, Jaime Lannister, Cersei Lannister"
+        }
+    },
+    "Q0729": {
+        "Aspect": "relat",
+        "Complexity": "mh",
+        "Question": "Please list 3 aliases or designations of Jon Snow",
+        "Options": {
+            "A": "Bastard, King in the North, Lord Snow",
+            "B": "Prince of Winterfell, Mother of Dragons, Goldenhand",
+            "C": "The White Wolf, Giant of Lannister, The Three-eyed Raven",
+            "D": "Warden of the South, Breaker of Chains, The Lioness"
+        }
+    },
+    "Q0730": {
+        "Aspect": "relat",
+        "Complexity": "mh",
+        "Question": "What is the relationship between Petyr Baelish and Littlefinger?",
+        "Options": {
+            "A": "Petyr Baelish is a giant of a man, which is why he was mockingly called Littlefinger due to his towering height.",
+            "B": "Petyr Baelish is a man known for many things that would be deserving of a nickname. From his Machiavellian scheming to his numerous betrayals, these would not play a hand in what gave him the infamous title of 'Littlefinger.' This name would be derived not from his personality but of his 'lowly' status.",
+            "C": "Petyr Baelish is known for his delicate hand movements and slight of hand tricks, which earned him the nickname Littlefinger.",
+            "D": "Petyr Baelish has a distinct mark on his little finger, which led to his nickname Littlefinger."
+        }
+    },
+    "Q0731": {
+        "Aspect": "meaning",
+        "Complexity": "mh",
+        "Question": "In the novel A Game of Thrones, explain the meaning or implication of the symbol or metaphor 'Ravens' within one sentence.",
+        "Options": {
+            "A": "They symbolize the arrival of good fortune and positive news.",
+            "B": "Ravens represent the presence of magic and the intervention of mystical forces.",
+            "C": "They are usually considered as being bad omens, carrying bad news.",
+            "D": "They are messengers of peace and herald the end of conflict."
+        }
+    },
+    "Q0732": {
+        "Aspect": "span",
+        "Complexity": "mh",
+        "Question": "In which year does the earliest event happen, and in which year does the latest even happen?",
+        "Options": {
+            "A": "278 AC, 279 AC",
+            "B": "281 AC(year of false spring), 282 AC",
+            "C": "283 AC, 284 AC",
+            "D": "280 AC, 281 AC"
+        }
+    },
+    "Q0733": {
+        "Aspect": "plot",
+        "Complexity": "mh",
+        "Question": "Jaime Lannister used to be negative and finally became a positive one. Please explain which plot marks Jaime's change.",
+        "Options": {
+            "A": "Jaime Lannister can be considered a character who starts off with negative traits but undergoes significant development and ultimately becomes a more positive and honorable figure as the series progresses.",
+            "B": "Jaime Lannister remains a villain throughout the series without showing any signs of personal growth or redemption.",
+            "C": "Jaime Lannister's character arc is static, and he does not exhibit any changes in his personality or moral outlook from beginning to end.",
+            "D": "Jaime Lannister's transformation is only superficial, as he continues to engage in immoral actions without genuine remorse or change in character."
+        }
+    },
+    "Q0734": {
+        "Aspect": "meaning",
+        "Complexity": "dtl",
+        "Question": "In the novel A Game of Thrones, in which chapter does there exist a sentence with the same or similar meaning as 'the positions and responsibilities of the ruler of the region known as the Vale of Arryn'?",
+        "Options": {
+            "A": "Chapter 28, Chapter 34, Lord of the Eyrie and Defender of the Vale",
+            "B": "Chapter 15, Warden of the East",
+            "C": "Chapter 22, Master of Coin",
+            "D": "Chapter 31, Hand of the King"
+        }
+    },
+    "Q0735": {
+        "Aspect": "character",
+        "Complexity": "mh",
+        "Question": "Who is Quorin Halfhand?",
+        "Options": {
+            "A": "Quorin Halfhand was a wildling leader who opposed the Night's Watch and fought against them in numerous battles.",
+            "B": "Quorin Halfhand was a member of the Night's Watch, a senior and experienced ranger regarded as an elite scout and soldier.",
+            "C": "Quorin Halfhand was the master-at-arms at Castle Black, responsible for training new recruits in the art of combat.",
+            "D": "Quorin Halfhand was the Lord Commander of the Night's Watch, known for his strict discipline and strategic mind."
+        }
+    },
+    "Q0736": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "Has the author mentioned Ayra crying? If so, how many times has the author mentioned this plot?",
+        "Options": {
+            "A": "Yes, 2",
+            "B": "Never",
+            "C": "Yes, 3",
+            "D": "More than 5"
+        }
+    },
+    "Q0737": {
+        "Aspect": "meaning",
+        "Complexity": "dtl",
+        "Question": "In the novel A Game of Thrones, in which chapter does there exist a sentence with the same or similar meaning as 'ending or eliminating the Targaryen family or their influence in some way'?",
+        "Options": {
+            "A": "Chapter 15, The Targaryen Threat",
+            "B": "Chapter 35, The Fall of the Dragon",
+            "C": "Chapter 22, The Last of the Targaryens",
+            "D": "Chapter 28, To put an end to Targaryens"
+        }
+    },
+    "Q0738": {
+        "Aspect": "meaning",
+        "Complexity": "mh",
+        "Question": "In the novel A Game of Thrones, explain the meaning or implication of the symbol or metaphor 'steel kiss' within one sentence.",
+        "Options": {
+            "A": "To embrace someone with warmth and affection",
+            "B": "To betray someone with a deceptive gesture",
+            "C": "To show respect by bowing one's head gently",
+            "D": "To kiss someone in a quick and sudden way"
+        }
+    },
+    "Q0739": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel A Game of Thrones, has the broken sword ever fallen? If so, how many times has this plot happened?",
+        "Options": {
+            "A": "Never",
+            "B": "Yes, 2",
+            "C": "Yes, 3",
+            "D": "Yes, once"
+        }
+    },
+    "Q0740": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "How many times has the author mentioned thar Bran scratching something?",
+        "Options": {
+            "A": "Once",
+            "B": "Twice",
+            "C": "Three times",
+            "D": "Four times"
+        }
+    },
+    "Q0741": {
+        "Aspect": "relat",
+        "Complexity": "dtl",
+        "Question": "What is the relationship between Jon Snow and Bastard?",
+        "Options": {
+            "A": "Jon Snow was the legitimate son of Eddard Stark and his wife Catelyn",
+            "B": "Jon Snow was the half-brother of Bastard, sharing the same father but different mothers",
+            "C": "Jon Snow was the cousin of Bastard, their fathers being brothers",
+            "D": "Jon Snow and Bastard were the same person, His uncled brought him to the family as bastard to save him from enemy"
+        }
+    },
+    "Q0742": {
+        "Aspect": "meaning",
+        "Complexity": "dtl",
+        "Question": "In the novel A Game of Thrones, in which chapter does there exist a sentence with the same or similar meaning as 'She repeat or resound by echoes'?",
+        "Options": {
+            "A": "Chapter 9, she murmured",
+            "B": "Chapter 14, Chapter 17, Chapter 19, she echoed",
+            "C": "Chapter 12, she whispered",
+            "D": "Chapter 21, she mumbled"
+        }
+    },
+    "Q0743": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "How many times have Catelyn and Ned Kissed?",
+        "Options": {
+            "A": "0",
+            "B": "1",
+            "C": "2",
+            "D": "3"
+        }
+    },
+    "Q0744": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel A Game of Thrones, has someone been mentioned to get goose bumps by the author? If so, how many times has this plot been mentioned?",
+        "Options": {
+            "A": "Yes, 2",
+            "B": "No, never",
+            "C": "Yes, once",
+            "D": "Yes, 3"
+        }
+    },
+    "Q0745": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "How many times has the author mentioned Arya crying?",
+        "Options": {
+            "A": "0",
+            "B": "3",
+            "C": "5",
+            "D": "2"
+        }
+    },
+    "Q0746": {
+        "Aspect": "settg",
+        "Complexity": "dtl",
+        "Question": "What was the color of Samwell Tarly's face when he was first hidden behind the horses?",
+        "Options": {
+            "A": "pale green with fear",
+            "B": "flushed red with embarrassment",
+            "C": "The color of Samwell Tarly's face was curdled milk.",
+            "D": "a sickly yellow hue"
+        }
+    },
+    "Q0747": {
+        "Aspect": "plot",
+        "Complexity": "dtl",
+        "Question": "What happens the second time that Sasha finds herself too stunned for words?",
+        "Options": {
+            "A": "She felt her eyes grow moist again",
+            "B": "She felt a surge of anger boiling within her",
+            "C": "She was overwhelmed with a sense of joy and relief",
+            "D": "She began to laugh uncontrollably"
+        }
+    },
+    "Q0748": {
+        "Aspect": "character",
+        "Complexity": "sh",
+        "Question": "In the novel A Game of Thrones, who was the last character that was mentioned to have his or her mother died while giving birth to him or her?",
+        "Options": {
+            "A": "Jon Snow's mother",
+            "B": "Brandon Stark's mother",
+            "C": "Daenerys Targaryen's mother",
+            "D": "Tyrion Lannister's mother"
+        }
+    },
+    "Q0749": {
+        "Aspect": "plot",
+        "Complexity": "dtl",
+        "Question": "What was Arya holding in her heart the first time Sansa had been crying in sleep?",
+        "Options": {
+            "A": "Arya was holding secrets hard in her heart",
+            "B": "Arya was holding a small stone in her hand",
+            "C": "Arya was holding a needle in her fingers",
+            "D": "Arya was holding a grudge against Sansa"
+        }
+    },
+    "Q0750": {
+        "Aspect": "settg",
+        "Complexity": "sh",
+        "Question": "What did Jon shout when the second time that he appeared on the crest?",
+        "Options": {
+            "A": "Uncle, Arya, hurry over, look at what Robb has discovered!",
+            "B": "Mother, Rickon, rush here, witness what Robb has stumbled upon!",
+            "C": "Father, Bran, come quickly, see what Robb has found!",
+            "D": "Ser Rodrik, Sansa, make haste, observe what Robb has unearthed!"
+        }
+    },
+    "Q0751": {
+        "Aspect": "settg",
+        "Complexity": "sh",
+        "Question": "How old were Viserys when they fled King's Landing to escape the advancing armies of Usurper?",
+        "Options": {
+            "A": "Five",
+            "B": "Eight",
+            "C": "Ten",
+            "D": "Twelve"
+        }
+    },
+    "Q0752": {
+        "Aspect": "settg",
+        "Complexity": "sh",
+        "Question": "What has the lord of Eyrie done when the mad king demanded the heads?",
+        "Options": {
+            "A": "sun-and-lion banners",
+            "B": "wolf-and-tree banners",
+            "C": "moon-andfalcon banners",
+            "D": "kraken-and-ship banners"
+        }
+    },
+    "Q0753": {
+        "Aspect": "settg",
+        "Complexity": "dtl",
+        "Question": "What did Dany do when the red door closed behind them forever?",
+        "Options": {
+            "A": "Dany cried",
+            "B": "Dany laughed",
+            "C": "Dany danced",
+            "D": "Dany fell asleep"
+        }
+    },
+    "Q0754": {
+        "Aspect": "settg",
+        "Complexity": "sh",
+        "Question": "What did Dothraki do when they were defeated?",
+        "Options": {
+            "A": "shave their heads",
+            "B": "cut off their braids",
+            "C": "wear a white cloak",
+            "D": "brand their cheeks"
+        }
+    },
+    "Q0755": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "How long has it been before Ned has seen the King during Balon Greyjoy's rebellion?",
+        "Options": {
+            "A": "nine years",
+            "B": "five years",
+            "C": "twelve years",
+            "D": "fifteen years"
+        }
+    }
+}

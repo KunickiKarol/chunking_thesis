@@ -1,0 +1,607 @@
+{
+    "Q0470": {
+        "Aspect": "plot",
+        "Complexity": "dtl",
+        "Question": "What happens to Burris Ewell?",
+        "Options": {
+            "A": "He gets expelled for bad behavior.",
+            "B": "He wins a prize for good attendance.",
+            "C": "A bug crawls out of his hair.",
+            "D": "He helps Scout learn to read."
+        }
+    },
+    "Q0471": {
+        "Aspect": "settg",
+        "Complexity": "sh",
+        "Question": "When do the Ewell kids go to school?",
+        "Options": {
+            "A": "Throughout the entire school year, but sporadically",
+            "B": "Only during the winter months",
+            "C": "They don't attend school at all",
+            "D": "Only on the first day of every school year."
+        }
+    },
+    "Q0472": {
+        "Aspect": "meaning",
+        "Complexity": "sh",
+        "Question": "Why does Scout start hanging out with Miss Maudie?",
+        "Options": {
+            "A": "Because Scout admires Miss Maudie's gardening skills and wants to learn from her.",
+            "B": "Because Scout is curious about Miss Maudie's life and wants to hear stories about the neighborhood.",
+            "C": "Because Dill and Jem have made her feel unwelcome in their games.",
+            "D": "Because Miss Maudie offers Scout cookies and cakes, which lures her into spending time there."
+        }
+    },
+    "Q0473": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "How does Miss Maudie account for Boo's strangeness?",
+        "Options": {
+            "A": "He was naturally unsociable and disliked people",
+            "B": "He suffered from a rare psychological disorder",
+            "C": "He experienced a traumatic event that changed him",
+            "D": "He had an incredibly strict Baptist father."
+        }
+    },
+    "Q0474": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "How does Dill explain Jem's missing pants?",
+        "Options": {
+            "A": "He won them in a bet against the Cunninghams",
+            "B": "He traded them for a collection of old coins",
+            "C": "First he says strip poker and then lighting matches.",
+            "D": "He lost them while they were swimming in the creek."
+        }
+    },
+    "Q0475": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "What does Boo Radley carve for Jem and Scout out of soap?",
+        "Options": {
+            "A": "A collection of animals from the neighborhood",
+            "B": "Miniature models of the Radley house",
+            "C": "Two figures that look like Jem and Scout.",
+            "D": "Caricatures of Maycomb's residents"
+        }
+    },
+    "Q0476": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "What reason does Boo's brother, Nathan Radley, give Jem for filling in the knot-hole with cement?",
+        "Options": {
+            "A": "He says that's what you do when a tree is dying.",
+            "B": "He claims it was to keep animals from living in the tree.",
+            "C": "He mentions it was to stop children from leaving messages.",
+            "D": "He explains it's to prevent the tree from causing harm during storms."
+        }
+    },
+    "Q0477": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "What unexpected natural phenomenon happens in Alabama for the first time in years?",
+        "Options": {
+            "A": "Snow.",
+            "B": "Heatwave.",
+            "C": "Tornado.",
+            "D": "Flood."
+        }
+    },
+    "Q0478": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "What does Boo Radley do during the night of the fire?",
+        "Options": {
+            "A": "He helps put out the fire with a bucket of water.",
+            "B": "He calls the fire department to report the fire.",
+            "C": "He drapes a blanket over Scout's shoulders.",
+            "D": "He invites Scout and Jem into his house to stay warm."
+        }
+    },
+    "Q0479": {
+        "Aspect": "meaning",
+        "Complexity": "sh",
+        "Question": "Why do Cecil Jacobs, Francis, and other kids start taunting Scout about her father?",
+        "Options": {
+            "A": "Because he is defending Tom Robinson, a Black man.",
+            "B": "Because he lost a previous case and they think he's a bad lawyer.",
+            "C": "Because he doesn't let Scout fight at school.",
+            "D": "Because he was once the mayor of Maycomb and they didn't like his policies."
+        }
+    },
+    "Q0480": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "What does Uncle Jack say about Tom Robinson?",
+        "Options": {
+            "A": "That he's guilty but will be acquitted.",
+            "B": "That he's misunderstood and needs help.",
+            "C": "That he's dangerous and should be avoided.",
+            "D": "That he's innocent but doomed."
+        }
+    },
+    "Q0481": {
+        "Aspect": "meaning",
+        "Complexity": "sh",
+        "Question": "Why does it surprise Scout and Jem when Atticus shoots a mad dog?",
+        "Options": {
+            "A": "Because they believe he is afraid of guns and violence.",
+            "B": "Because they have never seen him show interest in any physical activities.",
+            "C": "Because they were told by someone else that Atticus was not a good shot.",
+            "D": "Because they think of him as old and lacking real-life skills."
+        }
+    },
+    "Q0482": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "What does Jem have to do as punishment for ruining Mrs. Dubose's flowers?",
+        "Options": {
+            "A": "Jem must apologize publicly in the town newspaper",
+            "B": "Jem is grounded for a month without leaving the house",
+            "C": "Jem has to read to Mrs. Dubose every afternoon for hours.",
+            "D": "Jem has to replant and take care of Mrs. Dubose's garden for the summer"
+        }
+    },
+    "Q0483": {
+        "Aspect": "meaning",
+        "Complexity": "sh",
+        "Question": "Why doesn't Dill return for the summer?",
+        "Options": {
+            "A": "Because he has 'a new father'.",
+            "B": "Because his mother fell ill and he needed to care for her.",
+            "C": "Because he decided to go to military school instead.",
+            "D": "Because he moved abroad with his family for his stepfather's job."
+        }
+    },
+    "Q0484": {
+        "Aspect": "settg",
+        "Complexity": "sh",
+        "Question": "Where does Calpurnia take the children?",
+        "Options": {
+            "A": "To her Black church.",
+            "B": "To the Finch's Landing",
+            "C": "To the Maycomb courthouse",
+            "D": "To the local schoolhouse"
+        }
+    },
+    "Q0485": {
+        "Aspect": "character",
+        "Complexity": "sh",
+        "Question": "For whom does Reverend Sykes take up a collection?",
+        "Options": {
+            "A": "For Miss Maudie's house repairs after the fire",
+            "B": "For Helen Robinson, Tom Robinson's wife.",
+            "C": "For the Finch family after Atticus takes on Tom Robinson's case",
+            "D": "For Boo Radley, to provide him with gifts and necessities"
+        }
+    },
+    "Q0486": {
+        "Aspect": "character",
+        "Complexity": "sh",
+        "Question": "Who comes to live with the Finches for a while to help take care of the kids?",
+        "Options": {
+            "A": "Atticus's sister, Aunt Alexandra.",
+            "B": "Miss Maudie Atkinson",
+            "C": "Calpurnia",
+            "D": "Rachel Haverford"
+        }
+    },
+    "Q0487": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "What does Aunt Alexandra like to lecture the kids about?",
+        "Options": {
+            "A": "Proper table manners.",
+            "B": "The importance of academic excellence.",
+            "C": "Their family heritage.",
+            "D": "The dangers of playing outside."
+        }
+    },
+    "Q0488": {
+        "Aspect": "settg",
+        "Complexity": "sh",
+        "Question": "What does Scout do when she sees the men surrounding her father outside the jail?",
+        "Options": {
+            "A": "She stayed hidden behind the jail to watch what was happening without being seen.",
+            "B": "She called out to Atticus from a distance to make sure he was alright.",
+            "C": "She pushed her way through dark smelly bodies and burst into the circle of light.",
+            "D": "She ran back home to call the sheriff for help."
+        }
+    },
+    "Q0489": {
+        "Aspect": "meaning",
+        "Complexity": "sh",
+        "Question": "Why does Walter Cunningham tell the group to leave?",
+        "Options": {
+            "A": "Because Scout offered them food and hospitality.",
+            "B": "Because Atticus convinced them with his legal expertise.",
+            "C": "Because the sheriff arrived and threatened to arrest them.",
+            "D": "Because Scout has shamed him by talking about his son."
+        }
+    },
+    "Q0490": {
+        "Aspect": "character",
+        "Complexity": "sh",
+        "Question": "Who was guarding Atticus with a gun in his window the whole time?",
+        "Options": {
+            "A": "Mr. Radley, Boo's father",
+            "B": "Mr. Underwood, the newspaper owner.",
+            "C": "Mr. Tate, the sheriff",
+            "D": "Mr. Cunningham, a member of the mob"
+        }
+    },
+    "Q0491": {
+        "Aspect": "character",
+        "Complexity": "sh",
+        "Question": "Who says that the trial will be like a Roman carnival and refuses to go?",
+        "Options": {
+            "A": "Miss Maudie.",
+            "B": "Atticus Finch",
+            "C": "Calpurnia",
+            "D": "Aunt Alexandra"
+        }
+    },
+    "Q0492": {
+        "Aspect": "settg",
+        "Complexity": "sh",
+        "Question": "Where do Scout, Jem, and Dill watch the trial from?",
+        "Options": {
+            "A": "The back of the courtroom on the main floor.",
+            "B": "The jury box, next to Atticus.",
+            "C": "Behind the judge's bench, hidden from view.",
+            "D": "The balcony with Reverend Sykes."
+        }
+    },
+    "Q0493": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "What is Bob Ewell like? Please use three adjectives.",
+        "Options": {
+            "A": "Polite, respectful, and educated.",
+            "B": "Friendly, helpful, and honest.",
+            "C": "Rude, obnoxious, and ignorant.",
+            "D": "Compassionate, understanding, and wise."
+        }
+    },
+    "Q0494": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "Which hand does Bob Ewell sign his name with?",
+        "Options": {
+            "A": "His left.",
+            "B": "His right.",
+            "C": "Both hands.",
+            "D": "He cannot write."
+        }
+    },
+    "Q0495": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "What does Sheriff Tate say on the witness stand?",
+        "Options": {
+            "A": "That he saw Tom Robinson fleeing the Ewell's property on the night of the incident",
+            "B": "That he found Mayella beaten and she said Tom raped her, but that no doctor was called.",
+            "C": "That Mayella's injuries were consistent with a fall she had, and she did not accuse anyone",
+            "D": "That Bob Ewell was the one who reported the crime and insisted on Tom's arrest"
+        }
+    },
+    "Q0496": {
+        "Aspect": "settg",
+        "Complexity": "sh",
+        "Question": "When does Mayella say the rape occurred?",
+        "Options": {
+            "A": "While she was outside tending to the flowers in the garden.",
+            "B": "When she went to get a nickel for Tom for breaking up a dresser.",
+            "C": "During the evening when she asked Tom to chop wood for her.",
+            "D": "In the morning when Tom passed by her house on his way to work."
+        }
+    },
+    "Q0497": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "What does Mayella think Atticus is doing to her?",
+        "Options": {
+            "A": "Accusing her of lying",
+            "B": "Mocking her.",
+            "C": "Judging her lifestyle",
+            "D": "Pitying her circumstances"
+        }
+    },
+    "Q0498": {
+        "Aspect": "settg",
+        "Complexity": "sh",
+        "Question": "What does Tom say happened when Mayella invited him inside?",
+        "Options": {
+            "A": "She asked him to fix a door inside her house.",
+            "B": "She offered him money for his help.",
+            "C": "She tried to kiss him.",
+            "D": "She accused him of stealing something from her."
+        }
+    },
+    "Q0499": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "How does Tom feel about Mayella?",
+        "Options": {
+            "A": "He is in love with her.",
+            "B": "He feels sorry for her.",
+            "C": "He is angry with her.",
+            "D": "He is indifferent to her."
+        }
+    },
+    "Q0500": {
+        "Aspect": "character",
+        "Complexity": "dtl",
+        "Question": "Who is Mr. Dolphus Raymond?",
+        "Options": {
+            "A": "A local shopkeeper who is known for his fairness towards the black community.",
+            "B": "A rich white man with a Black mistress and mixed-race children.",
+            "C": "The town's doctor who treats both white and black patients equally.",
+            "D": "A schoolteacher who advocates for racial equality in the education system."
+        }
+    },
+    "Q0501": {
+        "Aspect": "character",
+        "Complexity": "sh",
+        "Question": "Whom does Atticus argue is responsible for beating up Mayella?",
+        "Options": {
+            "A": "Tom Robinson",
+            "B": "Boo Radley",
+            "C": "Mayella Ewell",
+            "D": "Bob Ewell."
+        }
+    },
+    "Q0502": {
+        "Aspect": "meaning",
+        "Complexity": "sh",
+        "Question": "Why does Calpurnia interrupt the court proceedings?",
+        "Options": {
+            "A": "Because Scout was feeling ill and needed to go home.",
+            "B": "Because Atticus had forgotten important documents at home.",
+            "C": "Because Aunt Alexandra thinks the children have gone missing.",
+            "D": "Because there was an emergency at the Finch household that required Atticus's attention."
+        }
+    },
+    "Q0503": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "What do the women at Aunt Alexandra's tea complain about?",
+        "Options": {
+            "A": "The lack of interest in church activities among the younger generation.",
+            "B": "The rising cost of groceries and how it's affecting their household budgets.",
+            "C": "The difficulty in finding good schools for their children in Maycomb.",
+            "D": "How poorly behaved their Black servants have been since Tom's trial."
+        }
+    },
+    "Q0504": {
+        "Aspect": "meaning",
+        "Complexity": "sh",
+        "Question": "Why does Atticus interrupt Aunt Alexandra's tea?",
+        "Options": {
+            "A": "Because Scout was in trouble at school and needed to be picked up.",
+            "B": "Because there was a fire at the Finch's house and he needed to leave immediately.",
+            "C": "Because he had forgotten an important legal document at home and had to retrieve it.",
+            "D": "Because Tom has been shot dead trying to escape prison."
+        }
+    },
+    "Q0505": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "How does Tom's death affect Maycomb?",
+        "Options": {
+            "A": "It causes a major upheaval and leads to significant changes in the town's racial attitudes.",
+            "B": "The community holds a public memorial to honor Tom and reflect on the injustice.",
+            "C": "They stay interested in it for about two days and then forget all about it.",
+            "D": "Tom's death becomes a catalyst for protests and civil rights activism in Maycomb."
+        }
+    },
+    "Q0506": {
+        "Aspect": "meaning",
+        "Complexity": "sh",
+        "Question": "Why does Bob Ewell lose his WPA job?",
+        "Options": {
+            "A": "He's caught stealing from the job site.",
+            "B": "He's fired for laziness.",
+            "C": "He quits out of pride.",
+            "D": "He's laid off due to budget cuts."
+        }
+    },
+    "Q0507": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "What happens to Judge Taylor on the Sunday night?",
+        "Options": {
+            "A": "Someone tries to burgle his house.",
+            "B": "He is attacked on his way home from court.",
+            "C": "He is falsely accused of a crime.",
+            "D": "His courtroom is vandalized."
+        }
+    },
+    "Q0508": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "What does Scout get to dress as for the school pageant?",
+        "Options": {
+            "A": "A carrot",
+            "B": "A pumpkin",
+            "C": "A ham.",
+            "D": "A cotton boll"
+        }
+    },
+    "Q0509": {
+        "Aspect": "character",
+        "Complexity": "sh",
+        "Question": "Who jumps out and scares Scout and Jem on the way to the pageant in the dark?",
+        "Options": {
+            "A": "Dill Harris",
+            "B": "Boo Radley",
+            "C": "Tom Robinson",
+            "D": "Cecil Jacobs."
+        }
+    },
+    "Q0510": {
+        "Aspect": "character",
+        "Complexity": "sh",
+        "Question": "Who kills Bob Ewell?",
+        "Options": {
+            "A": "Atticus Finch",
+            "B": "Tom Robinson",
+            "C": "Jem Finch",
+            "D": "Boo Radley."
+        }
+    },
+    "Q0511": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "What is Boo Radley's real name?",
+        "Options": {
+            "A": "Nathan",
+            "B": "Robert",
+            "C": "Arthur.",
+            "D": "Edward"
+        }
+    },
+    "Q0512": {
+        "Aspect": "character",
+        "Complexity": "sh",
+        "Question": "In the novel To Kill a Mocking Bird, who is the editor of the local newspaper?",
+        "Options": {
+            "A": "Mr. Taylor",
+            "B": "Mr. Radley",
+            "C": "Mr. Finch",
+            "D": "Mr. Underwood."
+        }
+    },
+    "Q0513": {
+        "Aspect": "plot",
+        "Complexity": "dtl",
+        "Question": "What does Scout first find in the knot-hole?",
+        "Options": {
+            "A": "A shiny penny",
+            "B": "Chewing gum.",
+            "C": "A small key",
+            "D": "A note written on paper"
+        }
+    },
+    "Q0514": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "What does Dill find in Dolphus Raymond's bottle?",
+        "Options": {
+            "A": "Lemonade",
+            "B": "Iced tea",
+            "C": "Water",
+            "D": "Coca-Cola."
+        }
+    },
+    "Q0515": {
+        "Aspect": "character",
+        "Complexity": "sh",
+        "Question": "Who founded Finch's Landing?",
+        "Options": {
+            "A": "Atticus Finch",
+            "B": "Jeremy Finch",
+            "C": "Jack Finch",
+            "D": "Simon Finch."
+        }
+    },
+    "Q0516": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "How did Miss Caroline learn her educational techniques?",
+        "Options": {
+            "A": "From a teaching seminar she attended.",
+            "B": "From college courses.",
+            "C": "By observing other teachers in the school.",
+            "D": "Through years of personal teaching experience."
+        }
+    },
+    "Q0517": {
+        "Aspect": "settg",
+        "Complexity": "sh",
+        "Question": "Where does Dill live during the school year?",
+        "Options": {
+            "A": "Mississippi.",
+            "B": "Alabama",
+            "C": "Louisiana",
+            "D": "Georgia"
+        }
+    },
+    "Q0518": {
+        "Aspect": "character",
+        "Complexity": "sh",
+        "Question": "In the novel To Kill a Mocking Bird, who tucks Scout in at the end of the novel?",
+        "Options": {
+            "A": "Atticus.",
+            "B": "Jem",
+            "C": "Aunt Alexandra",
+            "D": "Boo Radley"
+        }
+    },
+    "Q0519": {
+        "Aspect": "character",
+        "Complexity": "sh",
+        "Question": "Who beat Mayella Ewell?",
+        "Options": {
+            "A": "Tom Robinson",
+            "B": "Atticus Finch",
+            "C": "Bob Ewell.",
+            "D": "Boo Radley"
+        }
+    },
+    "Q0520": {
+        "Aspect": "character",
+        "Complexity": "sh",
+        "Question": "Whose actions lead Mr. Cunningham to disperse the lynch mob?",
+        "Options": {
+            "A": "Atticus's eloquence.",
+            "B": "Tom Robinson's plea for mercy.",
+            "C": "Scout's.",
+            "D": "Jem's defiance."
+        }
+    },
+    "Q0521": {
+        "Aspect": "settg",
+        "Complexity": "sh",
+        "Question": "How old is Jem when the action of the novel starts?",
+        "Options": {
+            "A": "Seven years old.",
+            "B": "Eleven years old.",
+            "C": "Eight years old.",
+            "D": "Nine years old."
+        }
+    },
+    "Q0522": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "What are Jem and Scout shocked to discover about Atticus?",
+        "Options": {
+            "A": "That he was once a famous actor in Maycomb County.",
+            "B": "That he is the best shot in Maycomb County.",
+            "C": "That he is secretly wealthy and the richest man in Maycomb County.",
+            "D": "That he was a professional boxer in his youth in Maycomb County."
+        }
+    },
+    "Q0523": {
+        "Aspect": "character",
+        "Complexity": "sh",
+        "Question": "Who takes the children to the Black church?",
+        "Options": {
+            "A": "Atticus Finch",
+            "B": "Aunt Alexandra",
+            "C": "Calpurnia.",
+            "D": "Tom Robinson"
+        }
+    },
+    "Q0524": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "For what does Uncle Jack reprimand Scout on Christmas Eve?",
+        "Options": {
+            "A": "Cussing.",
+            "B": "Fighting with Francis",
+            "C": "Talking back to Aunt Alexandra",
+            "D": "Refusing to read with Atticus"
+        }
+    }
+}

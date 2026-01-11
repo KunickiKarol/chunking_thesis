@@ -1,0 +1,838 @@
+{
+    "Q0649": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "How did Tom and Huck come into their money?",
+        "Options": {
+            "A": "They inherited the money from a distant relative who passed away.",
+            "B": "They earned the money by working for a wealthy landowner.",
+            "C": "They found a treasure map and followed it to a hidden chest of gold.",
+            "D": "They discovered the money that the robbers hid in the cave."
+        }
+    },
+    "Q0650": {
+        "Aspect": "meaning",
+        "Complexity": "sh",
+        "Question": "Why does Jim wear the five-cent piece around his neck?",
+        "Options": {
+            "A": "He believes it brings him good luck and protects him from harm.",
+            "B": "He says it's a charm from the devil that can cure illness.",
+            "C": "He wears it as a reminder of his freedom from slavery.",
+            "D": "He thinks it will help him find his way back to his family if he gets lost."
+        }
+    },
+    "Q0651": {
+        "Aspect": "meaning",
+        "Complexity": "sh",
+        "Question": "Why does Huck sell his fortune to Judge Thatcher?",
+        "Options": {
+            "A": "He wants to donate it to charity.",
+            "B": "He plans to invest it in a business venture.",
+            "C": "He is afraid he will spend it all on frivolous things.",
+            "D": "He doesn't want his father to get it."
+        }
+    },
+    "Q0652": {
+        "Aspect": "character",
+        "Complexity": "dtl",
+        "Question": "Whom does Jim consult about Huck's predicament?",
+        "Options": {
+            "A": "A wise old woman.",
+            "B": "A large hairball.",
+            "C": "The stars and the moon.",
+            "D": "A deck of tarot cards."
+        }
+    },
+    "Q0653": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "What stops Huck from escaping the cabin?",
+        "Options": {
+            "A": "His father returns.",
+            "B": "He loses the key to the cabin door.",
+            "C": "A storm prevents him from leaving.",
+            "D": "He feels guilty about leaving his father alone."
+        }
+    },
+    "Q0654": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "What keeps Pap from attacking Huck with the knife?",
+        "Options": {
+            "A": "Huck manages to escape through the window.",
+            "B": "Huck overpowers Pap and takes the knife away.",
+            "C": "He passes out and falls asleep.",
+            "D": "The arrival of the town sheriff startles Pap."
+        }
+    },
+    "Q0655": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "How does Huck eventually escape from Pap?",
+        "Options": {
+            "A": "He tricks Pap into thinking he has drowned in the river.",
+            "B": "He waits until Pap leaves the cabin unlocked and runs away.",
+            "C": "He sets the cabin on fire to create a distraction and escapes in the confusion.",
+            "D": "He cuts a hole in the floor of the cabin and floats away in a canoe."
+        }
+    },
+    "Q0656": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "How does Jim get bitten by the rattlesnake?",
+        "Options": {
+            "A": "Jim steps on a snake while walking in the woods.",
+            "B": "Jim is bitten while trying to catch a snake for dinner.",
+            "C": "A snake falls from a tree onto Jim while he is sleeping.",
+            "D": "Huck hides a dead snake on the foot of Jim's blanket."
+        }
+    },
+    "Q0657": {
+        "Aspect": "settg",
+        "Complexity": "sh",
+        "Question": "How does Huck disguise himself when he goes ashore?",
+        "Options": {
+            "A": "He wears a suit and top hat.",
+            "B": "He puts on a dress and sun-bonnet.",
+            "C": "He disguises himself as a sailor.",
+            "D": "He puts on a wig and mustache."
+        }
+    },
+    "Q0658": {
+        "Aspect": "plot",
+        "Complexity": "mh",
+        "Question": "How does the old lady discover that Huck is a boy?",
+        "Options": {
+            "A": "He sews his dress in a way that only a boy would do",
+            "B": "He eats his food in a manner that is not ladylike",
+            "C": "Firstly, he closes his legs to catch something she throws. Besides, he almost hits a rat with a lead ball. Last but not least, He forgets the name that he originally gave her.",
+            "D": "He accidentally reveals that he has a brother."
+        }
+    },
+    "Q0659": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "What does Huck discover in the wrecked steamboat?",
+        "Options": {
+            "A": "A family of settlers looking for help.",
+            "B": "An abandoned treasure chest full of gold.",
+            "C": "A hidden compartment used for smuggling goods.",
+            "D": "A group of robbers."
+        }
+    },
+    "Q0660": {
+        "Aspect": "plot",
+        "Complexity": "mh",
+        "Question": "What does Huck tell the ferry watchman to convince him to go to the wrecked steamboat?",
+        "Options": {
+            "A": "He's looking for his lost treasure on the boat.",
+            "B": "He's a detective investigating a crime on the steamboat.",
+            "C": "He needs to retrieve important medicine left on the steamboat.",
+            "D": "His family is trapped on board."
+        }
+    },
+    "Q0661": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "What do Huck and Jim do with the robber's boat?",
+        "Options": {
+            "A": "They repair it and use it to travel down the river.",
+            "B": "They hide it in a nearby cove to use later.",
+            "C": "They sell it to another traveler for money.",
+            "D": "They sink it."
+        }
+    },
+    "Q0662": {
+        "Aspect": "meaning",
+        "Complexity": "sh",
+        "Question": "Why does Jim think Solomon wasn't a wise man?",
+        "Options": {
+            "A": "Solomon gave all his riches away to strangers.",
+            "B": "Solomon couldn't understand the language of birds.",
+            "C": "Solomon lost all his wisdom after a dream.",
+            "D": "Solomon was going to cut a baby in half."
+        }
+    },
+    "Q0663": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "What convinces Jim that the ordeal in the fog was not a dream?",
+        "Options": {
+            "A": "He notices a campfire burning on the shore and recognizes the smell of fish cooking",
+            "B": "He sees the tallest and the thickest kind of timber on both banks and a couple of sawlogs made fast together.",
+            "C": "He hears the sound of a steamboat whistle which he remembers hearing before falling asleep",
+            "D": "He finds the remains of their campsite undisturbed, just as they left it before the fog rolled in"
+        }
+    },
+    "Q0664": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "What town are Huck and Jim trying to reach?",
+        "Options": {
+            "A": "St. Petersburg",
+            "B": "New Orleans",
+            "C": "Cairo.",
+            "D": "Louisville"
+        }
+    },
+    "Q0665": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "How does Huck dissuade the men in the boat from searching his raft?",
+        "Options": {
+            "A": "He claims there are dangerous animals on the raft.",
+            "B": "His says his small-pox ridden family is onboard.",
+            "C": "He warns them that the raft is booby-trapped.",
+            "D": "He pretends to be a ghost haunting the raft."
+        }
+    },
+    "Q0666": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "How do Jim and Huck explain the disappearance of the canoe?",
+        "Options": {
+            "A": "It was stolen by someone from the nearby town.",
+            "B": "It drifted away because they forgot to secure it properly.",
+            "C": "It is due to bad luck from the rattlesnake-skin.",
+            "D": "It was taken by the river's current during a sudden storm."
+        }
+    },
+    "Q0667": {
+        "Aspect": "character",
+        "Complexity": "sh",
+        "Question": "Whom are the Grangerfords feuding with?",
+        "Options": {
+            "A": "The Phelps",
+            "B": "The Wilks",
+            "C": "The Thatcherites",
+            "D": "The Shepherdsons."
+        }
+    },
+    "Q0668": {
+        "Aspect": "character",
+        "Complexity": "sh",
+        "Question": "Who brings Huck to Jim's hiding place?",
+        "Options": {
+            "A": "Tom Sawyer's Aunt Polly.",
+            "B": "Huck's father, Pap Finn.",
+            "C": "The Duke and the Dauphin.",
+            "D": "One of the Grangerford's slaves."
+        }
+    },
+    "Q0669": {
+        "Aspect": "meaning",
+        "Complexity": "sh",
+        "Question": "Why does Huck continue to serve the two con men after he realizes they are not really royalty?",
+        "Options": {
+            "A": "He is afraid they will physically harm him if he disobeys them.",
+            "B": "He admires their intelligence and wants to learn from them.",
+            "C": "He believes that they are undercover agents of the law.",
+            "D": "He doesn't want to have quarrels or get into trouble."
+        }
+    },
+    "Q0670": {
+        "Aspect": "meaning",
+        "Complexity": "sh",
+        "Question": "In the novel The Adventures of Huckleberry Finn, why is the town that the duke and dauphin enter deserted?",
+        "Options": {
+            "A": "Everyone has gone to a funeral in the next town.",
+            "B": "Everyone has gone to the annual town fair.",
+            "C": "Everyone has gone fishing on the Mississippi River.",
+            "D": "Everyone has gone to camp-meeting."
+        }
+    },
+    "Q0671": {
+        "Aspect": "meaning",
+        "Complexity": "mh",
+        "Question": "Why does the duke print up wanted signs for Jim?",
+        "Options": {
+            "A": "He wants people to believe that Jim is their prisoner.",
+            "B": "He wants to advertise Jim's musical talents to attract attention to their shows.",
+            "C": "He wants to use the posters to decorate their raft and make it look more interesting.",
+            "D": "He wants to mislead the authorities into thinking they are actively searching for Jim."
+        }
+    },
+    "Q0672": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "What two plays does the duke plan to perform portions of?",
+        "Options": {
+            "A": "Macbeth and A Midsummer Night's Dream",
+            "B": "Hamlet and Romeo and Juliet.",
+            "C": "Othello and The Merchant of Venice",
+            "D": "King Lear and The Tempest"
+        }
+    },
+    "Q0673": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "What stops the crowd from lynching Sherburn?",
+        "Options": {
+            "A": "Sherburn shames them for their cowardice.",
+            "B": "Sherburn is rescued by the arrival of the police.",
+            "C": "A local preacher convinces the crowd to forgive Sherburn.",
+            "D": "The crowd disperses due to an approaching storm."
+        }
+    },
+    "Q0674": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "In the novel The Adventures of Huckleberry Finn, what happens at the duke and king's performance?",
+        "Options": {
+            "A": "The audience is outraged and demands their money back.",
+            "B": "A lot of people show up and they laugh at the show.",
+            "C": "Only a few people attend, and they are unimpressed by the performance.",
+            "D": "The performance is interrupted by a group of protesters who disagree with the content."
+        }
+    },
+    "Q0675": {
+        "Aspect": "meaning",
+        "Complexity": "sh",
+        "Question": "Why doesn't the crowd at the first performance retaliate against the duke and dauphin?",
+        "Options": {
+            "A": "They believe the performance will improve if they give the actors another chance.",
+            "B": "They are embarrassed and want the rest of the town to also get ripped off.",
+            "C": "They are afraid of the legal consequences of causing a disturbance.",
+            "D": "They are too entertained by the performance to feel cheated."
+        }
+    },
+    "Q0676": {
+        "Aspect": "meaning",
+        "Complexity": "sh",
+        "Question": "Why does Jim regret beating his daughter for not listening to him?",
+        "Options": {
+            "A": "His daughter was actually listening but didn't understand him.",
+            "B": "His daughter was pretending not to hear him as a joke.",
+            "C": "His daughter is deaf.",
+            "D": "His daughter had already completed the task he was punishing her for."
+        }
+    },
+    "Q0677": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "How does the duke disguise Jim so that he can walk around in public?",
+        "Options": {
+            "A": "He covers him with a green blanket pretending he's a merchant from the East.",
+            "B": "He paints him blue and calls him a wild man from Borneo.",
+            "C": "He disguises him as a deaf and dumb servant who cannot speak.",
+            "D": "He dresses him to look like a sick Arab."
+        }
+    },
+    "Q0678": {
+        "Aspect": "settg",
+        "Complexity": "sh",
+        "Question": "What do the duke and king do when they are first offered the Wilks inheritance?",
+        "Options": {
+            "A": "They give it to the Wilks daughters.",
+            "B": "They refuse to take the inheritance, claiming it is immoral to profit from a man's death.",
+            "C": "They immediately spend the inheritance on gambling and drinking.",
+            "D": "They invest the inheritance in a legitimate business venture to honor the Wilks family."
+        }
+    },
+    "Q0679": {
+        "Aspect": "character",
+        "Complexity": "sh",
+        "Question": "In the novel The Adventures of Huckleberry Finn, who accuses the duke and king of being frauds?",
+        "Options": {
+            "A": "Peter Wilks's doctor and friend.",
+            "B": "Tom Sawyer's aunt Polly.",
+            "C": "The local sheriff and the town judge.",
+            "D": "Huckleberry Finn and Jim."
+        }
+    },
+    "Q0680": {
+        "Aspect": "character",
+        "Complexity": "sh",
+        "Question": "Who questions Huck about England?",
+        "Options": {
+            "A": "Aunt Sally Phelps",
+            "B": "The youngest Wilks daughter.",
+            "C": "The Duke",
+            "D": "Tom Sawyer"
+        }
+    },
+    "Q0681": {
+        "Aspect": "settg",
+        "Complexity": "sh",
+        "Question": "Where does Huck hide the inheritance money?",
+        "Options": {
+            "A": "Under the floorboards of the Wilks's house.",
+            "B": "Inside the mattress in the Wilks's guest room.",
+            "C": "In Peter Wilks's coffin.",
+            "D": "Behind the portrait in the Wilks's living room."
+        }
+    },
+    "Q0682": {
+        "Aspect": "character",
+        "Complexity": "sh",
+        "Question": "In the novel The Adventures of Huckleberry Finn, who do the duke and king believe stole their money?",
+        "Options": {
+            "A": "The house slaves.",
+            "B": "Jim alone.",
+            "C": "Huck and Jim.",
+            "D": "The townspeople."
+        }
+    },
+    "Q0683": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "How does Mary Jane discover the truth about the duke and king?",
+        "Options": {
+            "A": "She overhears the duke and king discussing their plan.",
+            "B": "She finds incriminating letters in their belongings.",
+            "C": "The real uncles arrive and expose them.",
+            "D": "Huck confesses to her."
+        }
+    },
+    "Q0684": {
+        "Aspect": "character",
+        "Complexity": "sh",
+        "Question": "In the novel The Adventures of Huckleberry Finn, who interrupts the duke and dauphin's auction?",
+        "Options": {
+            "A": "The sheriff with a warrant for their arrest.",
+            "B": "A mob accompanied by the real Wilks brothers.",
+            "C": "A group of local townspeople who suspect fraud.",
+            "D": "The lawyer of the late Peter Wilks, questioning the will."
+        }
+    },
+    "Q0685": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "What has delayed the arrival of the true Wilks brothers?",
+        "Options": {
+            "A": "Their baggage was lost and one of them broke his arm.",
+            "B": "They missed their train connection due to a scheduling error.",
+            "C": "One of them fell ill with a fever, delaying their journey.",
+            "D": "They were detained by a legal misunderstanding in the previous town."
+        }
+    },
+    "Q0686": {
+        "Aspect": "meaning",
+        "Complexity": "sh",
+        "Question": "Why is the crowd surprised when Peter Wilks's coffin is opened?",
+        "Options": {
+            "A": "They discover a secret will left by Peter Wilks.",
+            "B": "They see that the body is not actually Peter Wilks.",
+            "C": "They find a hidden map leading to a treasure.",
+            "D": "They find the inheritance money inside."
+        }
+    },
+    "Q0687": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "What happens to Jim while Huck is ashore with the duke and king?",
+        "Options": {
+            "A": "He is taken in by a local family who believes he is a free man.",
+            "B": "He decides to leave the raft and start a new life in the town.",
+            "C": "He is mistaken for a thief and arrested by the local sheriff.",
+            "D": "He is picked up as a runaway slave."
+        }
+    },
+    "Q0688": {
+        "Aspect": "meaning",
+        "Complexity": "sh",
+        "Question": "Why does Huck decide he can't pray about his problems?",
+        "Options": {
+            "A": "He believes praying is only for church-going people.",
+            "B": "He thinks his problems are too trivial for prayer.",
+            "C": "He's not truly sorry for helping Jim.",
+            "D": "He's afraid that if he prays, he will be punished for his actions."
+        }
+    },
+    "Q0689": {
+        "Aspect": "settg",
+        "Complexity": "sh",
+        "Question": "What is the duke doing when Huck runs across him?",
+        "Options": {
+            "A": "He was sticking up a bill for the Royal Nonesuch.",
+            "B": "He was fishing on the riverbank",
+            "C": "He was arguing with the king about their plans",
+            "D": "He was sleeping under a tree"
+        }
+    },
+    "Q0690": {
+        "Aspect": "character",
+        "Complexity": "mh",
+        "Question": "Who does Huck pretend to be when he gets to the Phelps farm?",
+        "Options": {
+            "A": "The Phelps's son.",
+            "B": "The Phelps's farmhand.",
+            "C": "The Phelps's nephew.",
+            "D": "The Phelps's neighbor."
+        }
+    },
+    "Q0691": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "In the novel The Adventures of Huckleberry Finn, what happens to the duke and king?",
+        "Options": {
+            "A": "They are arrested and jailed.",
+            "B": "They escape down the river.",
+            "C": "They become respected leaders in the town.",
+            "D": "They are tarred and feathered."
+        }
+    },
+    "Q0692": {
+        "Aspect": "meaning",
+        "Complexity": "sh",
+        "Question": "Why does Tom nix Huck's original plan to free Jim?",
+        "Options": {
+            "A": "He believes Huck's plan is too dangerous for them.",
+            "B": "He thinks Huck's plan will take too long to execute.",
+            "C": "He feels that Huck's plan doesn't follow the adventure stories he's read.",
+            "D": "He thinks Huck's plan is too simple."
+        }
+    },
+    "Q0693": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "What does Tom need a saw for?",
+        "Options": {
+            "A": "To saw the leg off Jim's bed.",
+            "B": "To cut through the prison bars.",
+            "C": "To build a raft for their escape.",
+            "D": "To defend themselves against pursuers."
+        }
+    },
+    "Q0694": {
+        "Aspect": "meaning",
+        "Complexity": "sh",
+        "Question": "Why do Tom and Huck replace the spoons and sheets after stealing them?",
+        "Options": {
+            "A": "They feel guilty and want to return them.",
+            "B": "They need to use the items for another part of their plan.",
+            "C": "They are trying to confuse Aunt Sally.",
+            "D": "Aunt Sally asks them to put everything back in its place."
+        }
+    },
+    "Q0695": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "What does Tom want Jim to do before he can escape?",
+        "Options": {
+            "A": "Tom insists Jim must write a farewell letter to his family before leaving",
+            "B": "Tom demands Jim to dig a tunnel under the shed for his escape",
+            "C": "Tom requires Jim to do his inscription and coat of arms.",
+            "D": "Tom suggests Jim should grow a disguise to avoid recognition."
+        }
+    },
+    "Q0696": {
+        "Aspect": "meaning",
+        "Complexity": "sh",
+        "Question": "Why does Tom feel the need to create elaborate plans for Jim's escape?",
+        "Options": {
+            "A": "He believes it's the only way to ensure Jim's safety.",
+            "B": "He thinks simple plans are not challenging enough.",
+            "C": "He wants to follow the model in his adventure books.",
+            "D": "He wants to impress Huck with his intelligence and creativity."
+        }
+    },
+    "Q0697": {
+        "Aspect": "character",
+        "Complexity": "sh",
+        "Question": "Who does Tom pretend to be in his last letter to the Phelpses?",
+        "Options": {
+            "A": "A remorseful gang member.",
+            "B": "A concerned neighbor.",
+            "C": "A government official.",
+            "D": "A traveling preacher."
+        }
+    },
+    "Q0698": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "How does Jim finally gain his freedom?",
+        "Options": {
+            "A": "Jim buys his freedom with money he found on the raft.",
+            "B": "Huck's father returns and sets Jim free as a gesture of goodwill.",
+            "C": "The judge in the town declares Jim free after hearing his story.",
+            "D": "Tom reveals that Miss Watson has freed him in her will."
+        }
+    },
+    "Q0699": {
+        "Aspect": "character",
+        "Complexity": "sh",
+        "Question": "Who arrives to clear up the confusion caused by Tom and Huck?",
+        "Options": {
+            "A": "Aunt Polly.",
+            "B": "Miss Watson",
+            "C": "Judge Thatcher",
+            "D": "Widow Douglas"
+        }
+    },
+    "Q0700": {
+        "Aspect": "meaning",
+        "Complexity": "sh",
+        "Question": "Why does Huck want to head out West?",
+        "Options": {
+            "A": "To escape Aunt Sally's efforts to civilize him.",
+            "B": "To find adventure and gold like a prospector",
+            "C": "To reunite with his long-lost father",
+            "D": "To become a cowboy and learn to herd cattle"
+        }
+    },
+    "Q0701": {
+        "Aspect": "settg",
+        "Complexity": "sh",
+        "Question": "Where does Tom get ideas for his plans?",
+        "Options": {
+            "A": "Adventure novels.",
+            "B": "His own experiences",
+            "C": "Local legends and myths",
+            "D": "School textbooks"
+        }
+    },
+    "Q0702": {
+        "Aspect": "character",
+        "Complexity": "dtl",
+        "Question": "Who is Peter Wilks?",
+        "Options": {
+            "A": "A wealthy plantation owner who was swindled out of his fortune",
+            "B": "The youngest brother who went searching for treasure",
+            "C": "A dead man who left behind a rich inheritance.",
+            "D": "A famous lawyer who defended Jim in court"
+        }
+    },
+    "Q0703": {
+        "Aspect": "character",
+        "Complexity": "dtl",
+        "Question": "Who is Sid?",
+        "Options": {
+            "A": "He is a friend of Huck's from St. Petersburg.",
+            "B": "He is the town's judge.",
+            "C": "He is Tom's relative.",
+            "D": "He is the steamboat captain Huck encounters."
+        }
+    },
+    "Q0704": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "What is the source of the fortune that Judge Thatcher is keeping in trust for Huck?",
+        "Options": {
+            "A": "The money hidden by the robbers in the cave, which was found by Huck and Tom later.",
+            "B": "The reward money Huck received for capturing a notorious criminal",
+            "C": "An inheritance left to Huck by his late father",
+            "D": "A treasure Huck discovered while on a journey down the Mississippi River"
+        }
+    },
+    "Q0705": {
+        "Aspect": "character",
+        "Complexity": "sh",
+        "Question": "At the end of the novel, which character informs the others that Jim is actually a free man?",
+        "Options": {
+            "A": "Tom.",
+            "B": "Huck.",
+            "C": "Aunt Polly.",
+            "D": "Miss Watson."
+        }
+    },
+    "Q0706": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "What symbolizes bad luck to Huck and Jim?",
+        "Options": {
+            "A": "A shed snakeskin.",
+            "B": "A broken mirror.",
+            "C": "A black cat crossing their path.",
+            "D": "Spilling salt."
+        }
+    },
+    "Q0707": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "Which Wilks sister is initially suspicious of Huck?",
+        "Options": {
+            "A": "Joe.",
+            "B": "Mary Jane",
+            "C": "Susan",
+            "D": "Charlotte"
+        }
+    },
+    "Q0708": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "How does Huck know that Pap has returned to St. Petersburg?",
+        "Options": {
+            "A": "He hears about Pap's return from the townspeople.",
+            "B": "He finds a note Pap left at his door.",
+            "C": "He sees Pap's boot print in the snow.",
+            "D": "He recognizes Pap's unique whistle while walking in town."
+        }
+    },
+    "Q0709": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "What is the name of the wrecked steamboat on which Huck and Jim encounter the robbers?",
+        "Options": {
+            "A": "The Royal Nonesuch",
+            "B": "The Mississippi Belle",
+            "C": "The Grand Majestic",
+            "D": "The Walter Scott."
+        }
+    },
+    "Q0710": {
+        "Aspect": "settg",
+        "Complexity": "sh",
+        "Question": "What is Jim's initial destination when he and Huck start downriver?",
+        "Options": {
+            "A": "The Ohio River.",
+            "B": "The Mississippi River",
+            "C": "The Missouri River",
+            "D": "The Arkansas River"
+        }
+    },
+    "Q0711": {
+        "Aspect": "settg",
+        "Complexity": "sh",
+        "Question": "Where does Huck hide the Wilks family gold?",
+        "Options": {
+            "A": "Under the floorboards of the Wilks's house.",
+            "B": "Inside the stove in the Wilks's kitchen.",
+            "C": "Buried in the backyard of the Wilks's property.",
+            "D": "In Peter Wilks's coffin."
+        }
+    },
+    "Q0712": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "Down which river do Huck and Jim travel?",
+        "Options": {
+            "A": "The Missouri River",
+            "B": "The Ohio River",
+            "C": "The Colorado River",
+            "D": "The Mississippi."
+        }
+    },
+    "Q0713": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "What event sets off the final gunfight between the Shepherdsons and the Grangerfords?",
+        "Options": {
+            "A": "Buck Grangerford's accusation of theft against the Shepherdsons.",
+            "B": "The discovery of a secret letter between the two families.",
+            "C": "Sophia Grangerford's elopement with a Shepherdson.",
+            "D": "A public insult at the town's church service."
+        }
+    },
+    "Q0714": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "What does the 'witch pie' that Huck and Tom bake for Jim contain?",
+        "Options": {
+            "A": "A file with a rescue plan written on it",
+            "B": "A rope ladder.",
+            "C": "A saw to cut through the bars",
+            "D": "A map showing the escape route"
+        }
+    },
+    "Q0715": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "How do the duke and the king dress Jim so that he can stay on the raft without being tied up?",
+        "Options": {
+            "A": "As a runaway slave.",
+            "B": "As a wild Indian.",
+            "C": "As a traveling circus performer.",
+            "D": "As a sick Arab."
+        }
+    },
+    "Q0716": {
+        "Aspect": "settg",
+        "Complexity": "sh",
+        "Question": "What is the name of the town where Huck, Jim, and Tom live at the novel's opening?",
+        "Options": {
+            "A": "Hannibal",
+            "B": "St. Petersburg.",
+            "C": "Jackson's Island",
+            "D": "Cairo"
+        }
+    },
+    "Q0717": {
+        "Aspect": "meaning",
+        "Complexity": "sh",
+        "Question": "Why does Jim run away from Miss Watson's?",
+        "Options": {
+            "A": "He wants to seek his own fortune and adventure away from the plantation",
+            "B": "He is tired of Miss Watson's strict rules and decides to escape for his freedom",
+            "C": "She is planning to sell him, which would separate him from his family.",
+            "D": "Miss Watson has granted him his freedom, but he doesn't trust her and runs away instead"
+        }
+    },
+    "Q0718": {
+        "Aspect": "plot",
+        "Complexity": "dtl",
+        "Question": "What charm does Jim wear around his neck that he says cures sickness?",
+        "Options": {
+            "A": "A rabbit's foot.",
+            "B": "A silver bullet.",
+            "C": "A lock of hair.",
+            "D": "A five-cent piece."
+        }
+    },
+    "Q0719": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "Which is the primary influence on Tom Sawyer?",
+        "Options": {
+            "A": "Huck's practical nature.",
+            "B": "Jim's superstitions.",
+            "C": "The rules of society.",
+            "D": "Adventure novels."
+        }
+    },
+    "Q0720": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "In the novel The Adventures of Huckleberry Finn, 'Temperance' refers to the movement designed to abolish what?",
+        "Options": {
+            "A": "Eating meat.",
+            "B": "Gambling.",
+            "C": "Dancing.",
+            "D": "Drinking alcohol."
+        }
+    },
+    "Q0721": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "What kind of animal does Huck kill as part of the plot to fake his own death?",
+        "Options": {
+            "A": "A chicken.",
+            "B": "A dog.",
+            "C": "A pig.",
+            "D": "A horse."
+        }
+    },
+    "Q0722": {
+        "Aspect": "character",
+        "Complexity": "sh",
+        "Question": "What character gets shot in Jim's final 'escape'?",
+        "Options": {
+            "A": "Jim",
+            "B": "Huck",
+            "C": "Tom.",
+            "D": "Pap Finn"
+        }
+    },
+    "Q0723": {
+        "Aspect": "settg",
+        "Complexity": "sh",
+        "Question": "Where does Huck go after Sherburn disperses the lynch mob?",
+        "Options": {
+            "A": "To the widow's house.",
+            "B": "To the Mississippi River.",
+            "C": "To Jim's hiding place.",
+            "D": "To the circus."
+        }
+    },
+    "Q0724": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "How does Tom travel to the Phelps farm?",
+        "Options": {
+            "A": "By horseback.",
+            "B": "By steamboat.",
+            "C": "By raft.",
+            "D": "On foot."
+        }
+    }
+}

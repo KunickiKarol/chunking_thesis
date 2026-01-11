@@ -1,0 +1,310 @@
+{
+    "Q1916": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel The Old Wives' Tale, has someone ever been mentioned to scream in the novel? If so, how many times have they been mentioned to scream?",
+        "Options": {
+            "A": "Yes, 2",
+            "B": "Yes, 5",
+            "C": "Yes, 4",
+            "D": "Yes, 3"
+        }
+    },
+    "Q1917": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "How many times has Constance cried?",
+        "Options": {
+            "A": "4",
+            "B": "6",
+            "C": "7",
+            "D": "5"
+        }
+    },
+    "Q1918": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "How many times have Miss Chetwynd and Sophia gotten along with each other?",
+        "Options": {
+            "A": "0",
+            "B": "2",
+            "C": "3",
+            "D": "1"
+        }
+    },
+    "Q1919": {
+        "Aspect": "relat",
+        "Complexity": "mh",
+        "Question": "Who are in the The Baines family?",
+        "Options": {
+            "A": "John Baines, Mrs. Baines, Sophia",
+            "B": "Constance, Samuel Povey, Cyril",
+            "C": "Gerald Scales, Constance, Sophia",
+            "D": "Samuel Povey, Mrs. Baines, Gerald Scales"
+        }
+    },
+    "Q1920": {
+        "Aspect": "relat",
+        "Complexity": "dtl",
+        "Question": "What is the relationship between Mrs. Baine and middle-aged fool?",
+        "Options": {
+            "A": "Mrs. Baine is the mother of the middle-aged fool",
+            "B": "Mrs. Baine and middle-aged fool are same person",
+            "C": "Mrs. Baine is the sister of the middle-aged fool",
+            "D": "Mrs. Baine is the daughter of the middle-aged fool"
+        }
+    },
+    "Q1921": {
+        "Aspect": "meaning",
+        "Complexity": "dtl",
+        "Question": "In the novel The Old Wives' Tale, in which chapter does there exist a sentence with the same or similar meaning as ' As Mr. Scales was about to depart, he caught sight of her. with her delightful snub nose and warm, unassuming eyes, she was in the midst of inviting the second customer to ascend to the showroom, where Miss Sophia awaited.'?",
+        "Options": {
+            "A": "Chapter 6",
+            "B": "Chapter 4",
+            "C": "Chapter 8",
+            "D": "Chapter 10"
+        }
+    },
+    "Q1922": {
+        "Aspect": "span",
+        "Complexity": "mh",
+        "Question": "In which year does the earliest event happen, and in which year does the latest even happen?",
+        "Options": {
+            "A": "1807,  1908",
+            "B": "1810, 1910",
+            "C": "1799, 1905",
+            "D": "1820, 1912"
+        }
+    },
+    "Q1923": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel The Old Wives' Tale, has someone ever been mentioned to shout? If so, how many times has this plot been mentioned?",
+        "Options": {
+            "A": "Yes, 3",
+            "B": "Yes, 6",
+            "C": "Yes, 8",
+            "D": "Yes, 10"
+        }
+    },
+    "Q1924": {
+        "Aspect": "character",
+        "Complexity": "dtl",
+        "Question": "In the novel The Old Wives' Tale, in which chapter does there exist a sentence with the same or similar meaning as 'Madame Foucault felt profoundly moved by the situation. In her characteristic manner, she immediately began formulating a theory that Sophia could effortlessly find ideal tenants for the rooms simply by stepping out of the house..?",
+        "Options": {
+            "A": "Chapter 4",
+            "B": "Chapter 8",
+            "C": "Chapter 6",
+            "D": "Chapter 10"
+        }
+    },
+    "Q1925": {
+        "Aspect": "character",
+        "Complexity": "mh",
+        "Question": "Who is Rue Clausel?",
+        "Options": {
+            "A": "Rue Clausel was a young and struggling artist",
+            "B": "Rue Clausel was an old and retired schoolteacher",
+            "C": "Rue Clausel, was a middle-aged and wealthy man",
+            "D": "Rue Clausel was a famous and influential politician"
+        }
+    },
+    "Q1926": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel The Old Wives' Tale, has the author described someone begging others for food or living? If so, how many times has the author mentioned this action?",
+        "Options": {
+            "A": "Yes, 2",
+            "B": "Yes, 1",
+            "C": "Yes, 3",
+            "D": "No, never"
+        }
+    },
+    "Q1927": {
+        "Aspect": "meaning",
+        "Complexity": "dtl",
+        "Question": "In the novel The Old Wives' Tale, in which chapter does there exist a sentence with the same or similar meaning as 'She briefly noticed a sizable bathtub positioned beside the bed, and before she knew it, she found herself gently guided into its chilling, icy-cold water.'?",
+        "Options": {
+            "A": "Chapter 3",
+            "B": "Chapter 5",
+            "C": "Chapter 8",
+            "D": "Chapter 12"
+        }
+    },
+    "Q1928": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel The Old Wives' Tale, has there been any celebration? If so, how many times has this plot happened?",
+        "Options": {
+            "A": "Yes, 7",
+            "B": "Yes, 12",
+            "C": "Yes, 5",
+            "D": "Yes, 9"
+        }
+    },
+    "Q1929": {
+        "Aspect": "character",
+        "Complexity": "dtl",
+        "Question": "In the novel The Old Wives' Tale, in which chapter does there exist a sentence with the same or similar meaning as ' The boy stood tall, defying his appearance as a little child. Yet, in his father's eyes, he remained a little boy, draped in his night-shirt, his demeanor and expressions still very much childlike. He exuded a delightful and endearing anxiety not to disrupt his mother, who had been deprived of sleep due to tending to Amy during her illness, requiring constant care and attention.'?",
+        "Options": {
+            "A": "Chapter 3",
+            "B": "Chapter 8",
+            "C": "Chapter 5",
+            "D": "Chapter 12"
+        }
+    },
+    "Q1930": {
+        "Aspect": "relat",
+        "Complexity": "mh",
+        "Question": "What is the relationship between Boldero and Gerald?",
+        "Options": {
+            "A": "Boldero was the uncle of Gerald",
+            "B": "Boldero was the father of Gerald",
+            "C": "Boldero was the brother of Gerald",
+            "D": "Boldero was the cousin of Gerald"
+        }
+    },
+    "Q1931": {
+        "Aspect": "meaning",
+        "Complexity": "dtl",
+        "Question": "In the novel The Old Wives' Tale, in which chapter does there exist a sentence with the same or similar meaning as 'However, the sheer disarray on the washstand, with a towel carelessly strewn across one of the cane chairs, induced a sense of impropriety in him, intensifying his casual restlessness.'?",
+        "Options": {
+            "A": "Chapter 1",
+            "B": "Chapter 2",
+            "C": "Chapter 3",
+            "D": "Chapter 4"
+        }
+    },
+    "Q1932": {
+        "Aspect": "relat",
+        "Complexity": "mh",
+        "Question": "What is the relationship between harriet and Constance?",
+        "Options": {
+            "A": "Harriet was the aunt of Constance",
+            "B": "Harriet was the sister of Constance",
+            "C": "Harriet was the mother of Constance",
+            "D": "Harriet was the cousin of Constance"
+        }
+    },
+    "Q1933": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel The Old Wives' Tale, has the author described someone feeling heart broken? If so, how many times has the author mentioned about this action?",
+        "Options": {
+            "A": "No, never",
+            "B": "Yes, 1",
+            "C": "Yes, 2",
+            "D": "Yes, 3"
+        }
+    },
+    "Q1934": {
+        "Aspect": "character",
+        "Complexity": "dtl",
+        "Question": "In the novel The Old Wives' Tale, in which chapter does there exist a sentence with the same or similar meaning as The quiet denial of individuality had passed unnoticed, leaving little trace of his presence in either his room or the recollections of those who shared the house with him.?",
+        "Options": {
+            "A": "Chapter 4",
+            "B": "Chapter 10",
+            "C": "Chapter 7",
+            "D": "Chapter 13"
+        }
+    },
+    "Q1935": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "How many times has Sophia cried?",
+        "Options": {
+            "A": "2",
+            "B": "5",
+            "C": "4",
+            "D": "3"
+        }
+    },
+    "Q1936": {
+        "Aspect": "character",
+        "Complexity": "dtl",
+        "Question": "In the novel The Old Wives' Tale, in which chapter does there exist a sentence with the same or similar meaning as ' However, he persisted in pestering her feet, leading to one of those ceaseless and monotonous arguments on a singular topic that frequently arises between two intellectual peers, where one is a young son of the household and the other a seasoned servant who deeply admires him.'?",
+        "Options": {
+            "A": "Chapter 2",
+            "B": "Chapter 4",
+            "C": "Chapter 7",
+            "D": "Chapter 10"
+        }
+    },
+    "Q1937": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel The Old Wives' Tale, has the author described someone dancing? If so, how many times has the authot mentioned this action?",
+        "Options": {
+            "A": "Yes, 1",
+            "B": "Yes, 3",
+            "C": "Yes, 2",
+            "D": "No, never"
+        }
+    },
+    "Q1938": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "Has the word or phrase 'Three young lady assistants' appeared? If so, how many times does it appear in the text?",
+        "Options": {
+            "A": "Yes, 2",
+            "B": "Yes, 3",
+            "C": "Yes, 4",
+            "D": "Yes, 5"
+        }
+    },
+    "Q1939": {
+        "Aspect": "settg",
+        "Complexity": "dtl",
+        "Question": "In the novel The Old Wives' Tale, it is widely believed that in which country, whenever a woman washes up, she washes up the product of the district?",
+        "Options": {
+            "A": "France",
+            "B": "England",
+            "C": "Germany",
+            "D": "Italy"
+        }
+    },
+    "Q1940": {
+        "Aspect": "character",
+        "Complexity": "sh",
+        "Question": "Mr. Povey has been an apprentice in a shop in his teenage, and showed his worth when the shop has been struck down. Who owns the shop?",
+        "Options": {
+            "A": "Mr. Critchlow",
+            "B": "Mrs. Baines",
+            "C": "Mr. Baines",
+            "D": "Mr. Duncalf"
+        }
+    },
+    "Q1941": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "What did Constance said after her hair was quite finished and knelt down?",
+        "Options": {
+            "A": "She read a book",
+            "B": "She checked her reflection",
+            "C": "She went straight to bed",
+            "D": "Her prayers"
+        }
+    },
+    "Q1942": {
+        "Aspect": "character",
+        "Complexity": "sh",
+        "Question": "In the novel The Old Wives' Tale, when who entered the room, the paralytic followed her with his nervous gaze until she had sat down on the end of the sofa at the foot of the bed?",
+        "Options": {
+            "A": "Constance",
+            "B": "Geraldine",
+            "C": "Sophia",
+            "D": "Mrs. Baines"
+        }
+    },
+    "Q1943": {
+        "Aspect": "character",
+        "Complexity": "dtl",
+        "Question": "In the novel The Old Wives' Tale, when who had eaten to his capacity, he took the Signal importantly from his pocket, posed his spectacles, and read the obituary all through in slow, impressive accents.?",
+        "Options": {
+            "A": "Mr. Critchlow",
+            "B": "Mr. Povey",
+            "C": "Samuel Povey",
+            "D": "Constance"
+        }
+    }
+}

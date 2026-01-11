@@ -1,0 +1,211 @@
+{
+    "Q0756": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel The Law and the Lady, has the author mentioned someone ever killed a person? If so, how many times has this plot been mentioned by the author?",
+        "Options": {
+            "A": "Yes, 1",
+            "B": "Yes, 2",
+            "C": "Yes, 3",
+            "D": "Yes, 4"
+        }
+    },
+    "Q0757": {
+        "Aspect": "meaning",
+        "Complexity": "dtl",
+        "Question": "In the novel The Law and the Lady, in which chapter does there exist a sentence with the same or similar meaning as 'I find it difficult to depict my sensations while the carriage was taking me to Major Fitz-David's home.'?",
+        "Options": {
+            "A": "Chapter 8",
+            "B": "Chapter 5",
+            "C": "Chapter 12",
+            "D": "Chapter 15"
+        }
+    },
+    "Q0758": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "How many times has the author mentioned Ariel and Mr. Dexter hugging?",
+        "Options": {
+            "A": "Never",
+            "B": "Twice",
+            "C": "3 times",
+            "D": "Once"
+        }
+    },
+    "Q0759": {
+        "Aspect": "relat",
+        "Complexity": "mh",
+        "Question": "Who are in Valeria's family?",
+        "Options": {
+            "A": "Miserrimus Dexter, Ariel",
+            "B": "Uncle Starkweather, Rosamond",
+            "C": "Major Fitz-David, Lady Jane",
+            "D": "Valeria, Eustace Woodville"
+        }
+    },
+    "Q0760": {
+        "Aspect": "relat",
+        "Complexity": "mh",
+        "Question": "Please list 3 aliases or designations of Valeria Brinton.",
+        "Options": {
+            "A": "Mrs. Woodville, VICAR, Mrs. Eustace Woodville",
+            "B": "The covert accomplice, Mrs. Valeria Macallan, Mrs. Macallan",
+            "C": "Lady Brinton, the secret admirer, the anonymous informant",
+            "D": "Wilkie Collins, Captain Wragge, Miss Eustace"
+        }
+    },
+    "Q0761": {
+        "Aspect": "span",
+        "Complexity": "mh",
+        "Question": "In which year does the earliest event happen, and in which year does the latest even happen?",
+        "Options": {
+            "A": "1839, 1840",
+            "B": "1838, 1841",
+            "C": "1840, 1842",
+            "D": "1837, 1839"
+        }
+    },
+    "Q0762": {
+        "Aspect": "character",
+        "Complexity": "mh",
+        "Question": "Eustace Woodville is used to be negative and finally becomes a postive one? Tell in one sentence that which episode marks this character's change.",
+        "Options": {
+            "A": "Eustace Woodville reveals his true identity as Eustace Macallan, which causes a scandal and estrangement from Valeria",
+            "B": "Valeria Brinton discovers Eustace Woodville's secret past, leading to a confrontation and his eventual redemption",
+            "C": "Eustace Woodville's gambling debts are exposed, forcing him to reconcile with his family and Valeria's support.",
+            "D": "Valeria Brinton marries Eustace Woodville despite objections from Woodville's family; this decision worries Valeria's family and friends."
+        }
+    },
+    "Q0763": {
+        "Aspect": "meaning",
+        "Complexity": "dtl",
+        "Question": "In the novel The Law and the Lady, in which chapter does there exist a sentence with the same or similar meaning as 'Mrs. Macallan responded, 'I believe there can be no doubt that you are lawfully my son's wife.''?",
+        "Options": {
+            "A": "Chapter 6",
+            "B": "Chapter 3",
+            "C": "Chapter 9",
+            "D": "Chapter 12"
+        }
+    },
+    "Q0764": {
+        "Aspect": "character",
+        "Complexity": "mh",
+        "Question": "Who is Madame Mirliflore?",
+        "Options": {
+            "A": "Madame Mirliflore is a renowned chef known for her autumn soup",
+            "B": "Madame Mirliflore is a shy and retiring figure who avoids social gatherings",
+            "C": "Madame Mirliflore is a person of prodigious tenacity of purpose",
+            "D": "Madame Mirliflore is a modest dresser who often goes unnoticed at events"
+        }
+    },
+    "Q0765": {
+        "Aspect": "meaning",
+        "Complexity": "dtl",
+        "Question": "In the novel The Law and the Lady, in which chapter does there exist a sentence with the same or similar meaning as 'I can't persuade myself to duplicate, for the subsequent time, the terrible cover sheet which holds up to public shame my significant other's name.'?",
+        "Options": {
+            "A": "Chapter 12",
+            "B": "Chapter 20",
+            "C": "Chapter 8",
+            "D": "Chapter 15"
+        }
+    },
+    "Q0766": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "How many times has Mrs. Woodville cried?",
+        "Options": {
+            "A": "0",
+            "B": "1",
+            "C": "2",
+            "D": "3"
+        }
+    },
+    "Q0767": {
+        "Aspect": "relat",
+        "Complexity": "mh",
+        "Question": "What is the relationship between Mr. Woodville and Major Fitz-David?",
+        "Options": {
+            "A": "Friends",
+            "B": "Business Partners",
+            "C": "Cousins",
+            "D": "Brothers-in-law"
+        }
+    },
+    "Q0768": {
+        "Aspect": "meaning",
+        "Complexity": "dtl",
+        "Question": "In the novel The Law and the Lady, in which chapter does there exist a sentence with the same or similar meaning as 'We had been traveling for just over an hour when a sudden shift suddenly passed over us both.'?",
+        "Options": {
+            "A": "Chapter 3",
+            "B": "Chapter 2",
+            "C": "Chapter 5",
+            "D": "Chapter 7"
+        }
+    },
+    "Q0769": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "How many times have Macallan and Major Communicated?  ",
+        "Options": {
+            "A": "1",
+            "B": "5",
+            "C": "3",
+            "D": "2"
+        }
+    },
+    "Q0770": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel The Law and the Lady, has someone been murdered unnaturally? If so, how many times has this plot happened?",
+        "Options": {
+            "A": "Yes, 2",
+            "B": "Yes, 1",
+            "C": "No. No one is murdered in the text.",
+            "D": "Yes, 3. Three people are murdered in the text."
+        }
+    },
+    "Q0771": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "How many times has Mr. Gale been obliged to help?",
+        "Options": {
+            "A": "2",
+            "B": "1",
+            "C": "3",
+            "D": "4"
+        }
+    },
+    "Q0772": {
+        "Aspect": "meaning",
+        "Complexity": "dtl",
+        "Question": "In the novel The Law and the Lady, in which chapter does there exist a sentence with the same or similar meaning as 'He had graciously offered to go to my husband's lawyers on my behalf the day before.'?",
+        "Options": {
+            "A": "Chapter 12",
+            "B": "Chapter 16",
+            "C": "Chapter 14",
+            "D": "Chapter 18"
+        }
+    },
+    "Q0773": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "How many times has Mr. Eustace Macallan purchase some arsenic?",
+        "Options": {
+            "A": "0",
+            "B": "2",
+            "C": "3",
+            "D": "1"
+        }
+    },
+    "Q0774": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel The Law and the Lady, has someone been playing with something? If so, how many times has this plot happened?",
+        "Options": {
+            "A": "Yes, 1",
+            "B": "Yes, 3",
+            "C": "Yes, 4",
+            "D": "Yes, 2"
+        }
+    }
+}

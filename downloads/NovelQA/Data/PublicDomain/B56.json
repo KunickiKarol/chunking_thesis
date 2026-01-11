@@ -1,0 +1,343 @@
+{
+    "Q0000": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel Ayala's Angel, has Ayala ever screamed in the novel? If so, how many times has she screamed?",
+        "Options": {
+            "A": "No, never",
+            "B": "Yes, 1",
+            "C": "Yes, 2",
+            "D": "Yes, 3"
+        }
+    },
+    "Q0001": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "How many times have Mr. Houston and Mrs. Docimer been mentioned to have dinner together in the novel?",
+        "Options": {
+            "A": "Twice",
+            "B": "Once",
+            "C": "Three times",
+            "D": "Four times"
+        }
+    },
+    "Q0002": {
+        "Aspect": "relat",
+        "Complexity": "mh",
+        "Question": "Who are in the Tringle family?",
+        "Options": {
+            "A": "Gertrude Tringle, Ayala Tringle, Lucy Tringle",
+            "B": "Amelia Tringle, Lucy Tringle, Septimus Tringle",
+            "C": "Augusta, Lady Tringle, Tom Tringle, Thomas Tringle",
+            "D": "Colonel Jonathan Tringle, Amelia Tringle, Sir Harry Tringle"
+        }
+    },
+    "Q0003": {
+        "Aspect": "relat",
+        "Complexity": "dtl",
+        "Question": "What is the relationship between Tom and Lout?",
+        "Options": {
+            "A": "Tom is Lout's brother",
+            "B": "Tom is Lout's cousin",
+            "C": "Tom is Lout's friend",
+            "D": "Tom and Lout are same person"
+        }
+    },
+    "Q0004": {
+        "Aspect": "meaning",
+        "Complexity": "dtl",
+        "Question": "In the novel Ayala's Angel, in which chapter does there exist a sentence with the same or similar meaning as 'Mrs. Dosett was unaware of this, as Marcella chose not to mention Tom's letter's arrival. Quietly, she mailed her own letter, offering no explanation for her actions.'?",
+        "Options": {
+            "A": "Chapter 10",
+            "B": "Chapter 15",
+            "C": "Chapter 12",
+            "D": "Chapter 18"
+        }
+    },
+    "Q0005": {
+        "Aspect": "span",
+        "Complexity": "mh",
+        "Question": "In which year does the earliest event happen, and in which year does the latest even happen?",
+        "Options": {
+            "A": "1875, 1885",
+            "B": "1880, 1890",
+            "C": "1878, 1888",
+            "D": "1870, 1880"
+        }
+    },
+    "Q0006": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel Ayala's Angel, has someone had ever drinked tea? If so, how many times have they drinked it?",
+        "Options": {
+            "A": "No, never",
+            "B": "Yes, 2",
+            "C": "Yes, 3",
+            "D": "Yes, 5"
+        }
+    },
+    "Q0007": {
+        "Aspect": "character",
+        "Complexity": "dtl",
+        "Question": "In the novel Ayala's Angel, in which chapter does there exist a sentence with the same or similar meaning as 'She was the one who encouraged Ayala to misbehave towards the Tringles while they were in Rome. She would invite Ayala to her parties when she had no intention of inviting the Tringles.?",
+        "Options": {
+            "A": "Chapter 15",
+            "B": "Chapter 12",
+            "C": "Chapter 18",
+            "D": "Chapter 21"
+        }
+    },
+    "Q0008": {
+        "Aspect": "character",
+        "Complexity": "mh",
+        "Question": "Who is Lord George Bideford?",
+        "Options": {
+            "A": "Lord George is Ayala's long-lost brother who reappears to claim his inheritance",
+            "B": "Lord George is the antagonist of the story, constantly plotting against Ayala's happiness",
+            "C": "Lord George is a minor character who provides comic relief through his bumbling antics.",
+            "D": "Lord George is the pursuit of Ayala. His interactions with other characters add to the romantic and dramatic elements of the plot."
+        }
+    },
+    "Q0009": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel Ayala's Angel, has someone been mentioned to cry by the author? If so, how many times has this plot been mentioned?",
+        "Options": {
+            "A": "Yes, 2",
+            "B": "Yes, 3",
+            "C": "Yes, 5",
+            "D": "Yes, 6"
+        }
+    },
+    "Q0010": {
+        "Aspect": "character",
+        "Complexity": "dtl",
+        "Question": "In the novel Ayala's Angel, in which chapter does there exist a sentence with the same or similar meaning as 'On this occasion, numerous candidates vied for Glenbogie. One of them was Mr. Frank Houston, whose candidacy was not self-asserted, as it would have been impractical, but rather advocated by Gertrude on his behalf.'?",
+        "Options": {
+            "A": "Chapter 14",
+            "B": "Chapter 12",
+            "C": "Chapter 16",
+            "D": "Chapter 18"
+        }
+    },
+    "Q0011": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel Ayala's Angel, has someone ever been mentioned to kill others by the author? If so, how many times has this plot been mentioned by the author?",
+        "Options": {
+            "A": "Yes, once",
+            "B": "Yes, 2",
+            "C": "Yes, 3",
+            "D": "Yes, 4"
+        }
+    },
+    "Q0012": {
+        "Aspect": "meaning",
+        "Complexity": "dtl",
+        "Question": "In the novel Ayala's Angel, in which chapter does there exist a sentence with the same or similar meaning as 'Afterward, no more was mentioned, and Lucy was not informed of her uncle's opinion on the matter, despite the earlier promise.'?",
+        "Options": {
+            "A": "Chapter 12",
+            "B": "Chapter 21",
+            "C": "Chapter 18",
+            "D": "Chapter 15"
+        }
+    },
+    "Q0013": {
+        "Aspect": "relat",
+        "Complexity": "mh",
+        "Question": "What is the relationship between Egbert Dormer and Ayala?",
+        "Options": {
+            "A": "Egbert Dormer was the uncle of Ayala",
+            "B": "Egbert Dormer was the brother of Ayala",
+            "C": "Egbert Dormer  was the father of Ayala",
+            "D": "Egbert Dormer was the cousin of Ayala"
+        }
+    },
+    "Q0014": {
+        "Aspect": "character",
+        "Complexity": "dtl",
+        "Question": "In the novel Ayala's Angel, in which chapter does there exist a sentence with the same or similar meaning as 'The younger of the Dosett sisters, Adelaide Dosett, who was considerably younger than her sister, chose to dedicate herself to Egbert Dormer, the artist whose death we commemorated in our opening line.'?",
+        "Options": {
+            "A": "Chapter 1",
+            "B": "Chapter 3",
+            "C": "Chapter 5",
+            "D": "Chapter 8"
+        }
+    },
+    "Q0015": {
+        "Aspect": "relat",
+        "Complexity": "mh",
+        "Question": "What is the relationship between Lucy and Ayala?",
+        "Options": {
+            "A": "Lucy and Ayala are sisters",
+            "B": "Lucy and Ayala are cousins",
+            "C": "Lucy and Ayala are best friends",
+            "D": "Lucy and Ayala are mother and daughter"
+        }
+    },
+    "Q0016": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel Ayala's Angel, has someone been mentioned to commit the action 'to punish others'? If so, how many times has this action been mentioned?",
+        "Options": {
+            "A": "Yes, 3",
+            "B": "Yes, 2",
+            "C": "Yes, 4",
+            "D": "Yes, 5"
+        }
+    },
+    "Q0017": {
+        "Aspect": "meaning",
+        "Complexity": "dtl",
+        "Question": "In the novel Ayala's Angel, in which chapter does there exist a sentence with the same or similar meaning as fter the Easter holidays, the Trafficks returned to Queen's Gate, embarking on a blend of honeymoon and business that proved successful for a while.?",
+        "Options": {
+            "A": "Chapter 10",
+            "B": "Chapter 17",
+            "C": "Chapter 21",
+            "D": "Chapter 13"
+        }
+    },
+    "Q0018": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "How many times has Ayala cried?",
+        "Options": {
+            "A": "0",
+            "B": "3",
+            "C": "5",
+            "D": "2"
+        }
+    },
+    "Q0019": {
+        "Aspect": "meaning",
+        "Complexity": "dtl",
+        "Question": "In the novel Ayala's Angel, in which chapter does there exist a sentence with the same or similar meaning as 'Augusta had obtained this last boon from her father just two days before the wedding, sealed with her sweetest kiss.'?",
+        "Options": {
+            "A": "Chapter 5",
+            "B": "Chapter 8",
+            "C": "Chapter 12",
+            "D": "Chapter 15"
+        }
+    },
+    "Q0020": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel Ayala's Angel, has any quarrel happened in the novel? If so, how many times has it happened?",
+        "Options": {
+            "A": "Yes, once",
+            "B": "Yes, 3",
+            "C": "Yes, 2",
+            "D": "No, it never happens."
+        }
+    },
+    "Q0021": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "At the time Egbert Dormer died, how many daughters did he have?",
+        "Options": {
+            "A": "one daughter",
+            "B": "three daughters",
+            "C": "two daughters",
+            "D": "four daughters"
+        }
+    },
+    "Q0022": {
+        "Aspect": "settg",
+        "Complexity": "dtl",
+        "Question": "How old was Ayala when her father died?",
+        "Options": {
+            "A": "seventeen",
+            "B": "twenty-one",
+            "C": "nineteen",
+            "D": "eighteen"
+        }
+    },
+    "Q0023": {
+        "Aspect": "character",
+        "Complexity": "sh",
+        "Question": "When it was decided who would go to Kingsbury Crescent the difference was very great?",
+        "Options": {
+            "A": "Lucy",
+            "B": "Sophia",
+            "C": "Emily",
+            "D": "Isabella"
+        }
+    },
+    "Q0024": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "How much salary has Mr. Dosett received per annum?",
+        "Options": {
+            "A": "£900 per annum.",
+            "B": "£750 per annum.",
+            "C": "£1,000 per annum.",
+            "D": "£850 per annum."
+        }
+    },
+    "Q0025": {
+        "Aspect": "settg",
+        "Complexity": "sh",
+        "Question": "When Mr. Dosett died, how many years has it been since Dosett's marriage?",
+        "Options": {
+            "A": "took place some five years",
+            "B": "took place some fifteen years",
+            "C": "took place some twenty years",
+            "D": "took place some ten years"
+        }
+    },
+    "Q0026": {
+        "Aspect": "character",
+        "Complexity": "sh",
+        "Question": "Who was brought to this house when Mr. Dosett had consented to share with Sir Thomas the burden left by the death of the improvident artist?",
+        "Options": {
+            "A": "Isabel Boncassen",
+            "B": "Ayala Dormer",
+            "C": "Lucy Dormer",
+            "D": "Gertrude Tringle"
+        }
+    },
+    "Q0027": {
+        "Aspect": "character",
+        "Complexity": "sh",
+        "Question": "When Lucy's anger boiled within her when she was told of an excuse, and she declared to herself that she could never like whom?",
+        "Options": {
+            "A": "Her cousin",
+            "B": "Her sister",
+            "C": "Her aunt",
+            "D": "Her friend"
+        }
+    },
+    "Q0028": {
+        "Aspect": "character",
+        "Complexity": "sh",
+        "Question": "When Lucy was taken to Kingsbury Crescent who was at once carried down to Glenbogie, and from thence there came letters twice a week for six weeks?",
+        "Options": {
+            "A": "Ayala",
+            "B": "Isabella",
+            "C": "Gertrude",
+            "D": "Augusta"
+        }
+    },
+    "Q0029": {
+        "Aspect": "character",
+        "Complexity": "sh",
+        "Question": "Ayala once tried to speak about someone and Lucy suddenly silenced her. About whom did Ayala try to speak?",
+        "Options": {
+            "A": "About Mr. Hamel",
+            "B": "About Colonel Stubbs",
+            "C": "About Sir Thomas Tringle",
+            "D": "About Jonathan Stubbs"
+        }
+    },
+    "Q0030": {
+        "Aspect": "character",
+        "Complexity": "sh",
+        "Question": "Augusta hinted who had pawned her diamonds, then she felt that her nearest and dearest relatives smelt abominably of money?",
+        "Options": {
+            "A": "Lady Tringle",
+            "B": "Sir Thomas Tringle",
+            "C": "Lucy Dormer",
+            "D": "Lady Sophia"
+        }
+    }
+}

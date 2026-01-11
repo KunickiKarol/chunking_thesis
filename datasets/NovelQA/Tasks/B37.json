@@ -1,0 +1,376 @@
+{
+    "Q1383": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel Pride and Prejudice, has the word or phrase 'the young people's engagement' appeared? If so, how many times does it appear in the text?",
+        "Options": {
+            "A": "Yes, once",
+            "B": "No, never",
+            "C": "Yes, twice",
+            "D": "Yes, three times"
+        }
+    },
+    "Q1384": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel Pride and Prejudice, has the word or phrase ' a good scheme' appeared? If so, how many times does it appear in the text?",
+        "Options": {
+            "A": "No, never",
+            "B": "Yes, 1",
+            "C": "Yes, 2",
+            "D": "Yes, 3"
+        }
+    },
+    "Q1385": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel Pride and Prejudice, has the word or phrase ' at the instrument' appeared? If so, how many times does it appear in the text?",
+        "Options": {
+            "A": "No, never",
+            "B": "Yes, 1",
+            "C": "Yes, 3",
+            "D": "Yes, 2"
+        }
+    },
+    "Q1386": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel Pride and Prejudice, has the object red coat appeared? If so, how many times does it appear in the text?",
+        "Options": {
+            "A": "No, never",
+            "B": "Yes, 1",
+            "C": "Yes, 3",
+            "D": "Yes, 2"
+        }
+    },
+    "Q1387": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel Pride and Prejudice, has the object preservative  appeared? If so, how many times does it appear in the text?",
+        "Options": {
+            "A": "No, never",
+            "B": "Yes, 2",
+            "C": "Yes, 1",
+            "D": "Yes, 3"
+        }
+    },
+    "Q1388": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel Pride and Prejudice, has the object vase appeared? If so, how many times does it appear in the text?",
+        "Options": {
+            "A": "Yes, once",
+            "B": "No, never",
+            "C": "Yes, 2",
+            "D": "Yes, 3"
+        }
+    },
+    "Q1389": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "Has the place Mansfield Park appeared? If so, how many times does it appear in the text?",
+        "Options": {
+            "A": "Yes, once",
+            "B": "No, never",
+            "C": "Yes, 2",
+            "D": "Yes, 3"
+        }
+    },
+    "Q1390": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel Pride and Prejudice, has the place Cheapside appeared? If so, how many times does it appear in the text?",
+        "Options": {
+            "A": "No",
+            "B": "Yes, 2",
+            "C": "Yes, 4",
+            "D": "Yes, 6"
+        }
+    },
+    "Q1391": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "Has the place Hunsford Lane appeared? If so, how many times does it appear in the text?",
+        "Options": {
+            "A": "No",
+            "B": "Yes, 2",
+            "C": "Yes, 1",
+            "D": "Yes, 3"
+        }
+    },
+    "Q1392": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "Has the place Sussex appeared? If so, how many times does it appear in the text?",
+        "Options": {
+            "A": "Yes, once",
+            "B": "No",
+            "C": "Yes, 2",
+            "D": "Yes, 5"
+        }
+    },
+    "Q1393": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "Has the sentence 'My affections and wishes are unchanged; but one word from you will silence me on this subject for ever.' appeared? If so, how many times does this sentence appear in the text?",
+        "Options": {
+            "A": "No",
+            "B": "Yes, 1",
+            "C": "Yes, 2",
+            "D": "Yes, 3"
+        }
+    },
+    "Q1394": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "Has the character Mr. Jones appeared? If so, how many times does he/she/they appear in the text?",
+        "Options": {
+            "A": "Yes, 5",
+            "B": "Yes, 2",
+            "C": "Yes, 3",
+            "D": "Yes, 6"
+        }
+    },
+    "Q1395": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "How many times has Mr. Darcy  made no answer?",
+        "Options": {
+            "A": "5",
+            "B": "3",
+            "C": "7",
+            "D": "2"
+        }
+    },
+    "Q1396": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "How many times has Charlotte  couldn't help doing something?",
+        "Options": {
+            "A": "2",
+            "B": "3",
+            "C": "1",
+            "D": "4"
+        }
+    },
+    "Q1397": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "How many times has Elizabeth  blushed?",
+        "Options": {
+            "A": "5",
+            "B": "10",
+            "C": "8",
+            "D": "12"
+        }
+    },
+    "Q1398": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "How many times has Mrs. Bennet been startled?",
+        "Options": {
+            "A": "2",
+            "B": "3",
+            "C": "4",
+            "D": "1"
+        }
+    },
+    "Q1399": {
+        "Aspect": "relat",
+        "Complexity": "dtl",
+        "Question": "What is the relationship between Catherine and Kitty?",
+        "Options": {
+            "A": "Catherine is Kitty's mother.",
+            "B": "Catherine is Kitty's cousin.",
+            "C": "Kitty and Catherine are the same person.",
+            "D": "Catherine is Kitty's sister."
+        }
+    },
+    "Q1400": {
+        "Aspect": "relat",
+        "Complexity": "mh",
+        "Question": "What is the relationship between Mrs. Bennet and Kitty?",
+        "Options": {
+            "A": "Mrs. Bennet is Kitty's aunt.",
+            "B": "Mrs. Bennet is Kitty's sister.",
+            "C": "Mrs. Bennet is Kitty's cousin.",
+            "D": "Mrs. Bennet is Kitty's mother."
+        }
+    },
+    "Q1401": {
+        "Aspect": "relat",
+        "Complexity": "mh",
+        "Question": "What is the relationship between Mr. Bennet and Lizzy?",
+        "Options": {
+            "A": "Lizzy is Mr. Bennet's niece.",
+            "B": "Lizzy is Mr. Bennet's sister.",
+            "C": "Lizzy is Mr. Bennet's daughter.",
+            "D": "Lizzy is Mr. Bennet's cousin."
+        }
+    },
+    "Q1402": {
+        "Aspect": "relat",
+        "Complexity": "mh",
+        "Question": "What is the relationship between Mrs. Bennet and  Mrs. Philips?",
+        "Options": {
+            "A": "Mrs. Philips is Mrs. Bennet's sister.",
+            "B": "Mrs. Philips is Mrs. Bennet's cousin.",
+            "C": "Mrs. Philips is Mrs. Bennet's daughter-in-law.",
+            "D": "Mrs. Philips is Mrs. Bennet's aunt."
+        }
+    },
+    "Q1403": {
+        "Aspect": "relat",
+        "Complexity": "dtl",
+        "Question": "What is the relationship between Elizabeth and Lizzy?",
+        "Options": {
+            "A": "Elizabeth is Lizzy's sister.",
+            "B": "Elizabeth and Lizzy are the same person.",
+            "C": "Elizabeth is Lizzy's cousin.",
+            "D": "Elizabeth is Lizzy's friend."
+        }
+    },
+    "Q1404": {
+        "Aspect": "relat",
+        "Complexity": "mh",
+        "Question": "How many members are there in the Bennets' family?",
+        "Options": {
+            "A": "7",
+            "B": "5",
+            "C": "6",
+            "D": "8"
+        }
+    },
+    "Q1405": {
+        "Aspect": "meaning",
+        "Complexity": "mh",
+        "Question": "In the novel Pride and Prejudice, explain the meaning or implication of the symbol or metaphor 'red coat' within one sentence.",
+        "Options": {
+            "A": "It signifies the danger that lurks in society.",
+            "B": "It represents the wealth and prosperity of the military men.",
+            "C": "It's the implication of officers.",
+            "D": "It's a metaphor for the passionate love affairs of the characters."
+        }
+    },
+    "Q1406": {
+        "Aspect": "meaning",
+        "Complexity": "sh",
+        "Question": "In the novel Pride and Prejudice, explain the meaning or implication of the symbol or metaphor 'preservative' within one sentence.",
+        "Options": {
+            "A": "It signifies the emotional security that marriage provides to women in that era.",
+            "B": "It means that the property of her future husband will make her life better.",
+            "C": "It represents the societal expectation for women to marry for status rather than love.",
+            "D": "It indicates the physical protection that a husband is expected to offer his wife."
+        }
+    },
+    "Q1407": {
+        "Aspect": "meaning",
+        "Complexity": "dtl",
+        "Question": "In the novel Pride and Prejudice, in which chapter does there exist a sentence with the same or similar meaning as 'Forgive me for stating, but I believe that the clerical office is on par with the highest rank in the kingdom in terms of dignity.'?",
+        "Options": {
+            "A": "Chapter XI",
+            "B": "Chapter XXIII",
+            "C": "Chapter XVIII",
+            "D": "Chapter XXXV"
+        }
+    },
+    "Q1408": {
+        "Aspect": "meaning",
+        "Complexity": "dtl",
+        "Question": "In the novel Pride and Prejudice, in which chapter does there exist a sentence with the same or similar meaning as 'Let's keep quiet about this issue forever. '?",
+        "Options": {
+            "A": "Chapter XVIII",
+            "B": "Chapter XX",
+            "C": "Chapter XXII",
+            "D": "Chapter XXV"
+        }
+    },
+    "Q1409": {
+        "Aspect": "meaning",
+        "Complexity": "dtl",
+        "Question": "In the novel Pride and Prejudice, in which chapter does there exist a sentence with the same or similar meaning as 'There must be some justification for exposing him in such a horrible way.'?",
+        "Options": {
+            "A": "Chapter XXIII",
+            "B": "Chapter XL",
+            "C": "Chapter LIII",
+            "D": "Chapter XVII"
+        }
+    },
+    "Q1410": {
+        "Aspect": "character",
+        "Complexity": "dtl",
+        "Question": "Who is old Wickham?",
+        "Options": {
+            "A": "He is Mr. Bingley's solicitor.",
+            "B": "He is the late Mr. Darcy's steward.",
+            "C": "He is the Bennet family's gardener.",
+            "D": "He is Lady Catherine's coachman."
+        }
+    },
+    "Q1411": {
+        "Aspect": "settg",
+        "Complexity": "sh",
+        "Question": "When would the next ball be after the complaint of Kitty's coughing?",
+        "Options": {
+            "A": "To-morrow fortnight.",
+            "B": "Next week.",
+            "C": "In three days.",
+            "D": "Next month."
+        }
+    },
+    "Q1412": {
+        "Aspect": "character",
+        "Complexity": "sh",
+        "Question": "In the novel Pride and Prejudice, the sentence 'He was quite young, wonderfully handsome, extremely agreeable.' is to describe whom?",
+        "Options": {
+            "A": "Mr. Darcy",
+            "B": "Mr. Bingley",
+            "C": "Mr. Wickham",
+            "D": "Colonel Fitzwilliam"
+        }
+    },
+    "Q1413": {
+        "Aspect": "relat",
+        "Complexity": "sh",
+        "Question": "How many people on the whole would Mr.Bingley bring in the large party held in London?",
+        "Options": {
+            "A": "19",
+            "B": "16",
+            "C": "21",
+            "D": "24"
+        }
+    },
+    "Q1414": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "What has Mr. Darcy done that made a sharp contrast between Mr. Bingley had soon made himself acquainted with all the principal people in the room?",
+        "Options": {
+            "A": "Mr. Darcy engaged in lively conversations with several ladies but avoided dancing altogether, preferring to observe the festivities from a distance.",
+            "B": "Mr. Darcy danced with many partners throughout the evening but did not engage in any conversation outside of his immediate acquaintances.",
+            "C": "Mr. Darcy spent the evening near the refreshment table, talking exclusively to Mr. Bingley and showing no interest in the other guests.",
+            "D": "Mr. Darcy danced only once with Mrs. Hurst and once with Miss Bingley, declined being introduced to any other lady, and spent the rest of the evening in walking about the room, speaking occasionally to one of his own party."
+        }
+    },
+    "Q1415": {
+        "Aspect": "character",
+        "Complexity": "sh",
+        "Question": "How did Jane go to Mr. Bingley's home when the weather was about to rain and who asked her to do so?",
+        "Options": {
+            "A": "She went by carriage and it was her sister's suggestion.",
+            "B": "She traveled on foot and it was her father's plan.",
+            "C": "She went on horseback and it was her mom's idea.",
+            "D": "She took a public coach and it was her aunt's advice."
+        }
+    },
+    "Q1416": {
+        "Aspect": "character",
+        "Complexity": "sh",
+        "Question": "Who was the only person who didn't feel surprised after acknowledging that Elizabeth had walked three miles?",
+        "Options": {
+            "A": "Mr. Bingley",
+            "B": "Mrs. Hurst",
+            "C": "Miss Bingley",
+            "D": "Jane"
+        }
+    }
+}

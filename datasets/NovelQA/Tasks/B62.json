@@ -1,0 +1,123 @@
+{
+    "Q1735": {
+        "Aspect": "settg",
+        "Complexity": "sh",
+        "Question": "How was the moment for Stepan when, on coming, happy and good-humored, from the theater, with a huge pear in his hand for his wife?",
+        "Options": {
+            "A": "Delightful",
+            "B": "Indifferent",
+            "C": "Amusing",
+            "D": "Unpleasant"
+        }
+    },
+    "Q1736": {
+        "Aspect": "settg",
+        "Complexity": "dtl",
+        "Question": "What was in the hand of Matvey when Stepan Arkadyevitch was already washed and combed and ready to be dressed, when Matvey, stepping deliberately in his creaky boots, came back into the room?",
+        "Options": {
+            "A": "Letter",
+            "B": "Telegram",
+            "C": "Newspaper",
+            "D": "Pocket watch"
+        }
+    },
+    "Q1737": {
+        "Aspect": "settg",
+        "Complexity": "sh",
+        "Question": "How Stepan Arkadyevitch felt when he thought of his wife?",
+        "Options": {
+            "A": "Anxious",
+            "B": "Indifferent",
+            "C": "Angry",
+            "D": "Calm"
+        }
+    },
+    "Q1738": {
+        "Aspect": "settg",
+        "Complexity": "dtl",
+        "Question": "When the case had been read through, Stepan Arkadyevitch got up and stretched, and by way of tribute to the liberalism of the times, took out what in the boardroom and went into his private room?",
+        "Options": {
+            "A": "Pipe",
+            "B": "Pocket watch",
+            "C": "Snuffbox",
+            "D": "Cigarette"
+        }
+    },
+    "Q1739": {
+        "Aspect": "settg",
+        "Complexity": "sh",
+        "Question": "What did Levin feel when people treated him not as Konstantin Levin, but as the brother of the celebrated Koznishev?",
+        "Options": {
+            "A": "He could not endure it",
+            "B": "He felt immensely proud",
+            "C": "He was completely indifferent",
+            "D": "He enjoyed the attention"
+        }
+    },
+    "Q1740": {
+        "Aspect": "settg",
+        "Complexity": "dtl",
+        "Question": "When the first time Levin went out of his room, what did he forget?",
+        "Options": {
+            "A": "To pick up his travel documents from the table",
+            "B": "To say goodbye to his brother",
+            "C": "To take leave of Oblonsky's colleagues",
+            "D": "To wear his overcoat"
+        }
+    },
+    "Q1741": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "What is the occupation of Natalia's husband?",
+        "Options": {
+            "A": "Her husband is Korsunsky, a military officer",
+            "B": "Her husband is Petrov, a university professor",
+            "C": "Her husband is Ilyin, a landowner",
+            "D": "Her husband is Lvov, a diplomat"
+        }
+    },
+    "Q1742": {
+        "Aspect": "settg",
+        "Complexity": "sh",
+        "Question": "When Levin finished her university education, is Kitty already an adult?",
+        "Options": {
+            "A": "No, she was still a child",
+            "B": "Yes, she was already married and starting a family",
+            "C": "No, she was traveling abroad with her family",
+            "D": "Yes, she was engaged to Vronsky"
+        }
+    },
+    "Q1743": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "How old Levin was in Kitty's family's eyes he had no ordinary, definite career and position in society?",
+        "Options": {
+            "A": "Twenty-eight years old",
+            "B": "Thirty-two years old",
+            "C": "Thirty-five years old",
+            "D": "Forty years old"
+        }
+    },
+    "Q1744": {
+        "Aspect": "character",
+        "Complexity": "sh",
+        "Question": "Levin went to the restaurant with whom he could not help noticing a certain peculiarity of expression, as it were, a restrained radiance, about the face and whole figure of Stepan Arkadyevitch?",
+        "Options": {
+            "A": "Vronsky",
+            "B": "Karenin",
+            "C": "Koznyshev",
+            "D": "Oblonsky"
+        }
+    },
+    "Q1745": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "Has the word or phrase 'everything would _come round_' appeared in the text of the novel Anna Karenina? If so, how many times does it appear in the text?",
+        "Options": {
+            "A": "Yes, once",
+            "B": "No, never",
+            "C": "Yes, 2",
+            "D": "Yes, 3"
+        }
+    }
+}

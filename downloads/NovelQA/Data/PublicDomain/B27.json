@@ -1,0 +1,376 @@
+{
+    "Q1882": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel Mansfield Park, has the word or phrase exquisite appeared? If so, how many times does it appear in the text?",
+        "Options": {
+            "A": "Yes, 2",
+            "B": "Yes, 5",
+            "C": "Yes, 7",
+            "D": "Yes, 4"
+        }
+    },
+    "Q1883": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel Mansfield Park, has the word or phrase vulnerable appeared? If so, how many times does it appear in the text?",
+        "Options": {
+            "A": "Yes, 1",
+            "B": "No, never",
+            "C": "Yes, 2",
+            "D": "Yes, 3"
+        }
+    },
+    "Q1884": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel Mansfield Park, has the word or phrase hectic appeared? If so, how many times does it appear in the text?",
+        "Options": {
+            "A": "No, never",
+            "B": "Yes, 2",
+            "C": "Yes, 3",
+            "D": "Yes, 1"
+        }
+    },
+    "Q1885": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel Mansfield Park, has the word or phrase acre appeared? If so, how many times does it appear in the text?",
+        "Options": {
+            "A": "Yes, 3",
+            "B": "Yes, 1",
+            "C": "Yes, the word 'acre' appears five times in the text.",
+            "D": "Yes, the word 'acre' appears twice in the text."
+        }
+    },
+    "Q1886": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "Has the object Arcturus appeared? If so, how many times does it appear in the text?",
+        "Options": {
+            "A": "No, never",
+            "B": "Yes, 2",
+            "C": "Yes, 1",
+            "D": "Yes, 3"
+        }
+    },
+    "Q1887": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "Has the object the Canopus appeared? If so, how many times does it appear in the text?",
+        "Options": {
+            "A": "No, never",
+            "B": "Yes, 1",
+            "C": "Yes, 2",
+            "D": "Yes, 3"
+        }
+    },
+    "Q1888": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel Mansfield Park, has the object pianoforte appeared? If so, how many times does it appear in the text?",
+        "Options": {
+            "A": "Yes, 5",
+            "B": "Yes, 9",
+            "C": "Yes, 3",
+            "D": "Yes, 7"
+        }
+    },
+    "Q1889": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "Has the place Antigua appeared? If so, how many times does it appear in the text?",
+        "Options": {
+            "A": "Yes, 9",
+            "B": "Yes, 4",
+            "C": "Yes, 12",
+            "D": "Yes, 7"
+        }
+    },
+    "Q1890": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "Has the place Newbury appeared? If so, how many times does it appear in the text?",
+        "Options": {
+            "A": "No, never",
+            "B": "Yes, 2",
+            "C": "Yes, 1",
+            "D": "Yes, 3"
+        }
+    },
+    "Q1891": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "Has the place Garrison chapel appeared? If so, how many times does it appear in the text?",
+        "Options": {
+            "A": "Yes, 1",
+            "B": "No, never",
+            "C": "Yes, 2",
+            "D": "Yes, 3"
+        }
+    },
+    "Q1892": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "Has the sentence 'Blest leaf! whose aromatic gales dispense To Templars modesty, to Parsons sense.' appeared? If so, how many times does this sentence appear in the text?",
+        "Options": {
+            "A": "No, never",
+            "B": "Yes, 2",
+            "C": "Yes, 3",
+            "D": "Yes, 1"
+        }
+    },
+    "Q1893": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "Has the character Captain Walsh appeared? If so, how many times does he appear in the text?",
+        "Options": {
+            "A": "Yes, 1",
+            "B": "No, never",
+            "C": "Yes, 2",
+            "D": "Yes, 3"
+        }
+    },
+    "Q1894": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "How many times has Miss Crawford played harp?",
+        "Options": {
+            "A": "2",
+            "B": "4",
+            "C": "3",
+            "D": "5"
+        }
+    },
+    "Q1895": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "How many times has Fanny done needlework?",
+        "Options": {
+            "A": "2",
+            "B": "3",
+            "C": "5",
+            "D": "1"
+        }
+    },
+    "Q1896": {
+        "Aspect": "relat",
+        "Complexity": "dtl",
+        "Question": "What is the relationship between Miss Maria Ward and Lady Bertram?",
+        "Options": {
+            "A": "Miss Maria Ward is Lady Bertram's sister-in-law.",
+            "B": "Miss Maria Ward and Lady Bertram are the same person.",
+            "C": "Miss Maria Ward is Lady Bertram's daughter.",
+            "D": "Miss Maria Ward is Lady Bertram's niece."
+        }
+    },
+    "Q1897": {
+        "Aspect": "relat",
+        "Complexity": "mh",
+        "Question": "Please list 3 aliases or designations of Frances Ward.",
+        "Options": {
+            "A": "Miss Frances, Mrs Price, Fanny",
+            "B": "Free-spirited visitor to Mansfield park, gentleman admirer, Mrs. Norris",
+            "C": "Quiet sister, Lady Bertram, overbearing aunt",
+            "D": "The eldest daughter, Miss Price, manipulative aunt"
+        }
+    },
+    "Q1898": {
+        "Aspect": "relat",
+        "Complexity": "mh",
+        "Question": "In the novel Mansfield Park, how many people are there in the the Price?",
+        "Options": {
+            "A": "8",
+            "B": "12",
+            "C": "9",
+            "D": "10"
+        }
+    },
+    "Q1899": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "How many times have Campbell and Sam met each other (or appear together)?",
+        "Options": {
+            "A": "0",
+            "B": "1",
+            "C": "2",
+            "D": "3"
+        }
+    },
+    "Q1900": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "How many times have Old Scholey and Mr. Price communicated with each other?",
+        "Options": {
+            "A": "0",
+            "B": "1",
+            "C": "2",
+            "D": "3"
+        }
+    },
+    "Q1901": {
+        "Aspect": "meaning",
+        "Complexity": "sh",
+        "Question": "In the novel Mansfield Park, explain the meaning or implication of the symbol or metaphor 'the Mansfied Park' within one sentence.",
+        "Options": {
+            "A": "It signifies the oppressive societal structures of the era, highlighting the constraints placed upon individuals by social expectations.",
+            "B": "It means the beautiful countryside scene of the British, representing assurance and pleasure which human can feel from the nature.",
+            "C": "It represents the tumultuous emotional landscape of the characters, mirroring their internal conflicts and turmoils.",
+            "D": "It symbolizes the journey of personal growth and the pursuit of knowledge, as characters navigate through their educational and philosophical advancements."
+        }
+    },
+    "Q1902": {
+        "Aspect": "meaning",
+        "Complexity": "dtl",
+        "Question": "In the novel Mansfield Park, in which chapter does there exist a sentence in the novel Mansfile Park with the same or similar meaning as 'Edmund replies that 'if the situation need Fanny's gratitude, she will show it', then Edmund skip the topic.'?",
+        "Options": {
+            "A": "ChapterIV",
+            "B": "ChapterXII",
+            "C": "ChapterXVI",
+            "D": "ChapterVIII"
+        }
+    },
+    "Q1903": {
+        "Aspect": "plot",
+        "Complexity": "dtl",
+        "Question": " In which chapter does Flora appear?",
+        "Options": {
+            "A": "Chapter XXXV, twice",
+            "B": "Chapter XXI, once",
+            "C": "Chapter XLVII, twice",
+            "D": "Chapter XXVIII, twice"
+        }
+    },
+    "Q1904": {
+        "Aspect": "plot",
+        "Complexity": "dtl",
+        "Question": "In which chapter does Mr. Campbell appear?",
+        "Options": {
+            "A": "ChapterXXIX",
+            "B": "ChapterXLII",
+            "C": "ChapterXLV",
+            "D": "ChapterXXXVIII"
+        }
+    },
+    "Q1905": {
+        "Aspect": "plot",
+        "Complexity": "dtl",
+        "Question": "In which chapter does Mrs. Chapman appear?",
+        "Options": {
+            "A": "Chapter XXIV",
+            "B": "Chapter XXVII",
+            "C": "Chapter XXX",
+            "D": "Chapter XXI"
+        }
+    },
+    "Q1906": {
+        "Aspect": "character",
+        "Complexity": "sh",
+        "Question": "In the novel Mansfield Park, who did not wonder that such should be his father's feelings, nor could he regret anything but the exclusion of the Grants?",
+        "Options": {
+            "A": "Fanny Price",
+            "B": "Edmund",
+            "C": "Sir Thomas Bertram",
+            "D": "Henry Crawford"
+        }
+    },
+    "Q1907": {
+        "Aspect": "settg",
+        "Complexity": "sh",
+        "Question": "When he returned from which place, Henry Crawford would have been glad to see Mrs. Rushworth no more?",
+        "Options": {
+            "A": "Richmondy",
+            "B": "Bath",
+            "C": "London",
+            "D": "Derbyshire"
+        }
+    },
+    "Q1908": {
+        "Aspect": "character",
+        "Complexity": "sh",
+        "Question": "Edmund married with whom?",
+        "Options": {
+            "A": "Fanny",
+            "B": "Julia",
+            "C": "Maria",
+            "D": "Mary"
+        }
+    },
+    "Q1909": {
+        "Aspect": "character",
+        "Complexity": "sh",
+        "Question": "When who came back Fanny had every proof that could be given in his then melancholy state of spirits, of his perfect approbation and increased regard?",
+        "Options": {
+            "A": "Mr. Crawford",
+            "B": "Edmund Bertram",
+            "C": "Sir Thomas",
+            "D": "Henry Crawford"
+        }
+    },
+    "Q1910": {
+        "Aspect": "character",
+        "Complexity": "sh",
+        "Question": "Who had scarcely passed the solemn-looking servants, when Lady Bertram came from the drawing-room to meet her?",
+        "Options": {
+            "A": "Edmund",
+            "B": "Fanny",
+            "C": "Maria",
+            "D": "Julia"
+        }
+    },
+    "Q1911": {
+        "Aspect": "character",
+        "Complexity": "sh",
+        "Question": "A very few lines from whom shewed her the patient and the sickroom in a juster and stronger light than all Lady Bertram's sheets of paper could do?",
+        "Options": {
+            "A": "Sir Thomas",
+            "B": "Fanny Price",
+            "C": "Mrs. Norris",
+            "D": "Edmund"
+        }
+    },
+    "Q1912": {
+        "Aspect": "settg",
+        "Complexity": "sh",
+        "Question": "Tom had gone from where with a party of young men to Newmarket, where a neglected fall and a good deal of drinking had brought on a fever?",
+        "Options": {
+            "A": "London",
+            "B": "Bath",
+            "C": "Mansfield",
+            "D": "Portsmouth"
+        }
+    },
+    "Q1913": {
+        "Aspect": "settg",
+        "Complexity": "sh",
+        "Question": "The Prices were just setting off for what the next day when Mr. Crawford appeared again?",
+        "Options": {
+            "A": "church",
+            "B": "market",
+            "C": "a picnic",
+            "D": "a ball"
+        }
+    },
+    "Q1914": {
+        "Aspect": "plot",
+        "Complexity": "dtl",
+        "Question": "about how many years ago Miss Maria Ward, of Huntingdon, with only seven thousand pounds, had the good luck to captivate Sir Thomas Bertram, of Mansfield Park, in the county of Northampton, and to be thereby raised to the rank of a baronet's lady, with all the comforts and consequences of an handsome house and large income?",
+        "Options": {
+            "A": "Twenty years",
+            "B": "Thirty years",
+            "C": "Forty years",
+            "D": "Fifty years"
+        }
+    },
+    "Q1915": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "Fanny Price was at this time how old, and though there might not be much in her first appearance to captivate, there was, at least, nothing to disgust her relations?",
+        "Options": {
+            "A": "eight years old",
+            "B": "twelve years old",
+            "C": "fifteen years old",
+            "D": "ten years old"
+        }
+    }
+}

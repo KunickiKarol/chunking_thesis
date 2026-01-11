@@ -1,0 +1,211 @@
+{
+    "Q0906": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel A Tale of Two Cities, has the author mentioned the subtle action 'to lift ones eyes / eyebrows'? If so, how many times has this subtle action been mentioned by the author?",
+        "Options": {
+            "A": "Yes, 2 times",
+            "B": "Yes, 5 times",
+            "C": "Yes, 8 times",
+            "D": "Yes, 13 times"
+        }
+    },
+    "Q0907": {
+        "Aspect": "meaning",
+        "Complexity": "dtl",
+        "Question": "In the novel A Tale of Two Cities, in which chapter does there exist a sentence with the same or similar meaning as 'Mr. Stryver having decided to that charitable bestowal of favorable luck on the Specialist's little girl, made plans to spread the word about her satisfaction for her before he left town for the Long Excursion. '?",
+        "Options": {
+            "A": "Book the First Recalled to Life, Chapter 5",
+            "B": "Book the Second The Golden Thread, Chapter 17",
+            "C": "Book the Second The Track of a Storm, Chapter 12",
+            "D": "Book the Third The Track of a Storm, Chapter 7"
+        }
+    },
+    "Q0908": {
+        "Aspect": "relat",
+        "Complexity": "sh",
+        "Question": "Who are in the Darnay family?",
+        "Options": {
+            "A": "Charles Darnay, Lucie Manette",
+            "B": "Sydney Carton, Miss Pross, Monsieur Roger Cly",
+            "C": "Mr. Jarvis Lorry, Dr. Alexandre Manette",
+            "D": "Alexandre Manette, Jarvis Lorry"
+        }
+    },
+    "Q0909": {
+        "Aspect": "relat",
+        "Complexity": "mh",
+        "Question": "Please list 3 aliases or designations of Charles Darnay?",
+        "Options": {
+            "A": "Evremonde, The Golden Thread, The Tax Collector",
+            "B": "The Fury, Saint-Evremond, The Jackal",
+            "C": "The spy, One Hundred and Five-North Tower, Carton",
+            "D": "Jacques, D'Aulnais, Darnay"
+        }
+    },
+    "Q0910": {
+        "Aspect": "span",
+        "Complexity": "mh",
+        "Question": "In which year does the earliest event happen, and in which year does the latest even happen?",
+        "Options": {
+            "A": "1757-1792",
+            "B": "1749-1789",
+            "C": "1762-1794",
+            "D": "1770-1790"
+        }
+    },
+    "Q0911": {
+        "Aspect": "character",
+        "Complexity": "mh",
+        "Question": "Sydney Carton is used to be negative and finally becomes a postive one? Tell in one sentence that which episode marks this character's change.",
+        "Options": {
+            "A": "Sydney Carton is initially portrayed as a disheartened lawyer and finds redemption by taking on a new legal case that proves his worth.",
+            "B": "Sydney Carton starts off as a disillusioned clerk and his change is signified when he decides to leave London and start a new life in Paris.",
+            "C": "Sydney Carton is first seen as an underachieving attorney and his transformation occurs when he wins a pivotal court case, changing his reputation.",
+            "D": "Sydney Carton is used to be a 'wastrel' (idle, wasteful person) and finally becomes a self-sacrificing hero in the novel 'A Tale of Two Cities'; his transformation is marked during his final act of sacrificing himself for Charles Darnay at the guillotine."
+        }
+    },
+    "Q0912": {
+        "Aspect": "meaning",
+        "Complexity": "dtl",
+        "Question": "In the novel A Tale of Two Cities, in which chapter does there exist a sentence with the same or similar meaning as 'The Marquis responded, 'You do me too much honor. 'in any case, I lean toward that assumption.'?",
+        "Options": {
+            "A": "Book the second The Track of a Storm, Chapter 9",
+            "B": "Book the First: Recalled to Life, Chapter 5",
+            "C": "Book the Second: The Golden Thread, Chapter 14",
+            "D": "Book the Third: The Track of a Storm, Chapter 15"
+        }
+    },
+    "Q0913": {
+        "Aspect": "character",
+        "Complexity": "mh",
+        "Question": "Who is Jerry Cruncher?",
+        "Options": {
+            "A": "Jerry Cruncher's Role in A Tale of Two Cities. In A Tale of Two Cities, Jerry Cruncher is a British man who works by day as a porter for Tellson's Bank of London. He is abusive towards his wife; he beats and insults her because he thinks she prays too much.",
+            "B": "Jerry Cruncher is a French aristocrat who escapes to England to avoid the revolution.",
+            "C": "Jerry Cruncher is a lawyer who defends Charles Darnay in his trial.",
+            "D": "Jerry Cruncher is the head of Tellson's Bank and a key figure in the British financial industry."
+        }
+    },
+    "Q0914": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel A Tale of Two Cities, have somebody ever kissed? If so, how many times has this plot happened?",
+        "Options": {
+            "A": "3",
+            "B": "1",
+            "C": "5",
+            "D": "2"
+        }
+    },
+    "Q0915": {
+        "Aspect": "meaning",
+        "Complexity": "dtl",
+        "Question": "In the novel A Tale of Two Cities, in which chapter does there exist a sentence with the same or similar meaning as ' Madame Defarge marginally waved her hand, to suggest that she heard, and may be depended upon to show up eventually, thus went through the mud, and round the side of the jail wall.'?",
+        "Options": {
+            "A": "Book the Second The Golden Thread, Chapter 20",
+            "B": "Book the First Recalled to Life, Chapter 5",
+            "C": "Book the Third The Track of a Storm, Chapter 14",
+            "D": "Book the Third The Track of a Storm, Chapter 10"
+        }
+    },
+    "Q0916": {
+        "Aspect": "meaning",
+        "Complexity": "sh",
+        "Question": "In the novel A Tale of Two Cities, explain the meaning or implication of the symbol or metaphor 'waved her hand' within one sentence.",
+        "Options": {
+            "A": "gesture to attract someone's attention",
+            "B": "signify a command to stop",
+            "C": "move your hand from side to side in the air, usually in order to say hello or goodbye to someone.",
+            "D": "indicate the direction one should take"
+        }
+    },
+    "Q0917": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel A Tale of Two Cities, has someone been mentioned to shout by the author? If so, how many times has this plot been mentioned?",
+        "Options": {
+            "A": "Yes, once",
+            "B": "Yes, 2",
+            "C": "Yes, 4",
+            "D": "Yes, 3"
+        }
+    },
+    "Q0918": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "How many times has the author mentioned Stryver shouldering himself?",
+        "Options": {
+            "A": "2",
+            "B": "5",
+            "C": "4",
+            "D": "3"
+        }
+    },
+    "Q0919": {
+        "Aspect": "relat",
+        "Complexity": "mh",
+        "Question": "What is the relationship between Charles Darnay and Emigrant?",
+        "Options": {
+            "A": "Enemies",
+            "B": "Cousins",
+            "C": "Strangers",
+            "D": "Friends"
+        }
+    },
+    "Q0920": {
+        "Aspect": "meaning",
+        "Complexity": "dtl",
+        "Question": "In the novel A Tale of Two Cities, in which chapter does there exist a sentence with the same or similar meaning as ''What is this decree that was mentioned by the smith?''",
+        "Options": {
+            "A": "Book the First Recalled to Life, Chapter 3",
+            "B": "Book the Second The Golden Thread, Chapter 6",
+            "C": "Book the Third The Track of a Storm, Chapter 1",
+            "D": "Book the Third The Track of a Storm, Chapter 5"
+        }
+    },
+    "Q0921": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "How many times have Charles Darnay and Mr. Lorry helped each other?",
+        "Options": {
+            "A": "3",
+            "B": "2",
+            "C": "4",
+            "D": "5"
+        }
+    },
+    "Q0922": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "How many times has Lucie shuddered?",
+        "Options": {
+            "A": "1",
+            "B": "2",
+            "C": "3",
+            "D": "4"
+        }
+    },
+    "Q0923": {
+        "Aspect": "meaning",
+        "Complexity": "dtl",
+        "Question": "In the novel A Tale of Two Cities, in which chapter does there exist a sentence with the same or similar meaning as 'The marriage-day was sparkling brilliantly, and they were prepared external the shut entryway of the Specialist's room, where he was talking with Charles Darnay.'?",
+        "Options": {
+            "A": "Book the First, Recalled to Life, Chapter 6",
+            "B": "Book the Second The Track of a Storm,Chapter 18",
+            "C": "Book the Third, The Track of a Storm, Chapter 10",
+            "D": "Book the Second, The Golden Thread, Chapter 14"
+        }
+    },
+    "Q0924": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "How many times has Madame Defarge set wine?",
+        "Options": {
+            "A": "0",
+            "B": "1",
+            "C": "2",
+            "D": "3"
+        }
+    }
+}

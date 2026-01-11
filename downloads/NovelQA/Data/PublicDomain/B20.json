@@ -1,0 +1,211 @@
+{
+    "Q1746": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel Brave New World, has someone ever been mentioned to kill others by the author? If so, how many times has this plot been mentioned?",
+        "Options": {
+            "A": "Yes, once",
+            "B": "Yes, 3",
+            "C": "Yes, twice",
+            "D": "Yes, 4"
+        }
+    },
+    "Q1747": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "How many times has the author mentioned Linda crying?",
+        "Options": {
+            "A": "Never",
+            "B": "Once",
+            "C": "Twice",
+            "D": "Three times"
+        }
+    },
+    "Q1748": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "How many times have Linda and Pope kissed each other?",
+        "Options": {
+            "A": "2",
+            "B": "0",
+            "C": "1",
+            "D": "3"
+        }
+    },
+    "Q1749": {
+        "Aspect": "relat",
+        "Complexity": "mh",
+        "Question": "Who are in the Central London Hatchery and Conditioning Centre?",
+        "Options": {
+            "A": "Bernard Marx, Lenina Crowne",
+            "B": "Fanny Crown, Helmholtz Watson",
+            "C": "Linda, Mustapha Mond",
+            "D": "Tomakin Grahambell, Henry Foste"
+        }
+    },
+    "Q1750": {
+        "Aspect": "relat",
+        "Complexity": "dtl",
+        "Question": "What is the relationship between Tomakin and Thomas?",
+        "Options": {
+            "A": "Tomakin is Thomas's brother",
+            "B": "Tomakin is Thomas's son",
+            "C": "Mr. Tomakin and Thomas are the same person",
+            "D": "Tomakin is Thomas's father"
+        }
+    },
+    "Q1751": {
+        "Aspect": "meaning",
+        "Complexity": "dtl",
+        "Question": "In the novel Brave New World, in which chapter does there exist a sentence with the same or similar meaning as 'The plateau resembled a boat pacified in a waterway of lion-hued dust.'?",
+        "Options": {
+            "A": "Chapter 3",
+            "B": "Chapter 7",
+            "C": "Chapter 12",
+            "D": "Chapter 15"
+        }
+    },
+    "Q1752": {
+        "Aspect": "character",
+        "Complexity": "mh",
+        "Question": "Linda used to be negative and finally becomes a positive one? Tell in one sentence that which episode marks this character's change.",
+        "Options": {
+            "A": "Linda was indifferent to him at first and later became overly protective and caring.",
+            "B": "Linda was bad with him and slapped him at the beginning and then Linda became so good that other asked for forgiveness.",
+            "C": "Linda initially ignored him and later on, she apologized for her neglect.",
+            "D": "Linda was always kind to him, but after a certain event, she became even more nurturing and understanding."
+        }
+    },
+    "Q1753": {
+        "Aspect": "meaning",
+        "Complexity": "dtl",
+        "Question": "In the novel Brave New World, in which chapter does there exist a sentence withthe same or similar meaning as 'The warm brilliance of evening daylight made him start and squint his eyes.?",
+        "Options": {
+            "A": "Chapter 4",
+            "B": "Chapter 6",
+            "C": "Chapter 9",
+            "D": "Chapter 12"
+        }
+    },
+    "Q1754": {
+        "Aspect": "character",
+        "Complexity": "mh",
+        "Question": "Who is Jim Bokanovsky?",
+        "Options": {
+            "A": "Bokanovsky is a high-ranking Alpha who opposes the Bokanovsky Process and seeks to restore traditional reproduction methods.",
+            "B": "Bokanovsky is the Director of Hatcheries and Conditioning, responsible for overseeing the entire reproductive system of the World State.",
+            "C": "Bokanovsky is the scientist who developed the Bokanovsky Process, one of the keys to social stability in the World State. His name is thought to derive from Maurice Bokanowski, a French bureaucrat who believed in a strong and efficient central government",
+            "D": "Bokanovsky is a character who defects from the World State and joins the Savage Reservation, promoting individualism and natural birth."
+        }
+    },
+    "Q1755": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel Brave New World, has someone ever been mentioned to make the subtle action 'snore' by the author? If so, how many times has this plot been mentioned?",
+        "Options": {
+            "A": "Yes, 2",
+            "B": "No, never",
+            "C": "Yes, 1",
+            "D": "Yes, 3"
+        }
+    },
+    "Q1756": {
+        "Aspect": "meaning",
+        "Complexity": "dtl",
+        "Question": "In the novel Brave New World, in which chapter does there exist a sentence with the same or similar meaning as ' In the open air, amidst the dust and scattered debris, Bernard and John strolled leisurely back and forth. Four dogs accompanied them as they took their unhurried walk. '?",
+        "Options": {
+            "A": "Chapter 3",
+            "B": "Chapter 8",
+            "C": "Chapter 12",
+            "D": "Chapter 15"
+        }
+    },
+    "Q1757": {
+        "Aspect": "meaning",
+        "Complexity": "sh",
+        "Question": "In the novel Brave New World, explain the meaning or implication of the symbol or metaphor 'The light was frozen, dead, a ghost' within one sentence.",
+        "Options": {
+            "A": "The light was frozen, dead, a ghost. The phrase suggests that the light is actually supernatural, indicating that the Hatchery is haunted by spirits from the past.",
+            "B": "The light was frozen, dead, a ghost. The narrator uses a metaphor to compare the light inside the room at the Central London Hatchery and Conditioning Center to a ghost, cold and unfeeling, which shows that the atmosphere in the building is lifeless and free of emotion.",
+            "C": "The light was frozen, dead, a ghost. This metaphor implies that the light is literally cold to the touch, emphasizing the chilly temperature within the Hatchery.",
+            "D": "The light was frozen, dead, a ghost. It signifies that the light in the room is physically deteriorating, hinting at the poor maintenance and decay of the Hatchery's infrastructure."
+        }
+    },
+    "Q1758": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel Brave New World, has someone ever been mentioned to scream in the novel? If so, how many times have they been mentioned to scream?",
+        "Options": {
+            "A": "Yes, 1",
+            "B": "Yes, 3",
+            "C": "Yes, 5",
+            "D": "Yes, 2"
+        }
+    },
+    "Q1759": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "How many times has Mrs. Joel Dethridge locked himself?",
+        "Options": {
+            "A": "0",
+            "B": "1",
+            "C": "2",
+            "D": "3"
+        }
+    },
+    "Q1760": {
+        "Aspect": "relat",
+        "Complexity": "mh",
+        "Question": "What is the relationship between Bernard Marx and Lenina?",
+        "Options": {
+            "A": "Unlike his peers, he does not like team sports, casual services and solidarity services, and is not that fond of society's official happiness drug, known as soma. He is in love with Lenina Crowne, but does not like the fact that she partakes in the promiscuity promoted by the world state.",
+            "B": "Bernard Marx is indifferent to Lenina and views her as just another member of society to engage with in obligatory social activities.",
+            "C": "Bernard Marx disapproves of Lenina's lifestyle choices but maintains a purely professional relationship with her, avoiding personal entanglements.",
+            "D": "Bernard Marx is superior to Lenina in rank and sees her as a subordinate to mentor and guide in the ways of the World State."
+        }
+    },
+    "Q1761": {
+        "Aspect": "meaning",
+        "Complexity": "dtl",
+        "Question": "In the novel Brave New World, in which chapter does there exist a sentence with the same or similar meaning as 'The Park Lane Hospital for the Dying employed a menial staff comprising one hundred and sixty-two Deltas, organized into two Bokanovsky Groups. The first group consisted of eighty-four red-headed females, while the second group comprised seventy-eight dark dolichocephalic males, respectively.'?",
+        "Options": {
+            "A": "Chapter 15",
+            "B": "Chapter 5",
+            "C": "Chapter 10",
+            "D": "Chapter 20"
+        }
+    },
+    "Q1762": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "How many times have Bernard and John walked together?",
+        "Options": {
+            "A": "1",
+            "B": "0",
+            "C": "2",
+            "D": "3"
+        }
+    },
+    "Q1763": {
+        "Aspect": "meaning",
+        "Complexity": "dtl",
+        "Question": "In the novel Brave New World, in which chapter does there exist a sentence with the same or similar meaning as 'Continuously reflected, as if in an endless chain of mirrors, two countenances emerged. One resembled a hairless and freckled moon, encircled in a radiant orange glow. The other bore the semblance of a slender, beaked bird-mask, its surface slightly roughened by a two-day-old beard. Both faces glared at him  an air of indignation.'?",
+        "Options": {
+            "A": "Chapter 7",
+            "B": "Chapter 15",
+            "C": "Chapter 12",
+            "D": "Chapter 18"
+        }
+    },
+    "Q1764": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "How many times has Linda snored?",
+        "Options": {
+            "A": "3",
+            "B": "5",
+            "C": "0",
+            "D": "2"
+        }
+    }
+}

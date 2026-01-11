@@ -1,0 +1,739 @@
+{
+    "Q1157": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "How many children does Mrs. Ramsay have?",
+        "Options": {
+            "A": "Five",
+            "B": "Ten",
+            "C": "Eight.",
+            "D": "Six"
+        }
+    },
+    "Q1158": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "Does Mrs. Ramsay think Lily is attractive?",
+        "Options": {
+            "A": "No. She thinks it would take a clever man to find her beauty.",
+            "B": "Yes, she finds Lily's beauty conventional and appealing.",
+            "C": "No, she thinks Lily is too plain to ever be considered beautiful.",
+            "D": "Yes, she believes Lily's attractiveness lies in her traditional elegance."
+        }
+    },
+    "Q1159": {
+        "Aspect": "character",
+        "Complexity": "sh",
+        "Question": "How many daughters does Mrs. Ramsay have? Who are they?",
+        "Options": {
+            "A": "Two. Prue and Rose.",
+            "B": "Four. Prue, Nancy, Rose, and Cam.",
+            "C": "Five. Prue, Nancy, Rose, Cam, and James.",
+            "D": "Three. Prue, Nancy and Rose."
+        }
+    },
+    "Q1160": {
+        "Aspect": "meaning",
+        "Complexity": "sh",
+        "Question": "When James is a six-year-old boy in Chapter 1, what's his attitude towards his father? Why?",
+        "Options": {
+            "A": "James is indifferent to his father's presence and comments in Chapter 1. Because he is too young to understand the implications of his father's words.",
+            "B": "James is deeply admiring of his father in Chapter 1, idolizing him as a hero. Because he believes his father is always right and knows best.",
+            "C": "James is amused and entertained by his father's behavior in Chapter 1. Because he finds his father's sarcasm and disillusionment funny.",
+            "D": "James is as bitter and resentful of his father as a six-year-old in Chapter 1. Because his father shattered his dream of going to the lighthouse."
+        }
+    },
+    "Q1161": {
+        "Aspect": "character",
+        "Complexity": "dtl",
+        "Question": "In the novel To the Lighthouse, who had an unfortunate marriage?",
+        "Options": {
+            "A": "Mr. Ramsay",
+            "B": "Augustus Carmichael.",
+            "C": "Mrs. Ramsay",
+            "D": "Lily Briscoe"
+        }
+    },
+    "Q1162": {
+        "Aspect": "character",
+        "Complexity": "sh",
+        "Question": "Who is the youngest daughter in the Ramsay family?",
+        "Options": {
+            "A": "Prue",
+            "B": "Nancy",
+            "C": "Cam.",
+            "D": "Rose"
+        }
+    },
+    "Q1163": {
+        "Aspect": "plot",
+        "Complexity": "dtl",
+        "Question": "What will outlive the memory of Shakespeare, according to Mr. Ramsay?",
+        "Options": {
+            "A": "A mighty empire.",
+            "B": "An ancient tree.",
+            "C": "The written word.",
+            "D": "A small stone."
+        }
+    },
+    "Q1164": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "As the novel begins, how does young James Ramsay occupy himself?",
+        "Options": {
+            "A": "He draws battleships on the back of an envelope.",
+            "B": "He clips pictures from the Army and Navy Stores catalogue.",
+            "C": "He builds a model lighthouse from wooden blocks.",
+            "D": "He reads a storybook about pirates and adventures."
+        }
+    },
+    "Q1165": {
+        "Aspect": "character",
+        "Complexity": "sh",
+        "Question": "To whom does Lily show her painting?",
+        "Options": {
+            "A": "Charles Tansley",
+            "B": "William Bankes.",
+            "C": "Mrs. Ramsay",
+            "D": "Paul Rayley"
+        }
+    },
+    "Q1166": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "How does Andrew Ramsay die?",
+        "Options": {
+            "A": "He dies in a boating accident.",
+            "B": "He succumbs to a sudden illness while studying abroad.",
+            "C": "He is killed in World War I.",
+            "D": "He perishes in a fire at the family's summer home."
+        }
+    },
+    "Q1167": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "To what does Mr. Ramsay liken the progress of human thought?",
+        "Options": {
+            "A": "An alphabet.",
+            "B": "A staircase leading to an attic.",
+            "C": "A series of locked doors.",
+            "D": "A vast, uncharted ocean."
+        }
+    },
+    "Q1168": {
+        "Aspect": "character",
+        "Complexity": "sh",
+        "Question": "In the novel To the Lighthouse, who originally asks to go to the lighthouse?",
+        "Options": {
+            "A": "Charles",
+            "B": "Cam",
+            "C": "James.",
+            "D": "Jasper"
+        }
+    },
+    "Q1169": {
+        "Aspect": "plot",
+        "Complexity": "dtl",
+        "Question": "What article of clothing does Mrs. Ramsay make for the lighthouse keeper's son?",
+        "Options": {
+            "A": "A scarf.",
+            "B": "A hat.",
+            "C": "A stocking.",
+            "D": "A pair of gloves."
+        }
+    },
+    "Q1170": {
+        "Aspect": "character",
+        "Complexity": "sh",
+        "Question": "Who tells Lily that women can never paint or write?",
+        "Options": {
+            "A": "Charles Tansley.",
+            "B": "Mr. Ramsay",
+            "C": "Mrs. Ramsay",
+            "D": "James Ramsay"
+        }
+    },
+    "Q1171": {
+        "Aspect": "character",
+        "Complexity": "dtl",
+        "Question": "Who chooses Mrs. Ramsay's jewelry for the dinner party?",
+        "Options": {
+            "A": "Prue",
+            "B": "James",
+            "C": "Rose.",
+            "D": "Lily"
+        }
+    },
+    "Q1172": {
+        "Aspect": "character",
+        "Complexity": "sh",
+        "Question": "Which character does Mrs. Ramsay hope Lily will marry?",
+        "Options": {
+            "A": "Charles Tansley",
+            "B": "Paul Rayley",
+            "C": "William Bankes.",
+            "D": "Augustus Carmichael"
+        }
+    },
+    "Q1173": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "What revives interest in Mr. Carmichael's poetry?",
+        "Options": {
+            "A": "His appointment as a professor of literature at a prestigious university",
+            "B": "His new volume of poems published during World War I.",
+            "C": "A controversial public speech he gave on modern art",
+            "D": "His appearance in a series of radio broadcasts discussing philosophy"
+        }
+    },
+    "Q1174": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "How does Prue Ramsay die?",
+        "Options": {
+            "A": "She drowns during a boating accident.",
+            "B": "She is stricken by an illness related to childbirth.",
+            "C": "She succumbs to a long-term chronic disease.",
+            "D": "She is killed in a car accident while traveling."
+        }
+    },
+    "Q1175": {
+        "Aspect": "meaning",
+        "Complexity": "sh",
+        "Question": "What does Mr. Ramsay most often want from Mrs. Ramsay and why?",
+        "Options": {
+            "A": "Sympathy; he is full of professional anxiety.",
+            "B": "Approval for his work; he seeks validation for his intellectual contributions.",
+            "C": "Assistance with his research; he requires help to advance his academic studies.",
+            "D": "Entertainment; he desires distraction from his work-related stress."
+        }
+    },
+    "Q1176": {
+        "Aspect": "character",
+        "Complexity": "sh",
+        "Question": "Who accompanies Mr. Ramsay to the lighthouse at the novel's end?",
+        "Options": {
+            "A": "James and Cam.",
+            "B": "Charles Tansley and Lily Briscoe",
+            "C": "Paul Rayley and Minta Doyle",
+            "D": "Mrs. Ramsay and Nancy Ramsey"
+        }
+    },
+    "Q1177": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "How many years pass in the second section of the novel?",
+        "Options": {
+            "A": "Ten years.",
+            "B": "Five years.",
+            "C": "Twenty years.",
+            "D": "Fifteen years."
+        }
+    },
+    "Q1178": {
+        "Aspect": "character",
+        "Complexity": "sh",
+        "Question": "In the novel To the Lighthouse, who rescues the house from the disastrous effects of time?",
+        "Options": {
+            "A": "Mrs. McNab and Mrs. Bast.",
+            "B": "Mr. Ramsay and Mr. Tansley",
+            "C": "Lily Briscoe and Charles Tansley",
+            "D": "Mr. Bankes and Mrs. Ramsay"
+        }
+    },
+    "Q1179": {
+        "Aspect": "settg",
+        "Complexity": "sh",
+        "Question": "What does Mrs. Ramsay read when she joins Mr. Ramsay after the dinner party?",
+        "Options": {
+            "A": "A passage from the Bible.",
+            "B": "A Shakespearean sonnet.",
+            "C": "A chapter from 'Middlemarch'.",
+            "D": "A poem by T.S. Eliot."
+        }
+    },
+    "Q1180": {
+        "Aspect": "plot",
+        "Complexity": "dtl",
+        "Question": "What does Minta Doyle lose on the beach?",
+        "Options": {
+            "A": "Her mother's earrings",
+            "B": "Her grandmother's brooch.",
+            "C": "Her father's watch",
+            "D": "Her sister's bracelet"
+        }
+    },
+    "Q1181": {
+        "Aspect": "settg",
+        "Complexity": "sh",
+        "Question": "When Mrs. Ramsay discovers the children awake in the nursery, what does she do to help them sleep?",
+        "Options": {
+            "A": "She reads them a bedtime story.",
+            "B": "She turns on a night light.",
+            "C": "She sings them a lullaby.",
+            "D": "She covers a skull that hangs on the wall with her shawl."
+        }
+    },
+    "Q1182": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "How old is James in this opening section?",
+        "Options": {
+            "A": "Four.",
+            "B": "Eight.",
+            "C": "Ten.",
+            "D": "Six."
+        }
+    },
+    "Q1183": {
+        "Aspect": "plot",
+        "Complexity": "dtl",
+        "Question": "As Tansley and Mrs. Ramsay walk to the shops, what do they see advertised on a sign?",
+        "Options": {
+            "A": "A circus",
+            "B": "A theatre play",
+            "C": "A farmer's market",
+            "D": "A shipyard sale"
+        }
+    },
+    "Q1184": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "In Chapter III of 'The Window', the sound of what shocks Mrs. Ramsay?",
+        "Options": {
+            "A": "The ticking of a clock",
+            "B": "The call of a seagull",
+            "C": "The waves.",
+            "D": "The whistle of the wind"
+        }
+    },
+    "Q1185": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "As Mr. Ramsay passes Lily on the grass in Chapter IV of 'The Window', what does he nearly tip?",
+        "Options": {
+            "A": "Lily's paint palette",
+            "B": "Lily's easel.",
+            "C": "Lily's canvas",
+            "D": "Lily's chair"
+        }
+    },
+    "Q1186": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "To what does Bankes compare Mrs. Ramsay in Chapter V of 'The Window'?",
+        "Options": {
+            "A": "A dilapidated lighthouse.",
+            "B": "An unfinished hotel.",
+            "C": "A blossoming garden.",
+            "D": "An ancient Greek statue."
+        }
+    },
+    "Q1187": {
+        "Aspect": "character",
+        "Complexity": "sh",
+        "Question": "In the novel To the Lighthouse, in Chapter VII of 'The Window', who goes to watch the children play cricket?",
+        "Options": {
+            "A": "Mr. Ramsay",
+            "B": "Mrs. Ramsay",
+            "C": "Lily Briscoe",
+            "D": "Tansley."
+        }
+    },
+    "Q1188": {
+        "Aspect": "plot",
+        "Complexity": "dtl",
+        "Question": "What two things does Mrs. Ramsay think the island needs?",
+        "Options": {
+            "A": "A school, a bridge.",
+            "B": "A lighthouse, a market.",
+            "C": "A post office, a library.",
+            "D": "A hospital, a dairy."
+        }
+    },
+    "Q1189": {
+        "Aspect": "plot",
+        "Complexity": "dtl",
+        "Question": "What, according to Mrs. Ramsay, would be the bill for the greenhouse?",
+        "Options": {
+            "A": "50 pounds.",
+            "B": "30 pounds",
+            "C": "70 pounds",
+            "D": "100 pounds"
+        }
+    },
+    "Q1190": {
+        "Aspect": "settg",
+        "Complexity": "sh",
+        "Question": "What does Mrs. Ramsay find when she is no longer herself?",
+        "Options": {
+            "A": "Confusion",
+            "B": "Certainty",
+            "C": "Frustration",
+            "D": "Peace."
+        }
+    },
+    "Q1191": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "In the part 'The Window', what does Lily think of her painting at the beginning of Chapter IX?",
+        "Options": {
+            "A": "She believes it is a masterpiece.",
+            "B": "She is indifferent to its quality.",
+            "C": "She feels it is nearly perfect but needs minor adjustments.",
+            "D": "She thinks it is bad."
+        }
+    },
+    "Q1192": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "In Chapter XII of 'The Window', what does Mr. Ramsay say is the only thing in Tansley's life?",
+        "Options": {
+            "A": "His career ambitions.",
+            "B": "His dissertation.",
+            "C": "His philosophical debates.",
+            "D": "His teaching position."
+        }
+    },
+    "Q1193": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "In Chapter XII of 'The Window', what does Mrs. Ramsay refrain from pointing out to Mr. Ramsay, because it would sadden him?",
+        "Options": {
+            "A": "A cloud passing over the moon",
+            "B": "The flicker of a lighthouse beam",
+            "C": "A star.",
+            "D": "The waves crashing against the shore"
+        }
+    },
+    "Q1194": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "In Chapter XIII of 'The Window', what symbol does the Ramsays mean for Lily?",
+        "Options": {
+            "A": "The artistic struggle.",
+            "B": "The passage of time.",
+            "C": "The fragility of human relationships.",
+            "D": "The married life."
+        }
+    },
+    "Q1195": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "In Chapter XVI of 'The Window', what is Mrs. Ramsay doing as she wonders whether Paul will propose to Minta?",
+        "Options": {
+            "A": "She is reading a book in the parlor.",
+            "B": "She is preparing tea for the guests.",
+            "C": "She is dressing for dinner.",
+            "D": "She is arranging flowers in the drawing room."
+        }
+    },
+    "Q1196": {
+        "Aspect": "character",
+        "Complexity": "sh",
+        "Question": "In Chapter XVII of 'The Window', who does Mrs. Ramsay blame for the shabbiness of the dining room and the isolation of her guests?",
+        "Options": {
+            "A": "Herself.",
+            "B": "Mr. Ramsay",
+            "C": "The servants",
+            "D": "The weather"
+        }
+    },
+    "Q1197": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "In Chapter XVII of 'The Window', what does Lily recognize she should do for Tansley, out of her duty as a woman?",
+        "Options": {
+            "A": "Ignore him.",
+            "B": "Challenge his opinions.",
+            "C": "Ask him to leave.",
+            "D": "Comfort him."
+        }
+    },
+    "Q1198": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "In Chapter XVII of 'The Window', what brings a change over the room, establishing a sense of order?",
+        "Options": {
+            "A": "The firelight.",
+            "B": "The setting sun.",
+            "C": "The electric lamps.",
+            "D": "The candles."
+        }
+    },
+    "Q1199": {
+        "Aspect": "plot",
+        "Complexity": "dtl",
+        "Question": "What book did Mr. Ramsay talk about with Minta, which she has not finished reading?",
+        "Options": {
+            "A": "Middlemarch.",
+            "B": "The Mill on the Floss",
+            "C": "Adam Bede",
+            "D": "Silas Marner"
+        }
+    },
+    "Q1200": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "What does Mr. Ramsay do after the guests finish dinner?",
+        "Options": {
+            "A": "He reads a novel aloud to the guests.",
+            "B": "He discusses philosophy with his wife.",
+            "C": "She recites a poem.",
+            "D": "He takes a solitary walk by the sea."
+        }
+    },
+    "Q1201": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "What does Mrs. Ramsay discover James and Cam staring at in the nursery?",
+        "Options": {
+            "A": "A boar's skull.",
+            "B": "A pirate's map.",
+            "C": "A ship in a bottle.",
+            "D": "A stuffed raven."
+        }
+    },
+    "Q1202": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "In Chapter XIX of 'The Window', Mr. Ramsay reads a book by which author?",
+        "Options": {
+            "A": "Charles Dickens",
+            "B": "William Shakespeare",
+            "C": "Jane Austen",
+            "D": "Sir Walter Scott."
+        }
+    },
+    "Q1203": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "In Chapter XIX of 'The Window', what sort of book does Mrs. Ramsay reach for?",
+        "Options": {
+            "A": "A novel by Charles Dickens.",
+            "B": "A poetry collection.",
+            "C": "A history of the English monarchy.",
+            "D": "A botanical guide to flowers."
+        }
+    },
+    "Q1204": {
+        "Aspect": "character",
+        "Complexity": "sh",
+        "Question": "In Chapter I of 'Time Passes', whose light remains on in his/her room?",
+        "Options": {
+            "A": "Mrs. Ramsay",
+            "B": "Lily Briscoe",
+            "C": "Mr. Ramsay",
+            "D": "Carmichael."
+        }
+    },
+    "Q1205": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "In Chapter II of 'Time Passes', what is the only source of movement in the house?",
+        "Options": {
+            "A": "The sea waves.",
+            "B": "The ticking clock.",
+            "C": "The scurrying mice.",
+            "D": "The wind."
+        }
+    },
+    "Q1206": {
+        "Aspect": "character",
+        "Complexity": "sh",
+        "Question": "Who dies in Chapter III of 'Time Passes'?",
+        "Options": {
+            "A": "Mrs. Ramsay.",
+            "B": "Mr. Bankes",
+            "C": "Andrew Ramsay",
+            "D": "Lily Briscoe"
+        }
+    },
+    "Q1207": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "In the novel To the Lighthouse, what do the objects in the house reply to the wind's questions?",
+        "Options": {
+            "A": "'We fade.'",
+            "B": "'We remain'.",
+            "C": "'We perish.'",
+            "D": "'We change.'"
+        }
+    },
+    "Q1208": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "In Chapter VI of 'Time Passes', what happens to Prue in summer?",
+        "Options": {
+            "A": "She gets married.",
+            "B": "She travels abroad.",
+            "C": "She starts a new job.",
+            "D": "She dies."
+        }
+    },
+    "Q1209": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "What gave Lily inspiration for her painting ten years before?",
+        "Options": {
+            "A": "The view from the window",
+            "B": "Mrs. Ramsay's reading",
+            "C": "The table-cloth pattern.",
+            "D": "The lighthouse beam"
+        }
+    },
+    "Q1210": {
+        "Aspect": "settg",
+        "Complexity": "sh",
+        "Question": "Where does Lily set up her easel?",
+        "Options": {
+            "A": "The beach.",
+            "B": "The terrace.",
+            "C": "The drawing room.",
+            "D": "The lawn."
+        }
+    },
+    "Q1211": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "How does Mr. Ramsay think Lily looks?",
+        "Options": {
+            "A": "Mr. Ramsay thinks Lily looks quite robust and hearty.",
+            "B": "Mr. Ramsay think Lily looks shriveled slightly.",
+            "C": "Mr. Ramsay believes Lily appears exceedingly glamorous and sophisticated.",
+            "D": "Mr. Ramsay considers Lily to be rather plump and overly cheerful."
+        }
+    },
+    "Q1212": {
+        "Aspect": "plot",
+        "Complexity": "dtl",
+        "Question": "What does Lily compliment Mr. Ramsay on?",
+        "Options": {
+            "A": "His boots.",
+            "B": "His hat.",
+            "C": "His coat.",
+            "D": "His tie."
+        }
+    },
+    "Q1213": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "What does Lily notice on the edge of the water?",
+        "Options": {
+            "A": "She notices a swimmer.",
+            "B": "She notices a seal.",
+            "C": "She notices a buoy.",
+            "D": "She notices a boat."
+        }
+    },
+    "Q1214": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "What do James and Cam secretly hope will happen to the boat they are in?",
+        "Options": {
+            "A": "They hope it will sail smoothly and quickly to the lighthouse.",
+            "B": "They hope it will encounter a massive storm and be delayed.",
+            "C": "They hope it will be taken over by pirates.",
+            "D": "They hope it will be forced to turn back."
+        }
+    },
+    "Q1215": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "What does Cam realize Mr. Ramsay likes to hear stories about?",
+        "Options": {
+            "A": "Men overcoming personal challenges.",
+            "B": "Men having dangerous adventures.",
+            "C": "Men engaging in intellectual debates.",
+            "D": "Men achieving great scientific discoveries."
+        }
+    },
+    "Q1216": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "What does Cam think everything her father says means?",
+        "Options": {
+            "A": "Respect my authority.",
+            "B": "Obey the rules.",
+            "C": "Submit to me.",
+            "D": "Follow my lead."
+        }
+    },
+    "Q1217": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "What does Lily do as she is thinking about the memory of Mrs. Ramsay?",
+        "Options": {
+            "A": "She cries in grief.",
+            "B": "She laughs with joy.",
+            "C": "She begins to paint furiously.",
+            "D": "She writes a letter to an old friend."
+        }
+    },
+    "Q1218": {
+        "Aspect": "plot",
+        "Complexity": "dtl",
+        "Question": "What does Lily imagine Mrs. Ramsay wearing on her head as she crosses the lawn?",
+        "Options": {
+            "A": "A wreath of white flowers.",
+            "B": "A bonnet with blue ribbons",
+            "C": "A golden tiara",
+            "D": "A silk scarf with a floral pattern"
+        }
+    },
+    "Q1219": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "What is Mr. Ramsay doing in the boat?",
+        "Options": {
+            "A": "He is fishing.",
+            "B": "He is reading.",
+            "C": "He is sleeping.",
+            "D": "He is rowing."
+        }
+    },
+    "Q1220": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "How does the lighthouse look to James as he approaches it?",
+        "Options": {
+            "A": "It appears more welcoming than he anticipated.",
+            "B": "It looks starker than he remembered.",
+            "C": "It seems smaller and less significant than he thought.",
+            "D": "It looks more colorful and ornate than his memories suggested."
+        }
+    },
+    "Q1221": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "In Chapter IX of 'The Lighthouse', what lingers of the steamer after it has passed?",
+        "Options": {
+            "A": "Its smoke.",
+            "B": "Its horn sounding in the distance",
+            "C": "The waves it created",
+            "D": "The light from its windows"
+        }
+    },
+    "Q1222": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "In Chapter X of 'The Lighthouse', how does Cam feel in Mr. Ramsay's presence in the boat?",
+        "Options": {
+            "A": "She feels anxious.",
+            "B": "She feels ignored.",
+            "C": "She feels safe.",
+            "D": "She feels resentful."
+        }
+    },
+    "Q1223": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "What does Lily feel after she has painted the final line of her painting?",
+        "Options": {
+            "A": "She feels a sense of disappointment.",
+            "B": "She feels a sense of relief.",
+            "C": "She feels a sense of confusion.",
+            "D": "She feels a sense of anger."
+        }
+    }
+}

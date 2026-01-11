@@ -1,0 +1,112 @@
+{
+    "Q0588": {
+        "Aspect": "meaning",
+        "Complexity": "sh",
+        "Question": "Why did Stephen try to open Mr. Casey's hand when Mr. Casey had told him that he made a birthday present for Queen Victoria?",
+        "Options": {
+            "A": "Stephen thought Mr. Casey was hiding a piece of birthday cake",
+            "B": "Stephen tried to see if the purse of silver was hidden there",
+            "C": "Stephen believed Mr. Casey had a secret letter for the Queen",
+            "D": "Stephen was curious if Mr. Casey was concealing a birthday card."
+        }
+    },
+    "Q0589": {
+        "Aspect": "settg",
+        "Complexity": "dtl",
+        "Question": "What was in the mouth of Mr. Casey when Kitty stuck her ugly old face up at him?",
+        "Options": {
+            "A": "His mouth was full of chewing gum",
+            "B": "His mouth was full of tobacco juice",
+            "C": "His mouth was full of food",
+            "D": "His mouth was full of water"
+        }
+    },
+    "Q0590": {
+        "Aspect": "character",
+        "Complexity": "dtl",
+        "Question": "Who was the first person to be commented on as a good Irishman when doing a job with no salary?",
+        "Options": {
+            "A": "Patrick",
+            "B": "Michael",
+            "C": "Seamus",
+            "D": "John"
+        }
+    },
+    "Q0591": {
+        "Aspect": "settg",
+        "Complexity": "dtl",
+        "Question": "What did Simon Moonan show to Stephen, that resulted in the fellow of football fifteen rolling down to Stephen when Stephen was at the door?",
+        "Options": {
+            "A": "he had shown him a shiny new whistle",
+            "B": "he had shown him a collection of colorful marbles",
+            "C": "he had shown him a ball of creamy sweets",
+            "D": "he had shown him a pocketful of foreign coins"
+        }
+    },
+    "Q0592": {
+        "Aspect": "settg",
+        "Complexity": "dtl",
+        "Question": "What was the skin color of Corrigan when the first time he met Mr Gleeson?",
+        "Options": {
+            "A": "His skin color was as the turfcoloured bogwater in the shallow end of the bath",
+            "B": "His skin was as pale as the porcelain of the sink",
+            "C": "His skin was as white as the freshly fallen snow outside the window",
+            "D": "His skin had the rosy tint of the early morning sunrise"
+        }
+    },
+    "Q0593": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "What kind of people used to watch Stephen and uncle Charles sitting down and talking about athletics and politics?",
+        "Options": {
+            "A": "A group of elderly gentlemen and local merchants",
+            "B": "A small ring of wonderstruck children and nursemaids",
+            "C": "Several curious tourists and passersby",
+            "D": "A gathering of university students and professors"
+        }
+    },
+    "Q0594": {
+        "Aspect": "settg",
+        "Complexity": "dtl",
+        "Question": "What sickened Stephen's heart when the first autumn came and the cows were driven home from the grass?",
+        "Options": {
+            "A": "The sight of the barren fields stripped of their golden wheat and the empty, silent barns",
+            "B": "The vision of the overworked farmers toiling away under the harsh, cold rain",
+            "C": "The smell of burning leaves and the sight of withered trees shedding their last leaves",
+            "D": "The first sight of the filthy cowyard at Stradbrook with its foul green puddles and clots of liquid dung and steaming bran troughs"
+        }
+    },
+    "Q0595": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "What came to an end the last time Mike Flynn went into hospital?",
+        "Options": {
+            "A": "Mike Flynn's coaching career",
+            "B": "Stephen's visits to the library",
+            "C": "The practice in the park",
+            "D": "The weekly family gatherings"
+        }
+    },
+    "Q0596": {
+        "Aspect": "plot",
+        "Complexity": "dtl",
+        "Question": "What was the color of Stephen's mother's nose and eyes, on her first day in the hall of the castle?",
+        "Options": {
+            "A": "Blue",
+            "B": "Red",
+            "C": "Green",
+            "D": "Brown"
+        }
+    },
+    "Q0597": {
+        "Aspect": "settg",
+        "Complexity": "dtl",
+        "Question": "How many balls of creamy sweets that the fellows of the football Simon Moonan show to Stephen along the carpet in the middle of the refectory when he was at the door?",
+        "Options": {
+            "A": "fifteen",
+            "B": "ten",
+            "C": "twenty",
+            "D": "thirty"
+        }
+    }
+}

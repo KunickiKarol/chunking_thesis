@@ -1,0 +1,332 @@
+{
+    "Q1852": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel Birds of Prey, has someone been mentioned to scream by the author? If so, how many times have they been mentioned to scream?",
+        "Options": {
+            "A": "Yes, 3",
+            "B": "Yes, 5",
+            "C": "Yes, 7",
+            "D": "Yes, 6"
+        }
+    },
+    "Q1853": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "How many times has the author mentioned Charlotte crying?",
+        "Options": {
+            "A": "12 times",
+            "B": "9 times",
+            "C": "15 times",
+            "D": "18 times"
+        }
+    },
+    "Q1854": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "How many times have Georgy and Nancy chum together?",
+        "Options": {
+            "A": "0",
+            "B": "2",
+            "C": "3",
+            "D": "1"
+        }
+    },
+    "Q1855": {
+        "Aspect": "relat",
+        "Complexity": "mh",
+        "Question": "Who are in the The Bird family?",
+        "Options": {
+            "A": "Matthew, Mrs. Judson, Barlingford, Philip Sheldon",
+            "B": "Georgina Cradock, Philip Sheldon's father, Ullerton dentist",
+            "C": "Mrs. Cradock, Matthew's father, Sheldon Barlingford",
+            "D": "Judson Cradock, Philip's sister, Matthew Barlingford"
+        }
+    },
+    "Q1856": {
+        "Aspect": "meaning",
+        "Complexity": "dtl",
+        "Question": "In the novel Birds of Prey, in which chapter does there exist a sentence with the same or similar meaning as 'A week from today, I reached Hidling following a long and tiring journey that spanned most of the day. The trip involved stops at Derby and Normanton, along with some minor delays at less prominent station'?",
+        "Options": {
+            "A": "Chapter 3",
+            "B": "Chapter 2",
+            "C": "Chapter 4",
+            "D": "Chapter 5"
+        }
+    },
+    "Q1857": {
+        "Aspect": "span",
+        "Complexity": "mh",
+        "Question": "In which year does the earliest event happen, and in which year does the latest even happen?",
+        "Options": {
+            "A": "1710, 1806",
+            "B": "1730, 1786",
+            "C": "1705, 1810",
+            "D": "1720, 1796"
+        }
+    },
+    "Q1858": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel Birds of Prey, has any quarrel ever happened? If so, how many times has this plot happened?",
+        "Options": {
+            "A": "Yes, 9",
+            "B": "Yes, 5",
+            "C": "Yes, 12",
+            "D": "Yes, 7"
+        }
+    },
+    "Q1859": {
+        "Aspect": "meaning",
+        "Complexity": "dtl",
+        "Question": "In the novel Birds of Prey, in which chapter does there exist a sentence with the same or similar meaning as 'As he raced towards London on the pleasantly efficient combination of a generous railway management and a swift yet economical train, he experienced a sensation beyond mere hope.'?",
+        "Options": {
+            "A": "Chapter 1",
+            "B": "Chapter 3",
+            "C": "Chapter 5",
+            "D": "Chapter 8"
+        }
+    },
+    "Q1860": {
+        "Aspect": "character",
+        "Complexity": "mh",
+        "Question": "Who is Uncle Mercer?",
+        "Options": {
+            "A": "Uncle Mercer were the uncle of Charlotte",
+            "B": "Uncle Mercer was Charlotte's brother",
+            "C": "Uncle Mercer was Charlotte's father",
+            "D": "Uncle Mercer was the family lawyer"
+        }
+    },
+    "Q1861": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel Birds of Prey, has someone ever been mentioned to get injured by the author? If so, how many times has this plot been mentioned?",
+        "Options": {
+            "A": "Yes, 2",
+            "B": "Yes, once",
+            "C": "Yes, 3 times",
+            "D": "Yes, 4 times"
+        }
+    },
+    "Q1862": {
+        "Aspect": "meaning",
+        "Complexity": "dtl",
+        "Question": "In the novel Birds of Prey, in which chapter does there exist a sentence with the same or similar meaning as 'The slight knowing gaze, which profoundly agitated this vulnerable heart, is likely something she displays whenever she feels cherished and admired. Yet, it holds no significance that could bolster my impractical aspirations.'?",
+        "Options": {
+            "A": "Chapter 2",
+            "B": "Chapter 7",
+            "C": "Chapter 4",
+            "D": "Chapter 9"
+        }
+    },
+    "Q1863": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel Birds of Prey, are there any celebrations? If so, how many times has this plot happened?",
+        "Options": {
+            "A": "Yes, 1",
+            "B": "Yes, 2",
+            "C": "Yes, 3",
+            "D": "Yes, 4"
+        }
+    },
+    "Q1864": {
+        "Aspect": "meaning",
+        "Complexity": "dtl",
+        "Question": "In the novel Birds of Prey, in which chapter does there exist a sentence with the same or similar meaning as 'During my intimate conversations with my beloved companion, I refrained from disclosing the specifics of my assignment in Yorkshire. I also kept the information about my imminent departure from Huxter's Cross for an exploratory journey, purposefully vague, as it involved a search for the elusive archives of the Meynells..'?",
+        "Options": {
+            "A": "Chapter 3",
+            "B": "Chapter 8",
+            "C": "Chapter 5",
+            "D": "Chapter 11"
+        }
+    },
+    "Q1865": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel Birds of Prey, has the author ever described someone dancing? If so, how many times has the author mentioned this action?",
+        "Options": {
+            "A": "Yes, 2",
+            "B": "Yes, 4",
+            "C": "Yes, 3",
+            "D": "Yes, 5"
+        }
+    },
+    "Q1866": {
+        "Aspect": "meaning",
+        "Complexity": "dtl",
+        "Question": "In the novel Birds of Prey, in which chapter does there exist a sentence with the same or similar meaning as 'For twenty-seven long years of his life, Fortune had been exceptionally unkind to him, only to unexpectedly change her course and shower him with her most precious blessings all at once.'?",
+        "Options": {
+            "A": "Chapter 3",
+            "B": "Chapter 6",
+            "C": "Chapter 9",
+            "D": "Chapter 12"
+        }
+    },
+    "Q1867": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "How many times has Alexander Keith of Mayfair helped to bring clandestine marriages into vogue?",
+        "Options": {
+            "A": "0",
+            "B": "2",
+            "C": "1",
+            "D": "3"
+        }
+    },
+    "Q1868": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel Birds of Prey, has the author had described someone slapping someone else? If so, how many times has the author mentioned this action?",
+        "Options": {
+            "A": "No, never",
+            "B": "Yes, 1",
+            "C": "Yes, 3",
+            "D": "Yes, 2"
+        }
+    },
+    "Q1869": {
+        "Aspect": "character",
+        "Complexity": "dtl",
+        "Question": "In the novel Birds of Prey, in which chapter does there exist a sentence with the same or similar meaning as On that particular evening, he dedicated himself to assisting his long-time ally. He wholeheartedly fulfilled all the duties of friendship for the departing Captain, sharing a delightful dinner with him in Regent Street. Subsequently, he accompanied the Captain to the London Bridge terminus, where he ensured the voyager's comfort as he settled into a second-class carriage on the night-train bound for Newhaven..",
+        "Options": {
+            "A": "Chapter 5",
+            "B": "Chapter 12",
+            "C": "Chapter 3",
+            "D": "Chapter 8"
+        }
+    },
+    "Q1870": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel Birds of Prey, has the author had described someone worshipping? If so, how many times has the author mentioned this action?",
+        "Options": {
+            "A": "Yes, 6",
+            "B": "Yes, 8",
+            "C": "No. No one worshipped, possibly because they are all irreligious.",
+            "D": "No. No one worshipped in this novel because their policy forbids this."
+        }
+    },
+    "Q1871": {
+        "Aspect": "meaning",
+        "Complexity": "dtl",
+        "Question": "In the novel Birds of Prey, in which chapter does there exist a sentence with the same or similar meaning as 'The next day, Mr. Sheldon had an opportunity to meet with Captain Paget and diligently inquired about his protégé's activities.'?",
+        "Options": {
+            "A": "Chapter 5",
+            "B": "Chapter 12",
+            "C": "Chapter 9",
+            "D": "Chapter 16"
+        }
+    },
+    "Q1872": {
+        "Aspect": "character",
+        "Complexity": "sh",
+        "Question": "Fitzgeorge-street was chill and dreary of aspect, under a gray March sky, when who returned to it after a week's absence from London?",
+        "Options": {
+            "A": "Mr. Sheldon",
+            "B": "Mr. Hawkehurst",
+            "C": "Miss Halliday",
+            "D": "Mr. Balderby"
+        }
+    },
+    "Q1873": {
+        "Aspect": "settg",
+        "Complexity": "sh",
+        "Question": "It was before how many years had Yorkshire-woman nursed Mr. Sheldon, when he was a handsome black-eyed baby?",
+        "Options": {
+            "A": "over twenty years",
+            "B": "almost forty years",
+            "C": "nearly thirty years",
+            "D": "just twenty-five years"
+        }
+    },
+    "Q1874": {
+        "Aspect": "settg",
+        "Complexity": "sh",
+        "Question": "The journey from Barlingford in which kind of transport is no joke in Mr. Sheldon's mind when he talked apologetically towards George?",
+        "Options": {
+            "A": "horse-drawn carriage",
+            "B": "stagecoach",
+            "C": "riverboat",
+            "D": "slow train"
+        }
+    },
+    "Q1875": {
+        "Aspect": "meaning",
+        "Complexity": "sh",
+        "Question": "The Barlingford Juliet had liked Romeo as much as she was capable of liking anyone, and then why did she move to Paris?",
+        "Options": {
+            "A": "because she fell in love with the city of Paris",
+            "B": "because she wanted to pursue a career in fashion",
+            "C": "because Papa Capulet insisted on her union with Paris",
+            "D": "because Romeo moved to Venice"
+        }
+    },
+    "Q1876": {
+        "Aspect": "character",
+        "Complexity": "sh",
+        "Question": "Mr. Sheldon was afraid Mrs. Halliday must be dull in these long evenings when who would be out of the way?",
+        "Options": {
+            "A": "John",
+            "B": "Harry",
+            "C": "Tom.",
+            "D": "Richard"
+        }
+    },
+    "Q1877": {
+        "Aspect": "settg",
+        "Complexity": "sh",
+        "Question": "How Mrs. Halliday felt when Philip Sheldon slapped his friend's broad shoulder and told him cheerily that he would be all right tomorrow?",
+        "Options": {
+            "A": "She felt upset and sighed",
+            "B": "She felt amused and chuckled",
+            "C": "She was indifferent and yawned",
+            "D": "She felt relieved and smiled"
+        }
+    },
+    "Q1878": {
+        "Aspect": "settg",
+        "Complexity": "sh",
+        "Question": "How did George feel when he found his friend changed for the worse?",
+        "Options": {
+            "A": "George felt indifferent.",
+            "B": "George was overjoyed.",
+            "C": "George appeared relieved.",
+            "D": "George seemed distressed."
+        }
+    },
+    "Q1879": {
+        "Aspect": "settg",
+        "Complexity": "sh",
+        "Question": "How many days of grace were when Philip Sheldon opened his friend's letter?",
+        "Options": {
+            "A": "Fourteen days",
+            "B": "Twenty-one days.",
+            "C": "Thirty days",
+            "D": "Seven days"
+        }
+    },
+    "Q1880": {
+        "Aspect": "character",
+        "Complexity": "sh",
+        "Question": "When Mr. Sheldon was departing on his quest breakfastless, who met him in the hall with a cup of tea?",
+        "Options": {
+            "A": "Nancy Woolper",
+            "B": "Diana Paget",
+            "C": "Matthew Haygarth",
+            "D": "Philip Sheldon"
+        }
+    },
+    "Q1881": {
+        "Aspect": "character",
+        "Complexity": "sh",
+        "Question": "How many years were Mr. Kingdon older than Susan, and had served in Spain, and had not borne too good a character abroad.",
+        "Options": {
+            "A": "Five years",
+            "B": "Fifteen years",
+            "C": "Twenty years",
+            "D": "Ten years"
+        }
+    }
+}

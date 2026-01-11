@@ -1,0 +1,233 @@
+{
+    "Q0126": {
+        "Aspect": "meaning",
+        "Complexity": "sh",
+        "Question": "Why did Scarlett's father go to Wilkes plantation on the day that Scarlett knew Hili was going to marry Han Meilan?",
+        "Options": {
+            "A": "To discuss the sale of timber from his land.",
+            "B": "To buy Pbok's wife.",
+            "C": "To arrange a marriage contract for Scarlett.",
+            "D": "To invite the Wilkes family to a barbecue at Tara."
+        }
+    },
+    "Q0127": {
+        "Aspect": "meaning",
+        "Complexity": "sh",
+        "Question": "Why did Ellen marry Gerald?",
+        "Options": {
+            "A": "It was a decision she made in a fit of anger after her cousin dumped her and left her in love.",
+            "B": "She felt a deep love for Gerald and they had a long courtship.",
+            "C": "Gerald was immensely wealthy and she married him for his money.",
+            "D": "Ellen was charmed by Gerald's wit and humor, which won her over."
+        }
+    },
+    "Q0128": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "What does Gerald value most to him?",
+        "Options": {
+            "A": "His valet, his plantation, his wife Ellen.",
+            "B": "His wealth and social status",
+            "C": "His hunting dogs and rifle",
+            "D": "His political influence and power"
+        }
+    },
+    "Q0129": {
+        "Aspect": "plot",
+        "Complexity": "mh",
+        "Question": "How did Gerald get Tara?",
+        "Options": {
+            "A": "Gerald inherited the plantation from a distant relative who had no heirs",
+            "B": "Gerald won the plantation in a lottery that was popular in those days",
+            "C": "A man had grown tired of inland Georgia and wanted to sell his plantation, so Gerald and him played cards, and the plantation was the bet",
+            "D": "Gerald purchased the plantation at a very low price from a man who was moving out West."
+        }
+    },
+    "Q0130": {
+        "Aspect": "meaning",
+        "Complexity": "sh",
+        "Question": "Before Scarlett went to the picnic, why did she think Healy and Melanie would get engaged?",
+        "Options": {
+            "A": "She thinks because Hili dont know he likes him just promised to listen to the family arrangement and Meilan engaged.",
+            "B": "She believes Ashley is truly in love with Melanie and wants to marry her out of passion",
+            "C": "She assumes that Ashley and Melanie have been in a secret relationship for years",
+            "D": "She is convinced that Melanie has pressured Ashley into the engagement with the help of her family."
+        }
+    },
+    "Q0131": {
+        "Aspect": "meaning",
+        "Complexity": "sh",
+        "Question": "Why did Scarlett say yes to Charlie's proposal? When did she set the wedding?",
+        "Options": {
+            "A": "She was genuinely in love with Charlie and couldn't wait to be his wife, so she set the wedding for the following spring.",
+            "B": "She felt sorry for Charlie and agreed to marry him out of pity, with the wedding planned for the next month.",
+            "C": "She wanted to marry Charlie because she was angry at Healy for refusing, and the wedding was a day before Healy and Meilan's wedding.",
+            "D": "She wanted to secure her financial future and chose to marry Charlie, scheduling the wedding to coincide with the fall harvest season."
+        }
+    },
+    "Q0132": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "What's the name of Scarlett and Charlie's baby?",
+        "Options": {
+            "A": "Wade Hampton Hamilton.",
+            "B": "Ashley Wilkes Hamilton",
+            "C": "Rhett Butler Hamilton",
+            "D": "Beauregard Stuart Hamilton"
+        }
+    },
+    "Q0133": {
+        "Aspect": "plot",
+        "Complexity": "dtl",
+        "Question": "What was in the envelope Rhett gave Melanie?",
+        "Options": {
+            "A": "Her and Healy's wedding ring.",
+            "B": "A letter from Ashley Wilkes.",
+            "C": "A lock of Bonnie's hair.",
+            "D": "A deed to a house in Atlanta."
+        }
+    },
+    "Q0134": {
+        "Aspect": "settg",
+        "Complexity": "sh",
+        "Question": "Where did Melanie get the gray cloth for Rhett Butler's uniform?",
+        "Options": {
+            "A": "She found it in an abandoned store in Atlanta.",
+            "B": "She received it as a gift from a local charity organization.",
+            "C": "It was sent to her by the mother of a fallen soldier.",
+            "D": "She traded with a passing merchant for it."
+        }
+    },
+    "Q0135": {
+        "Aspect": "settg",
+        "Complexity": "dtl",
+        "Question": "What did Scarlett give Healy when he came back to visit his family for the first time as a soldier to show him her love?",
+        "Options": {
+            "A": "A red scarf.",
+            "B": "A pair of gloves.",
+            "C": "A yellow sash.",
+            "D": "A blue hat."
+        }
+    },
+    "Q0136": {
+        "Aspect": "settg",
+        "Complexity": "mh",
+        "Question": "When Rhett took Scarlett out for a ride, he met a group of black slaves. What was the name of the black man singing a hymn at the front of the group? What was he doing in Atlanta?",
+        "Options": {
+            "A": "Joe. Came to Atlanta to sell goods.",
+            "B": "Tom. Came to Atlanta to work in the factories.",
+            "C": "Sam. Came to Atlanta to dig trenches.",
+            "D": "Elijah. Came to Atlanta to join the Confederate army."
+        }
+    },
+    "Q0137": {
+        "Aspect": "character",
+        "Complexity": "sh",
+        "Question": "When Atlanta was about to be taken, Melanie gave birth, and the city was in chaos. Who delivered her?",
+        "Options": {
+            "A": "Dr. Meade delivered Melanie's baby just before he left for the war.",
+            "B": "Scarlett delivered Melanie's baby herself.",
+            "C": "Rhett Butler assisted in the delivery of Melanie's baby during the siege.",
+            "D": "Aunt Pittypat helped deliver Melanie's baby amidst the turmoil."
+        }
+    },
+    "Q0138": {
+        "Aspect": "plot",
+        "Complexity": "mh",
+        "Question": "What was the cause of Scarlett's mother's death?",
+        "Options": {
+            "A": "Because of the typhoid she had.",
+            "B": "Because of a horseback riding accident.",
+            "C": "Because of a heart attack.",
+            "D": "Because of complications during childbirth."
+        }
+    },
+    "Q0139": {
+        "Aspect": "plot",
+        "Complexity": "mh",
+        "Question": "What was Scarlett's purpose in meeting Captain Butler in a velvet dress made from her mother's curtains?",
+        "Options": {
+            "A": "She wanted to impress Captain Butler with her sewing skills and get a job as a seamstress.",
+            "B": "She intended to ask Captain Butler for a loan to invest in her own business venture.",
+            "C": "She was trying to convince Captain Butler to join her in a business partnership to save Tara.",
+            "D": "She hoped Captain Butler would offer to marry her and pay her high taxes."
+        }
+    },
+    "Q0140": {
+        "Aspect": "plot",
+        "Complexity": "mh",
+        "Question": "Which of Scarlett's husbands died to avenge Scarlett's death?",
+        "Options": {
+            "A": "Charles Hamilton",
+            "B": "Frank.",
+            "C": "Rhett Butler",
+            "D": "Ashley Wilkes"
+        }
+    },
+    "Q0141": {
+        "Aspect": "character",
+        "Complexity": "mh",
+        "Question": "Whose name was Alan screaming before he died? Why?",
+        "Options": {
+            "A": "She was calling out for Gerald because she regretted her marriage to him and wished for a different life.",
+            "B": "She was crying out for Ashley, as she had secretly loved him all along and could not bear his marriage to Melanie.",
+            "C": "She was shouting for Rhett in her delirium, revealing her hidden feelings for him despite her outward indifference.",
+            "D": "She was still obsessed with Philip when she died, because she still loved him so much that she had agreed to marry Gale in anger."
+        }
+    },
+    "Q0142": {
+        "Aspect": "meaning",
+        "Complexity": "sh",
+        "Question": "Why did Rhett find out about Scarlett's scheme and refuse to marry her?",
+        "Options": {
+            "A": "Because he overheard her talking to Ashley about it.",
+            "B": "Because he saw Scarlett's bruised hands.",
+            "C": "Because he received a letter from Melanie revealing the truth.",
+            "D": "Because he noticed Scarlett's expensive gifts to her family."
+        }
+    },
+    "Q0143": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "What was Rhett's attitude toward Scarlett's Black Mammy? And what was her attitude toward Rhett Butler?",
+        "Options": {
+            "A": "Rhett respected her, but she was always wary of Rhett and hated him.",
+            "B": "Rhett was indifferent to her, but she adored Rhett and his charm.",
+            "C": "Rhett found her annoying, yet she was deeply fond of Rhett and trusted him.",
+            "D": "Rhett was dismissive of her, while she respected Rhett and sought his approval."
+        }
+    },
+    "Q0144": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "What did Scarlett do to get Frank to stop looking forward to marrying Suellen and agree to marry her?",
+        "Options": {
+            "A": "Told him that Suellen had moved away to another state and couldn't be found.",
+            "B": "Convinced him that Suellen had always loved another man and was waiting for him to return.",
+            "C": "Informed him that Suellen had become ill and decided to join a convent, renouncing marriage.",
+            "D": "Lied to him that Suellen had left him to marry someone else."
+        }
+    },
+    "Q0145": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "How did Scarlett get the money for the sawmill?",
+        "Options": {
+            "A": "She inherited it from her father, Gerald O'Hara.",
+            "B": "It's from Rhett Butler.",
+            "C": "She won it in a poker game.",
+            "D": "She earned it from her work at the Atlanta hospital."
+        }
+    },
+    "Q0146": {
+        "Aspect": "meaning",
+        "Complexity": "sh",
+        "Question": "Why doesn't Sam want to stay and be Scarlett's driver?",
+        "Options": {
+            "A": "Because he wants to go back to Tara to farm the land.",
+            "B": "Because he is tired of working for Scarlett and wants to find a better job.",
+            "C": "Because he killed a white man, and he's being hunted.",
+            "D": "Because he has a family in another town that he needs to take care of."
+        }
+    }
+}

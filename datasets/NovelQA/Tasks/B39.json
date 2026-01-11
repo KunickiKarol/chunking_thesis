@@ -1,0 +1,310 @@
+{
+    "Q0098": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel Can You Forgive Her, has the author mentioned that some characters did the subtle action 'to lift the lock(a part of the hair)' above their ears? If so, how many times has this subtle action has been mentioned?",
+        "Options": {
+            "A": "Yes, once",
+            "B": "Yes, 5 times",
+            "C": "Yes, 3 times",
+            "D": "Yes, twice"
+        }
+    },
+    "Q0099": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "How many times has the author mentioned Kate making promises??",
+        "Options": {
+            "A": "Once",
+            "B": "3 times",
+            "C": "Twice",
+            "D": "4 times"
+        }
+    },
+    "Q0100": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "How many times have Alice and Lady Glencora walked through the Priory ruins?",
+        "Options": {
+            "A": "1",
+            "B": "3",
+            "C": "2",
+            "D": "4"
+        }
+    },
+    "Q0101": {
+        "Aspect": "relat",
+        "Complexity": "mh",
+        "Question": "Who are in the The family Vavasor?",
+        "Options": {
+            "A": "Alice Vavasor, Kate Vavasor, George Vavasor",
+            "B": "John Grey, John Vavasor, Captain Vavasor",
+            "C": "Plantagenet Vavasor, Lady Macleod",
+            "D": "Alice Vavasor, Lady Glencora Palliser, John Grey"
+        }
+    },
+    "Q0102": {
+        "Aspect": "relat",
+        "Complexity": "dtl",
+        "Question": "What is the relationship between Alice and Miss Vavasor?",
+        "Options": {
+            "A": "Alice is Miss Vavasor's niece",
+            "B": "Alice is Miss Vavasor's sister",
+            "C": "Alice is Miss Vavasor's cousin",
+            "D": "Alice and Miss Vavasor are the same person"
+        }
+    },
+    "Q0103": {
+        "Aspect": "meaning",
+        "Complexity": "dtl",
+        "Question": "In the novel Can You Forgive Her, in which chapter does there exist a sentence with the same or similar meaning as ' Idleness-absolute idleness-was not one of George Vavasor's many flaws.'?",
+        "Options": {
+            "A": "Chapter 4",
+            "B": "Chapter 2",
+            "C": "Chapter 10",
+            "D": "Chapter 16"
+        }
+    },
+    "Q0104": {
+        "Aspect": "meaning",
+        "Complexity": "dtl",
+        "Question": "In the novel Can You Forgive Her, in which chapter does there exist a sentence with the same or similar meaning as ' 'Come on, Mr. Scruby!' The publican's expression was highly expressive as he made this plea, directing a compelling look at the attorney.'?",
+        "Options": {
+            "A": "Chapter 7",
+            "B": "Chapter 19",
+            "C": "Chapter 26",
+            "D": "Chapter 13"
+        }
+    },
+    "Q0105": {
+        "Aspect": "character",
+        "Complexity": "mh",
+        "Question": "Who is Auld Reekie?",
+        "Options": {
+            "A": "Auld Reekie was Lady Glencora's cousin and confidant.",
+            "B": "Auld Reekie was Lady Glencora's uncle, and had been her guardian.",
+            "C": "Auld Reekie was the family estate where Lady Glencora grew up.",
+            "D": "Auld Reekie was the title of Lady Glencora's first husband."
+        }
+    },
+    "Q0106": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel Can You Forgive Her, has the author described someone falling from a chair? If so, how many times has the author described this?",
+        "Options": {
+            "A": "No, never",
+            "B": "Yes, 2",
+            "C": "Yes, 3",
+            "D": "Yes, 1"
+        }
+    },
+    "Q0107": {
+        "Aspect": "meaning",
+        "Complexity": "dtl",
+        "Question": "In the novel Can You Forgive Her, in which chapter does there exist a sentence with the same or similar meaning as ' 'Do you know,' said Kate, 'I have an extremely extraordinary brain to take off.''?",
+        "Options": {
+            "A": "Chapter 3",
+            "B": "Chapter 10",
+            "C": "Chapter 15",
+            "D": "Chapter 6"
+        }
+    },
+    "Q0108": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "How many times has George drunk beer?",
+        "Options": {
+            "A": "1",
+            "B": "0",
+            "C": "2",
+            "D": "3"
+        }
+    },
+    "Q0109": {
+        "Aspect": "relat",
+        "Complexity": "mh",
+        "Question": "What is the relationship between Lady Glencor and Auld Reekie?",
+        "Options": {
+            "A": "Auld Reekie was Lady Glencora's cousin.",
+            "B": "Auld Reekie was Lady Glencora's brother.",
+            "C": "Auld Reekie was Lady Glencora's father.",
+            "D": "Auld Reekie was Lady Glencora's uncle. Auld Reekie is known for his eccentricities, and his relationship with Lady Glencora has an impact on her decisions and actions throughout the story."
+        }
+    },
+    "Q0110": {
+        "Aspect": "meaning",
+        "Complexity": "dtl",
+        "Question": "In the novel Can You Forgive Her, in which chapter does there exist a sentence with the same or similar meaning as 'There can, in any case, be no question that Mr. Vavasor was in an ideal situation and more joyful with his practically ostensible work than he would have been without it.'?",
+        "Options": {
+            "A": "Chapter 3",
+            "B": "Chapter 1",
+            "C": "Chapter 5",
+            "D": "Chapter 8"
+        }
+    },
+    "Q0111": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "How many times have George and Alice dining?",
+        "Options": {
+            "A": "2",
+            "B": "3",
+            "C": "1",
+            "D": "4"
+        }
+    },
+    "Q0112": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel Can You Forgive Her, has the author described someone worshipping? If so, how many times has the author described this?",
+        "Options": {
+            "A": "Yes, 4",
+            "B": "No. No one worshipped, possibly because they are all irreligious.",
+            "C": "No. No one worshipped in this novel because their policy forbids this.",
+            "D": "Yes, 3"
+        }
+    },
+    "Q0113": {
+        "Aspect": "meaning",
+        "Complexity": "dtl",
+        "Question": "In the novel Can You Forgive Her, in which chapter does there exist a sentence with the same or similar meaning as She enjoyed the title of beauty, but she did not achieve the usual success that comes with such a title.?",
+        "Options": {
+            "A": "Chapter 3",
+            "B": "Chapter 12",
+            "C": "Chapter 7",
+            "D": "Chapter 15"
+        }
+    },
+    "Q0114": {
+        "Aspect": "character",
+        "Complexity": "sh",
+        "Question": "In the novel Can You Forgive Her, when a man marries an heiress for her money, if that money be within her control, as was the case with who's fortune, it is generally well for the speculating lover that the lady's friends should quarrel with him and with her.?",
+        "Options": {
+            "A": "Miss Vavasor's fortune",
+            "B": "Lady Glencora's fortune",
+            "C": "Mrs. Greenow's fortune",
+            "D": "Miss Macleod's fortune"
+        }
+    },
+    "Q0115": {
+        "Aspect": "settg",
+        "Complexity": "sh",
+        "Question": "How old Alice was when she had the full command of her fortune?",
+        "Options": {
+            "A": "eighteen",
+            "B": "twenty-one",
+            "C": "twenty-five",
+            "D": "thirty"
+        }
+    },
+    "Q0116": {
+        "Aspect": "settg",
+        "Complexity": "sh",
+        "Question": "When she induced her father, how long he had lived in lodgings, to take a small house in Queen Anne Street?",
+        "Options": {
+            "A": "last fifteen years",
+            "B": "last five years",
+            "C": "last twenty years",
+            "D": "last ten years"
+        }
+    },
+    "Q0117": {
+        "Aspect": "character",
+        "Complexity": "sh",
+        "Question": "When Lady Macleod got up to go away, who kissed her as was customary with them?",
+        "Options": {
+            "A": "John Grey",
+            "B": "Kate Vavasor",
+            "C": "Alice",
+            "D": "George Vavasor"
+        }
+    },
+    "Q0118": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "How old George Vavasor was since he lived in London?",
+        "Options": {
+            "A": "twenty",
+            "B": "eighteen",
+            "C": "twenty-five",
+            "D": "thirty"
+        }
+    },
+    "Q0119": {
+        "Aspect": "settg",
+        "Complexity": "sh",
+        "Question": "When Alice and Kate had seated themselves, the waiter had brought a small table for what? And George had placed his chair on the other side of that.",
+        "Options": {
+            "A": "for the dessert plates",
+            "B": "for the wine glasses",
+            "C": "for the afternoon tea service",
+            "D": "for the coffee-cups"
+        }
+    },
+    "Q0120": {
+        "Aspect": "settg",
+        "Complexity": "sh",
+        "Question": "When they got upon the bridge, Alice and Kate were together, and where George was?",
+        "Options": {
+            "A": "George strolled behind them, close to them,",
+            "B": "George waited at the end of the bridge",
+            "C": "George walked ahead, leading the way",
+            "D": "George took a different path and met them later"
+        }
+    },
+    "Q0121": {
+        "Aspect": "character",
+        "Complexity": "dtl",
+        "Question": "Mrs. Greenow lingered to say a word or two whom, of the manner in which Greenow's body was treated when Greenow was lying dead, and then she followed her brother and niece?",
+        "Options": {
+            "A": "Nurse",
+            "B": "Doctor",
+            "C": "Maid",
+            "D": "Cousin"
+        }
+    },
+    "Q0122": {
+        "Aspect": "character",
+        "Complexity": "sh",
+        "Question": "George when left the room he had insulted whom?",
+        "Options": {
+            "A": "aunt",
+            "B": "sister",
+            "C": "lawyer",
+            "D": "butler"
+        }
+    },
+    "Q0123": {
+        "Aspect": "meaning",
+        "Complexity": "sh",
+        "Question": "When Vavasor further asked whether there would be a gig, why did the boy stare at him?",
+        "Options": {
+            "A": "because the boy was deaf and could not hear the question",
+            "B": "because boy not knowing a gig by that name",
+            "C": "because the boy thought Vavasor was joking about the gig",
+            "D": "because the boy had just seen a gig leave and was confused"
+        }
+    },
+    "Q0124": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel Can You Forgive Her, has the word or phrase 'take away another man' appeared? If so, how many times does it appear in the text?",
+        "Options": {
+            "A": "No, never",
+            "B": "Yes, 1",
+            "C": "Yes, 3",
+            "D": "Yes, 2"
+        }
+    },
+    "Q0125": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel Can You Forgive Her, has the word or phrase 'Well take another glass' appeared? If so, how many times does it appear in the text?",
+        "Options": {
+            "A": "No, never",
+            "B": "Yes, 1",
+            "C": "Yes, 3",
+            "D": "Yes, 2"
+        }
+    }
+}

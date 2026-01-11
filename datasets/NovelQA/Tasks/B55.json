@@ -1,0 +1,211 @@
+{
+    "Q1288": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel Only A Girl's Love, has the author described someone screaming in the novel? If so, how many times has the author described this?",
+        "Options": {
+            "A": "Yes, 3",
+            "B": "Yes, 2",
+            "C": "Yes, 4",
+            "D": "Yes, 5"
+        }
+    },
+    "Q1289": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "How many times has Jasper cried?",
+        "Options": {
+            "A": "3",
+            "B": "1",
+            "C": "5",
+            "D": "2"
+        }
+    },
+    "Q1290": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "How many times have Stella and her uncle  went away on carriage?",
+        "Options": {
+            "A": "2",
+            "B": "3",
+            "C": "4",
+            "D": "1"
+        }
+    },
+    "Q1291": {
+        "Aspect": "relat",
+        "Complexity": "dtl",
+        "Question": "What is the relationship between Lord Wyndward and Lord of Wyndward?",
+        "Options": {
+            "A": "Lord Wyndward is the father of the Lord of Wyndward",
+            "B": "Lord Wyndward and Lord of Wyndward are same person",
+            "C": "Lord Wyndward is the brother of the Lord of Wyndward",
+            "D": "Lord Wyndward is the rival of the Lord of Wyndward"
+        }
+    },
+    "Q1292": {
+        "Aspect": "meaning",
+        "Complexity": "dtl",
+        "Question": "In the novel Only A Girl's Love, in which chapter does there exist a sentence with the same or similar meaning as 'For quite some time, he struggled to acknowledge it, even within his own heart. Being accustomed to taking pride in his immunity to romantic feelings, he found it difficult to come to terms with the truth.'?",
+        "Options": {
+            "A": "Chapter 16",
+            "B": "Chapter 10",
+            "C": "Chapter 23",
+            "D": "Chapter 5"
+        }
+    },
+    "Q1293": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel Only A Girl's Love, has any quarrel ever happened? If so, how many times has this plot happened?",
+        "Options": {
+            "A": "Yes, 1",
+            "B": "Yes, 3",
+            "C": "No, never",
+            "D": "Yes, 2"
+        }
+    },
+    "Q1294": {
+        "Aspect": "meaning",
+        "Complexity": "dtl",
+        "Question": "In the novel Only A Girl's Love, in which chapter does there exist a sentence with the same or similar meaning as 'The key to his immense power lay in his ability to focus his undivided attention on a single subject, completely forsaking all others..?",
+        "Options": {
+            "A": "Chapter 12",
+            "B": "Chapter 8",
+            "C": "Chapter 17",
+            "D": "Chapter 21"
+        }
+    },
+    "Q1295": {
+        "Aspect": "character",
+        "Complexity": "mh",
+        "Question": "Who is Lord Wyndward?",
+        "Options": {
+            "A": "Lord Wyndward was the family's solicitor",
+            "B": "Lord Wyndward was the youngest son",
+            "C": "Lord Wyndward was the head of the family",
+            "D": "Lord Wyndward was the estate's groundskeeper"
+        }
+    },
+    "Q1296": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel Only A Girl's Love, has someone ever been mentioned to kill others by the author? If so, how many times has this plot been mentioned?",
+        "Options": {
+            "A": "Yes, 2",
+            "B": "No, never",
+            "C": "Yes, 1",
+            "D": "Yes, 3"
+        }
+    },
+    "Q1297": {
+        "Aspect": "meaning",
+        "Complexity": "dtl",
+        "Question": "In the novel Only A Girl's Love, in which chapter does there exist a sentence with the same or similar meaning as 'Stella gazed upon the magnificent beauty before her, and in that moment, she realized that her own dress, though pretty, paled in comparison to its splendor-it was merely sateen.'?",
+        "Options": {
+            "A": "Chapter 11",
+            "B": "Chapter 5",
+            "C": "Chapter 8",
+            "D": "Chapter 14"
+        }
+    },
+    "Q1298": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel Only A Girl's Love, when the author is describing some characters' conversations, how many times has the verb 'shout' been used?",
+        "Options": {
+            "A": "Yes, 1",
+            "B": "Yes, 5",
+            "C": "Yes, 2",
+            "D": "Yes, 3"
+        }
+    },
+    "Q1299": {
+        "Aspect": "meaning",
+        "Complexity": "dtl",
+        "Question": "In the novel Only A Girl's Love, in which chapter does there exist a sentence with the same or similar meaning as 'Hand in hand, they strolled through the meadows, accompanied by larks ascending ahead, their melodies bursting forth, reaching the heavens. The river flowed quietly, its silvery stream finding its way to the vast sea. The lush green trees swayed gracefully in the gentle Summer breeze. High above, the imposing gray masonry of Wyndward Hall stretched out, adding a majestic touch to the picturesque scene..'?",
+        "Options": {
+            "A": "Chapter 5",
+            "B": "Chapter 12",
+            "C": "Chapter 7",
+            "D": "Chapter 3"
+        }
+    },
+    "Q1300": {
+        "Aspect": "relat",
+        "Complexity": "mh",
+        "Question": "What is the relationship between Frank and Stella?",
+        "Options": {
+            "A": "Frank was the brother of Stella",
+            "B": "Frank was the uncle of Stella",
+            "C": "Frank was the neighbor of Stella",
+            "D": "Frank was the cousin of Stella"
+        }
+    },
+    "Q1301": {
+        "Aspect": "meaning",
+        "Complexity": "dtl",
+        "Question": "In the novel Only A Girl's Love, in which chapter does there exist a sentence with the same or similar meaning as 'A few visitors arrived for business purposes, with Jasper skillfully opening the door using a wire that pulled back the handle without any visible movement..'?",
+        "Options": {
+            "A": "Chapter 12",
+            "B": "Chapter 17",
+            "C": "Chapter 21",
+            "D": "Chapter 15"
+        }
+    },
+    "Q1302": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "How many times has  Lord Leycester helped Stella?",
+        "Options": {
+            "A": "2",
+            "B": "3",
+            "C": "4",
+            "D": "1"
+        }
+    },
+    "Q1303": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel Only A Girl's Love, has someone ever been mentioned to 'get punished'? If so, how many times has this plot been mentioned?",
+        "Options": {
+            "A": "Yes, 1",
+            "B": "Yes, 2",
+            "C": "Yes, 3",
+            "D": "Yes, 4"
+        }
+    },
+    "Q1304": {
+        "Aspect": "meaning",
+        "Complexity": "dtl",
+        "Question": "In the novel Only A Girl's Love, in which chapter does there exist a sentence with the same or similar meaning as On this particular morning, she appeared to him more beautiful than ever before. Her eyes exuded a delicate radiance of concealed joy, and her youthful countenance carried a glimmer of hope that stirred his heart with a mixture of pleasure and anguish. He took delight in the beauty he had promised to make his own, but the thought of another-the detested Lord Leycester-having already beheld her that morning, caused him great pain and torment.",
+        "Options": {
+            "A": "Chapter 21",
+            "B": "Chapter 18",
+            "C": "Chapter 24",
+            "D": "Chapter 27"
+        }
+    },
+    "Q1305": {
+        "Aspect": "meaning",
+        "Complexity": "dtl",
+        "Question": "In the novel Only A Girl's Love, in which chapter does there exist a sentence with the same or similar meaning as 'He made a solemn pledge that he would delay no further in pursuit of the immeasurable treasure, the exquisite happiness within his reach.'?",
+        "Options": {
+            "A": "Chapter 17",
+            "B": "Chapter 23",
+            "C": "Chapter 12",
+            "D": "Chapter 29"
+        }
+    },
+    "Q1306": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel Only A Girl's Love, has the author described someone worshipping? If so, how many times has the author described this?",
+        "Options": {
+            "A": "Yes, 3",
+            "B": "No. No one worshipped, possibly because they are all irreligious.",
+            "C": "No. No one worshipped in this novel because their policy forbids this.",
+            "D": "Yes, 5"
+        }
+    }
+}

@@ -1,0 +1,321 @@
+{
+    "Q1128": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel Man and Wife, has the author describes someone punching others? If so, how many times has the author described this?",
+        "Options": {
+            "A": "Yes, 2",
+            "B": "Yes, 5",
+            "C": "Yes, 4",
+            "D": "Yes, 3"
+        }
+    },
+    "Q1129": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "How many times has Bishopriggs cried?",
+        "Options": {
+            "A": "2",
+            "B": "3",
+            "C": "4",
+            "D": "5"
+        }
+    },
+    "Q1130": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "How many times have Anne and Blanche kissed each other?",
+        "Options": {
+            "A": "3",
+            "B": "5",
+            "C": "7",
+            "D": "2"
+        }
+    },
+    "Q1131": {
+        "Aspect": "relat",
+        "Complexity": "mh",
+        "Question": "Who are in the The Vanborough family?",
+        "Options": {
+            "A": "Mrs. Vanborough, Blanche, Mr. Vanborough, Anne",
+            "B": "Mrs. Vanborough, Blanche,  Mr. Vanborough",
+            "C": "Mrs. Vanborough, Blanche, Mr. Vanborough, Sir Patrick",
+            "D": "Mrs. Vanborough, Blanche, Mr. Vanborough, Geoffrey"
+        }
+    },
+    "Q1132": {
+        "Aspect": "relat",
+        "Complexity": "dtl",
+        "Question": "What is the relationship between Mr. Bishopriggs and South?",
+        "Options": {
+            "A": "Mr. Bishopriggs is South's business partner",
+            "B": "Mr. Bishopriggs and South are the same person",
+            "C": "Mr. Bishopriggs is South's father",
+            "D": "Mr. Bishopriggs is South's servant"
+        }
+    },
+    "Q1133": {
+        "Aspect": "meaning",
+        "Complexity": "dtl",
+        "Question": "In the novel Man and Wife, in which chapter does there exist a sentence with the same or similar meaning as 'A Singular outsider, floating about London, floated toward Fulham upon the arrival of the Foot-Race.'?",
+        "Options": {
+            "A": "Chapter 12",
+            "B": "Chapter 30",
+            "C": "Chapter 45",
+            "D": "Chapter 53"
+        }
+    },
+    "Q1134": {
+        "Aspect": "span",
+        "Complexity": "mh",
+        "Question": "In which year does the earliest event happen, and in which year does the latest even happen?",
+        "Options": {
+            "A": "August 12, 1868, August 19, 1868.",
+            "B": "July 12, 1868, August 19, 1868.",
+            "C": "August 12, 1867, August 19, 1868.",
+            "D": "August 12, 1868, September 19, 1868."
+        }
+    },
+    "Q1135": {
+        "Aspect": "character",
+        "Complexity": "mh",
+        "Question": "Miss Silvester is used to be negative and finally becomes a positive one? Tell in one sentence that which episode marks this character's change.",
+        "Options": {
+            "A": "Miss Silvester was always cheerful and kind, but she becomes bitter by the novel's conclusion.",
+            "B": "Miss Silvester used to get angry at the beginning of novel and then at the end of novel she used to called as good lady.",
+            "C": "Miss Silvester begins the story as a wealthy heiress and ends up losing all her fortune and status.",
+            "D": "Miss Silvester starts as a minor character and emerges as the main antagonist by the end of the story."
+        }
+    },
+    "Q1136": {
+        "Aspect": "meaning",
+        "Complexity": "dtl",
+        "Question": "In the novel Man and Wife, in which chapter does there exist a sentence with the same or similar meaning as ' BLANCHE came in, with a glass of wine in her grasp, and saw the fainting lady on the floor.?",
+        "Options": {
+            "A": "Chapter 18",
+            "B": "Chapter 15",
+            "C": "Chapter 22",
+            "D": "Chapter 27"
+        }
+    },
+    "Q1137": {
+        "Aspect": "character",
+        "Complexity": "dtl",
+        "Question": "Who is Mr. Jones?",
+        "Options": {
+            "A": "Mr. Jones was the character who spilled the tea on the tablecloth.",
+            "B": "Mr. Jones was the character who narrated the story.",
+            "C": "Mr. Jones was the character who refused to eat dessert.",
+            "D": "Mr. Jones was the character who offered the cream and fruit tart."
+        }
+    },
+    "Q1138": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel Man and Wife, has the author described someone worshipping? If so, how many times had the author described this action?",
+        "Options": {
+            "A": "No, No one worshipped because the main characters have no religious belief.",
+            "B": "Yes, 2",
+            "C": "No. No one worshipped in this novel because their policy forbids this.",
+            "D": "Yes, 1"
+        }
+    },
+    "Q1139": {
+        "Aspect": "meaning",
+        "Complexity": "dtl",
+        "Question": "In the novel Man and Wife, in which chapter does there exist a sentence with the same or similar meaning as ' 'My Transcript: To be placed into my casket; and to join me in my final resting place.?",
+        "Options": {
+            "A": "Chapter 21",
+            "B": "Chapter 37",
+            "C": "Chapter 54",
+            "D": "Chapter 48"
+        }
+    },
+    "Q1140": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel Man and Wife, has someone ever been mentioned to scream in the novel? If so, how many times have they been mentioned to scream?",
+        "Options": {
+            "A": "Yes, 2",
+            "B": "Yes, 3",
+            "C": "Yes, 4",
+            "D": "Yes, 5"
+        }
+    },
+    "Q1141": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "How many times has Mrs. Joel Dethridge locked himself?",
+        "Options": {
+            "A": "2",
+            "B": "3",
+            "C": "1",
+            "D": "4"
+        }
+    },
+    "Q1142": {
+        "Aspect": "relat",
+        "Complexity": "mh",
+        "Question": "What is the relationship between Mrs. Joel Dethridge and Reuben?",
+        "Options": {
+            "A": "Brother and sister, who led the rest",
+            "B": "Uncle and niece, who disapproved of her choices",
+            "C": "Cousins who had a falling out over family matters",
+            "D": "Father and daughter, estranged due to personal disagreements"
+        }
+    },
+    "Q1143": {
+        "Aspect": "meaning",
+        "Complexity": "dtl",
+        "Question": "In the novel Man and Wife, in which chapter does there exist a sentence with the same or similar meaning as 'THE worker, seeming the following morning in Anne's room with the morning meal plate, shut the entryway with a quality of secret, and reported that peculiar things were happening in the house.'?",
+        "Options": {
+            "A": "Chapter 42",
+            "B": "Chapter 63",
+            "C": "Chapter 29",
+            "D": "Chapter 55"
+        }
+    },
+    "Q1144": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "How many times have Blanch and Arnold hugged each other?",
+        "Options": {
+            "A": "0",
+            "B": "2",
+            "C": "3",
+            "D": "1"
+        }
+    },
+    "Q1145": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel Man and Wife, has any quarrel ever happened? If so, how many times has this plot happened?",
+        "Options": {
+            "A": "Yes, 2",
+            "B": "Yes, 5",
+            "C": "Yes, 4",
+            "D": "Yes, 3"
+        }
+    },
+    "Q1146": {
+        "Aspect": "meaning",
+        "Complexity": "dtl",
+        "Question": "In the novel Man and Wife, in which chapter does there exist a sentence with the same or similar meaning as 'She introduced to the overall perception a brutal hooked nose, a resolute straight jawline, wonderful dull hair and eyes, a peaceful quality of grovel shaded clothing, and a lethargic effortlessness of development which was appealing from the start, yet unspeakably repetitive and wearisome on a more drawn out colleague.'?",
+        "Options": {
+            "A": "Chapter 3",
+            "B": "Chapter 5",
+            "C": "Chapter 7",
+            "D": "Chapter 2"
+        }
+    },
+    "Q1147": {
+        "Aspect": "settg",
+        "Complexity": "sh",
+        "Question": "What was the profession of Lady Jane when she was single?",
+        "Options": {
+            "A": "a painter in a studio",
+            "B": "a dancer in a ballet company",
+            "C": "a singer on the stage",
+            "D": "a writer for a newspaper"
+        }
+    },
+    "Q1148": {
+        "Aspect": "settg",
+        "Complexity": "sh",
+        "Question": "What happened when the second time that Sir Thomas was due in India?",
+        "Options": {
+            "A": "Lady Lundie decided to accompany Sir Thomas to India for a holiday",
+            "B": "Lady Lundie's health had been failing for some time previously",
+            "C": "Sir Thomas postponed his trip to India to take care of Lady Lundie",
+            "D": "Lady Lundie suddenly recovered and threw a grand party to celebrate her health"
+        }
+    },
+    "Q1149": {
+        "Aspect": "settg",
+        "Complexity": "sh",
+        "Question": "Which two persons left in the summer-house when Mr. Delamayn knitted his handsome eyebrows then left the summer-house in his turn?",
+        "Options": {
+            "A": "Geoffrey Delamayn and Lady Lundie",
+            "B": "Anne Silvester and Blanche Lundie",
+            "C": "Arnold Brinkworth and Sir Patrick Lundie.",
+            "D": "Mrs. Glenarm and Geoffrey Delamayn"
+        }
+    },
+    "Q1150": {
+        "Aspect": "character",
+        "Complexity": "sh",
+        "Question": "the second time Anne pulled the door who passed through the door?",
+        "Options": {
+            "A": "Sir Patrick",
+            "B": "Lady Lundie",
+            "C": "Arnold",
+            "D": "Geoffrey"
+        }
+    },
+    "Q1151": {
+        "Aspect": "character",
+        "Complexity": "sh",
+        "Question": "Who consulted on the case when Lady Lundie's health had been failing for some time previously?",
+        "Options": {
+            "A": "The family solicitor",
+            "B": "Sir Thomas himself",
+            "C": "A renowned spiritualist",
+            "D": "The medical men"
+        }
+    },
+    "Q1152": {
+        "Aspect": "settg",
+        "Complexity": "sh",
+        "Question": "Arnold said a word of sympathy to which of his friend, when they were alone?",
+        "Options": {
+            "A": "Blanche",
+            "B": "Sir Patrick",
+            "C": "Geoffrey",
+            "D": "Anne"
+        }
+    },
+    "Q1153": {
+        "Aspect": "plot",
+        "Complexity": "dtl",
+        "Question": "What was the color of Geoffrey's eyes?",
+        "Options": {
+            "A": "blue",
+            "B": "green",
+            "C": "brown",
+            "D": "hazel"
+        }
+    },
+    "Q1154": {
+        "Aspect": "character",
+        "Complexity": "sh",
+        "Question": "Who was due again in India when Lady Lundie's health had been failing for some time previously?",
+        "Options": {
+            "A": "Sir Patrick",
+            "B": "Sir Thomas",
+            "C": "Sir Leicester",
+            "D": "Sir John"
+        }
+    },
+    "Q1155": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "Arnold had hope and trust that Geoffrey would get to which city in time?",
+        "Options": {
+            "A": "London",
+            "B": "Manchester",
+            "C": "Edinburgh",
+            "D": "Bristol"
+        }
+    },
+    "Q1156": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "South produces of which color and how many men?",
+        "Options": {
+            "A": "Thirteen yellow men",
+            "B": "Twelve yellow men",
+            "C": "Thirteen pink men",
+            "D": "Fourteen yellow men"
+        }
+    }
+}

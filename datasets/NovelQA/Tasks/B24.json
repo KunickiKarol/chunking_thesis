@@ -1,0 +1,167 @@
+{
+    "Q0294": {
+        "Aspect": "settg",
+        "Complexity": "sh",
+        "Question": "Where did Mr.Phillips told Mattew that Anne was the smartest scholar in school?",
+        "Options": {
+            "A": "White Sands Hotel",
+            "B": "Green Gables barn",
+            "C": "Carmody post office",
+            "D": "Blair's store"
+        }
+    },
+    "Q0295": {
+        "Aspect": "plot",
+        "Complexity": "dtl",
+        "Question": "How did Anne and Diana signaled each other with candles and cardboard?",
+        "Options": {
+            "A": "they used different colored candles to send coded messages",
+            "B": "they lit the candle and held the cardboard still to create a steady glow",
+            "C": "they placed the candle behind different shapes cut out of cardboard to send specific signals",
+            "D": "they set the candle on the window sill and make flashes by passing the cardboard back and forth."
+        }
+    },
+    "Q0296": {
+        "Aspect": "plot",
+        "Complexity": "dtl",
+        "Question": "Anne and Diana signaled each other with candles and cardboard, how many flashes of the cardboard means 'yes'?",
+        "Options": {
+            "A": "Two",
+            "B": "Three",
+            "C": "Four",
+            "D": "Five"
+        }
+    },
+    "Q0297": {
+        "Aspect": "settg",
+        "Complexity": "dtl",
+        "Question": "Where did Diana's cousins leave for the Debating Club concert?",
+        "Options": {
+            "A": "White Sands",
+            "B": "Newbridge",
+            "C": "Carmody",
+            "D": "Avonlea"
+        }
+    },
+    "Q0298": {
+        "Aspect": "settg",
+        "Complexity": "dtl",
+        "Question": "Where did Josephine live?",
+        "Options": {
+            "A": "Summerside",
+            "B": "Avonlea",
+            "C": "Charlottetown",
+            "D": "Montreal"
+        }
+    },
+    "Q0299": {
+        "Aspect": "character",
+        "Complexity": "sh",
+        "Question": "Who said this proverb 'Look before you leap' to Anne?",
+        "Options": {
+            "A": "Marilla Cuthbert",
+            "B": "Mrs.Lynde",
+            "C": "Matthew Cuthbert",
+            "D": "Diana Barry"
+        }
+    },
+    "Q0300": {
+        "Aspect": "settg",
+        "Complexity": "dtl",
+        "Question": "Where did Mrs.Rachel hear that Matthew was going to sow his turnip seed next afternoon?",
+        "Options": {
+            "A": "Peter Morrison's farm",
+            "B": "Green Gables",
+            "C": "William J. Blair's store",
+            "D": "Carmody post office"
+        }
+    },
+    "Q0301": {
+        "Aspect": "plot",
+        "Complexity": "mh",
+        "Question": "What was Matthew wearing on the first day he met Anne?",
+        "Options": {
+            "A": "He had on his everyday clothes and a striped shirt",
+            "B": "He wore his best suit with a white collar",
+            "C": "Matthew was dressed in a black coat with no collar",
+            "D": "He was wearing his work overalls and a cap"
+        }
+    },
+    "Q0302": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "What train did Anne take to Avonlea?",
+        "Options": {
+            "A": "Seven-forty-five",
+            "B": "Six-ten",
+            "C": "Four-twenty",
+            "D": "Five-thirty"
+        }
+    },
+    "Q0303": {
+        "Aspect": "meaning",
+        "Complexity": "sh",
+        "Question": "Why did Matthew tie his horse in the yard of the small Bright River hotel in the first place when picking up the adopted child?",
+        "Options": {
+            "A": "Matthew thought he had come too early that the train the adopted child was on hasn't arrived.",
+            "B": "Matthew wanted to ask for directions to the train station",
+            "C": "Matthew needed to rest before continuing his journey",
+            "D": "Matthew decided to have a meal while waiting for the train to arrive"
+        }
+    },
+    "Q0304": {
+        "Aspect": "plot",
+        "Complexity": "dtl",
+        "Question": "In the novel Anne of Green Gables, what is 'idlewild'?",
+        "Options": {
+            "A": "'Idlewild' is the name of Anne's favorite tree in the Green Gables orchard where she loves to sit and read",
+            "B": "'Idlewild' refers to the name that Anne and Diana have given to their playhouse, which is located in a romantic spot among a ring of white birch trees on a piece of land belonging to Mr. William Bell.",
+            "C": "'Idlewild' is a term Anne uses to describe her daydreams and imaginary adventures",
+            "D": "'Idlewild' is the name of a poem that Anne writes about the beauty of nature in Avonlea"
+        }
+    },
+    "Q0305": {
+        "Aspect": "character",
+        "Complexity": "sh",
+        "Question": "Who first owned Marilla's amethyst brooch?",
+        "Options": {
+            "A": "A seafaring uncle of Marilla",
+            "B": "Marilla's father, who was a merchant",
+            "C": "A close family friend who was a jeweler",
+            "D": "Marilla's grandmother, who was an avid collector of precious stones"
+        }
+    },
+    "Q0306": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "How did Anne get to the picnic ground after being delayed by the brooch incident?",
+        "Options": {
+            "A": "Matthew took her on the buggy pulled by their black mare.",
+            "B": "Diana came to pick her up with her father's wagon.",
+            "C": "Anne walked all the way to the picnic ground by herself.",
+            "D": "Jerry hitches up the sorrel and drove Anne down to the picnic ground."
+        }
+    },
+    "Q0307": {
+        "Aspect": "settg",
+        "Complexity": "sh",
+        "Question": "Where is the Sunday-school picnic place?",
+        "Options": {
+            "A": "In Mrs. Rachel Lynde's orchard, beside the Avonlea town hall",
+            "B": "At the Barry's farm, close to the White Sands beach",
+            "C": "In Mr. Harmon Andrews's field, near the lake of Shining Waters.",
+            "D": "On the grounds of Green Gables, adjacent to the Haunted Wood"
+        }
+    },
+    "Q0308": {
+        "Aspect": "meaning",
+        "Complexity": "dtl",
+        "Question": "Why was the door in Mrs.Thomas's the sitting room broken?",
+        "Options": {
+            "A": "The hinges rusted over time and it eventually fell off",
+            "B": "Mr. Thomas smashed it one night when he was slightly intoxicated.",
+            "C": "A burglar tried to break in and damaged the door",
+            "D": "It was an old door that fell apart during a severe storm"
+        }
+    }
+}

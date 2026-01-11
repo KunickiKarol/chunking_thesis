@@ -1,0 +1,244 @@
+{
+    "Q0863": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "Has Dirk destroyed the nude painting of his wife drawn by Strickland? If so, how many times has this plot happened?",
+        "Options": {
+            "A": "Yes, 1",
+            "B": "No",
+            "C": "Yes, twice",
+            "D": "Yes, 3"
+        }
+    },
+    "Q0864": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "How many times has Charles Strickland abandoned his wife or lover?",
+        "Options": {
+            "A": "1",
+            "B": "2",
+            "C": "3",
+            "D": "4"
+        }
+    },
+    "Q0865": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "How many times have the narrator and Charles Strickland met each other before the narrator settled down in Paris?",
+        "Options": {
+            "A": "2",
+            "B": "4",
+            "C": "5",
+            "D": "3"
+        }
+    },
+    "Q0866": {
+        "Aspect": "relat",
+        "Complexity": "mh",
+        "Question": "Who are in the Mrs. Strickland?",
+        "Options": {
+            "A": "Mrs. Strickland (Amy), Charles Strickland, Robert Strickland, Major Ronaldson",
+            "B": "Mrs. Strickland (Amy), Charles Strickland, Robert Strickland, Ata",
+            "C": "Mrs. Strickland (Amy), Charles Strickland, Robert Strickland, the Bishop of Westminster",
+            "D": "Mrs. Strickland (Amy), Charles Strickland, Robert Strickland, Mrs. Ronaldson"
+        }
+    },
+    "Q0867": {
+        "Aspect": "relat",
+        "Complexity": "mh",
+        "Question": "What is the relationship between Mrs. Strickland and Alec?",
+        "Options": {
+            "A": "Alec is Mrs. Strickland's cousin",
+            "B": "Alec is Mrs. Strickland brother-in-law",
+            "C": "Alec is Mrs. Strickland's nephew",
+            "D": "Alec is Mrs. Strickland's son"
+        }
+    },
+    "Q0868": {
+        "Aspect": "meaning",
+        "Complexity": "sh",
+        "Question": "In the novel The Moon and Sixpence, explain the meaning or implication of the symbol or metaphor 'the bad still-life of oranges' within one sentence.",
+        "Options": {
+            "A": "Maugham highlights the narrator's preference for traditional art and his inability to appreciate Strickland's innovative style",
+            "B": "Maugham is gently satirising the visual inexperience of his narrator, (whilst rehearsing typical historical responses to the subversiveness of post-impressionist art). [J]",
+            "C": "Maugham uses the still-life to underscore the narrator's sophisticated taste in classical art forms",
+            "D": "Maugham is emphasizing the narrator's expertise in art criticism by focusing on the technical flaws of the painting."
+        }
+    },
+    "Q0869": {
+        "Aspect": "span",
+        "Complexity": "mh",
+        "Question": "In which year does the earliest event happen, and in which year does the latest even happen?",
+        "Options": {
+            "A": "from Mrs. Strickland's early twenties to her mid-fifties",
+            "B": "mainly from when Mrs. Strickland was thirty-seven until she was hard on sixty. (around 'the war')",
+            "C": "from Mrs. Strickland's mid-forties until she was nearly seventy",
+            "D": "from Mrs. Strickland's late thirties to her early fifties"
+        }
+    },
+    "Q0870": {
+        "Aspect": "character",
+        "Complexity": "sh",
+        "Question": "Blanche is used to be positive and finally becomes a negative one. Tell in one sentence that which episode marks this character's change.",
+        "Options": {
+            "A": "Blanche runs off with Strickland",
+            "B": "Blanche discovers Strickland's paintings and decides to leave Dirk",
+            "C": "Blanche receives a letter from Strickland and chooses to join him",
+            "D": "Blanche has a public argument with Dirk and announces her departure with Strickland"
+        }
+    },
+    "Q0871": {
+        "Aspect": "meaning",
+        "Complexity": "dtl",
+        "Question": "In the novel The Moon and Sixpence, in which chapter does there exist a sentencewith the same or similar meaning as ' a sentence not from the orignal text '? Please output the chapter name or index, and output the exact sentence.",
+        "Options": {
+            "A": "Chapter three",
+            "B": "Chapter one",
+            "C": "Chapter five",
+            "D": "Chapter eight"
+        }
+    },
+    "Q0872": {
+        "Aspect": "character",
+        "Complexity": "dtl",
+        "Question": "In which chapter is the Chinaman appears in Marseille mentioned?",
+        "Options": {
+            "A": "chapter XXXII(32)",
+            "B": "chapter XLVII(47)",
+            "C": "chapter LIV(54)",
+            "D": "chapter XXI(21)"
+        }
+    },
+    "Q0873": {
+        "Aspect": "meaning",
+        "Complexity": "dtl",
+        "Question": "In the novel The Moon and Sixpence, explain the meaning or implication of the symbol or metaphor 'Milk' in the 'Milk is very nice, especially with a drop of brandy in it, but the domestic cow is only too glad to be rid of it. A swollen udder is very uncomfortable.' within one sentence.",
+        "Options": {
+            "A": "Milk refers to her overflowing sympathy, which is selfish and out of her own need for catharsis",
+            "B": "Milk symbolizes the nurturing nature of Mrs. Strickland, which is genuine and selfless",
+            "C": "Milk represents the abundance of wealth that Mrs. Strickland possesses and her eagerness to share it",
+            "D": "Milk signifies the pure and innocent perspective of Mrs. Strickland towards life's hardships."
+        }
+    },
+    "Q0874": {
+        "Aspect": "meaning",
+        "Complexity": "sh",
+        "Question": "In the novel The Moon and Sixpence, explain the meaning or implication of the symbol or metaphor 'Dirk didn't destroy the nude painting of his wife drawn by Strickland' within one sentence.",
+        "Options": {
+            "A": "The conflict between art and human (aesthetics triumph remorselessly over personal feelings or ethical sensibility [J])",
+            "B": "Dirk's inability to destroy the painting represents his own lack of talent and jealousy of Strickland's skill",
+            "C": "The painting's survival signifies Dirk's acceptance and forgiveness of his wife's infidelity",
+            "D": "Dirk's decision not to destroy the painting symbolizes his defeat and submission to Strickland's dominance over him"
+        }
+    },
+    "Q0875": {
+        "Aspect": "character",
+        "Complexity": "dtl",
+        "Question": "In the novel The Moon and Sixpence, in which chapter does there exist a sentencewith the same or similar meaning as ' Sometimes the masks people put on are so perfect that over time they really become who they pretend to be. '? Please output the chapter name or index, and output the exact sentence.",
+        "Options": {
+            "A": "chapter 42",
+            "B": "chapter 19: He never seemed to think that he could make a serious error.",
+            "C": "chapter 33: The artist can mold nothing at will but must wait for the moment when his impressions of beauty become articulate.",
+            "D": "chapter 51: It is cruel to discover one's mediocrity only when it is too late."
+        }
+    },
+    "Q0876": {
+        "Aspect": "meaning",
+        "Complexity": "dtl",
+        "Question": "In the novel The Moon and Sixpence, in which chapter does there exist a sentencewith the same or similar meaning as ' It is not true that pain ennobles; happiness occasionally ennobles, but pain, for the most part, only bases and baleful. '? Please output the chapter name or index, and output the exact sentence.",
+        "Options": {
+            "A": "chapter 5: It is a common belief that sorrow and pain turn a man's heart to noble thoughts, but most often they lead to a brooding resentment.",
+            "B": "chapter 17",
+            "C": "chapter 23: Many argue that adversity brings out the best in people, yet it frequently results in smallness of spirit.",
+            "D": "chapter 32: Some say that through hardship, a person is elevated, but more often than not, it results in a mean-spirited and spiteful disposition."
+        }
+    },
+    "Q0877": {
+        "Aspect": "character",
+        "Complexity": "dtl",
+        "Question": "In which chapter(s) is/are Miss Waterford mentioned?",
+        "Options": {
+            "A": "Chapter 1, 2, 7",
+            "B": "Chapter 4, 7, 8",
+            "C": "Chapter 4, 5, 8",
+            "D": "Chapter 4, 5, 7"
+        }
+    },
+    "Q0878": {
+        "Aspect": "character",
+        "Complexity": "dtl",
+        "Question": "In which chapter(s) is/are Mrs. Strickland's daughter mentioned?",
+        "Options": {
+            "A": "Chapter 1, 8",
+            "B": "Chapter 1, 2",
+            "C": "Chapter 7, 14",
+            "D": "Chapter 7, 18"
+        }
+    },
+    "Q0879": {
+        "Aspect": "character",
+        "Complexity": "dtl",
+        "Question": "Who lost the chess game to Mr. Strickland when the narrator met Mr. Strickland for the third time before the narrator settled down in Paris?",
+        "Options": {
+            "A": "a Frenchman",
+            "B": "an Englishman",
+            "C": "a Dutch painter",
+            "D": "the waiter"
+        }
+    },
+    "Q0880": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "What does Strickland's son think of Strickland's experience in front of the narrator?",
+        "Options": {
+            "A": "He admires his father and believes he led an admirable life.",
+            "B": "He dislikes his father and thinks Mr. Strickland deserves it.",
+            "C": "He is indifferent to his father's fate and shows no emotion.",
+            "D": "He is deeply saddened by his father's struggles and expresses great sympathy."
+        }
+    },
+    "Q0881": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "After being abandoned by Strickland, what did Blanche attempt to commit suicide with?",
+        "Options": {
+            "A": "laudanum",
+            "B": "the oxalic acid",
+            "C": "sleeping pills",
+            "D": "arsenic"
+        }
+    },
+    "Q0882": {
+        "Aspect": "settg",
+        "Complexity": "dtl",
+        "Question": "What clothes was Madame Coutras wearing when the narrator first met her?",
+        "Options": {
+            "A": "straight-fronted corsets",
+            "B": "loose-fitting gowns",
+            "C": "elegant silk dress",
+            "D": "flowery summer frock"
+        }
+    },
+    "Q0883": {
+        "Aspect": "plot",
+        "Complexity": "dtl",
+        "Question": "Which country do the cook in Hotel de la Fleur belong to, except for Tiare?",
+        "Options": {
+            "A": "France",
+            "B": "China",
+            "C": "Spain",
+            "D": "Italy"
+        }
+    },
+    "Q0884": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel The Moon and Sixpence, has the word or phrase 'never throw anything away' appeared? If so, how many times does it appear in the text?",
+        "Options": {
+            "A": "No, never",
+            "B": "Yes, 1",
+            "C": "Yes, 3",
+            "D": "Yes, 2"
+        }
+    }
+}

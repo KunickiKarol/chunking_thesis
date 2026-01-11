@@ -1,0 +1,134 @@
+{
+    "Q1307": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "How many times has Rebecca cried?",
+        "Options": {
+            "A": "5",
+            "B": "3 times",
+            "C": "7 times",
+            "D": "2 times"
+        }
+    },
+    "Q1308": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "How many times were Susan Simpson and Emma Jane Perkins hiding behind the fence?",
+        "Options": {
+            "A": "2",
+            "B": "3",
+            "C": "4",
+            "D": "1"
+        }
+    },
+    "Q1309": {
+        "Aspect": "relat",
+        "Complexity": "mh",
+        "Question": "Who are in the The Sawyer family?",
+        "Options": {
+            "A": "Aunt Miranda Sawyer, Adam Sawyer, Mr. James Sawyer",
+            "B": "Emma Jane Sawyer, Mrs. Sarah Sawyer, Jeremiah Sawyer",
+            "C": "Abijah Sawyeer, Miss Emily Sawyer, Joshua Sawyer",
+            "D": "Miss Miranda Sawyer, Miss Miranda Sawyer, Miss Jane Sawyer"
+        }
+    },
+    "Q1310": {
+        "Aspect": "relat",
+        "Complexity": "dtl",
+        "Question": "What is the relationship between Adam Ladd and  Mr. Aladdin?",
+        "Options": {
+            "A": "Adam Ladd is Mr. Aladdin's business partner",
+            "B": "Adam Ladd and old fox are same person",
+            "C": "Adam Ladd is Mr. Aladdin's brother",
+            "D": "Adam Ladd is Mr. Aladdin's neighbor"
+        }
+    },
+    "Q1311": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel Rebecca of Sunnybrook Farm, has someone ever been mentioned to kill others by the author? If so, how many times has this plot been mentioned?",
+        "Options": {
+            "A": "Yes, 3 times",
+            "B": "Yes, twice, during a robbery gone wrong",
+            "C": "No. Never",
+            "D": "Yes, once, in a tragic hunting accident"
+        }
+    },
+    "Q1312": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel Rebecca of Sunnybrook Farm, has the author described someone praying? If so, how many times has the author described this?",
+        "Options": {
+            "A": "Yes, 1",
+            "B": "Yes, 2",
+            "C": "Yes, 3",
+            "D": "Yes, 4"
+        }
+    },
+    "Q1313": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel Rebecca of Sunnybrook Farm, has the author decribed someone dancing? If so, how many times has the author described this?",
+        "Options": {
+            "A": "Yes, 2",
+            "B": "Yes, 5",
+            "C": "Yes, 3",
+            "D": "Yes, 4"
+        }
+    },
+    "Q1314": {
+        "Aspect": "relat",
+        "Complexity": "mh",
+        "Question": "What is the relationship between Miss Miranda and Rebecca?",
+        "Options": {
+            "A": "Miss Miranda was the sister of Rebecca",
+            "B": "Miss Miranda was the mother of Rebecca",
+            "C": "Miss Miranda was the cousin of Rebecca",
+            "D": "Miss Miranda was the aunt of Rebecca"
+        }
+    },
+    "Q1315": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel Rebecca of Sunnybrook Farm, has someone ever did the action 'slapping something'? If so, how many times has this action being described?",
+        "Options": {
+            "A": "No",
+            "B": "Yes, 1",
+            "C": "Yes, 2",
+            "D": "Yes, 3"
+        }
+    },
+    "Q1316": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel Rebecca of Sunnybrook Farm, has someone ever been mentioned to 'get punished'? If so, how many times has this plot been mentioned?",
+        "Options": {
+            "A": "Yes, 3",
+            "B": "Yes, 1",
+            "C": "Yes, 5",
+            "D": "Yes, 2"
+        }
+    },
+    "Q1317": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel Rebecca of Sunnybrook Farm, has the author described that someone got 'frightened'? If so, how many times has this feeling appeared?",
+        "Options": {
+            "A": "Yes, 4",
+            "B": "Yes, 9",
+            "C": "Yes, 5",
+            "D": "Yes, 6"
+        }
+    },
+    "Q1318": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel Rebecca of Sunnybrook Farm, has someone ever been mentioned to 'get wound'? If so, how many times has this plot been mentioned?",
+        "Options": {
+            "A": "Yes, 5",
+            "B": "Yes, 3",
+            "C": "Yes, 7",
+            "D": "Yes, 2"
+        }
+    }
+}

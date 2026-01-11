@@ -1,0 +1,255 @@
+{
+    "Q2027": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel Brideshead Revisited, has someone ever been mentioned to feel 'excited'? If so, how many times has this plot been mentioned?",
+        "Options": {
+            "A": "Yes, 3",
+            "B": "Yes, 5",
+            "C": "Yes, 7",
+            "D": "Yes, 2"
+        }
+    },
+    "Q2028": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "Has the author mentioned Lady Julia celebrating the New Year in the novel Brideshead Revisited?",
+        "Options": {
+            "A": "Yes, twice.",
+            "B": "Yes, 3 times",
+            "C": "Yes, 4 times.",
+            "D": "Yes, once."
+        }
+    },
+    "Q2029": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "How many times have Julia and Rex played bezique?",
+        "Options": {
+            "A": "0",
+            "B": "2",
+            "C": "1",
+            "D": "3"
+        }
+    },
+    "Q2030": {
+        "Aspect": "relat",
+        "Complexity": "mh",
+        "Question": "Who are in the The Flyte family?",
+        "Options": {
+            "A": "Lady Marchmain, Charles Flyte, Rex Flyte",
+            "B": "Lord Brideshead, Lord Flyte",
+            "C": "Cordelia, Lady Julia Flyte, Lord Sebastian Flyte",
+            "D": "Lady Teresa Flyte, Anthony Flyte"
+        }
+    },
+    "Q2031": {
+        "Aspect": "relat",
+        "Complexity": "dtl",
+        "Question": "What is the relationship between Charles Ryder and Mr. Ryder?",
+        "Options": {
+            "A": "Charles Ryder is Mr. Ryder's son",
+            "B": "Charles Ryder is Mr. Ryder's brother",
+            "C": "Charles Ryder is Mr. Ryder's nephew",
+            "D": "Charles Ryder and Mr. Ryder are the same person"
+        }
+    },
+    "Q2032": {
+        "Aspect": "meaning",
+        "Complexity": "dtl",
+        "Question": "In the novel Brideshead Revisited, in which chapter does there exist a sentence with the same or similar meaning as 'The General dispatched them, and they arrived just in the nick of time. There's a group, less than a mile ahead.?'",
+        "Options": {
+            "A": "Chapter 4",
+            "B": "Chapter 8",
+            "C": "Chapter 6",
+            "D": "Chapter 10"
+        }
+    },
+    "Q2033": {
+        "Aspect": "span",
+        "Complexity": "mh",
+        "Question": "In which year does the earliest event happen, and in which year does the latest even happen?",
+        "Options": {
+            "A": "1904,  1940",
+            "B": "1903, 1939",
+            "C": "1905, 1941",
+            "D": "1906, 1942"
+        }
+    },
+    "Q2034": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel Brideshead Revisited, are there anyone killed unaturally? If so, how many times has this plot happened?",
+        "Options": {
+            "A": "No. No one dies in this novel.",
+            "B": "Yes, 5",
+            "C": "Yes, 3",
+            "D": "Yes, 9"
+        }
+    },
+    "Q2035": {
+        "Aspect": "character",
+        "Complexity": "dtl",
+        "Question": "In the novel Brideshead Revisited, in which chapter does there exist a sentence with the same or similar meaning as 'The moment has arrived to discuss Julia, who up until this point, has occupied an occasional and rather mysterious role in Sebastian's story.?",
+        "Options": {
+            "A": "Chapter 7",
+            "B": "Chapter 3",
+            "C": "Chapter 10",
+            "D": "Chapter 5"
+        }
+    },
+    "Q2036": {
+        "Aspect": "character",
+        "Complexity": "dtl",
+        "Question": "Who is Vittoria Corombona",
+        "Options": {
+            "A": "A Venetian merchant who seeks revenge for the loss of his ships",
+            "B": "The play's character, Vittoria Corombona, is a young woman from a Venetian family who is tried for adultery and the murder of her husband.",
+            "C": "A nobleman's wife who is renowned for her charitable works in Venice",
+            "D": "A famed Venetian painter known for her controversial portraits"
+        }
+    },
+    "Q2037": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel Brideshead Revisited, has the author described someone praying? If so, how many times has the author described this?",
+        "Options": {
+            "A": "Yes, 1",
+            "B": "Yes, 3",
+            "C": "No. They have no need to pray.",
+            "D": "Yes, 4"
+        }
+    },
+    "Q2038": {
+        "Aspect": "meaning",
+        "Complexity": "dtl",
+        "Question": "In the novel Brideshead Revisited, in which chapter does there exist a sentence with the same or similar meaning as 'As is their customary fervor when witnessing the troubles of their erstwhile allies, the French gleefully anticipated revolution and civil strife, skillfully adapting our more ambiguous concepts from across the channel into their own distinct expressions.'?",
+        "Options": {
+            "A": "Chapter 5",
+            "B": "Chapter 10",
+            "C": "Chapter 8",
+            "D": "Chapter 12"
+        }
+    },
+    "Q2039": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel Brideshead Revisited, has the author describes someone dancing? If so, how many times has the author described this action?",
+        "Options": {
+            "A": "Yes, 1",
+            "B": "Yes, 2",
+            "C": "Yes, 3",
+            "D": "No, never"
+        }
+    },
+    "Q2040": {
+        "Aspect": "meaning",
+        "Complexity": "dtl",
+        "Question": "In the novel Brideshead Revisited, in which chapter does there exist a sentence with the same or similar meaning as 'These memories serve as both monuments and promises of the significant moments throughout a lifetime.'?",
+        "Options": {
+            "A": "Chapter 1",
+            "B": "Chapter 2",
+            "C": "Chapter 5",
+            "D": "Chapter 8"
+        }
+    },
+    "Q2041": {
+        "Aspect": "relat",
+        "Complexity": "mh",
+        "Question": "What is the relationship between Lady Marchmain and Fanny Rosscommon?",
+        "Options": {
+            "A": "Fanny Rosscommon was the sister-in-law of Lady Marchmain",
+            "B": "Fanny Rosscommon was the cousin of Lady Marchmain",
+            "C": "Fanny Rosscommon was the aunt of Lady Marchmain",
+            "D": "Fanny Rosscommon was the daughter of Lady Marchmain"
+        }
+    },
+    "Q2042": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel Brideshead Revisited, has someone ever been mentioned to be 'angry'? If so, how many times has this plot been mentioned?",
+        "Options": {
+            "A": "Yes, 1",
+            "B": "Yes, 3",
+            "C": "Yes, 5",
+            "D": "No, never"
+        }
+    },
+    "Q2043": {
+        "Aspect": "meaning",
+        "Complexity": "dtl",
+        "Question": "In the novel Brideshead Revisited, in which chapter does there exist a sentence with the same or similar meaning as Throughout the preparation month, she frequented the Old Rectory multiple times, going back and forth, refining the invitation list and assisting with the decorations.?",
+        "Options": {
+            "A": "Chapter 4",
+            "B": "Chapter 6",
+            "C": "Chapter 9",
+            "D": "Chapter 2"
+        }
+    },
+    "Q2044": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel Brideshead Revisited, has someone ever been mentioned to be punished by the author? If so, how many times has this plot been mentioned?",
+        "Options": {
+            "A": "Yes, 1",
+            "B": "No, never",
+            "C": "Yes, 2",
+            "D": "Yes, more than 3"
+        }
+    },
+    "Q2045": {
+        "Aspect": "meaning",
+        "Complexity": "dtl",
+        "Question": "In the novel Brideshead Revisited, in which chapter does there exist a sentence with the same or similar meaning as We lapsed into silence, with only the birds conversing in a myriad of tiny and distinct tones within the lime-trees. The waters alone exchanged words amidst their intricately carved stones..",
+        "Options": {
+            "A": "Chapter 3",
+            "B": "Chapter 1",
+            "C": "Chapter 5",
+            "D": "Chapter 7"
+        }
+    },
+    "Q2046": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel Brideshead Revisited, has someone ever been mentioned to be 'frightened'? If so, how many times has this plot been mentioned?",
+        "Options": {
+            "A": "Yes, 2",
+            "B": "No, never",
+            "C": "Yes, 1",
+            "D": "Yes, 3"
+        }
+    },
+    "Q2047": {
+        "Aspect": "meaning",
+        "Complexity": "dtl",
+        "Question": "In the novel Brideshead Revisited, in which chapter does there exist a sentence with the same or similar meaning as 'The divorces were a prominent topic of discussion within our social circle. Even during that summer of widespread unease, there were certain places where personal matters took precedence. '?",
+        "Options": {
+            "A": "Chapter 2",
+            "B": "Chapter 6",
+            "C": "Chapter 9",
+            "D": "Chapter 4"
+        }
+    },
+    "Q2048": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel Brideshead Revisited, has someone ever been mentioned to get 'injured'? If so, how many times has this plot been mentioned?",
+        "Options": {
+            "A": "Yes, 1",
+            "B": "Yes, 2",
+            "C": "No. No one got injured.",
+            "D": "Yes, 4"
+        }
+    },
+    "Q2049": {
+        "Aspect": "meaning",
+        "Complexity": "dtl",
+        "Question": "In the novel Brideshead Revisited, in which chapter does there exist a sentence with the same or similar meaning as 'The time scheduled for my divorce case, primarily my wife's concern, coincided with the impending wedding of Brideshead.'?",
+        "Options": {
+            "A": "Chapter 5",
+            "B": "Chapter 3",
+            "C": "Chapter 7",
+            "D": "Chapter 9"
+        }
+    }
+}

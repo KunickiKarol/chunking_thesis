@@ -1,0 +1,189 @@
+{
+    "Q1442": {
+        "Aspect": "settg",
+        "Complexity": "sh",
+        "Question": "What was Christine's impression of her husband when she woke up today?",
+        "Options": {
+            "A": "She believed he was a young, athletic, and single man.",
+            "B": "She thought he was an old, gray and married man.",
+            "C": "She assumed he was a middle-aged, balding, and divorced individual.",
+            "D": "She perceived him to be a teenager, with blond hair and definitely unmarried."
+        }
+    },
+    "Q1443": {
+        "Aspect": "settg",
+        "Complexity": "sh",
+        "Question": "How old was Christine when she wrote her first journal?",
+        "Options": {
+            "A": "Forty-seven.",
+            "B": "Forty-five.",
+            "C": "Forty-nine.",
+            "D": "Forty-two."
+        }
+    },
+    "Q1444": {
+        "Aspect": "settg",
+        "Complexity": "sh",
+        "Question": "Which month was 'today', when the story happened?",
+        "Options": {
+            "A": "October",
+            "B": "December",
+            "C": "November.",
+            "D": "January"
+        }
+    },
+    "Q1445": {
+        "Aspect": "settg",
+        "Complexity": "sh",
+        "Question": "How Old was Christine when she had an accident?",
+        "Options": {
+            "A": "twenty-five",
+            "B": "thirty-two",
+            "C": "twenty-nine.",
+            "D": "twenty-seven"
+        }
+    },
+    "Q1446": {
+        "Aspect": "settg",
+        "Complexity": "dtl",
+        "Question": "What did Christine take today when she woke up?",
+        "Options": {
+            "A": "Cereal, a glass of orange juice, and a cup of tea.",
+            "B": "Toast, two cups of coffee and a jug of milk.",
+            "C": "Pancakes, a cup of espresso, and a glass of water.",
+            "D": "Scrambled eggs, a mug of hot chocolate, and a slice of fruit cake."
+        }
+    },
+    "Q1447": {
+        "Aspect": "settg",
+        "Complexity": "dtl",
+        "Question": "Where did Christine find her novel?",
+        "Options": {
+            "A": "She found it under her bed.",
+            "B": "She discovered it on a bookshelf in the living room.",
+            "C": "She located it in a drawer in the kitchen.",
+            "D": "She found it in a box in the cabinet."
+        }
+    },
+    "Q1448": {
+        "Aspect": "character",
+        "Complexity": "sh",
+        "Question": "Who kept Christine's original novel?",
+        "Options": {
+            "A": "Dr. Nash",
+            "B": "Claire",
+            "C": "Edmund",
+            "D": "Ben."
+        }
+    },
+    "Q1449": {
+        "Aspect": "character",
+        "Complexity": "mh",
+        "Question": "Who called Christine first today?",
+        "Options": {
+            "A": "Ben",
+            "B": "Claire",
+            "C": "Dr. Nash",
+            "D": "Adam"
+        }
+    },
+    "Q1450": {
+        "Aspect": "settg",
+        "Complexity": "mh",
+        "Question": "Where did Dr. Nash suggest to meet Christine today?",
+        "Options": {
+            "A": "A library near her home.",
+            "B": "A café in the park.",
+            "C": "The hospital cafeteria.",
+            "D": "A bookstore downtown."
+        }
+    },
+    "Q1451": {
+        "Aspect": "plot",
+        "Complexity": "mh",
+        "Question": "What sort of doctor was Dr, Nsah?",
+        "Options": {
+            "A": "He was a neurosurgeon, focusing on surgical treatments for brain conditions",
+            "B": "He was a psychiatrist, dealing primarily with mental health and behavioral disorders",
+            "C": "He was a neurologist, primarily treating diseases of the nervous system without a focus on imaging techniques",
+            "D": "He was a neuropsychologist, specializing in patients with brain disorders, with an interest in some of the newer functional neuroimaging techniques"
+        }
+    },
+    "Q1452": {
+        "Aspect": "plot",
+        "Complexity": "dtl",
+        "Question": "What did Dr. Nash order for Christine at the café today?",
+        "Options": {
+            "A": "Espresso with a dash of milk.",
+            "B": "Black coffee without sugar.",
+            "C": "Cappuccino with extra foam.",
+            "D": "Latte with two sugars."
+        }
+    },
+    "Q1453": {
+        "Aspect": "plot",
+        "Complexity": "mh",
+        "Question": "What did Dr. Nash give Christine today?",
+        "Options": {
+            "A": "A journal.",
+            "B": "A photograph of her younger self.",
+            "C": "A set of audio recordings.",
+            "D": "A novel she once loved."
+        }
+    },
+    "Q1454": {
+        "Aspect": "plot",
+        "Complexity": "mh",
+        "Question": "How did Christine remember to write her journal every day?",
+        "Options": {
+            "A": "Ben would leave her notes to remind her.",
+            "B": "Dr. Nash would call her every day to remind her.",
+            "C": "She had an alarm set to remind her to write in it.",
+            "D": "Her friend would send her a text message every morning to remind her."
+        }
+    },
+    "Q1455": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "What did Christine write on the first page of her journal?",
+        "Options": {
+            "A": "REMEMBER YOUR PAST",
+            "B": "ALWAYS BE CAUTIOUS",
+            "C": "FIND THE TRUTH",
+            "D": "'CHRISTINE LUCAS' and 'DON'T TRUST BEN'"
+        }
+    },
+    "Q1456": {
+        "Aspect": "plot",
+        "Complexity": "sh",
+        "Question": "What's Christine's son's name?",
+        "Options": {
+            "A": "Alex Wheeler",
+            "B": "Aaron Wheeler",
+            "C": "Adam Wheeler",
+            "D": "Andrew Wheeler"
+        }
+    },
+    "Q1457": {
+        "Aspect": "settg",
+        "Complexity": "sh",
+        "Question": "Where did Ben say Claire was?",
+        "Options": {
+            "A": "New Zealand",
+            "B": "Australia",
+            "C": "Canada",
+            "D": "South Africa"
+        }
+    },
+    "Q1458": {
+        "Aspect": "plot",
+        "Complexity": "mh",
+        "Question": "What did the film Dr. Nash displayed on September 9th show Christine?",
+        "Options": {
+            "A": "He was showing her a series of old photographs to trigger past memories",
+            "B": "He was conducting a standard psychological assessment with a series of questions and answers",
+            "C": "He was demonstrating a new medication that could potentially restore her memory function.",
+            "D": "He was guiding her to do a memory enhancing training, which involved drawing shapes on a piece of paper by looking in a mirror, and it turned out that Christine got improved."
+        }
+    }
+}

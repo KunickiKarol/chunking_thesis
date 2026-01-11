@@ -1,0 +1,156 @@
+{
+    "Q0215": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "Has Tess ever fallen in love with a man? If so, how many times has this plot occurred?",
+        "Options": {
+            "A": "Yes, once",
+            "B": "Yes, 3 times",
+            "C": "Yes, 4 times",
+            "D": "Yes, twice"
+        }
+    },
+    "Q0216": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "How many times has Tess tried to tell Angel Clare about her past experiences with Alec d'Urberville?",
+        "Options": {
+            "A": "1",
+            "B": "3",
+            "C": "4",
+            "D": "2"
+        }
+    },
+    "Q0217": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "How many times have Tess and Angel Clare Lost each other?",
+        "Options": {
+            "A": "1",
+            "B": "3",
+            "C": "2",
+            "D": "4"
+        }
+    },
+    "Q0218": {
+        "Aspect": "relat",
+        "Complexity": "mh",
+        "Question": "How many people are there in the Tess's family? Who are they?",
+        "Options": {
+            "A": "4 people: Tess Durbeyfield, Joan Durbeyfield, John Durbeyfield, Mercy Chant",
+            "B": "6 people: Tess Durbeyfield, Joan Durbeyfield, John Durbeyfield, Abraham Durbeyfield, Eliza Durbeyfield, Alec d'Urberville",
+            "C": "7 people: Tess Durbeyfield, Joan Durbeyfield, John Durbeyfield, Abraham Durbeyfield, Eliza Durbeyfield, Angel Clare, Mercy Chant",
+            "D": "5people: Tess Durbeyfield, Joan Durbeyfield, John Durbeyfield, Abraham Durbeyfield, Eliza Durbeyfield"
+        }
+    },
+    "Q0219": {
+        "Aspect": "relat",
+        "Complexity": "mh",
+        "Question": "What is the relationship between Tess and Abraham?",
+        "Options": {
+            "A": "Abraham Durbeyfield is Tess's cousin.",
+            "B": "Abraham Durbeyfield is Tess's uncle.",
+            "C": "Abraham Durbeyfield is Tess's younger brother.",
+            "D": "Abraham Durbeyfield is Tess's father."
+        }
+    },
+    "Q0220": {
+        "Aspect": "meaning",
+        "Complexity": "mh",
+        "Question": "Explain the meaning or implication of the symbol or metaphor in 'The huge pool of blood in front of her was already assuming the iridescence of coagulation.' within one sentence.",
+        "Options": {
+            "A": "The metaphor represents Tess's own emotional turmoil and sense of guilt after the accident.",
+            "B": "The blood symbolizes Tess's transition into womanhood and the loss of innocence.",
+            "C": "The pool of blood is a foreshadowing of Tess's eventual violent death at the hands of society.",
+            "D": "The metaphor suggests the tragic event that an accident occurred while Tess was driving the carriage, and the horse was stabbed to death."
+        }
+    },
+    "Q0221": {
+        "Aspect": "span",
+        "Complexity": "mh",
+        "Question": "In which year does the earliest event happen, and in which year does the latest even happen?",
+        "Options": {
+            "A": "Victorian era, about 1837-1901",
+            "B": "Elizabethan era, about 1558-1603",
+            "C": "Georgian era, about 1714-1830",
+            "D": "Edwardian era, about 1901-1910"
+        }
+    },
+    "Q0222": {
+        "Aspect": "character",
+        "Complexity": "sh",
+        "Question": "Angel Clare couldn't understand Tess's experience before but after many years in Brazil, he changed his idea. Tell in one sentence that which episode marks this character's change.",
+        "Options": {
+            "A": "Angel realized his mistake when he received a letter from Tess confessing her past and immediately rushed back to England to reconcile with her.",
+            "B": "Angel had a revelation about Tess's past during a conversation with a fellow farmer in Brazil, which led him to appreciate the struggles she faced.",
+            "C": "Angel returned to England from Brazil and met Tess  expressesing his regret for not understanding Tess's situation earlier and acknowledges the double standards society imposes on women.",
+            "D": "Angel's change of heart occurred after he witnessed the hardships of the Brazilian workers, which made him reflect on Tess's suffering and societal judgment."
+        }
+    },
+    "Q0223": {
+        "Aspect": "meaning",
+        "Complexity": "dtl",
+        "Question": "In the novel Tess of the d'Urbervilles, in which chapter does there exist a sentence with the same or similar meaning as 'She would have laid down her life for 'ee.'?",
+        "Options": {
+            "A": "Chapter 35",
+            "B": "Chapter 42",
+            "C": "Chapter 47",
+            "D": "Chapter 40"
+        }
+    },
+    "Q0224": {
+        "Aspect": "character",
+        "Complexity": "mh",
+        "Question": "Who is Izz?",
+        "Options": {
+            "A": "She is the owner of Talbothays Dairy and Tess's employer.",
+            "B": "She is a wealthy visitor at Talbothays Dairy who befriends Tess.",
+            "C": "She works at Talbothays Dairy alongside Tess. She is one of Tess's friends.",
+            "D": "She is Tess's sister and lives with her at the d'Urberville estate."
+        }
+    },
+    "Q0225": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "Has the place South Wessex appeared? If so, how many times does it appear in the text?",
+        "Options": {
+            "A": "No",
+            "B": "Yes, 1",
+            "C": "Yes, 3",
+            "D": "Yes, 2"
+        }
+    },
+    "Q0226": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "Has the place Africa appeared? If so, how many times does it appear in the text?",
+        "Options": {
+            "A": "No",
+            "B": "Yes, 2",
+            "C": "Yes, 1",
+            "D": "Yes, 3"
+        }
+    },
+    "Q0227": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel Tess of the d'Urbervilles, has the word or phrase 'get together sufficient money' appeared? If so, how many times does it appear in the text?",
+        "Options": {
+            "A": "Yes, 1",
+            "B": "No",
+            "C": "Yes, 2",
+            "D": "Yes, 3"
+        }
+    },
+    "Q0228": {
+        "Aspect": "times",
+        "Complexity": "mh",
+        "Question": "In the novel Tess of the d'Urbervilles, has the word or phrase 'till comparatively recent times' appeared? If so, how many times does it appear in the text?",
+        "Options": {
+            "A": "No",
+            "B": "Yes, 2",
+            "C": "Yes, 3",
+            "D": "Yes, 1"
+        }
+    }
+}
