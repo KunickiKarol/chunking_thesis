@@ -5,8 +5,8 @@ stages:
     deps:
     - path: download_datasets/download_datasets_all.py
       hash: md5
-      md5: 0a58119b3cf5bc947403bd9a1479a055
-      size: 1135
+      md5: 2446c3323ef38ae6bca84d6c13bb0d33
+      size: 1137
     - path: params.yaml
       hash: md5
       md5: 46b05c75d653a93b724d040b259c86a7
@@ -31,7 +31,7 @@ stages:
       nfiles: 157
     - path: preprocess_datasets/preprocess_datasets_all.py
       hash: md5
-      md5: 65fa5d7d1e4d707591ac7a7e8bb95f7d
+      md5: b1ad6390fdd29d9bd9b27ef1621506c5
       size: 1002
     params:
       params.yaml:
@@ -48,8 +48,8 @@ stages:
     deps:
     - path: chunking/chunking_text_all.py
       hash: md5
-      md5: 2c0138858725b871097a823f2aa8092c
-      size: 1344
+      md5: e0e6c0b9871d791ca7c324f17ec96c34
+      size: 1315
     - path: datasets/
       hash: md5
       md5: f5e5d0137f84887b08ba5d55193fc304.dir
@@ -66,6 +66,6 @@ stages:
     outs:
     - path: chunks/
       hash: md5
-      md5: 9f141d048516df37bea42e02477f7e8f.dir
-      size: 63284540
+      md5: b63dfcf87e9daa0d66164d1b66a99823.dir
+      size: 83950239
       nfiles: 60

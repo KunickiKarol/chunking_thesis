@@ -1,10 +1,12 @@
 import os
 import shutil
-from pathlib import Path
 import subprocess
+from pathlib import Path
+
 from dotenv import load_dotenv
 
 load_dotenv()
+
 
 def download_novelQA(dataset_name):
     """
@@ -13,13 +15,13 @@ def download_novelQA(dataset_name):
 
     Args:
         dataset_name (str): Nazwa datasetu na HF, np. "NovelQA/NovelQA"
-        downloads_dir (str, optional): Ścieżka do folderu downloads. 
+        downloads_dir (str, optional): Ścieżka do folderu downloads.
             Jeśli None, pobiera z .env lub domyślnie "downloads".
         hf_token (str, optional): Token Hugging Face. Jeśli None, pobiera z .env.
     """
     # 1️⃣ Wczytanie tokenu i folderu
     hf_token = os.getenv("HF_TOKEN")
-    downloads_dir =  Path(os.getenv("DOWNLOADS_DIR"))
+    downloads_dir = Path(os.getenv("DOWNLOADS_DIR"))
     downloads_dir.mkdir(parents=True, exist_ok=True)
 
     # 2️⃣ Ścieżki
@@ -33,14 +35,19 @@ def download_novelQA(dataset_name):
 
     # 4️⃣ Klonowanie repozytorium z tokenem
     print(f"Klonuję repozytorium {repo_url} do {repo_path}...")
-    subprocess.run([
-        "git", "clone",
-        f"https://user:{hf_token}@huggingface.co/datasets/NovelQA/NovelQA",
-        str(repo_path)
-    ], check=True)
+    subprocess.run(
+        [
+            "git",
+            "clone",
+            f"https://user:{hf_token}@huggingface.co/datasets/NovelQA/NovelQA",
+            str(repo_path),
+        ],
+        check=True,
+    )
 
     print("Klonowanie zakończone!")
     return repo_path
+
 
 # 🔹 Przykład wywołania
 if __name__ == "__main__":

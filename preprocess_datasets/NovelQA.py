@@ -1,11 +1,13 @@
 import os
 import shutil
 from pathlib import Path
+
 from dotenv import load_dotenv
 
 # 1️⃣ Wczytaj zmienne środowiskowe z .env
 load_dotenv()
-  # default = datasets
+# default = datasets
+
 
 def preprocess_novelQA():
     """
@@ -19,9 +21,9 @@ def preprocess_novelQA():
         datasets_dir (Path): folder docelowy dla datasetów
     """
 
-    DOWNLOADS_DIR =  Path(os.getenv("DOWNLOADS_DIR"))
+    DOWNLOADS_DIR = Path(os.getenv("DOWNLOADS_DIR"))
     DATASETS_DIR = Path(os.getenv("DATASETS_DIR"))
-    
+
     BOOKS_SRC = DOWNLOADS_DIR / "NovelQA" / "Books"
     DATA_SRC = DOWNLOADS_DIR / "NovelQA" / "Data"
     BOOKMETA_SRC = DOWNLOADS_DIR / "NovelQA" / "bookmeta.json"
@@ -58,6 +60,7 @@ def preprocess_novelQA():
 
     print("Preprocessing NovelQA zakończony!")
     return BOOKS_DST, TASKS_DST, BOOKMETA_DST
+
 
 # 🔹 Przykład wywołania
 if __name__ == "__main__":

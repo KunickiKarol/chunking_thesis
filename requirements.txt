@@ -8,3 +8,8 @@ langchain-text-splitters
 tiktoken
 transformers
 pyyaml
+black
+isort
+flake8
+pyproject-flake8==7.0.0
+Flake8-pyproject

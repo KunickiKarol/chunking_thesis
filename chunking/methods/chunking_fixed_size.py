@@ -1,7 +1,8 @@
-from langchain_text_splitters import CharacterTextSplitter
-from transformers import AutoTokenizer
-import yaml
 from typing import List
+
+import yaml
+from langchain_text_splitters import CharacterTextSplitter
+
 
 def chunking_fixed_size(
     text: str,
@@ -22,8 +23,6 @@ def chunking_fixed_size(
     Returns:
         List[str]: lista chunków tekstu
     """
-    import math
-
     # 🔹 Wczytujemy params.yaml tylko jeśli potrzebne
     if model_name is None or chunk_size is None or chunk_overlap is None:
         with open("params.yaml", "r", encoding="utf-8") as f:
@@ -45,8 +44,10 @@ def chunking_fixed_size(
 
     # Tworzymy splitter który liczy długość po tokenach HF
     text_splitter = CharacterTextSplitter(
-        chunk_size=chunk_size,
-        chunk_overlap=chunk_overlap
+        separator=" ",  # regex: akapity, linie, końce zdań
+        chunk_size=1000,
+        chunk_overlap=200,
+        length_function=len,
     )
 
     # dzielimy tekst

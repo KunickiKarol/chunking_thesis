@@ -1,6 +1,5 @@
 #!/usr/bin/env python
 import argparse
-import yaml
 from pathlib import Path
 
 from .datasets.novelQA import chunk_text_novelQA
@@ -35,11 +34,11 @@ def main():
                 continue
             else:
                 result_dir.mkdir(parents=True, exist_ok=True)
-                
-            if dataset_name == 'NovelQA':
+
+            if dataset_name == "NovelQA":
                 chunk_text_novelQA(chunking_type, dataset_name, result_dir)
             else:
-                raise NotImplementedError(f'Nie zaimplementowano chunkowania dla {chunking_type}')
+                raise NotImplementedError(f"Nie zaimplementowano chunkowania dla {chunking_type}")
 
 
 if __name__ == "__main__":

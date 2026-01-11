@@ -1,8 +1,9 @@
-import os
 import json
+import os
 from pathlib import Path
 
 from chunking.methods.chunking_fixed_size import chunking_fixed_size
+
 from ..methods.chunking_recurisive import chunking_recursive
 
 
@@ -37,7 +38,7 @@ def chunk_text_novelQA(chunking_type: str, dataset_name: str, result_dir: Path):
         else:
             raise ValueError(f"Nieznany typ chunkingu: {chunking_type}")
 
-        filename = filename.split('.')[0]
+        filename = filename.split(".")[0]
         output_file = result_dir / f"{filename}.jsonl"
         with open(output_file, "w", encoding="utf-8") as out_f:
             for i, chunk in enumerate(chunks):

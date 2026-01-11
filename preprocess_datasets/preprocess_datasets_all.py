@@ -1,6 +1,7 @@
 import argparse
 import os
 from pathlib import Path
+
 from dotenv import load_dotenv
 
 # jawne importy datasetów
@@ -30,4 +31,3 @@ for dataset in args.datasets:
         preprocess_novelQA()
     else:
         print(f"Nie ma obsługi pobierania dla datasetu {dataset}")
-

@@ -1,7 +1,8 @@
-from langchain_text_splitters import RecursiveCharacterTextSplitter
-from transformers import AutoTokenizer
-import yaml
 from typing import List
+
+import yaml
+from langchain_text_splitters import RecursiveCharacterTextSplitter
+
 
 def chunking_recursive(
     text: str,
@@ -58,7 +59,7 @@ def chunking_recursive(
             "\uff0e",  # Fullwidth full stop
             "\u3002",  # Ideographic full stop
             "",
-        ]
+        ],
     )
 
     # 🔹 dzielimy tekst
