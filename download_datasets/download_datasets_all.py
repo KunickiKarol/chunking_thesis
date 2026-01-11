@@ -3,28 +3,8 @@ import os
 from pathlib import Path
 from dotenv import load_dotenv
 
-import os
 
-# Aktualny katalog roboczy
-cwd = os.getcwd()
-print("Aktualny katalog roboczy:", cwd)
-
-# Lista plików w aktualnym katalogu (jak 'ls')
-print("\nZawartość katalogu roboczego:")
-for f in os.listdir(cwd):
-    print(f)
-
-# Sprawdzenie, czy folder 'downloads' istnieje
-downloads_path = os.path.join(cwd, "downloads")
-if os.path.isdir(downloads_path):
-    print("\nFolder 'downloads' istnieje. Zawartość:")
-    for f in os.listdir(downloads_path):
-        print(f)
-else:
-    print("\nFolder 'downloads' nie istnieje.")
-
-from .novelQA import download as download_NovelQA
-
+from .novelQA import download_novelQA
 # 1️⃣ Wczytanie zmiennych środowiskowych z .env
 load_dotenv()
 DOWNLOADS_DIR = Path(os.getenv("DOWNLOADS_DIR"))
@@ -39,6 +19,8 @@ args = parser.parse_args()
 for dataset in args.datasets:
     dataset_path = DOWNLOADS_DIR / dataset
     print(dataset_path, dataset_path.exists(), dataset_path.iterdir())
+    aaa = Path('preprocess_datasets')
+    print(aaa, aaa.exists(), aaa.iterdir())
     if dataset_path.exists() and any(dataset_path.iterdir()):
         print(f"{dataset} już pobrany w {dataset_path}, pomijam.")
         continue
@@ -47,6 +29,6 @@ for dataset in args.datasets:
 
     # 4️⃣ Wywołanie jawnie importowanej funkcji
     if dataset == "NovelQA":
-        download_NovelQA(dataset)
+        download_novelQA(dataset)
     else:
         print(f"Nie ma obsługi pobierania dla datasetu {dataset}")

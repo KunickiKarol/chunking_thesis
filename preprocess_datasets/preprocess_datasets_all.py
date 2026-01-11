@@ -4,7 +4,7 @@ from pathlib import Path
 from dotenv import load_dotenv
 
 # jawne importy datasetów
-from .novelQA import preprocess as preprocess_NovelQA
+from .novelQA import preprocess_novelQA
 
 # 1️⃣ Wczytanie zmiennych środowiskowych z .env
 load_dotenv()
@@ -27,7 +27,7 @@ for dataset in args.datasets:
 
     # 4️⃣ Wywołanie jawnie importowanej funkcji
     if dataset == "NovelQA":
-        preprocess_NovelQA()
+        preprocess_novelQA()
     else:
         print(f"Nie ma obsługi pobierania dla datasetu {dataset}")
 

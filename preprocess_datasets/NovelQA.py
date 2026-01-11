@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 load_dotenv()
   # default = datasets
 
-def preprocess():
+def preprocess_novelQA():
     """
     Przetwarza pobrany dataset NovelQA:
     - Kopiuje wszystkie pliki .txt z Books
@@ -61,4 +61,4 @@ def preprocess():
 
 # 🔹 Przykład wywołania
 if __name__ == "__main__":
-    preprocess()
+    preprocess_novelQA()

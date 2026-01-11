@@ -18,3 +18,14 @@ stages:
       - datasets/
     params:
       - datasets
+
+  chunking_text:
+    cmd: python -m chunking.chunking_text_all --datasets ${datasets} --chunking ${chunking.chunking_methods}
+    deps:
+      - datasets/
+      - chunking/chunking_text_all.py
+    outs:
+      - chunks/
+    params:
+      - datasets
+      - chunking

@@ -4,3 +4,7 @@ huggingface-hub
 python-dotenv
 dvc
 mlflow
+langchain-text-splitters
+tiktoken
+transformers
+pyyaml

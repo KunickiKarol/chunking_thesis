@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-def download(dataset_name):
+def download_novelQA(dataset_name):
     """
     Klonuje dataset z Hugging Face Hub do lokalnego folderu downloads.
     Jeśli folder już istnieje, usuwa go przed klonowaniem.
@@ -19,7 +19,7 @@ def download(dataset_name):
     """
     # 1️⃣ Wczytanie tokenu i folderu
     hf_token = os.getenv("HF_TOKEN")
-    downloads_dir =  os.getenv("DOWNLOADS_DIR")
+    downloads_dir =  Path(os.getenv("DOWNLOADS_DIR"))
     downloads_dir.mkdir(parents=True, exist_ok=True)
 
     # 2️⃣ Ścieżki
@@ -44,4 +44,4 @@ def download(dataset_name):
 
 # 🔹 Przykład wywołania
 if __name__ == "__main__":
-    download()
+    download_novelQA()

@@ -1,1 +1,8 @@
 datasets: "NovelQA"
+
+
+chunking:
+  chunking_methods: "fixed-size recursive"
+  tokenizer_model_name: 'gpt2'
+  chunk_size: 500
+  chunk_overlap: 50

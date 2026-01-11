@@ -5,12 +5,12 @@ stages:
     deps:
     - path: download_datasets/download_datasets_all.py
       hash: md5
-      md5: 322d7b79819aee8175620878a49bc29e
-      size: 1610
+      md5: 0a58119b3cf5bc947403bd9a1479a055
+      size: 1135
     - path: params.yaml
       hash: md5
-      md5: 5fa0211e8cd2180bd29909b3cb878733
-      size: 19
+      md5: 576e5246bf3b378f78caef9f86c669fa
+      size: 150
     params:
       params.yaml:
         datasets: NovelQA
@@ -31,8 +31,8 @@ stages:
       nfiles: 157
     - path: preprocess_datasets/preprocess_datasets_all.py
       hash: md5
-      md5: 6930438bccdce024ac3a55c603e846f3
-      size: 1016
+      md5: 65fa5d7d1e4d707591ac7a7e8bb95f7d
+      size: 1002
     params:
       params.yaml:
         datasets: NovelQA
