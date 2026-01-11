@@ -1,0 +1,12 @@
+# Środowisko wirtualne
+.venv/
+
+# Plik z sekretami
+.env
+
+# Inne systemowe pliki tymczasowe
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.log
