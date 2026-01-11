@@ -10,5 +10,3 @@ __pycache__/
 *.pyo
 *.pyd
 *.log
-
-datasets/

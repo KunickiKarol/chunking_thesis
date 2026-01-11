@@ -6,4 +6,4 @@ source .venv/Scripts/activate
 python -m pip install -r requirements.txt
 pip freeze > requirements.txt
 
-python download_scripts/novelQA.py
+dvc repor
