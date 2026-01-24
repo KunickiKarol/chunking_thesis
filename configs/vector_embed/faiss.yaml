@@ -1,0 +1,7 @@
+presets:
+  - name: all-MiniLM-L6-v2
+    params:
+      embbeder: all-MiniLM-L6-v2
+      batch_size: 32
+      dtype: float32
+

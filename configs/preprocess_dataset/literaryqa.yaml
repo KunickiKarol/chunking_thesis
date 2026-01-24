@@ -1,0 +1,4 @@
+presets:
+  - name: default
+    params:
+      task_type: 'open_qa'

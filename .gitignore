@@ -14,3 +14,4 @@ __pycache__/
 /downloads
 /datasets
 /chunks
+/vector_db

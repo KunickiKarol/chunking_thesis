@@ -1,0 +1,5 @@
+presets:
+  - name: r_512_64
+    params:
+      chunk_size: 512
+      overlap: 64

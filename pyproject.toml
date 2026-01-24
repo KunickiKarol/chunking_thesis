@@ -27,6 +27,7 @@ skip = [".venv", "build", "dist", "__pycache__", "downloads"]
 max-line-length = 120
 extend-ignore = ["E203", "W503"]  # zgodne z Black
 exclude = [
+    "venv",
     ".venv",
     "build",
     "dist",

@@ -1,7 +1,42 @@
-datasets: "NovelQA"
+datasets_download:
+  - "NovelQA"
+  - "LiteraryQA"
+
+preprocess_datasets:
+  datasets:
+    LiteraryQA:
+      presets_file: configs/preprocess_dataset/literaryqa.yaml
+      use_presets:
+        - default  # 'chapter' or 'page' or 'none'
+    NovelQA:
+      presets_file: configs/preprocess_dataset/novelqa.yaml
+      use_presets:
+        - default  # 'chapter' or 'page' or 'none'
 
 chunking:
-  chunking_types: "fixed-size"
-  tokenizer_model_name: 'gpt2'
-  chunk_size: 500
-  chunk_overlap: 50
+  methods:
+    fixed_size:
+      presets_file: configs/chunking/fixed_size.yaml
+      use_presets:
+        - fs_512_64
+
+    recursive:
+      presets_file: configs/chunking/recursive.yaml
+      use_presets:
+        - r_512_64
+
+vector_embed:
+  methods:
+    FAISS:
+      presets_file: configs/vector_embed/faiss.yaml
+      embed_chunks_types:
+        - all-MiniLM-L6-v2
+
+search:
+  top_k: 5
+
+LiteraryQA:
+  task_types: 'openQA'
+
+NovelQA:
+  task_types: 'multiple_choice_QA'

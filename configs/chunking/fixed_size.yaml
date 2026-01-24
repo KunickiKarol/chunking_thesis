@@ -1,0 +1,10 @@
+presets:
+  - name: fs_512_64
+    params:
+      chunk_size: 512
+      overlap: 64
+
+  - name: fs_2048_256
+    params:
+      chunk_size: 2048
+      overlap: 256

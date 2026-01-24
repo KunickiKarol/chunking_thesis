@@ -1,60 +1,61 @@
 schema: '2.0'
 stages:
   download:
-    cmd: python -m download_datasets.download_datasets_all --datasets NovelQA
+    cmd: python -m src.download_datasets.download_datasets_all --datasets 
+      LiteraryQA NovelQA
     deps:
-    - path: download_datasets/download_datasets_all.py
-      hash: md5
-      md5: 2446c3323ef38ae6bca84d6c13bb0d33
-      size: 1137
     - path: params.yaml
       hash: md5
-      md5: 46b05c75d653a93b724d040b259c86a7
-      size: 136
+      md5: f656ae4745395397dcca8970e1446aa7
+      size: 240
+    - path: src/download_datasets/download_datasets_all.py
+      hash: md5
+      md5: d488bbf42209c6b326837eb253d15236
+      size: 1368
     params:
       params.yaml:
-        datasets: NovelQA
+        datasets: LiteraryQA NovelQA
     outs:
-    - path: downloads/
+    - path: data/downloads/
       hash: md5
-      md5: 12a50cbf25311fc52de6fe22498a61ef.dir
-      size: 109578337
-      nfiles: 157
+      md5: df3ea87c04a458a13bd76f9bc8ea5fe9.dir
+      size: 866328210
+      nfiles: 2136
   preprocess_datasets:
-    cmd: python -m preprocess_datasets.preprocess_datasets_all --datasets 
-      NovelQA
+    cmd: python -m src.preprocess_datasets.preprocess_datasets_all --datasets 
+      LiteraryQA NovelQA
     deps:
-    - path: downloads/
+    - path: data/downloads/
       hash: md5
-      md5: 12a50cbf25311fc52de6fe22498a61ef.dir
-      size: 109578337
-      nfiles: 157
-    - path: preprocess_datasets/preprocess_datasets_all.py
+      md5: df3ea87c04a458a13bd76f9bc8ea5fe9.dir
+      size: 866328210
+      nfiles: 2136
+    - path: src/preprocess_datasets/preprocess_datasets_all.py
       hash: md5
-      md5: b1ad6390fdd29d9bd9b27ef1621506c5
-      size: 1002
+      md5: 826e47ae91b6c8cad3e8835ccd4c2359
+      size: 1117
     params:
       params.yaml:
-        datasets: NovelQA
+        datasets: LiteraryQA NovelQA
     outs:
-    - path: datasets/
+    - path: data/datasets/
       hash: md5
-      md5: f5e5d0137f84887b08ba5d55193fc304.dir
-      size: 62732692
-      nfiles: 149
+      md5: f8bb0329627f1d37612905f3ef255ba3.dir
+      size: 371635782
+      nfiles: 1450
   chunking_text:
-    cmd: python -m chunking.chunking_text_all --datasets NovelQA --chunking 
-      fixed-size
+    cmd: python -m src.chunking.chunking_text_all --datasets LiteraryQA NovelQA 
+      --chunking_types fixed-size
     deps:
-    - path: chunking/chunking_text_all.py
+    - path: data/datasets/
       hash: md5
-      md5: e0e6c0b9871d791ca7c324f17ec96c34
-      size: 1315
-    - path: datasets/
+      md5: f8bb0329627f1d37612905f3ef255ba3.dir
+      size: 371635782
+      nfiles: 1450
+    - path: src/chunking/chunking_text_all.py
       hash: md5
-      md5: f5e5d0137f84887b08ba5d55193fc304.dir
-      size: 62732692
-      nfiles: 149
+      md5: fba13b3a2d3b0183c6aff4eabc569d51
+      size: 1602
     params:
       params.yaml:
         chunking:
@@ -62,10 +63,60 @@ stages:
           tokenizer_model_name: gpt2
           chunk_size: 500
           chunk_overlap: 50
-        datasets: NovelQA
+        datasets: LiteraryQA NovelQA
     outs:
-    - path: chunks/
+    - path: data/chunks/
       hash: md5
-      md5: b63dfcf87e9daa0d66164d1b66a99823.dir
-      size: 83950239
+      md5: d036926145c4970895dddf6f96c27f8d.dir
+      size: 513576114
+      nfiles: 710
+  embed_chunks:
+    cmd: python -m src.embed_chunks.embed_chunks_all --datasets LiteraryQA 
+      NovelQA --chunking_types fixed-size --embed_chunks_types all-MiniLM-L6-v2 
+      --vector_db FAISS
+    deps:
+    - path: data/chunks/
+      hash: md5
+      md5: d036926145c4970895dddf6f96c27f8d.dir
+      size: 513576114
+      nfiles: 710
+    - path: src/embed_chunks/embed_chunks_all.py
+      hash: md5
+      md5: 2cf84cef70f53040f426dc1367547bb9
+      size: 2287
+    params:
+      params.yaml:
+        chunking:
+          chunking_types: fixed-size
+          tokenizer_model_name: gpt2
+          chunk_size: 500
+          chunk_overlap: 50
+        datasets: LiteraryQA NovelQA
+        vector_embed:
+          embed_chunks_types: all-MiniLM-L6-v2
+          vector_db: FAISS
+    outs:
+    - path: data/vector_db/
+      hash: md5
+      md5: edf79ab51c2666b2549cf6b1271daa75.dir
+      size: 806643546
+      nfiles: 770
+  search:
+    cmd: python -m src.search.search_all --datasets NovelQA --chunking_types 
+      fixed-size --embed_chunks_types all-MiniLM-L6-v2 --vector_db FAISS
+    deps:
+    - path: data/vector_db/
+      hash: md5
+      md5: 208b2808ca057eace480f4ad645ffb13.dir
+      size: 114336396
       nfiles: 60
+    - path: src/search/search_query.py
+      hash: md5
+      md5: d41d8cd98f00b204e9800998ecf8427e
+      size: 0
+    params:
+      params.yaml:
+        chunking.chunking_types: fixed-size
+        datasets: NovelQA
+        vector_embed.embed_chunks_types: all-MiniLM-L6-v2
+        vector_embed.vector_db: FAISS

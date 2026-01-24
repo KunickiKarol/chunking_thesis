@@ -6,4 +6,6 @@ source .venv/Scripts/activate
 python -m pip install -r requirements.txt
 pip freeze > requirements.txt
 
-dvc repor
+dvc repro
+
+./linter.sh
