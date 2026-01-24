@@ -7,7 +7,6 @@ stages:
     outs:
       - data/downloads/:
           persist: true
-          cache: true
     params:
       - datasets_download
 

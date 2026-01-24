@@ -1,6 +1,4 @@
-datasets_download:
-  - "NovelQA"
-  - "LiteraryQA"
+datasets_download: "NovelQA LiteraryQA"
 
 preprocess_datasets:
   datasets:
