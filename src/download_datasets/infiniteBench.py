@@ -1,12 +1,13 @@
 import os
 import shutil
-import subprocess
 from pathlib import Path
+from huggingface_hub import snapshot_download
+
 
 from dotenv import load_dotenv
 
 
-def download_novelQA():
+def download_infiniteBench():
     """
     Klonuje dataset z Hugging Face Hub do lokalnego folderu downloads.
     Jeśli folder już istnieje, usuwa go przed klonowaniem.
@@ -24,10 +25,9 @@ def download_novelQA():
     downloads_dir.mkdir(parents=True, exist_ok=True)
 
     # 2️⃣ Ścieżki
-    repo_url = f"https://huggingface.co/datasets/NovelQA/NovelQA"
+    repo_url = f"https://huggingface.co/datasets/xinrongzhang2022/InfiniteBench"
     repo_url_with_token = repo_url.replace("https://", f"https://user:{hf_token}@")
-
-    repo_path = downloads_dir / "novelQA"
+    repo_path = downloads_dir / "infiniteBench"
 
     # 3️⃣ Usuń istniejący folder
     if repo_path.exists():
@@ -36,20 +36,22 @@ def download_novelQA():
 
     # 4️⃣ Klonowanie repozytorium z tokenem
     print(f"Klonuję repozytorium {repo_url} do {repo_path}...")
-    subprocess.run(
-        [
-            "git",
-            "clone",
-            repo_url_with_token,
-            str(repo_path),
+    snapshot_download(
+        repo_id="xinrongzhang2022/InfiniteBench",
+        repo_type="dataset",
+        token=hf_token,
+        local_dir=repo_path,
+        allow_patterns=[
+            ".gitattributes",
+            "README.md",
+            "longbook_choice_eng.jsonl",
+            "longbook_qa_eng.jsonl",
         ],
-        check=True,
     )
-
     print("Klonowanie zakończone!")
     return repo_path
 
 
 # 🔹 Przykład wywołania
 if __name__ == "__main__":
-    download_novelQA()
+    download_infiniteBench()

@@ -1,106 +1,185 @@
 schema: '2.0'
 stages:
   download:
-    cmd: python -m src.download_datasets.download_datasets_all --datasets 
-      LiteraryQA NovelQA
+    cmd: python -m src.download_datasets.download_datasets_all
     deps:
     - path: params.yaml
       hash: md5
-      md5: f656ae4745395397dcca8970e1446aa7
-      size: 240
+      md5: 2b9d17a33da0a45abc4dc0f41799c166
+      size: 1761
+      isexec: true
     - path: src/download_datasets/download_datasets_all.py
       hash: md5
-      md5: d488bbf42209c6b326837eb253d15236
-      size: 1368
+      md5: b983d2dce70583d30a14903014d3bd5e
+      size: 1839
+      isexec: true
     params:
       params.yaml:
-        datasets: LiteraryQA NovelQA
+        datasets_download:
+        - infiniteBench
+        - novelQA
+        - literaryQA
     outs:
     - path: data/downloads/
       hash: md5
-      md5: df3ea87c04a458a13bd76f9bc8ea5fe9.dir
-      size: 866328210
-      nfiles: 2136
+      md5: 9ff7bdcc22ea8db485d2ad2045226936.dir
+      size: 1635703929
+      nfiles: 8218
   preprocess_datasets:
-    cmd: python -m src.preprocess_datasets.preprocess_datasets_all --datasets 
-      LiteraryQA NovelQA
+    cmd: python -m src.preprocess_datasets.preprocess_datasets_all
     deps:
     - path: data/downloads/
       hash: md5
-      md5: df3ea87c04a458a13bd76f9bc8ea5fe9.dir
-      size: 866328210
-      nfiles: 2136
+      md5: 9ff7bdcc22ea8db485d2ad2045226936.dir
+      size: 1635703929
+      nfiles: 8218
+    - path: params.yaml
+      hash: md5
+      md5: 2b9d17a33da0a45abc4dc0f41799c166
+      size: 1761
+      isexec: true
     - path: src/preprocess_datasets/preprocess_datasets_all.py
       hash: md5
-      md5: 826e47ae91b6c8cad3e8835ccd4c2359
-      size: 1117
+      md5: f68861d67a7827037f2221eaf3face34
+      size: 2293
+      isexec: true
     params:
       params.yaml:
-        datasets: LiteraryQA NovelQA
+        preprocess_datasets:
+          tokenizer:
+            backend: tiktoken
+            model_name: gpt-4
+          datasets:
+            literaryQA:
+              presets_file: configs/preprocess_dataset/literaryQA.yaml
+              use_presets:
+              - default
+            novelQA:
+              presets_file: configs/preprocess_dataset/novelQA.yaml
+              use_presets:
+              - default
+            infiniteBenchQA:
+              presets_file: configs/preprocess_dataset/infiniteBenchQA.yaml
+              use_presets:
+              - default
+            infiniteBenchChoice:
+              presets_file: configs/preprocess_dataset/infiniteBenchChoice.yaml
+              use_presets:
+              - default
     outs:
     - path: data/datasets/
       hash: md5
-      md5: f8bb0329627f1d37612905f3ef255ba3.dir
-      size: 371635782
-      nfiles: 1450
+      md5: 0f66e1ff85ac8a33218b9bd6594a0682.dir
+      size: 488239106
+      nfiles: 1741
   chunking_text:
-    cmd: python -m src.chunking.chunking_text_all --datasets LiteraryQA NovelQA 
-      --chunking_types fixed-size
+    cmd: python -m src.chunking.chunking_text_all
     deps:
     - path: data/datasets/
       hash: md5
-      md5: f8bb0329627f1d37612905f3ef255ba3.dir
-      size: 371635782
-      nfiles: 1450
+      md5: 0f66e1ff85ac8a33218b9bd6594a0682.dir
+      size: 488239106
+      nfiles: 1741
+    - path: params.yaml
+      hash: md5
+      md5: 2b9d17a33da0a45abc4dc0f41799c166
+      size: 1761
+      isexec: true
     - path: src/chunking/chunking_text_all.py
       hash: md5
-      md5: fba13b3a2d3b0183c6aff4eabc569d51
-      size: 1602
+      md5: 0af49032b67ca7e1e30e64c8a5d2af28
+      size: 2608
+      isexec: true
     params:
       params.yaml:
-        chunking:
-          chunking_types: fixed-size
-          tokenizer_model_name: gpt2
-          chunk_size: 500
-          chunk_overlap: 50
-        datasets: LiteraryQA NovelQA
+        chunking.methods:
+          fixed_size:
+            presets_file: configs/chunking/fixed_size.yaml
+            use_presets:
+            - fs_512_64_char
+            - fs_512_64_token
+          recursive:
+            presets_file: configs/chunking/recursive.yaml
+            use_presets:
+            - r_512_64
+          recursive_semantic:
+            presets_file: configs/chunking/recursive_semantic.yaml
+            use_presets:
+            - paper_based
+          neural:
+            presets_file: configs/chunking/neural.yaml
+            use_presets:
+            - default
+          chonkie_semantic:
+            presets_file: configs/chunking/chonkie_semantic.yaml
+            use_presets:
+            - default
+        preprocess_datasets.datasets:
+          literaryQA:
+            presets_file: configs/preprocess_dataset/literaryQA.yaml
+            use_presets:
+            - default
+          novelQA:
+            presets_file: configs/preprocess_dataset/novelQA.yaml
+            use_presets:
+            - default
+          infiniteBenchQA:
+            presets_file: configs/preprocess_dataset/infiniteBenchQA.yaml
+            use_presets:
+            - default
+          infiniteBenchChoice:
+            presets_file: configs/preprocess_dataset/infiniteBenchChoice.yaml
+            use_presets:
+            - default
     outs:
     - path: data/chunks/
       hash: md5
-      md5: d036926145c4970895dddf6f96c27f8d.dir
-      size: 513576114
-      nfiles: 710
+      md5: d6a09871dac1bd5e6a2dc01456de26d2.dir
+      size: 7328
+      nfiles: 24
   embed_chunks:
-    cmd: python -m src.embed_chunks.embed_chunks_all --datasets LiteraryQA 
-      NovelQA --chunking_types fixed-size --embed_chunks_types all-MiniLM-L6-v2 
-      --vector_db FAISS
+    cmd: python -m src.embed_chunks.embed_chunks_all
     deps:
     - path: data/chunks/
       hash: md5
-      md5: d036926145c4970895dddf6f96c27f8d.dir
-      size: 513576114
-      nfiles: 710
+      md5: dda096e9a22169e02f3c631e7262973d.dir
+      size: 1122498223
+      nfiles: 1420
+    - path: params.yaml
+      hash: md5
+      md5: 6bd893113691283233c75ef51253223e
+      size: 816
     - path: src/embed_chunks/embed_chunks_all.py
       hash: md5
-      md5: 2cf84cef70f53040f426dc1367547bb9
-      size: 2287
+      md5: 204b7207b700d092889ac8c2ff0ce101
+      size: 3871
     params:
       params.yaml:
-        chunking:
-          chunking_types: fixed-size
-          tokenizer_model_name: gpt2
-          chunk_size: 500
-          chunk_overlap: 50
-        datasets: LiteraryQA NovelQA
-        vector_embed:
-          embed_chunks_types: all-MiniLM-L6-v2
-          vector_db: FAISS
+        chunking.methods:
+          fixed_size:
+            presets_file: configs/chunking/fixed_size.yaml
+            use_presets:
+            - fs_512_64
+        preprocess_datasets.datasets:
+          LiteraryQA:
+            presets_file: configs/preprocess_dataset/literaryqa.yaml
+            use_presets:
+            - default
+          NovelQA:
+            presets_file: configs/preprocess_dataset/novelqa.yaml
+            use_presets:
+            - default
+        vector_embed.methods:
+          FAISS:
+            presets_file: configs/vector_embed/faiss.yaml
+            embed_chunks_types:
+            - all-MiniLM-L6-v2
     outs:
     - path: data/vector_db/
       hash: md5
-      md5: edf79ab51c2666b2549cf6b1271daa75.dir
-      size: 806643546
-      nfiles: 770
+      md5: 3e82fbe9695558ee118982184893d7fb.dir
+      size: 1236117198
+      nfiles: 710
   search:
     cmd: python -m src.search.search_all --datasets NovelQA --chunking_types 
       fixed-size --embed_chunks_types all-MiniLM-L6-v2 --vector_db FAISS

@@ -1,6 +1,6 @@
 stages:
   download:
-    cmd: python -m src.download_datasets.download_datasets_all --datasets_download ${datasets_download}
+    cmd: python -m src.download_datasets.download_datasets_all
     deps:
       - src/download_datasets/download_datasets_all.py
       - params.yaml
@@ -11,7 +11,7 @@ stages:
       - datasets_download
 
   preprocess_datasets:
-    cmd: python -m src.preprocess_datasets.preprocess_datasets_all --datasets ${preprocess_datasets.datasets}
+    cmd: python -m src.preprocess_datasets.preprocess_datasets_all
     deps:
       - data/downloads/
       - src/preprocess_datasets/preprocess_datasets_all.py
@@ -20,13 +20,11 @@ stages:
       - data/datasets/:
           persist: true
     params:
-      - preprocess_datasets.datasets
+      - preprocess_datasets
 
   chunking_text:
     cmd:
       python -m src.chunking.chunking_text_all
-      --datasets '${preprocess_datasets.datasets}'
-      --chunking_methods '${chunking.methods}'
     deps:
       - data/datasets/
       - src/chunking/chunking_text_all.py
@@ -39,10 +37,7 @@ stages:
       - chunking.methods
 
   embed_chunks:
-    cmd: python -m src.embed_chunks.embed_chunks_all \
-        --datasets '${preprocess_datasets.datasets}' \
-        --chunking_types '${chunking.methods}' \
-        --embed_methods '${vector_embed.methods}'
+    cmd: python -m src.embed_chunks.embed_chunks_all
     deps:
       - data/chunks/
       - src/embed_chunks/embed_chunks_all.py
@@ -55,14 +50,14 @@ stages:
       - chunking.methods
       - vector_embed.methods
 
-  search:
-    cmd: python -m src.search.search_all --datasets ${datasets} --chunking_types ${chunking.chunking_types} --embed_chunks_types ${vector_embed.embed_chunks_types} --vector_db ${vector_embed.vector_db} --top_k ${search.top_k}
-    deps:
-      - data/vector_db/
-      - src/search/search_query.py
-    params:
-      - datasets
-      - chunking.chunking_types
-      - vector_embed.embed_chunks_types
-      - vector_embed.vector_db
+  # search:
+  #   cmd: python -m src.search.search_all --datasets ${datasets} --chunking_types ${chunking.chunking_types} --embed_chunks_types ${vector_embed.embed_chunks_types} --vector_db ${vector_embed.vector_db} --top_k ${search.top_k}
+  #   deps:
+  #     - data/vector_db/
+  #     - src/search/search_query.py
+  #   params:
+  #     - datasets
+  #     - chunking.chunking_types
+  #     - vector_embed.embed_chunks_types
+  #     - vector_embed.vector_db
 

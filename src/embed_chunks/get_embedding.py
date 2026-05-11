@@ -11,8 +11,8 @@ def embed_texts(texts, embed_preset_params):
     """
     Tworzy embeddingi dla listy tekstów za pomocą HuggingFace SentenceTransformers.
     """
-    model = SentenceTransformer(embed_preset_params["model"])
-    embeddings = model.encode(texts, batch_size=embed_preset_params["batch_size"], precision=embed_preset_params["dtype"], show_progress_bar=True)
+    model = SentenceTransformer(embed_preset_params["embbeder"])
+    embeddings = model.encode(texts, batch_size=embed_preset_params["batch_size"], precision=embed_preset_params["dtype"], show_progress_bar=False)
     return np.array(embeddings, dtype=embed_preset_params["dtype"])
 
 
@@ -56,14 +56,13 @@ def build_index_for_file(embed_name, embed_preset_params, input_path, result_dir
     output_file = result_dir / f"{input_path.stem}.index"
 
     faiss.write_index(index, str(output_file))
-    print(f"✅ Zapisano FAISS index dla {input_path.name} w {output_file}, liczba wektorów: {len(chunks)}")
 
 def embed_chunks(embed_name, embed_preset_params, chunks_input_dir, result_dir):
     """
     Tworzy osobny FAISS index dla każdego pliku JSONL w katalogu chunks_input_dir
     """
     files = list(chunks_input_dir.glob("*.jsonl"))
-    print(f"Znaleziono {len(files)} plików do przetworzenia w {chunks_input_dir}.")
+    # print(f"Znaleziono {len(files)} plików do przetworzenia w {chunks_input_dir}.")
 
     for input_path in tqdm(files, desc=f'Tworzenie indexów {result_dir}'):
         build_index_for_file(embed_name, embed_preset_params, input_path, result_dir)

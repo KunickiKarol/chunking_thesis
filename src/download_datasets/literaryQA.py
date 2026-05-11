@@ -1,19 +1,22 @@
 import os
-import sys
 import subprocess
 from pathlib import Path
+import shutil
+
 from dotenv import load_dotenv
-
-
 
 
 def download_literaryQA():
     """
-    Pobiera repozytorium LiteraryQA z GitHub i uruchamia skrypt pobierający książki.
-    Jeśli repo już istnieje, pomija klonowanie i instalację zależności.
+    Pobiera repozytorium LiteraryQA z GitHub,
+    tworzy tymczasowe środowisko uv,
+    instaluje zależności,
+    uruchamia skrypt,
+    a następnie usuwa środowisko.
     """
 
     load_dotenv()
+
     DOWNLOADS_DIR = Path(os.getenv("DOWNLOADS_DIR"))
     DOWNLOADS_DIR.mkdir(parents=True, exist_ok=True)
 
@@ -21,64 +24,91 @@ def download_literaryQA():
     env["PYTHONUTF8"] = "1"
 
     repo_url = "https://github.com/KunickiKarol/LiteraryQA.git"
-    repo_path = DOWNLOADS_DIR / "LiteraryQA"
+    repo_path = DOWNLOADS_DIR / "literaryQA"
+
     script_path = repo_path / "scripts" / "download_and_clean_books.py"
 
-    repo_exists = repo_path.exists()
+    # Tymczasowy venv dla repo
+    temp_venv = repo_path / ".tmp_venv"
 
-    # 1️⃣ Klonowanie tylko jeśli repo nie istnieje
-    if not repo_exists:
-        print(f"Klonuję repozytorium {repo_url} do {repo_path}...")
-        subprocess.run(
-            ["git", "clone", repo_url, str(repo_path)],
-            check=True,
+    # Usuń stare repo
+    if repo_path.exists():
+        print(f"Usuwam istniejące repozytorium: {repo_path}")
+        shutil.rmtree(repo_path)
+
+    # Klonowanie repo
+    print(f"Klonuję repozytorium {repo_url}...")
+    subprocess.run(
+        ["git", "clone", repo_url, str(repo_path)],
+        check=True,
+    )
+
+    pyproject_file = repo_path / "pyproject.toml"
+
+    if not pyproject_file.exists():
+        raise FileNotFoundError(
+            f"Nie znaleziono {pyproject_file}"
         )
 
-        # 2️⃣ Instalacja zależności tylko przy świeżym klonie
-        pyproject_file = repo_path / "pyproject.toml"
-        if not pyproject_file.exists():
-            raise FileNotFoundError(
-                f"{pyproject_file} nie istnieje. Nie można zainstalować zależności."
-            )
+    # Tworzenie tymczasowego środowiska
+    print("Tworzę tymczasowe środowisko uv...")
 
-        print("Instaluję wymagane pakiety w aktualnym środowisku...")
-        subprocess.run(
-            [sys.executable, "-m", "pip", "install", "-e", "."],
-            cwd=repo_path,
-            check=True,
-        )
-        cwd_path = repo_path
-            # 3️⃣ Sprawdzenie skryptu
-        if not script_path.exists():
-            raise FileNotFoundError(f"Nie znaleziono skryptu: {script_path}")
+    subprocess.run(
+        ["uv", "venv", str(temp_venv), "--clear"],
+        check=True,
+        cwd=repo_path,
+    )
+
+    # Python z tymczasowego venv
+    if os.name == "nt":
+        python_bin = temp_venv / "Scripts" / "python.exe"
     else:
-        print(f"Repozytorium {repo_path} już istnieje – pomijam clone i pip install.")
-        print(repo_path)
-        cwd_path = repo_path
-        #script_path = Path("scripts") / "download_and_clean_books.py"
-        #output_dir = Path("data") / "script_pathliteraryqa"
+        python_bin = temp_venv / "bin" / "python"
 
+    # Instalacja dependencies z pyproject.toml
+    print("Instaluję zależności...")
 
-
-    # 4️⃣ Uruchomienie skryptu
-    script_path = Path("scripts") / "download_and_clean_books.py"
-    output_dir = Path("data") / "literaryqa"
-    output_dir.mkdir(parents=True, exist_ok=True)
-
-    print(f"Pobieram i czyszczę książki, zapisuję w {output_dir}...")
     subprocess.run(
         [
-            sys.executable,
+            "uv",
+            "pip",
+            "install",
+            "--python",
+            str(python_bin),
+            "-e",
+            ".",
+        ],
+        cwd=repo_path,
+        check=True,
+    )
+
+    # Output
+    output_dir = repo_path / "data" / "literaryqa"
+    output_dir.mkdir(parents=True, exist_ok=True)
+
+    # Uruchomienie skryptu
+    print("Uruchamiam download_and_clean_books.py...")
+    script_path = Path("scripts") / "download_and_clean_books.py"
+
+    subprocess.run(
+        [
+            str(python_bin),
             str(script_path),
             "--output_dir",
-            str(output_dir),
+            "data/literaryqa",
         ],
-        cwd=cwd_path,
+        cwd=repo_path,
         env=env,
         check=True,
     )
 
+    # Cleanup
+    print("Usuwam tymczasowe środowisko...")
+
+    shutil.rmtree(temp_venv, ignore_errors=True)
+
     print("Pobieranie LiteraryQA zakończone!")
+
     return repo_path, output_dir
 
 

@@ -1,0 +1,6 @@
+presets:
+  - name: all-MiniLM-L6-v2_k5
+    params:
+      embbeder: all-MiniLM-L6-v2
+      top_k: 5
+

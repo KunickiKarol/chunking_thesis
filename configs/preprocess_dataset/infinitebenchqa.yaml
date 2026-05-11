@@ -1,4 +1,4 @@
 presets:
   - name: default
     params:
-      task_type: 'choice_qa'
+      task_type: 'open_qa'

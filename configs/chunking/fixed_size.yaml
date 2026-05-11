@@ -1,10 +1,51 @@
 presets:
-  - name: fs_512_64
+
+  # =========================
+  # CHAR BASED
+  # =========================
+
+  - name: fs_512_64_char
     params:
       chunk_size: 512
       overlap: 64
+      mode: char
 
-  - name: fs_2048_256
+  - name: fs_1024_128_char
+    params:
+      chunk_size: 1024
+      overlap: 128
+      mode: char
+
+  - name: fs_2048_256_char
     params:
       chunk_size: 2048
       overlap: 256
+      mode: char
+
+  # =========================
+  # TOKEN BASED
+  # =========================
+
+  - name: fs_512_64_token
+    params:
+      chunk_size: 512
+      overlap: 64
+      mode: token
+      backend: tiktoken
+      model_name: gpt-4
+      
+  - name: fs_1024_128_token
+    params:
+      chunk_size: 1024
+      overlap: 128
+      mode: token
+      backend: tiktoken
+      model_name: gpt-4
+
+  - name: fs_2048_256_token
+    params:
+      chunk_size: 2048
+      overlap: 256
+      mode: token
+      backend: tiktoken
+      model_name: gpt-4

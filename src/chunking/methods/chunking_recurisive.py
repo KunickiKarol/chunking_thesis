@@ -1,7 +1,10 @@
 from typing import List
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 
+from src.chunking.methods.register import register_chunker
 
+
+@register_chunker("recursive")
 def chunking_recursive(
     text: str,
     *,

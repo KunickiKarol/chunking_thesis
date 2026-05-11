@@ -1,0 +1,13 @@
+presets:
+  - name: paper_based
+    params:
+      max_chunk_size: 15000
+      recursive_threshold: 1500
+      final_threshold: 2500
+      merge_threshold: 350
+      delta: 3
+
+      embedding_model: sentence-transformers/all-MiniLM-L6-v2
+
+      breakpoint_threshold_type: percentile
+      initial_breakpoint_threshold: 95

@@ -1,0 +1,16 @@
+presets:
+  - name: default
+    params:
+      embedding_model: minishlab/potion-base-32M
+      chunk_size: 2048
+      similarity_window: 3
+      skip_window: 0
+      threshold: 0.8
+
+  - name: skip_window
+    params:
+      embedding_model: minishlab/potion-base-32M
+      chunk_size: 2048
+      similarity_window: 3
+      skip_window: 1
+      threshold: 0.8

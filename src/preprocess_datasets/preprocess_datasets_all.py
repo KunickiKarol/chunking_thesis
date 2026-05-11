@@ -5,62 +5,76 @@ from dotenv import load_dotenv
 import yaml
 import os
 
-from ..tools.presets import load_presets
+
+from ..tools.presets import iter_cfg_with_presets
 
 # jawne importy datasetów
 from .novelQA import NovelQAPreprocessor
 from .literaryQA import LiteraryQAPreprocessor
+from .infiniteBenchChoice import infiniteBenchChoicePreprocessor
+from .infiniteBenchQA import infiniteBenchQAPreprocessor
+
+
+
+PREPROCESSOR_MAP = {
+    "novelQA": NovelQAPreprocessor,
+    "literaryQA": LiteraryQAPreprocessor,
+    "infiniteBenchQA": infiniteBenchQAPreprocessor,
+    "infiniteBenchChoice": infiniteBenchChoicePreprocessor,
+}
 
 
 def preprocess_datasets_all(datasets_cfg, datasets_dir: Path):
     """
     datasets_cfg: dict z dataset -> {'presets_file': str, 'use_presets': list[str]}
     """
-    for dataset, cfg in datasets_cfg.items():
-        dataset_path = datasets_dir / dataset
-        
-        presets = load_presets(cfg["presets_file"], cfg.get("use_presets"))
+    for dataset_name, preset in iter_cfg_with_presets(datasets_cfg):
 
-        for preset in presets:
-            dataset_path = dataset_path / preset["name"]
-            if dataset_path.exists() and any(dataset_path.iterdir()):
-                print(f"⏭️ Pomijam {dataset}/{preset['name']} – już istnieje")
-                continue
-            dataset_path.mkdir(parents=True, exist_ok=True)
+        try:
+            PreprocessorCls = PREPROCESSOR_MAP[dataset_name]
+        except KeyError:
+            print(f"⚠️ Brak preprocessora dla {dataset_name}, pomijam")
+            continue
 
-            print(f"Processing {dataset} with preset {preset['name']}...")
-            if dataset.lower() == "novelqa":
-                preprocessor = NovelQAPreprocessor(
-                    dataset_path=dataset_path,
-                    params=preset["params"]  # na razie tylko przechowywane
-                )
+        preset_name = preset["name"]
+        preset_params = preset["params"]
 
-                preprocessor.run()
-            elif dataset.lower() == "literaryqa":
-                preprocessor = LiteraryQAPreprocessor(
-                    dataset_path=dataset_path,
-                    params=preset["params"] # na razie tylko routing folderów
-                )
+        dataset_path = (
+            datasets_dir
+            / dataset_name
+            / preset_name
+        )
 
-                preprocessor.run()
-            else:
-                print(f"No preprocessing function for {dataset}")
+        if dataset_path.exists() and any(p.is_file() for p in dataset_path.iterdir()):
+            print(f"⏭️ Pomijam {dataset_name}/{preset_name} – już istnieje")
+            continue
+
+        dataset_path.mkdir(parents=True, exist_ok=True)
+
+        print(f"▶ Preprocessing {dataset_name} | preset={preset_name}")
+
+        preprocessor = PreprocessorCls(
+            dataset_path=dataset_path,
+            params=preset_params,
+        )
+        preprocessor.run()
+
 
 def main():
     load_dotenv()
     DATASETS_DIR = Path(os.getenv("DATASETS_DIR"))
     DATASETS_DIR.mkdir(parents=True, exist_ok=True)
     
-    parser = argparse.ArgumentParser()
-    parser.add_argument(
-        "--datasets_cfg",
-        type=json.loads,  # Python automatycznie parsuje JSON z args
-        required=True,
-        help="JSON mapping dataset -> presets_file + use_presets"
-    )
-    args = parser.parse_args()
+    with open("params.yaml", "r", encoding="utf-8") as f:
+        params = yaml.safe_load(f)
 
-    preprocess_datasets_all(args.datasets_cfg, DATASETS_DIR)
+    datasets_cfg = params.get("preprocess_datasets").get("datasets")
+    if not datasets_cfg:
+        raise ValueError("Nie znaleziono datasets_download w params.yaml")
+
+
+    preprocess_datasets_all(datasets_cfg, DATASETS_DIR)
+
 
 if __name__ == "__main__":
     main()
