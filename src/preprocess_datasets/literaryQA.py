@@ -48,19 +48,17 @@ class LiteraryQAPreprocessor:
             book_token_lengths,
         )
 
-        with bookmeta_dst.open("w", encoding="utf-8") as f:
-            json.dump(bookmeta, f, ensure_ascii=False, indent=4)
-
-        print(f"🧾 Zapisano metadata do {bookmeta_dst}")
-
         self._create_additional_splits(
             books_dst=books_dst,
             tasks_dst=tasks_dst,
             train_books_order=train_books_order,
             book_path_map=book_path_map,
             task_file_map=task_file_map,
-            bookmeta=bookmeta,   # ⬅️ DODANE
+            bookmeta=bookmeta,
         )
+
+        with bookmeta_dst.open("w", encoding="utf-8") as f:
+            json.dump(bookmeta, f, ensure_ascii=False, indent=4)
 
         self._save_meta(
             meta_path,
@@ -213,6 +211,10 @@ class LiteraryQAPreprocessor:
                         "summary": summary,
                         "summary_token_len": tokenizer.tokenize(summary)["token_count"],
                         "tokenlen": book_token_lengths.get(book_id),
+
+                        # 🔥 DODAJ TO:
+                        "example": False,
+                        "examples": False,
                     }
 
                     tasks = {}

@@ -81,7 +81,13 @@ class NovelQAPreprocessor:
 
     def _load_bookmeta(self) -> Dict:
         with open(self.bookmeta_src, encoding="utf-8") as f:
-            return json.load(f)
+            data = json.load(f)
+
+        return {
+            k: v
+            for k, v in data.items()
+            if v.get("copyright") == "PublicDomain"
+        }
 
     def _compute_splits(self, book_ids: list[str]) -> Tuple[Dict[str, str], int, int, int, Dict[str, list[str]]]:
         random.seed(self.random_state)

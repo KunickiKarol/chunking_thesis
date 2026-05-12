@@ -45,19 +45,24 @@ def chunk_text_one(
         split_chunks = 0
         start_split = time.perf_counter()
 
+        is_example = split in ("example", "examples")
+
         for txt_file in books_dir.rglob("*.txt"):
             bookid = txt_file.stem
+            meta = bookmeta.get(bookid)
 
-            if bookmeta.get(bookid, {}).get("split") != split:
-                continue
+            if is_example:
+                if txt_file.parent.name != split or not meta.get(split):
+                    continue
+            else:
+                if meta.get("split") != split:
+                    continue
 
             with txt_file.open("r", encoding="utf-8") as f:
                 text = f.read()
-
             start = time.perf_counter()
             chunks = chunk_text(chunking_type, text, **params)
             end = time.perf_counter()
-
             chunking_time = end - start
             split_times[split] += chunking_time
 

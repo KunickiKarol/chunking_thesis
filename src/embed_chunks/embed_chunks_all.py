@@ -11,9 +11,8 @@ from src.embed_chunks.get_embedding import embed_chunks
 from src.tools.presets import iter_cfg_with_presets, load_presets
 
 
-def embed_chunks_all(datasets_cfg, chunking_cfg, embed_cfg, chunks_dir: Path, embed_dir: Path):
-    splits = ["train", "validation", "test"]
-
+def embed_chunks_all(datasets_cfg, chunking_cfg, splits, embed_cfg, chunks_dir: Path, embed_dir: Path):
+    print(f"➡️ Tworzę embeddingi: {embed_dir}")
     for (
         (dataset_name, dataset_preset),
         (chunking_name, chunking_preset),
@@ -37,6 +36,7 @@ def embed_chunks_all(datasets_cfg, chunking_cfg, embed_cfg, chunks_dir: Path, em
             / chunking_name
             / chunking_preset_name
             / split
+            / "Books"
         )
 
         result_dir = (
@@ -59,7 +59,7 @@ def embed_chunks_all(datasets_cfg, chunking_cfg, embed_cfg, chunks_dir: Path, em
             continue
 
         result_dir.mkdir(parents=True, exist_ok=True)
-        print(f"➡️ Tworzę embeddingi: {result_dir}")
+        
         embed_chunks(
             embed_name,
             embed_preset_params,
@@ -91,9 +91,14 @@ def main():
     if not embed_cfg:
         raise ValueError("Nie znaleziono chunking_methods w params.yaml")
     
+    splits = params.get("chunking").get("splits")
+    if not splits:
+        raise ValueError("Nie znaleziono chunking_methods w params.yaml")
+    
     embed_chunks_all(
         datasets_cfg=datasets_cfg,
         chunking_cfg=chunking_cfg,
+        splits=splits,
         embed_cfg=embed_cfg,
         chunks_dir=CHUNKS_DIR,
         embed_dir=EMBED_DIR

@@ -49,6 +49,18 @@ chunking:
       presets_file: configs/chunking/chonkie_semantic.yaml
       use_presets:
         - default
+    lumber:
+      presets_file: configs/chunking/lumber.yaml
+      use_presets:
+        - default
+    max_min:
+      presets_file: configs/chunking/max_min.yaml
+      use_presets:
+        - liberal
+    sequential_hac:
+      presets_file: configs/chunking/sequential_hac.yaml
+      use_presets:
+        - liberal
       
 
 vector_embed:
@@ -56,7 +68,7 @@ vector_embed:
     FAISS:
       presets_file: configs/vector_embed/faiss.yaml
       use_presets:
-        - all-MiniLM-L6-v2
+        - default
 
 search:
   methods:

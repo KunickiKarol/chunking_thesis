@@ -29,9 +29,12 @@ dependencies = [
     "langchain-huggingface>=1.2.0",
     "sentence-transformers>=5.1.2",
     "nltk>=3.8.1",
-    "torch>=2.11.0",
+    "torch>=2.10.0",
     "chonkie",
-    "accelerate"
+    "chonkie[model2vec]",
+    "accelerate",
+    "vllm==0.19.1",
+    "openai",
 ]
 
 [tool.uv.sources]

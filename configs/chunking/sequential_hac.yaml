@@ -1,0 +1,11 @@
+presets:
+  - name: default
+    params:
+      model_name: BAAI/bge-m3
+      distance_threshold: 0.3
+      batch_size: 32
+  - name: liberal
+    params:
+      model_name: BAAI/bge-m3
+      distance_threshold: 0.6
+      batch_size: 32

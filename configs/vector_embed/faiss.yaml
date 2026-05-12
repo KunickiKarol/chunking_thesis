@@ -1,5 +1,5 @@
 presets:
-  - name: all-MiniLM-L6-v2
+  - name: default
     params:
       embbeder: all-MiniLM-L6-v2
       batch_size: 32

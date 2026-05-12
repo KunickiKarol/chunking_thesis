@@ -35,4 +35,4 @@ def chunking_neural(
     final_chunks = chunker.chunk(text)
 
 
-    return final_chunks
+    return [chunk.text for chunk in final_chunks]
