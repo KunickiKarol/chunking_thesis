@@ -1,10 +1,10 @@
-from typing import List, Dict, Any
+from typing import Any, Dict, List
+
 import numpy as np
 from nltk.tokenize import sent_tokenize
-from sklearn.metrics.pairwise import cosine_similarity
-from sentence_transformers import SentenceTransformer
 from scipy.special import expit
-
+from sentence_transformers import SentenceTransformer
+from sklearn.metrics.pairwise import cosine_similarity
 
 from src.chunking.methods.register import register_chunker
 
@@ -27,19 +27,13 @@ def _process_sentences(
         cluster_embeddings = embeddings[cluster_start:cluster_end]
 
         if cluster_end - cluster_start > 1:
-            new_sentence_similarities = cosine_similarity(
-                embeddings[i].reshape(1, -1), cluster_embeddings
-            )[0]
-            adjusted_threshold = (
-                pairwise_min * c * expit((cluster_end - cluster_start) - 1)
-            )
+            new_sentence_similarities = cosine_similarity(embeddings[i].reshape(1, -1), cluster_embeddings)[0]
+            adjusted_threshold = pairwise_min * c * expit((cluster_end - cluster_start) - 1)
             new_sentence_similarity = np.max(new_sentence_similarities)
             pairwise_min = min(np.min(new_sentence_similarities), pairwise_min)
         else:
             adjusted_threshold = 0
-            pairwise_min = cosine_similarity(
-                embeddings[i].reshape(1, -1), cluster_embeddings
-            )[0]
+            pairwise_min = cosine_similarity(embeddings[i].reshape(1, -1), cluster_embeddings)[0]
             new_sentence_similarity = init_constant * pairwise_min
 
         if new_sentence_similarity > max(adjusted_threshold, fixed_threshold):
@@ -53,6 +47,7 @@ def _process_sentences(
 
     paragraphs.append(current_paragraph)
     return paragraphs
+
 
 @register_chunker("max_min")
 def chunking_max_min(text: str, **params) -> List[str]:
@@ -68,10 +63,10 @@ def chunking_max_min(text: str, **params) -> List[str]:
     Zwraca:
         List[str]: Lista chunków (każdy chunk to string).
     """
-    model_name     = params.get("model_name")
+    model_name = params.get("model_name")
     hard_threshold = float(params.get("hard_threshold"))
-    c_param        = float(params.get("c_param"))
-    init_const     = float(params.get("init_const"))
+    c_param = float(params.get("c_param"))
+    init_const = float(params.get("init_const"))
     sentences = sent_tokenize(text)
     if not sentences:
         return []

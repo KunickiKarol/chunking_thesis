@@ -11,23 +11,23 @@ Switch by passing  inference_mode=<"hf"|"offline"|"api">  in **params.
 
 from __future__ import annotations
 
-import re
-import time
-import textwrap
 import os
+import re
+import textwrap
+import time
 from abc import ABC, abstractmethod
-from typing import List, Callable, Dict
+from typing import Callable, Dict, List
 
 from nltk.tokenize import sent_tokenize
 
 from src.chunking.methods.register import register_chunker
 
-
 # ---------------------------------------------------------------------------
 # Prompt templates
 # ---------------------------------------------------------------------------
 
-_SYSTEM_PROMPT = textwrap.dedent("""\
+_SYSTEM_PROMPT = textwrap.dedent(
+    """\
     You will receive as input an english document with paragraphs identified by 'ID XXXX: <text>'.
 
     Task: Find the first paragraph (not the first one) where the content clearly changes compared to the previous paragraphs.
@@ -42,13 +42,14 @@ def _build_messages(document_block: str) -> List[dict]:
     """Build the chat messages list sent to the LLM."""
     return [
         {"role": "system", "content": _SYSTEM_PROMPT},
-        {"role": "user",   "content": f"\nDocument:\n{document_block}"},
+        {"role": "user", "content": f"\nDocument:\n{document_block}"},
     ]
 
 
 # ---------------------------------------------------------------------------
 # Backend abstraction
 # ---------------------------------------------------------------------------
+
 
 class _InferenceBackend(ABC):
     """Common interface for both inference backends."""
@@ -69,8 +70,9 @@ class _ApiBackend(_InferenceBackend):
 
     def __init__(self, model_id: str, base_url: str, api_key: str) -> None:
         from openai import OpenAI  # lazy import — not needed for offline mode
+
         self._model_id = model_id
-        self._client   = OpenAI(base_url=base_url, api_key=api_key)
+        self._client = OpenAI(base_url=base_url, api_key=api_key)
 
     def generate(self, document_block: str, max_new_tokens: int) -> str:
         response = self._client.chat.completions.create(
@@ -93,7 +95,8 @@ class _HuggingFaceBackend(_InferenceBackend):
 
     def __init__(self, model_id: str, hf_token: str | None) -> None:
         import torch
-        from transformers import AutoTokenizer, AutoModelForCausalLM  # lazy imports
+        from transformers import AutoModelForCausalLM  # lazy imports
+        from transformers import AutoTokenizer
 
         self._tokenizer = AutoTokenizer.from_pretrained(
             model_id,
@@ -121,8 +124,7 @@ class _HuggingFaceBackend(_InferenceBackend):
 
         generated_ids = self._model.generate(**model_inputs, max_new_tokens=max_new_tokens)
         generated_ids = [
-            output_ids[len(input_ids):]
-            for input_ids, output_ids in zip(model_inputs.input_ids, generated_ids)
+            output_ids[len(input_ids) :] for input_ids, output_ids in zip(model_inputs.input_ids, generated_ids)
         ]
         return self._tokenizer.batch_decode(generated_ids, skip_special_tokens=True)[0].strip()
 
@@ -135,7 +137,9 @@ class _OfflineBackend(_InferenceBackend):
     """
 
     def __init__(self, model_id: str, hf_token: str | None) -> None:
-        from vllm import LLM, SamplingParams  # lazy import — not needed for API mode
+        from vllm import LLM  # lazy import — not needed for API mode
+        from vllm import SamplingParams
+
         self._SamplingParams = SamplingParams
         self._llm = LLM(
             model=model_id,
@@ -148,9 +152,10 @@ class _OfflineBackend(_InferenceBackend):
 
     def generate(self, document_block: str, max_new_tokens: int) -> str:
         from vllm import SamplingParams
-        messages   = _build_messages(document_block)
+
+        messages = _build_messages(document_block)
         # vllm.LLM.chat() accepts the OpenAI messages format directly
-        outputs    = self._llm.chat(
+        outputs = self._llm.chat(
             messages=[messages],
             sampling_params=SamplingParams(
                 max_tokens=max_new_tokens,
@@ -165,6 +170,7 @@ class _OfflineBackend(_InferenceBackend):
 # Backend factory
 # ---------------------------------------------------------------------------
 
+
 def _build_backend(params: dict) -> _InferenceBackend:
     """
     Instantiate the correct backend from *params*.
@@ -174,7 +180,7 @@ def _build_backend(params: dict) -> _InferenceBackend:
         "offline"  →  _OfflineBackend      (vllm.LLM, in-process)
         "api"      →  _ApiBackend          (OpenAI-compatible HTTP)
     """
-    mode     = params.get("inference_mode", "api")
+    mode = params.get("inference_mode", "api")
     model_id = params.get("model")
     hf_token = os.environ.get("HF_TOKEN")
 
@@ -185,14 +191,8 @@ def _build_backend(params: dict) -> _InferenceBackend:
         return _OfflineBackend(model_id=model_id, hf_token=hf_token)
 
     if mode == "api":
-        base_url = (
-            params.get("vllm_base_url")
-            or os.environ.get("VLLM_BASE_URL", "http://localhost:8000/v1")
-        )
-        api_key = (
-            params.get("vllm_api_key")
-            or os.environ.get("VLLM_API_KEY", "token-abc123")
-        )
+        base_url = params.get("vllm_base_url") or os.environ.get("VLLM_BASE_URL", "http://localhost:8000/v1")
+        api_key = params.get("vllm_api_key") or os.environ.get("VLLM_API_KEY", "token-abc123")
         return _ApiBackend(model_id=model_id, base_url=base_url, api_key=api_key)
 
     raise ValueError(f"Unknown inference_mode '{mode}'. Choose 'hf', 'offline', or 'api'.")
@@ -201,6 +201,7 @@ def _build_backend(params: dict) -> _InferenceBackend:
 # ---------------------------------------------------------------------------
 # Retry wrapper (backend-agnostic)
 # ---------------------------------------------------------------------------
+
 
 def _llm_prompt(
     backend: _InferenceBackend,
@@ -229,6 +230,7 @@ def _llm_prompt(
 # Helper
 # ---------------------------------------------------------------------------
 
+
 def _count_words(text: str) -> int:
     """Approximate token count: 1 word ≈ 1.2 tokens."""
     return round(1.2 * len(text.split()))
@@ -237,6 +239,7 @@ def _count_words(text: str) -> int:
 # ---------------------------------------------------------------------------
 # LumberChunker
 # ---------------------------------------------------------------------------
+
 
 @register_chunker("lumber")
 def chunking_lumber(text: str, **params) -> List[str]:
@@ -270,11 +273,11 @@ def chunking_lumber(text: str, **params) -> List[str]:
         List[str] – the resulting text chunks.
     """
     # --- required params (no defaults — caller must supply all five) ---
-    model_id             = params.get("model")
+    model_id = params.get("model")
     group_size_threshold = int(params.get("group_size_threshold"))
-    max_retries          = int(params.get("max_retries"))
-    sleep_seconds        = int(params.get("sleep_seconds"))
-    max_new_tokens       = int(params.get("max_new_tokens"))
+    max_retries = int(params.get("max_retries"))
+    sleep_seconds = int(params.get("sleep_seconds"))
+    max_new_tokens = int(params.get("max_new_tokens"))
 
     # --- validation ---
     if model_id is None:
@@ -292,11 +295,11 @@ def chunking_lumber(text: str, **params) -> List[str]:
     backend = _build_backend(params)
 
     # --- tokenise text into sentences and label with IDs ---
-    sentences     = sent_tokenize(text)
+    sentences = sent_tokenize(text)
     full_segments = [f"ID {idx}: {seg}" for idx, seg in enumerate(sentences)]
 
     # --- main LumberChunker loop ---
-    chunk_number  = 0
+    chunk_number = 0
     boundary_ids: List[int] = []
 
     while chunk_number < len(full_segments) - 5:
@@ -305,7 +308,7 @@ def chunking_lumber(text: str, **params) -> List[str]:
 
         while word_count < group_size_threshold and (i + chunk_number) < len(full_segments) - 1:
             i += 1
-            candidate  = "\n".join(full_segments[k] for k in range(chunk_number, i + chunk_number))
+            candidate = "\n".join(full_segments[k] for k in range(chunk_number, i + chunk_number))
             word_count = _count_words(candidate)
 
         if i == 1:
@@ -336,7 +339,7 @@ def chunking_lumber(text: str, **params) -> List[str]:
         if match is None:
             chunk_number += 1
         else:
-            id_match     = re.search(r"\d+", match.group(0))
+            id_match = re.search(r"\d+", match.group(0))
             chunk_number = int(id_match.group())
             boundary_ids.append(chunk_number)
             chunk_number += 1
@@ -347,7 +350,7 @@ def chunking_lumber(text: str, **params) -> List[str]:
 
     chunks: List[str] = []
     for i, end_idx in enumerate(boundary_ids):
-        start_idx  = boundary_ids[i - 1] if i > 0 else 0
+        start_idx = boundary_ids[i - 1] if i > 0 else 0
         chunk_text = "\n".join(clean_segments[start_idx:end_idx])
         if chunk_text.strip():
             chunks.append(chunk_text)

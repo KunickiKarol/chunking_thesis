@@ -1,14 +1,14 @@
-from typing import List, Optional
-import re
 import math
+import re
+from typing import List, Optional
 
-from langchain_experimental.text_splitter import SemanticChunker
-from sklearn.metrics.pairwise import cosine_similarity as sklearn_cosine
-from langchain_text_splitters import RecursiveCharacterTextSplitter
-from langchain_huggingface import HuggingFaceEmbeddings
 import nltk
 import numpy as np
 import torch
+from langchain_experimental.text_splitter import SemanticChunker
+from langchain_huggingface import HuggingFaceEmbeddings
+from langchain_text_splitters import RecursiveCharacterTextSplitter
+from sklearn.metrics.pairwise import cosine_similarity as sklearn_cosine
 
 from src.chunking.methods.register import register_chunker
 
@@ -30,8 +30,12 @@ def chunking_semantic_recursive(
     merge_threshold = params.get("merge_threshold")
     delta = params.get("delta")
     embedding_model = params.get("embedding_model")
-    breakpoint_threshold_type = params.get("breakpoint_threshold_type",)
-    initial_breakpoint_threshold = params.get("initial_breakpoint_threshold",)
+    breakpoint_threshold_type = params.get(
+        "breakpoint_threshold_type",
+    )
+    initial_breakpoint_threshold = params.get(
+        "initial_breakpoint_threshold",
+    )
     embeddings = params.get("embeddings")
 
     if not text or not text.strip():
@@ -41,15 +45,11 @@ def chunking_semantic_recursive(
         raise ValueError("delta must be positive")
 
     if merge_threshold >= recursive_threshold:
-        raise ValueError(
-            "merge_threshold must be smaller than recursive_threshold"
-        )
+        raise ValueError("merge_threshold must be smaller than recursive_threshold")
 
     if final_threshold > max_chunk_size:
-        raise ValueError(
-            "final_threshold must not exceed max_chunk_size"
-        )
-    nltk.download('punkt_tab')
+        raise ValueError("final_threshold must not exceed max_chunk_size")
+    nltk.download("punkt_tab")
     # ------------------------------------------------------------------ #
     # Embeddings
     # ------------------------------------------------------------------ #
@@ -59,8 +59,8 @@ def chunking_semantic_recursive(
     if embeddings is None:
         embeddings = HuggingFaceEmbeddings(
             model_name=embedding_model,
-            model_kwargs={"device": device},   # <- GPU / CPU
-            encode_kwargs={"device": device},   # <- ważne dla embeddingów
+            model_kwargs={"device": device},  # <- GPU / CPU
+            encode_kwargs={"device": device},  # <- ważne dla embeddingów
         )
 
     semantic_splitter_cache = {}
@@ -93,11 +93,7 @@ def chunking_semantic_recursive(
                 return nltk.sent_tokenize(text_)
 
         except ImportError:
-            return [
-                s.strip()
-                for s in re.split(r"(?<=[.!?])\s+", text_)
-                if s.strip()
-            ]
+            return [s.strip() for s in re.split(r"(?<=[.!?])\s+", text_) if s.strip()]
 
     # ------------------------------------------------------------------ #
     # Step 1 — Segment file
@@ -124,9 +120,7 @@ def chunking_semantic_recursive(
                     current_len = 0
 
                 for start in range(0, slen, max_chunk_size):
-                    segments.append(
-                        sentence[start:start + max_chunk_size]
-                    )
+                    segments.append(sentence[start : start + max_chunk_size])
 
                 continue
 
@@ -156,11 +150,7 @@ def chunking_semantic_recursive(
 
         docs = splitter.create_documents([text_])
 
-        return [
-            d.page_content
-            for d in docs
-            if d.page_content.strip()
-        ]
+        return [d.page_content for d in docs if d.page_content.strip()]
 
     # ------------------------------------------------------------------ #
     # Step 3 — Recursive semantic split
@@ -182,10 +172,7 @@ def chunking_semantic_recursive(
         )
 
         # no progress fallback
-        if (
-            len(sub_chunks) == 1
-            and len(sub_chunks[0]) >= len(chunk)
-        ):
+        if len(sub_chunks) == 1 and len(sub_chunks[0]) >= len(chunk):
             return [chunk]
 
         result = []
@@ -207,44 +194,38 @@ def chunking_semantic_recursive(
     def embed_texts(texts: List[str]):
         return embeddings.embed_documents(texts)
 
-
     def merge_small_chunks(chunks: List[str]) -> List[str]:
         """Łączy małe chunki z sąsiadami na podstawie similarity (zoptymalizowane)"""
-        
+
         if len(chunks) <= 1:
             return chunks
 
         merged = list(chunks)
-        
+
         # Embeduj wszystkie chunki na raz i konwertuj na numpy array
         embeddings_cache = np.array(embed_texts(merged))  # Shape: (N, embedding_dim)
 
         i = 0
         while i < len(merged):
-            if (
-                len(merged[i]) <= merge_threshold
-                and len(merged) > 1
-            ):
+            if len(merged[i]) <= merge_threshold and len(merged) > 1:
                 has_prev = i > 0
                 has_next = i < len(merged) - 1
 
                 if has_prev and has_next:
                     # Oblicz similarity dla dwóch par na raz (batch)
-                    current_emb = embeddings_cache[i:i+1]  # Shape: (1, dim)
-                    neighbors_emb = embeddings_cache[[i-1, i+1]]  # Shape: (2, dim)
-                    
+                    current_emb = embeddings_cache[i : i + 1]  # Shape: (1, dim)
+                    neighbors_emb = embeddings_cache[[i - 1, i + 1]]  # Shape: (2, dim)
+
                     similarities = sklearn_cosine(current_emb, neighbors_emb)[0]  # Shape: (2,)
                     sim_prev, sim_next = similarities[0], similarities[1]
 
                     if sim_prev >= sim_next:
                         # Merge z poprzednim
                         merged[i - 1] += " " + merged[i]
-                        
+
                         # Re-embed tylko zmieniony chunk
-                        embeddings_cache[i - 1] = np.array(
-                            embed_texts([merged[i - 1]])[0]
-                        )
-                        
+                        embeddings_cache[i - 1] = np.array(embed_texts([merged[i - 1]])[0])
+
                         merged.pop(i)
                         embeddings_cache = np.delete(embeddings_cache, i, axis=0)
                         i = max(0, i - 1)
@@ -252,22 +233,18 @@ def chunking_semantic_recursive(
                     else:
                         # Merge z następnym
                         merged[i + 1] = merged[i] + " " + merged[i + 1]
-                        
-                        embeddings_cache[i + 1] = np.array(
-                            embed_texts([merged[i + 1]])[0]
-                        )
-                        
+
+                        embeddings_cache[i + 1] = np.array(embed_texts([merged[i + 1]])[0])
+
                         merged.pop(i)
                         embeddings_cache = np.delete(embeddings_cache, i, axis=0)
 
                 elif has_prev:
                     # Tylko poprzedni
                     merged[i - 1] += " " + merged[i]
-                    
-                    embeddings_cache[i - 1] = np.array(
-                        embed_texts([merged[i - 1]])[0]
-                    )
-                    
+
+                    embeddings_cache[i - 1] = np.array(embed_texts([merged[i - 1]])[0])
+
                     merged.pop(i)
                     embeddings_cache = np.delete(embeddings_cache, i, axis=0)
                     i = max(0, i - 1)
@@ -275,11 +252,9 @@ def chunking_semantic_recursive(
                 else:
                     # Tylko następny
                     merged[i + 1] = merged[i] + " " + merged[i + 1]
-                    
-                    embeddings_cache[i + 1] = np.array(
-                        embed_texts([merged[i + 1]])[0]
-                    )
-                    
+
+                    embeddings_cache[i + 1] = np.array(embed_texts([merged[i + 1]])[0])
+
                     merged.pop(i)
                     embeddings_cache = np.delete(embeddings_cache, i, axis=0)
 
@@ -310,11 +285,7 @@ def chunking_semantic_recursive(
 
                 docs = splitter.create_documents([chunk])
 
-                result.extend(
-                    d.page_content
-                    for d in docs
-                    if d.page_content.strip()
-                )
+                result.extend(d.page_content for d in docs if d.page_content.strip())
 
             else:
                 result.append(chunk)
@@ -352,18 +323,10 @@ def chunking_semantic_recursive(
             else:
                 recursed_chunks.append(chunk)
 
-        merged_chunks = merge_small_chunks(
-            recursed_chunks
-        )
+        merged_chunks = merge_small_chunks(recursed_chunks)
 
         final_chunks.extend(merged_chunks)
 
-    final_chunks = final_size_adjustment(
-        final_chunks
-    )
+    final_chunks = final_size_adjustment(final_chunks)
 
-    return [
-        chunk.strip()
-        for chunk in final_chunks
-        if chunk.strip()
-    ]
+    return [chunk.strip() for chunk in final_chunks if chunk.strip()]

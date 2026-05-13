@@ -2,10 +2,9 @@ import json
 import time
 from pathlib import Path
 
-import numpy as np
 import faiss
+import numpy as np
 from sentence_transformers import SentenceTransformer
-
 
 _MODELS = {}
 
@@ -22,7 +21,7 @@ def embed_texts(texts, embed_preset_params):
         texts,
         batch_size=embed_preset_params["batch_size"],
         precision=embed_preset_params["dtype"],
-        show_progress_bar=False
+        show_progress_bar=False,
     )
     return np.array(embeddings, dtype=np.float32)
 
@@ -56,12 +55,7 @@ def build_index_for_file(embed_name, embeddings, input_path, indexes_dir):
     return index_time
 
 
-def embed_chunks(
-    embed_name,
-    embed_preset_params,
-    chunks_input_dir,
-    result_dir
-):
+def embed_chunks(embed_name, embed_preset_params, chunks_input_dir, result_dir):
     result_dir.mkdir(parents=True, exist_ok=True)
 
     indexes_dir = result_dir / "Indexes"
@@ -113,17 +107,16 @@ def embed_chunks(
         local_metadata = []
 
         for i, chunk in enumerate(chunks):
-            embed_index += 1
+
             metadata_item = {
-                "id": embed_index if embed_type == "global" else i,           # == indeks wiersza w odpowiadającym .npy
+                "id": embed_index if embed_type == "global" else i,
                 "source": chunk["source_file"],
                 "chunk_id": chunk["chunk_id"],
-                "embed_time": embed_time
-                # "embedding" celowo pominięte — przechowywane osobno w .npy
+                "embed_time": embed_time,
             }
             local_metadata.append(metadata_item)
-
             if embed_type == "global":
+                embed_index += 1
                 global_metadata.append(metadata_item)
 
         # ====================================
@@ -145,12 +138,7 @@ def embed_chunks(
         # ====================================
 
         if embed_type == "local":
-            index_time = build_index_for_file(
-                embed_name,
-                embeddings,
-                input_path,
-                indexes_dir
-            )
+            index_time = build_index_for_file(embed_name, embeddings, input_path, indexes_dir)
             total_index_time += index_time
 
         # ====================================
@@ -201,7 +189,7 @@ def embed_chunks(
         "embed_type": embed_type,
         "embed_time": total_embed_time,
         "index_time": total_global_index_time if embed_type == "global" else total_index_time,
-        "total_embeddings": total_embeddings
+        "total_embeddings": total_embeddings,
     }
 
     meta_file = result_dir / "meta.json"

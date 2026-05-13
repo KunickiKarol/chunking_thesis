@@ -1,7 +1,6 @@
 import yaml
 
 
-
 def load_presets(presets_file, use_presets):
     """Ładuje YAML presetów i filtruje wg use_presets"""
     with open(presets_file) as f:
@@ -14,7 +13,6 @@ def load_presets(presets_file, use_presets):
             raise ValueError(f"Nie znaleziono presetów: {missing} w pliku {presets_file}")
         return presets
     return all_presets
-
 
 
 def iter_cfg_with_presets(cfg):

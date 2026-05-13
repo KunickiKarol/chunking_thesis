@@ -1,8 +1,8 @@
+import json
 import os
 import shutil
-import json
 from pathlib import Path
-from typing import Dict, Tuple, List
+from typing import Dict, List, Tuple
 
 from dotenv import load_dotenv
 
@@ -211,7 +211,6 @@ class LiteraryQAPreprocessor:
                         "summary": summary,
                         "summary_token_len": tokenizer.tokenize(summary)["token_count"],
                         "tokenlen": book_token_lengths.get(book_id),
-
                         # 🔥 DODAJ TO:
                         "example": False,
                         "examples": False,

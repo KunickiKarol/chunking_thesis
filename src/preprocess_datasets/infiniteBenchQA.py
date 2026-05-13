@@ -1,21 +1,19 @@
-import os
-import shutil
-import random
 import json
+import os
+import random
+import shutil
 from pathlib import Path
-from typing import Dict, Tuple, Any
+from typing import Any, Dict, Tuple
 
 from dotenv import load_dotenv
 
 from src.tools.tokenizer_service import TokenizerService
 
 
-
 class infiniteBenchQAPreprocessor:
     """
     Preprocessor dla datasetu infiniteBench QA.
     """
-
 
     SPLITS = ("train", "validation", "test", "example", "examples")
 
@@ -45,27 +43,15 @@ class infiniteBenchQAPreprocessor:
         books_dst, tasks_dst = self._prepare_split_dirs()
 
         bookmeta, total_token_len = self._load_bookmeta()
-        split_map, old_id_split_map, n_test, n_val, n_train, example_map = (
-            self._compute_splits(bookmeta)
-        )
+        split_map, old_id_split_map, n_test, n_val, n_train, example_map = self._compute_splits(bookmeta)
 
         self._annotate_bookmeta(bookmeta, split_map, example_map)
         self._save_bookmeta(bookmeta)
-        
-        bookid_to_contentid, docs_count = self._create_books_files(
-            self.books_src,
-            books_dst,
-            split_map,
-            example_map
-        )
+
+        bookid_to_contentid, docs_count = self._create_books_files(self.books_src, books_dst, split_map, example_map)
 
         tasks_count = self._create_tasks_files(
-            self.books_src,
-            tasks_dst,
-            split_map,
-            old_id_split_map,
-            bookid_to_contentid,
-            example_map
+            self.books_src, tasks_dst, split_map, old_id_split_map, bookid_to_contentid, example_map
         )
 
         self._save_meta(total_token_len, docs_count, tasks_count, n_test, n_val, n_train)
@@ -73,7 +59,6 @@ class infiniteBenchQAPreprocessor:
         print("✅ infiniteBenchQA preprocessing finished")
 
         return books_dst, tasks_dst, self.dataset_path
-
 
     @staticmethod
     def _load_env_config() -> Dict:
@@ -128,16 +113,9 @@ class infiniteBenchQAPreprocessor:
 
         for value in metadata.values():
             # ignorujemy old_id przy deduplikacji
-            compare_value = {
-                k: v for k, v in value.items()
-                if k != "old_id"
-            }
+            compare_value = {k: v for k, v in value.items() if k != "old_id"}
 
-            value_key = json.dumps(
-                compare_value,
-                sort_keys=True,
-                ensure_ascii=False
-            )
+            value_key = json.dumps(compare_value, sort_keys=True, ensure_ascii=False)
 
             if value_key not in seen:
                 new_key = str(len(seen))
@@ -153,23 +131,17 @@ class infiniteBenchQAPreprocessor:
                 if isinstance(existing_old_id, list):
                     existing_old_id.append(value["old_id"])
                 else:
-                    deduplicated[existing_key]["old_id"] = [
-                        existing_old_id,
-                        value["old_id"]
-                    ]
+                    deduplicated[existing_key]["old_id"] = [existing_old_id, value["old_id"]]
 
         return deduplicated, total_token_len
 
-    def _compute_splits(
-        self,
-        bookmeta: Dict[str, dict]
-    ) -> Tuple[
-        Dict[str, str],   # split map po nowych id
-        Dict[str, str],   # split map po old_id
+    def _compute_splits(self, bookmeta: Dict[str, dict]) -> Tuple[
+        Dict[str, str],  # split map po nowych id
+        Dict[str, str],  # split map po old_id
         int,
         int,
         int,
-        Dict[str, list[str]]
+        Dict[str, list[str]],
     ]:
         # splitujemy tylko po nowych deduplikowanych id
         book_ids = list(bookmeta.keys())
@@ -186,10 +158,10 @@ class infiniteBenchQAPreprocessor:
         for bookid in book_ids[:n_test]:
             split_map[bookid] = "test"
 
-        for bookid in book_ids[n_test:n_test + n_val]:
+        for bookid in book_ids[n_test : n_test + n_val]:
             split_map[bookid] = "validation"
 
-        for bookid in book_ids[n_test + n_val:]:
+        for bookid in book_ids[n_test + n_val :]:
             split_map[bookid] = "train"
 
         # mapowanie old_id -> split
@@ -204,10 +176,7 @@ class infiniteBenchQAPreprocessor:
             for old_id in old_ids:
                 old_id_split_map[old_id] = split
 
-        train_ids = [
-            bid for bid in book_ids
-            if split_map.get(bid) == "train"
-        ]
+        train_ids = [bid for bid in book_ids if split_map.get(bid) == "train"]
 
         example_map = {
             "example": train_ids[:1],
@@ -245,15 +214,16 @@ class infiniteBenchQAPreprocessor:
             json.dump(bookmeta, f, ensure_ascii=False, indent=2)
 
     def _save_meta(self, total_token_len, docs_count, tasks_count, n_test, n_val, n_train):
-        meta = {"dataset_name": "novelQA",
-                "task_type": "Short Answer",
-                "docs_count": docs_count,
-                "tasks_count": tasks_count,
-                "avg_token_len": total_token_len // docs_count,
-                "n_test": n_test,
-                "n_val": n_val, 
-                "n_train": n_train
-                }
+        meta = {
+            "dataset_name": "novelQA",
+            "task_type": "Short Answer",
+            "docs_count": docs_count,
+            "tasks_count": tasks_count,
+            "avg_token_len": total_token_len // docs_count,
+            "n_test": n_test,
+            "n_val": n_val,
+            "n_train": n_train,
+        }
         with open(self.dataset_path / "meta.json", "w", encoding="utf-8") as f:
             json.dump(meta, f, ensure_ascii=False, indent=2)
 
@@ -361,11 +331,7 @@ class infiniteBenchQAPreprocessor:
                     continue
 
                 if content_id not in tasks_per_content:
-                    tasks_per_content[content_id] = {
-                        "split": split,
-                        "old_ids": set(),
-                        "data": {}
-                    }
+                    tasks_per_content[content_id] = {"split": split, "old_ids": set(), "data": {}}
 
                 tasks_per_content[content_id]["old_ids"].add(old_id)
 
@@ -373,7 +339,7 @@ class infiniteBenchQAPreprocessor:
 
                 tasks_per_content[content_id]["data"][q_key] = {
                     "Question": obj.get("input", ""),
-                    "Answers": obj.get("answer", "")
+                    "Answers": obj.get("answer", ""),
                 }
 
         tasks_count = 0
@@ -402,7 +368,8 @@ class infiniteBenchQAPreprocessor:
                     json.dump(data, out, ensure_ascii=False, indent=2)
 
         return tasks_count
-                
+
+
 if __name__ == "__main__":
     load_dotenv()
     dataset_path = Path(os.getenv("PREPROCESSED_DIR")) / "infiniteBenchQA"

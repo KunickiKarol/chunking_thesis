@@ -1,7 +1,7 @@
 import os
+import shutil
 import subprocess
 from pathlib import Path
-import shutil
 
 from dotenv import load_dotenv
 
@@ -46,9 +46,7 @@ def download_literaryQA():
     pyproject_file = repo_path / "pyproject.toml"
 
     if not pyproject_file.exists():
-        raise FileNotFoundError(
-            f"Nie znaleziono {pyproject_file}"
-        )
+        raise FileNotFoundError(f"Nie znaleziono {pyproject_file}")
 
     # Tworzenie tymczasowego środowiska
     print("Tworzę tymczasowe środowisko uv...")

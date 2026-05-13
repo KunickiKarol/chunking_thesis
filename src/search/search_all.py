@@ -1,19 +1,21 @@
 #!/usr/bin/env python
 import argparse
-import os
 import json
-from pathlib import Path
-from dotenv import load_dotenv
-import yaml
+import os
 from itertools import product
+from pathlib import Path
 
+import yaml
+from dotenv import load_dotenv
 
 from src.embed_chunks.get_embedding import embed_chunks
 from src.search.search_query import search_query
 from src.tools.presets import iter_cfg_with_presets
 
 
-def search_all(datasets_cfg, chunking_cfg, splits, embed_cfg, search_cfg, dataset_dir: Path, embed_dir: Path, search_dir: Path):
+def search_all(
+    datasets_cfg, chunking_cfg, splits, embed_cfg, search_cfg, dataset_dir: Path, embed_dir: Path, search_dir: Path
+):
     for (
         (dataset_name, dataset_preset),
         (chunking_name, chunking_preset),
@@ -32,19 +34,12 @@ def search_all(datasets_cfg, chunking_cfg, splits, embed_cfg, search_cfg, datase
         embed_preset_name = embed_preset["name"]
         search_preset_name = search_preset["name"]
 
-        embed_type = embed_preset['params']["embed_type"]
-        task_type = dataset_preset["params"]['task_type']
+        embed_type = embed_preset["params"]["embed_type"]
+        task_type = dataset_preset["params"]["task_type"]
         search_preset_params = search_preset["params"]
 
-        task_input_dir = (
-            dataset_dir
-            / dataset_name
-            / dataset_preset_name
-            / 'Tasks'
-            / task_type
-            / split
-        )
-        
+        task_input_dir = dataset_dir / dataset_name / dataset_preset_name / "Tasks" / task_type / split
+
         embed_input_dir = (
             embed_dir
             / dataset_name
@@ -81,7 +76,7 @@ def search_all(datasets_cfg, chunking_cfg, splits, embed_cfg, search_cfg, datase
             continue
 
         result_dir.mkdir(parents=True, exist_ok=True)
-        print(f"➡️ Tworzę embeddingi: {result_dir}")
+        print(f"➡️ Szukam query: {result_dir}")
         search_query(
             embed_type,
             search_preset_params,
@@ -94,12 +89,11 @@ def search_all(datasets_cfg, chunking_cfg, splits, embed_cfg, search_cfg, datase
 def main():
     load_dotenv()
 
-    DATASET_DIR = Path(os.getenv('DATASETS_DIR'))
-    EMBED_DIR = Path(os.getenv('EMBED_DIR'))
-    SEARCH_DIR = Path(os.getenv('SEARCH_DIR'))
+    DATASET_DIR = Path(os.getenv("DATASETS_DIR"))
+    EMBED_DIR = Path(os.getenv("EMBED_DIR"))
+    SEARCH_DIR = Path(os.getenv("SEARCH_DIR"))
     SEARCH_DIR.mkdir(parents=True, exist_ok=True)
-    
-    
+
     with open("params.yaml", "r", encoding="utf-8") as f:
         params = yaml.safe_load(f)
 
@@ -110,15 +104,15 @@ def main():
     chunking_cfg = params.get("chunking").get("methods")
     if not chunking_cfg:
         raise ValueError("Nie znaleziono chunking_methods w params.yaml")
-    
+
     embed_cfg = params.get("vector_embed").get("methods")
     if not embed_cfg:
         raise ValueError("Nie znaleziono vector_embed_methods w params.yaml")
-    
+
     search_cfg = params.get("search").get("methods")
     if not search_cfg:
         raise ValueError("Nie znaleziono search_methods w params.yaml")
-    
+
     splits = params.get("chunking").get("splits")
     if not splits:
         raise ValueError("Nie znaleziono splits w params.yaml")
@@ -131,7 +125,7 @@ def main():
         search_cfg=search_cfg,
         dataset_dir=DATASET_DIR,
         embed_dir=EMBED_DIR,
-        search_dir=SEARCH_DIR
+        search_dir=SEARCH_DIR,
     )
 
 

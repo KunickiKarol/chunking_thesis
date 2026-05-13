@@ -1,6 +1,6 @@
 import json
-from pathlib import Path
 import time
+from pathlib import Path
 from typing import List
 
 from src.chunking.methods.all_chunker import chunk_text
@@ -69,7 +69,6 @@ def chunk_text_one(
             out_file = split_books_dir / f"{bookid}.jsonl"
             with out_file.open("w", encoding="utf-8") as out:
                 for chunk in chunks:
-                    chunk_id += 1
                     record = {
                         "source_file": bookid,
                         "chunk_id": chunk_id,
@@ -79,6 +78,7 @@ def chunk_text_one(
                         "chunking_params": params,
                         "chunking_time": chunking_time,
                     }
+                    chunk_id += 1
                     out.write(json.dumps(record, ensure_ascii=False) + "\n")
 
             chunks_count = len(chunks)
@@ -107,9 +107,7 @@ def chunk_text_one(
         with open(output_dir / split / "meta.json", "w", encoding="utf-8") as f:
             json.dump(meta, f, ensure_ascii=False, indent=2)
 
-        print(
-            f"✅ Split: {split} | time: {split_times[split]:.4f}s | chunks: {split_chunks}"
-        )
+        print(f"✅ Split: {split} | time: {split_times[split]:.4f}s | chunks: {split_chunks}")
 
     print(
         f"\n🔥 DATASET SUMMARY {dataset_name}\n"

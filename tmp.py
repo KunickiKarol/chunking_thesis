@@ -14,4 +14,5 @@
 # main()
 
 from src.rerank.rerank_all import main
+
 main()

@@ -1,12 +1,13 @@
 import argparse
 import os
 from pathlib import Path
-from dotenv import load_dotenv
+
 import yaml
+from dotenv import load_dotenv
 
 from src.download_datasets.infiniteBench import download_infiniteBench
-from src.download_datasets.novelQA import download_novelQA
 from src.download_datasets.literaryQA import download_literaryQA
+from src.download_datasets.novelQA import download_novelQA
 
 
 def download_datasets_all(datasets_download, downloads_dir: Path) -> None:

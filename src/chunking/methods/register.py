@@ -9,4 +9,5 @@ def register_chunker(name: str):
     def decorator(fn: ChunkerFn):
         CHUNKERS[name] = fn
         return fn
+
     return decorator

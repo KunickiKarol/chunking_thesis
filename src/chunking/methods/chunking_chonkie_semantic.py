@@ -1,6 +1,6 @@
 from typing import List
 
-from chonkie import SemanticChunker, TokenChunker, NeuralChunker
+from chonkie import NeuralChunker, SemanticChunker, TokenChunker
 from transformers import AutoTokenizer
 
 from src.chunking.methods.register import register_chunker
@@ -23,16 +23,14 @@ def chunking_neural(
     similarity_window = params.get("similarity_window")
     skip_window = params.get("skip_window")
 
-
     chunker = SemanticChunker(
         embedding_model=embedding_model,  # Default model
-        threshold=threshold,                               # Similarity threshold (0-1)
-        chunk_size=chunk_size,                             # Maximum tokens per chunk
-        similarity_window=similarity_window,                         # Window for similarity calculation
-        skip_window=skip_window                                # Skip-and-merge window (0=disabled)
+        threshold=threshold,  # Similarity threshold (0-1)
+        chunk_size=chunk_size,  # Maximum tokens per chunk
+        similarity_window=similarity_window,  # Window for similarity calculation
+        skip_window=skip_window,  # Skip-and-merge window (0=disabled)
     )
 
     final_chunks = chunker.chunk(text)
-
 
     return [chunk.text for chunk in final_chunks]

@@ -1,5 +1,6 @@
-import pkgutil
 import importlib
+import pkgutil
+
 from src.chunking.methods.register import CHUNKERS
 
 
@@ -10,9 +11,7 @@ def load_chunkers():
     """
 
     package = "src.chunking.methods"
-    for _, module_name, _ in pkgutil.iter_modules(
-        importlib.import_module(package).__path__
-    ):
+    for _, module_name, _ in pkgutil.iter_modules(importlib.import_module(package).__path__):
         if module_name in {"register", "all_chunker"}:
             continue
 

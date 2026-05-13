@@ -1,13 +1,15 @@
-from typing import List, Dict, Any
+from typing import Any, Dict, List
+
 import numpy as np
-from scipy.sparse import diags
 from nltk.tokenize import sent_tokenize
-from sklearn.cluster import AgglomerativeClustering
+from scipy.sparse import diags
 from sentence_transformers import SentenceTransformer
+from sklearn.cluster import AgglomerativeClustering
 
 from src.chunking.methods.register import register_chunker
 
 _model_cache: Dict[str, SentenceTransformer] = {}
+
 
 @register_chunker("sequential_hac")
 def chunking_sequential_hac(text: str, **params) -> List[str]:

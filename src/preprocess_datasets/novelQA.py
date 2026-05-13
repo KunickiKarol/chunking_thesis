@@ -1,7 +1,7 @@
-import os
-import shutil
-import random
 import json
+import os
+import random
+import shutil
 from pathlib import Path
 from typing import Dict, Tuple
 
@@ -51,9 +51,7 @@ class NovelQAPreprocessor:
         docs_count, total_token_len = self._copy_files_by_split(
             self.books_src, books_dst, split_map, example_map, ".txt", do_tokenize=True
         )
-        tasks_count, _ = self._copy_files_by_split(
-            self.tasks_src, tasks_dst, split_map, example_map, ".json"
-        )
+        tasks_count, _ = self._copy_files_by_split(self.tasks_src, tasks_dst, split_map, example_map, ".json")
 
         print("✅ novelQA preprocessing finished")
         self._save_meta(total_token_len, docs_count, tasks_count, n_test, n_val, n_train)
@@ -83,11 +81,7 @@ class NovelQAPreprocessor:
         with open(self.bookmeta_src, encoding="utf-8") as f:
             data = json.load(f)
 
-        return {
-            k: v
-            for k, v in data.items()
-            if v.get("copyright") == "PublicDomain"
-        }
+        return {k: v for k, v in data.items() if v.get("copyright") == "PublicDomain"}
 
     def _compute_splits(self, book_ids: list[str]) -> Tuple[Dict[str, str], int, int, int, Dict[str, list[str]]]:
         random.seed(self.random_state)
@@ -102,10 +96,10 @@ class NovelQAPreprocessor:
         for bookid in book_ids[:n_test]:
             split_map[bookid] = "test"
 
-        for bookid in book_ids[n_test:n_test + n_val]:
+        for bookid in book_ids[n_test : n_test + n_val]:
             split_map[bookid] = "validation"
 
-        for bookid in book_ids[n_test + n_val:]:
+        for bookid in book_ids[n_test + n_val :]:
             split_map[bookid] = "train"
 
         train_ids = [bid for bid in book_ids if split_map.get(bid) == "train"]
@@ -155,7 +149,7 @@ class NovelQAPreprocessor:
         split_map: Dict[str, str],
         example_map: Dict[str, list[str]],
         extension: str,
-        do_tokenize: bool = False
+        do_tokenize: bool = False,
     ):
         docs_count = 0
         total_token_len = 0

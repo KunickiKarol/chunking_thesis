@@ -22,7 +22,6 @@ def search_query(
     _search(embed_type, embedder_name, top_k, task_input_dir, embed_input_dir, result_dir)
 
 
-
 def _search(
     embed_type: str,
     embedder_name: str,
@@ -32,8 +31,7 @@ def _search(
     result_dir: Path,
 ):
     model = SentenceTransformer(embedder_name)
-    index_path = embed_input_dir/ "Indexes"
-    
+    index_path = embed_input_dir / "Indexes"
 
     if not index_path.exists():
         raise FileNotFoundError(f"Brak pliku indeksu FAISS: {index_path}")
@@ -45,9 +43,9 @@ def _search(
         results_global = {}
         total_time = 0.0
 
-        if embed_type == 'global':
+        if embed_type == "global":
             tasks_file = sorted(task_input_dir.glob("*.json"))
-        elif embed_type == 'local':
+        elif embed_type == "local":
             tasks_file = [task_input_dir / f"{index_file.stem}.json"]
         else:
             raise ValueError(f"Unknown embed_type: {embed_type}")
@@ -75,17 +73,17 @@ def _search(
                 results[question_id] = {
                     "indices": indices[0].tolist(),
                     "distances": distances[0].tolist(),
-                    'embed_time': t_after_embed - t_start,
+                    "embed_time": t_after_embed - t_start,
                     "search_time": t_end - t_after_embed,
                 }
             results_global.update(results)
-            if embed_type == 'local':
+            if embed_type == "local":
                 search_out_dir = result_dir / "Search"
                 search_out_dir.mkdir(parents=True, exist_ok=True)
 
                 with open(search_out_dir / f"{task_file.stem}.json", "w", encoding="utf-8") as f:
                     json.dump(results, f, ensure_ascii=False, indent=2)
-        if embed_type == 'global':
+        if embed_type == "global":
             search_out_dir = result_dir / "Search"
             search_out_dir.mkdir(parents=True, exist_ok=True)
 

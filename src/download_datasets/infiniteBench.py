@@ -1,10 +1,9 @@
 import os
 import shutil
 from pathlib import Path
-from huggingface_hub import snapshot_download
-
 
 from dotenv import load_dotenv
+from huggingface_hub import snapshot_download
 
 
 def download_infiniteBench():

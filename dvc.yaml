@@ -81,3 +81,21 @@ stages:
       - search.methods
       - rerank.methods
 
+  generation:
+    cmd: python -m src.generation.generation_all
+    deps:
+      - data/search_result/
+      - src/generation/generation_all.py
+      - params.yaml
+    outs:
+      - data/generation_result/:
+          persist: true
+    params:
+      - preprocess_datasets.datasets
+      - chunking.methods
+      - vector_embed.methods
+      - search.methods
+      - rerank.methods
+      - generation.methods
+
+

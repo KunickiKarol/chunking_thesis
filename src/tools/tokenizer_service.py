@@ -1,10 +1,9 @@
 # tokenizer_service.py
 
-from typing import Dict, Any
+from typing import Any, Dict
 
-from transformers import AutoTokenizer
 import yaml
-
+from transformers import AutoTokenizer
 
 try:
     import tiktoken
@@ -36,11 +35,7 @@ class TokenizerService:
             with open("params.yaml", "r", encoding="utf-8") as f:
                 params = yaml.safe_load(f) or {}
 
-            tokenizer_cfg = (
-                params
-                .get("preprocess_datasets", {})
-                .get("tokenizer", {})
-            )
+            tokenizer_cfg = params.get("preprocess_datasets", {}).get("tokenizer", {})
 
         except FileNotFoundError:
 
@@ -53,61 +48,39 @@ class TokenizerService:
         # 3. DEFAULT
         # =========================
 
-        self.backend = (
-            backend
-            or tokenizer_cfg.get("backend")
-            or default_backend
-        )
+        self.backend = backend or tokenizer_cfg.get("backend") or default_backend
 
-        self.model_name = (
-            model_name
-            or tokenizer_cfg.get("model_name")
-            or default_model_name
-        )
+        self.model_name = model_name or tokenizer_cfg.get("model_name") or default_model_name
 
         # =========================
         if self.backend == "hf":
             if AutoTokenizer is None:
-                raise ImportError(
-                    "Brakuje transformers. pip install transformers"
-                )
+                raise ImportError("Brakuje transformers. pip install transformers")
             self.tokenizer = AutoTokenizer.from_pretrained(self.model_name)
         elif self.backend == "tiktoken":
             if tiktoken is None:
-                raise ImportError(
-                    "Brakuje tiktoken. pip install tiktoken"
-                )
+                raise ImportError("Brakuje tiktoken. pip install tiktoken")
             self.tokenizer = tiktoken.encoding_for_model(self.model_name)
 
         else:
-            raise ValueError(
-                "backend musi być: 'hf' albo 'tiktoken'"
-            )
+            raise ValueError("backend musi być: 'hf' albo 'tiktoken'")
 
     def tokenize(self, context: str) -> Dict[str, Any]:
 
         # =========================
         if self.backend == "hf":
-            token_ids = self.tokenizer.encode(
-                context,
-                add_special_tokens=False
-            )
-            tokens = self.tokenizer.convert_ids_to_tokens(
-                token_ids
-            )
+            token_ids = self.tokenizer.encode(context, add_special_tokens=False)
+            tokens = self.tokenizer.convert_ids_to_tokens(token_ids)
         elif self.backend == "tiktoken":
             token_ids = self.tokenizer.encode(context)
             # tiktoken nie ma normalnego convert_ids_to_tokens
-            tokens = [
-                self.tokenizer.decode([x])
-                for x in token_ids
-            ]
+            tokens = [self.tokenizer.decode([x]) for x in token_ids]
 
         return {
             "token_count": len(token_ids),
             "tokens": tokens,
             "token_ids": token_ids,
         }
-    
+
     def get_tokenizer(self):
         return self.tokenizer

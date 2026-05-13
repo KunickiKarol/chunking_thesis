@@ -2,9 +2,8 @@ import json
 import time
 from pathlib import Path
 
-from src.tools.find_content import find_query_by_id, find_chunk_by_retreived_id
-
 from src.rerank.methods.all_reranker import rerank_text
+from src.tools.find_content import find_chunk_by_retreived_id, find_query_by_id
 
 
 def rerank_one(
@@ -40,11 +39,8 @@ def rerank_one(
 
             # cache query
             if query_key not in query_cache:
-                source_id, question_text = find_query_by_id(
-                    task_input_dir,
-                    query_key
-                )
-                query_cache[query_key] = question_text['Question']
+                source_id, question_text = find_query_by_id(task_input_dir, query_key)
+                query_cache[query_key] = question_text["Question"]
 
             question_text = query_cache[query_key]
 
@@ -54,24 +50,20 @@ def rerank_one(
 
                 # cache chunków
                 if retrieved_key not in chunk_cache:
-                    chunk_cache[retrieved_key] = find_chunk_by_retreived_id(
+                    chunk_data = find_chunk_by_retreived_id(
                         embed_input_dir,
                         retrieved_key,
                         chunks_input_dir,
                         None if search_file.stem == "global" else source_id,
-                    )["text"]
+                    )
+                    chunk_cache[retrieved_key] = (chunk_data["chunk_id"], chunk_data["text"])
 
-                chunk_text = chunk_cache[retrieved_key]
+                chunk_id, chunk_text = chunk_cache[retrieved_key]
 
-                retrieved_chunks.append(
-                    {retrieved_key: chunk_text}
-                )
+                retrieved_chunks.append({chunk_id: chunk_text})
 
             # nowy słownik
-            result[query_key] = (
-                question_text,
-                retrieved_chunks
-            )
+            result[query_key] = (question_text, retrieved_chunks)
 
     # reranking + pomiar czasu
     rerank_results = {}
@@ -80,11 +72,7 @@ def rerank_one(
 
         start_time = time.perf_counter()
 
-        reranked = rerank_text(
-            rerank_name,
-            query_tuple,
-            **rerank_preset_params
-        )
+        reranked = rerank_text(rerank_name, query_tuple, **rerank_preset_params)
 
         end_time = time.perf_counter()
 
@@ -103,9 +91,7 @@ def rerank_one(
         json.dump(rerank_results, f, ensure_ascii=False, indent=2)
 
     # zapis meta
-    meta = {
-        "global_rerank_time": global_rerank_time
-    }
+    meta = {"global_rerank_time": global_rerank_time}
 
     meta_output_path = result_dir / "meta.json"
 

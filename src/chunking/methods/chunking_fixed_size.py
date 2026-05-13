@@ -1,8 +1,8 @@
 from typing import List, Literal
-import yaml
 
-from langchain_text_splitters import CharacterTextSplitter
+import yaml
 from chonkie import TokenChunker
+from langchain_text_splitters import CharacterTextSplitter
 
 from src.chunking.methods.register import register_chunker
 from src.tools.tokenizer_service import TokenizerService

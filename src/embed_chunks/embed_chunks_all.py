@@ -1,17 +1,18 @@
 #!/usr/bin/env python
 import argparse
-from itertools import product
 import os
+from itertools import product
 from pathlib import Path
-from dotenv import load_dotenv
+
 import yaml
+from dotenv import load_dotenv
 
 from src.embed_chunks.get_embedding import embed_chunks
 from src.tools.presets import iter_cfg_with_presets
 
 
 def embed_chunks_all(datasets_cfg, chunking_cfg, splits, embed_cfg, chunks_dir: Path, embed_dir: Path):
-    print(f"➡️ Tworzę embeddingi: {embed_dir}")
+    print(f"➡️ Embedding: {embed_dir}")
     for (
         (dataset_name, dataset_preset),
         (chunking_name, chunking_preset),
@@ -29,13 +30,7 @@ def embed_chunks_all(datasets_cfg, chunking_cfg, splits, embed_cfg, chunks_dir: 
         embed_preset_params = embed_preset["params"]
 
         chunks_input_dir = (
-            chunks_dir
-            / dataset_name
-            / dataset_preset_name
-            / chunking_name
-            / chunking_preset_name
-            / split
-            / "Books"
+            chunks_dir / dataset_name / dataset_preset_name / chunking_name / chunking_preset_name / split / "Books"
         )
 
         result_dir = (
@@ -58,7 +53,7 @@ def embed_chunks_all(datasets_cfg, chunking_cfg, splits, embed_cfg, chunks_dir: 
             continue
 
         result_dir.mkdir(parents=True, exist_ok=True)
-        
+
         embed_chunks(
             embed_name,
             embed_preset_params,
@@ -70,11 +65,10 @@ def embed_chunks_all(datasets_cfg, chunking_cfg, splits, embed_cfg, chunks_dir: 
 def main():
     load_dotenv()
 
-    CHUNKS_DIR = Path(os.getenv('CHUNKS_DIR'))
-    EMBED_DIR = Path(os.getenv('EMBED_DIR'))
+    CHUNKS_DIR = Path(os.getenv("CHUNKS_DIR"))
+    EMBED_DIR = Path(os.getenv("EMBED_DIR"))
     EMBED_DIR.mkdir(parents=True, exist_ok=True)
-    
-    
+
     with open("params.yaml", "r", encoding="utf-8") as f:
         params = yaml.safe_load(f)
 
@@ -85,22 +79,22 @@ def main():
     chunking_cfg = params.get("chunking").get("methods")
     if not chunking_cfg:
         raise ValueError("Nie znaleziono chunking_methods w params.yaml")
-    
+
     embed_cfg = params.get("vector_embed").get("methods")
     if not embed_cfg:
         raise ValueError("Nie znaleziono vector_embed_methods w params.yaml")
-    
+
     splits = params.get("chunking").get("splits")
     if not splits:
         raise ValueError("Nie znaleziono chunking_methods w params.yaml")
-    
+
     embed_chunks_all(
         datasets_cfg=datasets_cfg,
         chunking_cfg=chunking_cfg,
         splits=splits,
         embed_cfg=embed_cfg,
         chunks_dir=CHUNKS_DIR,
-        embed_dir=EMBED_DIR
+        embed_dir=EMBED_DIR,
     )
 
 

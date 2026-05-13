@@ -83,11 +83,16 @@ rerank:
       presets_file: configs/rerank/nothing.yaml
       use_presets:
         - default_top3
-    # rerank:
-    #   presets_file: configs/rerank/rerank.yaml
-    #   use_presets:
-    #     - default
-    # order_preverse:
-    #   presets_file: configs/rerank/order_preverse.yaml
-    #   use_presets:
-    #     - default
+        - default_top3_op
+    reranker:
+      presets_file: configs/rerank/reranker.yaml
+      use_presets:
+        - default_top3
+        - default_top3_op
+
+generation:
+  methods:
+    fixed_token:
+      presets_file: configs/generation/fixed_token.yaml
+      use_presets:
+        - default
