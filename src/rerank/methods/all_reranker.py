@@ -23,10 +23,10 @@ def load_reranker():
 load_reranker()
 
 
-def chunk_text(rerankertype: str, text: str, **params):
+def rerank_text(rerank_name: str, text: str, **params):
     try:
-        fn = RERANKERS[rerankertype]
+        fn = RERANKERS[rerank_name]
     except KeyError:
-        raise ValueError(f"Unknown reranker type: {rerankertype}")
+        raise ValueError(f"Unknown reranker type: {rerank_name}")
 
     return fn(text, **params)

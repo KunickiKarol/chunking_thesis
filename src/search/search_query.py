@@ -33,6 +33,7 @@ def _search(
 ):
     model = SentenceTransformer(embedder_name)
     index_path = embed_input_dir/ "Indexes"
+    
 
     if not index_path.exists():
         raise FileNotFoundError(f"Brak pliku indeksu FAISS: {index_path}")
@@ -41,18 +42,18 @@ def _search(
 
     for index_file in index_files:
         index = faiss.read_index(str(index_file))
-        results = {}
+        results_global = {}
         total_time = 0.0
 
         if embed_type == 'global':
             tasks_file = sorted(task_input_dir.glob("*.json"))
-
         elif embed_type == 'local':
             tasks_file = [task_input_dir / f"{index_file.stem}.json"]
         else:
             raise ValueError(f"Unknown embed_type: {embed_type}")
 
         for task_file in tasks_file:
+            results = {}
             with open(task_file, "r", encoding="utf-8") as f:
                 tasks = json.load(f)
 
@@ -77,13 +78,19 @@ def _search(
                     'embed_time': t_after_embed - t_start,
                     "search_time": t_end - t_after_embed,
                 }
+            results_global.update(results)
+            if embed_type == 'local':
+                search_out_dir = result_dir / "Search"
+                search_out_dir.mkdir(parents=True, exist_ok=True)
 
-        # Save per-question results
-        search_out_dir = result_dir / "Search"
-        search_out_dir.mkdir(parents=True, exist_ok=True)
+                with open(search_out_dir / f"{task_file.stem}.json", "w", encoding="utf-8") as f:
+                    json.dump(results, f, ensure_ascii=False, indent=2)
+        if embed_type == 'global':
+            search_out_dir = result_dir / "Search"
+            search_out_dir.mkdir(parents=True, exist_ok=True)
 
-        with open(search_out_dir / "global.json", "w", encoding="utf-8") as f:
-            json.dump(results, f, ensure_ascii=False, indent=2)
+            with open(search_out_dir / f"global.json", "w", encoding="utf-8") as f:
+                json.dump(results_global, f, ensure_ascii=False, indent=2)
 
         # Save metadata
         meta = {"total_time": total_time}

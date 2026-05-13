@@ -38,7 +38,6 @@ def rerank_all(datasets_cfg, chunking_cfg, splits, embed_cfg, search_cfg, rerank
         rerank_preset_name = rerank_preset["name"]
 
         task_type = dataset_preset["params"]['task_type']
-        rerank_type = dataset_preset["params"]['rerank_type']
         rerank_preset_params = rerank_preset["params"]
 
 
@@ -85,7 +84,7 @@ def rerank_all(datasets_cfg, chunking_cfg, splits, embed_cfg, search_cfg, rerank
             / split
         )
 
-        result_dir = {
+        result_dir = (
             rerank_dir
             / dataset_name
             / dataset_preset_name
@@ -98,7 +97,7 @@ def rerank_all(datasets_cfg, chunking_cfg, splits, embed_cfg, search_cfg, rerank
             / rerank_name
             / rerank_preset_name
             / split
-        }
+        )
 
 
         if not task_input_dir.exists():
@@ -112,11 +111,11 @@ def rerank_all(datasets_cfg, chunking_cfg, splits, embed_cfg, search_cfg, rerank
         if not embed_input_dir.exists():
             print(f"❌ Brak embeddingów: {embed_input_dir}, pomijam...")
             continue
-
+        print(type(search_input_dir), search_input_dir)
         if not search_input_dir.exists():
             print(f"❌ Brak search: {search_input_dir}, pomijam...")
             continue
-
+        print(type(result_dir), result_dir)
         if result_dir.exists() and any(p.is_file() for p in result_dir.iterdir()):
             print(f"⏭️ Pomijam {result_dir}, vector db już istnieje")
             continue
@@ -124,12 +123,12 @@ def rerank_all(datasets_cfg, chunking_cfg, splits, embed_cfg, search_cfg, rerank
         result_dir.mkdir(parents=True, exist_ok=True)
         
         rerank_one(
-            rerank_type,
+            rerank_name,
             rerank_preset_params,
             split,
             task_input_dir,
             chunks_input_dir,
-            embed_input_dir
+            embed_input_dir,
             search_input_dir,
             result_dir,
         )
@@ -180,7 +179,7 @@ def main():
         embed_cfg=embed_cfg,
         search_cfg=search_cfg,
         rerank_cfg=rerank_cfg,
-        dataset_dir=DATASET_DIR
+        dataset_dir=DATASET_DIR,
         chunks_dir=CHUNKS_DIR,
         embed_dir=EMBED_DIR,
         search_dir=SEARCH_DIR,

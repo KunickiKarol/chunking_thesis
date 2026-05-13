@@ -37,7 +37,7 @@ def chunk_text_one(
     chunks_validation_num = 0
 
     split_times = {split: 0.0 for split in splits}
-
+    chunk_id = 0
     for split in splits:
         split_out_dir = output_dir / split
         split_books_dir = split_out_dir / "Books"
@@ -68,10 +68,11 @@ def chunk_text_one(
 
             out_file = split_books_dir / f"{bookid}.jsonl"
             with out_file.open("w", encoding="utf-8") as out:
-                for i, chunk in enumerate(chunks):
+                for chunk in chunks:
+                    chunk_id += 1
                     record = {
                         "source_file": bookid,
-                        "chunk_id": i,
+                        "chunk_id": chunk_id,
                         "text": chunk,
                         "split": split,
                         "chunking_method": chunking_type,

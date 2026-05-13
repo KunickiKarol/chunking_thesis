@@ -1,6 +1,6 @@
 datasets_download:
-  - "infiniteBench"
-  - "novelQA"
+  # - "infiniteBench"
+  # - "novelQA"
   - "literaryQA"
 
 preprocess_datasets:
@@ -12,55 +12,55 @@ preprocess_datasets:
       presets_file: configs/preprocess_dataset/literaryQA.yaml
       use_presets:
         - default  # 'chapter' or 'page' or 'none'
-    novelQA:
-      presets_file: configs/preprocess_dataset/novelQA.yaml
-      use_presets:
-        - default  # 'chapter' or 'page' or 'none'
-    infiniteBenchQA:
-      presets_file: configs/preprocess_dataset/infiniteBenchQA.yaml
-      use_presets:
-        - default  # 'chapter' or 'page' or 'none'
-    infiniteBenchChoice:
-      presets_file: configs/preprocess_dataset/infiniteBenchChoice.yaml
-      use_presets:
-        - default  # 'chapter' or 'page' or 'none'
+    # novelQA:
+    #   presets_file: configs/preprocess_dataset/novelQA.yaml
+    #   use_presets:
+    #     - default  # 'chapter' or 'page' or 'none'
+    # infiniteBenchQA:
+    #   presets_file: configs/preprocess_dataset/infiniteBenchQA.yaml
+    #   use_presets:
+    #     - default  # 'chapter' or 'page' or 'none'
+    # infiniteBenchChoice:
+    #   presets_file: configs/preprocess_dataset/infiniteBenchChoice.yaml
+    #   use_presets:
+    #     - default  # 'chapter' or 'page' or 'none'
 
 chunking:
-  splits: ["example"]
+  splits: ["examples"]
   methods:
     fixed_size:
       presets_file: configs/chunking/fixed_size.yaml
       use_presets:
         - fs_512_64_char
-        - fs_512_64_token
-    recursive:
-      presets_file: configs/chunking/recursive.yaml
-      use_presets:
-        - r_512_64
-    recursive_semantic:
-      presets_file: configs/chunking/recursive_semantic.yaml
-      use_presets:
-        - paper_based
-    neural:
-      presets_file: configs/chunking/neural.yaml
-      use_presets:
-        - default
-    chonkie_semantic:
-      presets_file: configs/chunking/chonkie_semantic.yaml
-      use_presets:
-        - default
-    lumber:
-      presets_file: configs/chunking/lumber.yaml
-      use_presets:
-        - default
-    max_min:
-      presets_file: configs/chunking/max_min.yaml
-      use_presets:
-        - liberal
-    sequential_hac:
-      presets_file: configs/chunking/sequential_hac.yaml
-      use_presets:
-        - liberal
+        # - fs_512_64_token
+    # recursive:
+    #   presets_file: configs/chunking/recursive.yaml
+    #   use_presets:
+    #     - r_512_64
+    # recursive_semantic:
+    #   presets_file: configs/chunking/recursive_semantic.yaml
+    #   use_presets:
+    #     - paper_based
+    # neural:
+    #   presets_file: configs/chunking/neural.yaml
+    #   use_presets:
+    #     - default
+    # chonkie_semantic:
+    #   presets_file: configs/chunking/chonkie_semantic.yaml
+    #   use_presets:
+    #     - default
+    # lumber:
+    #   presets_file: configs/chunking/lumber.yaml
+    #   use_presets:
+    #     - default
+    # max_min:
+    #   presets_file: configs/chunking/max_min.yaml
+    #   use_presets:
+    #     - liberal
+    # sequential_hac:
+    #   presets_file: configs/chunking/sequential_hac.yaml
+    #   use_presets:
+    #     - liberal
 
 vector_embed:
   methods:
@@ -82,7 +82,7 @@ rerank:
     nothing:
       presets_file: configs/rerank/nothing.yaml
       use_presets:
-        - default
+        - default_top3
     # rerank:
     #   presets_file: configs/rerank/rerank.yaml
     #   use_presets:

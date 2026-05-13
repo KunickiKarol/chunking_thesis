@@ -2,10 +2,8 @@ import json
 import time
 from pathlib import Path
 
-from src.tools.find_content import (
-    find_query_by_id,
-    find_retreived_chunk_by_id
-)
+from src.tools.find_content import find_query_by_id, find_chunk_by_retreived_id
+
 from src.rerank.methods.all_reranker import rerank_text
 
 
@@ -51,15 +49,15 @@ def rerank_one(
 
             retrieved_chunks = []
 
-            for retrieved_key in query_data.get("indices", []):
+            for retrieved_key in query_data.get("indices"):
 
                 # cache chunków
                 if retrieved_key not in chunk_cache:
-                    chunk_cache[retrieved_key] = find_retreived_chunk_by_id(
-                        chunks_input_dir,
+                    chunk_cache[retrieved_key] = find_chunk_by_retreived_id(
                         embed_input_dir,
                         retrieved_key,
-                        split
+                        search_file.stem,
+                        chunks_input_dir
                     )["text"]
 
                 chunk_text = chunk_cache[retrieved_key]

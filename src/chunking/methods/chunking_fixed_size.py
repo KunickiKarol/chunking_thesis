@@ -26,7 +26,7 @@ def chunking_fixed_size(
 ) -> List[str]:
 
     params = load_params()
-    tokenizer_cfg = params.get("preprocess_datasets", {}).get("tokenizer", {})
+    tokenizer_cfg = params.get("preprocess_datasets").get("tokenizer")
 
     if overlap >= chunk_size:
         raise ValueError("overlap must be smaller than chunk_size")

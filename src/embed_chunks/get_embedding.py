@@ -109,11 +109,12 @@ def embed_chunks(
 
         local_metadata = []
 
-        for i, chunk in enumerate(chunks):
+        for (i, chunk), embedding in zip(enumerate(chunks), embeddings):
             metadata_item = {
                 "id": i,
                 "source": chunk["source_file"],
                 "chunk_id": chunk["chunk_id"],
+                "embedding": embedding.tolist(),  # konwersja do listy dla JSON
                 "embed_time": embed_time
             }
             local_metadata.append(metadata_item)
