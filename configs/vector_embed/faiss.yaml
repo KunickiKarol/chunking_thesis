@@ -1,7 +1,14 @@
 presets:
-  - name: default
+  - name: default_global
     params:
       embbeder: all-MiniLM-L6-v2
       batch_size: 32
       dtype: float32
+      embed_type: global
+  - name: default_local
+    params:
+      embbeder: all-MiniLM-L6-v2
+      batch_size: 32
+      dtype: float32
+      embed_type: local
 

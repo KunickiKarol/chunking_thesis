@@ -61,18 +61,33 @@ chunking:
       presets_file: configs/chunking/sequential_hac.yaml
       use_presets:
         - liberal
-      
 
 vector_embed:
   methods:
     FAISS:
       presets_file: configs/vector_embed/faiss.yaml
       use_presets:
-        - default
+        - default_global
+        - default_local
 
 search:
   methods:
-    dense_retrieval:
-      presets_file: configs/search/dense_retrieval.yaml
+    faiss:
+      presets_file: configs/search/faiss.yaml
       use_presets:
-        - all-MiniLM-L6-v2_k5
+        - default_top5
+
+rerank:
+  methods:
+    nothing:
+      presets_file: configs/rerank/nothing.yaml
+      use_presets:
+        - default
+    # rerank:
+    #   presets_file: configs/rerank/rerank.yaml
+    #   use_presets:
+    #     - default
+    # order_preverse:
+    #   presets_file: configs/rerank/order_preverse.yaml
+    #   use_presets:
+    #     - default

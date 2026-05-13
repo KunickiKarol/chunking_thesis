@@ -2,13 +2,12 @@
 import argparse
 from itertools import product
 import os
-import json
 from pathlib import Path
 from dotenv import load_dotenv
 import yaml
 
 from src.embed_chunks.get_embedding import embed_chunks
-from src.tools.presets import iter_cfg_with_presets, load_presets
+from src.tools.presets import iter_cfg_with_presets
 
 
 def embed_chunks_all(datasets_cfg, chunking_cfg, splits, embed_cfg, chunks_dir: Path, embed_dir: Path):
@@ -89,7 +88,7 @@ def main():
     
     embed_cfg = params.get("vector_embed").get("methods")
     if not embed_cfg:
-        raise ValueError("Nie znaleziono chunking_methods w params.yaml")
+        raise ValueError("Nie znaleziono vector_embed_methods w params.yaml")
     
     splits = params.get("chunking").get("splits")
     if not splits:

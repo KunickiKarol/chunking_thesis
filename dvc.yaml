@@ -50,14 +50,34 @@ stages:
       - chunking.methods
       - vector_embed.methods
 
-  # search:
-  #   cmd: python -m src.search.search_all --datasets ${datasets} --chunking_types ${chunking.chunking_types} --embed_chunks_types ${vector_embed.embed_chunks_types} --vector_db ${vector_embed.vector_db} --top_k ${search.top_k}
-  #   deps:
-  #     - data/vector_db/
-  #     - src/search/search_query.py
-  #   params:
-  #     - datasets
-  #     - chunking.chunking_types
-  #     - vector_embed.embed_chunks_types
-  #     - vector_embed.vector_db
+  search:
+    cmd: python -m src.search.search_all
+    deps:
+      - data/vector_db/
+      - src/search/search_all.py
+      - params.yaml
+    outs:
+      - data/search_result/:
+          persist: true
+    params:
+      - preprocess_datasets.datasets
+      - chunking.methods
+      - vector_embed.methods
+      - search.methods
+
+  rerank:
+    cmd: python -m src.rerank.rerank_all
+    deps:
+      - data/search_result/
+      - src/rerank/rerank_all.py
+      - params.yaml
+    outs:
+      - data/rerank/:
+          persist: true
+    params:
+      - preprocess_datasets.datasets
+      - chunking.methods
+      - vector_embed.methods
+      - search.methods
+      - rerank.methods
 

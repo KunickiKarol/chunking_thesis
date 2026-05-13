@@ -9,12 +9,11 @@ from itertools import product
 
 
 from src.embed_chunks.get_embedding import embed_chunks
+from src.search.search_query import search_query
 from src.tools.presets import iter_cfg_with_presets
 
 
-def search_all(datasets_cfg, chunking_cfg, embed_cfg,  search_cfg, dataset_dir: Path, embed_dir: Path, search_dir: Path):
-    splits = ["train", "validation", "test"]
-
+def search_all(datasets_cfg, chunking_cfg, splits, embed_cfg, search_cfg, dataset_dir: Path, embed_dir: Path, search_dir: Path):
     for (
         (dataset_name, dataset_preset),
         (chunking_name, chunking_preset),
@@ -33,6 +32,7 @@ def search_all(datasets_cfg, chunking_cfg, embed_cfg,  search_cfg, dataset_dir: 
         embed_preset_name = embed_preset["name"]
         search_preset_name = search_preset["name"]
 
+        embed_type = embed_preset['params']["embed_type"]
         task_type = dataset_preset["params"]['task_type']
         search_preset_params = search_preset["params"]
 
@@ -57,7 +57,7 @@ def search_all(datasets_cfg, chunking_cfg, embed_cfg,  search_cfg, dataset_dir: 
         )
 
         result_dir = (
-            embed_dir
+            search_dir
             / dataset_name
             / dataset_preset_name
             / chunking_name
@@ -77,13 +77,13 @@ def search_all(datasets_cfg, chunking_cfg, embed_cfg,  search_cfg, dataset_dir: 
             continue
 
         if result_dir.exists() and any(p.is_file() for p in result_dir.iterdir()):
-            print(f"⏭️ Pomijam {result_dir}, vector db już istnieje")
+            print(f"⏭️ Pomijam {result_dir}, search dir już istnieje")
             continue
 
         result_dir.mkdir(parents=True, exist_ok=True)
         print(f"➡️ Tworzę embeddingi: {result_dir}")
         search_query(
-            search_name,
+            embed_type,
             search_preset_params,
             task_input_dir,
             embed_input_dir,
@@ -94,7 +94,7 @@ def search_all(datasets_cfg, chunking_cfg, embed_cfg,  search_cfg, dataset_dir: 
 def main():
     load_dotenv()
 
-    DATASET_DIR = Path(os.getenv('DATASET_DIR'))
+    DATASET_DIR = Path(os.getenv('DATASETS_DIR'))
     EMBED_DIR = Path(os.getenv('EMBED_DIR'))
     SEARCH_DIR = Path(os.getenv('SEARCH_DIR'))
     SEARCH_DIR.mkdir(parents=True, exist_ok=True)
@@ -113,15 +113,20 @@ def main():
     
     embed_cfg = params.get("vector_embed").get("methods")
     if not embed_cfg:
-        raise ValueError("Nie znaleziono chunking_methods w params.yaml")
+        raise ValueError("Nie znaleziono vector_embed_methods w params.yaml")
     
     search_cfg = params.get("search").get("methods")
     if not search_cfg:
         raise ValueError("Nie znaleziono search_methods w params.yaml")
+    
+    splits = params.get("chunking").get("splits")
+    if not splits:
+        raise ValueError("Nie znaleziono splits w params.yaml")
 
     search_all(
         datasets_cfg=datasets_cfg,
         chunking_cfg=chunking_cfg,
+        splits=splits,
         embed_cfg=embed_cfg,
         search_cfg=search_cfg,
         dataset_dir=DATASET_DIR,
