@@ -7,9 +7,8 @@ from pathlib import Path
 from dotenv import load_dotenv
 import yaml
 
-from src.embed_chunks.get_embedding import embed_chunks
 from src.rerank.rerank_one import rerank_one
-from src.tools.presets import iter_cfg_with_presets, load_presets
+from src.tools.presets import iter_cfg_with_presets
 
 
 def rerank_all(datasets_cfg, chunking_cfg, splits, embed_cfg, search_cfg, rerank_cfg, 

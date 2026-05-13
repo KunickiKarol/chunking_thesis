@@ -40,10 +40,11 @@ def rerank_one(
 
             # cache query
             if query_key not in query_cache:
-                query_cache[query_key] = find_query_by_id(
+                source_id, question_text = find_query_by_id(
                     task_input_dir,
                     query_key
-                )["Question"]
+                )
+                query_cache[query_key] = question_text['Question']
 
             question_text = query_cache[query_key]
 
@@ -56,8 +57,8 @@ def rerank_one(
                     chunk_cache[retrieved_key] = find_chunk_by_retreived_id(
                         embed_input_dir,
                         retrieved_key,
-                        search_file.stem,
-                        chunks_input_dir
+                        chunks_input_dir,
+                        None if search_file.stem == "global" else source_id,
                     )["text"]
 
                 chunk_text = chunk_cache[retrieved_key]

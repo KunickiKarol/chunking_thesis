@@ -10,8 +10,8 @@
 # from src.embed_chunks.embed_chunks_all import main
 # main()
 
-from src.search.search_all import main
-main()
-
-# from src.rerank.rerank_all import main
+# from src.search.search_all import main
 # main()
+
+from src.rerank.rerank_all import main
+main()

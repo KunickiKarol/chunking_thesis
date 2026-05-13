@@ -70,6 +70,10 @@ def embed_chunks(
     metadatas_dir = result_dir / "Metadatas"
     metadatas_dir.mkdir(parents=True, exist_ok=True)
 
+    # Nowy folder na embeddingi jako .npy
+    embeddings_dir = result_dir / "Embeddings"
+    embeddings_dir.mkdir(parents=True, exist_ok=True)
+
     files = list(chunks_input_dir.glob("*.jsonl"))
 
     total_embed_time = 0.0
@@ -79,9 +83,8 @@ def embed_chunks(
     all_embeddings = []
     global_metadata = []
 
-    # ← odczyt embed_type raz przed pętlą
     embed_type = embed_preset_params.get("embed_type")
-
+    embed_index = 0
     for input_path in files:
 
         chunks = load_chunks_from_file(input_path)
@@ -109,25 +112,33 @@ def embed_chunks(
 
         local_metadata = []
 
-        for (i, chunk), embedding in zip(enumerate(chunks), embeddings):
+        for i, chunk in enumerate(chunks):
+            embed_index += 1
             metadata_item = {
-                "id": i,
+                "id": embed_index if embed_type == "global" else i,           # == indeks wiersza w odpowiadającym .npy
                 "source": chunk["source_file"],
                 "chunk_id": chunk["chunk_id"],
-                "embedding": embedding.tolist(),  # konwersja do listy dla JSON
                 "embed_time": embed_time
+                # "embedding" celowo pominięte — przechowywane osobno w .npy
             }
             local_metadata.append(metadata_item)
 
             if embed_type == "global":
                 global_metadata.append(metadata_item)
 
-        # zapis lokalny tylko dla trybu "local"
+        # ====================================
+        # zapis local: metadata JSON + embeddingi .npy
+        # ====================================
+
         if embed_type == "local":
-            metadata_output_file = (
-                metadatas_dir / f"{input_path.stem}.json"
-            )
+            # metadata (bez embeddingów)
+            metadata_output_file = metadatas_dir / f"{input_path.stem}.json"
             save_metadata(local_metadata, metadata_output_file)
+
+            # embeddingi float32 jako .npy — wiersz i == metadata_item["id"]
+            embeddings_output_file = embeddings_dir / f"{input_path.stem}.npy"
+            np.save(str(embeddings_output_file), embeddings)
+            # embeddings.dtype jest już float32 (wymuszony w embed_texts)
 
         # ====================================
         # local index — tylko dla trybu "local"
@@ -168,7 +179,14 @@ def embed_chunks(
         global_index_path = result_dir / "Indexes" / "global.index"
         faiss.write_index(global_index, str(global_index_path))
 
+        # metadata globalna (bez embeddingów)
         save_metadata(global_metadata, metadatas_dir / "global.json")
+
+        # embeddingi globalne float32 jako .npy — wiersz i == global_metadata[i]["id"]
+        # UWAGA: "id" w global_metadata to indeks lokalny w obrębie pliku źródłowego.
+        # Globalny indeks wiersza w tablicy = pozycja elementu na liście global_metadata.
+        global_embeddings_path = embeddings_dir / "global.npy"
+        np.save(str(global_embeddings_path), all_embeddings)
 
         total_embeddings = int(all_embeddings.shape[0])
 

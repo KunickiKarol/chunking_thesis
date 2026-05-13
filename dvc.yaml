@@ -72,7 +72,7 @@ stages:
       - src/rerank/rerank_all.py
       - params.yaml
     outs:
-      - data/rerank/:
+      - data/rerank_result/:
           persist: true
     params:
       - preprocess_datasets.datasets

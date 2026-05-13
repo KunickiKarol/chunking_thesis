@@ -15,7 +15,4 @@ def rank_nothing(
 
     retrieved_chunks = query_tuple[1]
 
-    return [
-        retrieved_key
-        for retrieved_key, _ in retrieved_chunks[:top_k]
-    ]
+    return [list(x.keys())[0] for x in retrieved_chunks[:top_k]]

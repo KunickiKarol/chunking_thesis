@@ -133,17 +133,17 @@ stages:
     outs:
     - path: data/vector_db/
       hash: md5
-      md5: 9e8565fbc992768534047c37eaa44ad5.dir
-      size: 70606700
-      nfiles: 10
+      md5: 1a83574b5653ccbce3ac562f8fab2b56.dir
+      size: 15319388
+      nfiles: 14
   search:
     cmd: python -m src.search.search_all
     deps:
     - path: data/vector_db/
       hash: md5
-      md5: 9e8565fbc992768534047c37eaa44ad5.dir
-      size: 70606700
-      nfiles: 10
+      md5: 1a83574b5653ccbce3ac562f8fab2b56.dir
+      size: 15319388
+      nfiles: 14
     - path: params.yaml
       hash: md5
       md5: 362f2242a4a846b4adaf8e1283d70c38
@@ -180,6 +180,57 @@ stages:
     outs:
     - path: data/search_result/
       hash: md5
-      md5: 61184641048bae08704c918b40bfafea.dir
-      size: 58069
+      md5: e8c06eb4724878fa666113ad96fd13b5.dir
+      size: 58016
       nfiles: 6
+  rerank:
+    cmd: python -m src.rerank.rerank_all
+    deps:
+    - path: data/search_result/
+      hash: md5
+      md5: e8c06eb4724878fa666113ad96fd13b5.dir
+      size: 58016
+      nfiles: 6
+    - path: params.yaml
+      hash: md5
+      md5: 362f2242a4a846b4adaf8e1283d70c38
+      size: 2522
+      isexec: true
+    - path: src/rerank/rerank_all.py
+      hash: md5
+      md5: ec4d0f82a28879daa4cc59be6011b0ad
+      size: 5627
+    params:
+      params.yaml:
+        chunking.methods:
+          fixed_size:
+            presets_file: configs/chunking/fixed_size.yaml
+            use_presets:
+            - fs_512_64_char
+        preprocess_datasets.datasets:
+          literaryQA:
+            presets_file: configs/preprocess_dataset/literaryQA.yaml
+            use_presets:
+            - default
+        rerank.methods:
+          nothing:
+            presets_file: configs/rerank/nothing.yaml
+            use_presets:
+            - default_top3
+        search.methods:
+          faiss:
+            presets_file: configs/search/faiss.yaml
+            use_presets:
+            - default_top5
+        vector_embed.methods:
+          FAISS:
+            presets_file: configs/vector_embed/faiss.yaml
+            use_presets:
+            - default_global
+            - default_local
+    outs:
+    - path: data/rerank_result/
+      hash: md5
+      md5: d62bdf01ece069172e4c8f1b6b8f2cf2.dir
+      size: 7898
+      nfiles: 4
