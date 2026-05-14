@@ -8,6 +8,7 @@ from pathlib import Path
 import yaml
 from dotenv import load_dotenv
 
+from src.generation.generation_one import generation_one
 from src.rerank.rerank_one import rerank_one
 from src.tools.presets import iter_cfg_with_presets
 
@@ -22,8 +23,6 @@ def generation_all(
     generation_cfg,
     dataset_dir: Path,
     chunks_dir: Path,
-    embed_dir: Path,
-    search_dir: Path,
     rerank_dir: Path,
     generation_dir: Path,
 ):
@@ -56,25 +55,11 @@ def generation_all(
         task_type = dataset_preset["params"]["task_type"]
         generation_preset_params = generation_preset["params"]
 
-        task_input_dir = (
-            dataset_dir 
-            / dataset_name 
-            / dataset_preset_name 
-            / "Tasks" 
-            / task_type 
-            / split
-        )
+        task_input_dir = dataset_dir / dataset_name / dataset_preset_name / "Tasks" / task_type / split
 
         chunks_input_dir = (
-            chunks_dir 
-            / dataset_name 
-            / dataset_preset_name 
-            / chunking_name 
-            / chunking_preset_name 
-            / split 
-            / "Books"
+            chunks_dir / dataset_name / dataset_preset_name / chunking_name / chunking_preset_name / split / "Books"
         )
-
 
         rerank_input_dir = (
             rerank_dir
@@ -106,6 +91,7 @@ def generation_all(
             / generation_name
             / generation_preset_name
             / split
+        )
 
         if not task_input_dir.exists():
             print(f"❌ Brak zadań: {task_input_dir}, pomijam...")
@@ -141,8 +127,6 @@ def main():
 
     DATASET_DIR = Path(os.getenv("DATASETS_DIR"))
     CHUNKS_DIR = Path(os.getenv("CHUNKS_DIR"))
-    EMBED_DIR = Path(os.getenv("EMBED_DIR"))
-    SEARCH_DIR = Path(os.getenv("SEARCH_DIR"))
     RERANK_DIR = Path(os.getenv("RERANK_DIR"))
     GENERATION_DIR = Path(os.getenv("GENERATION_DIR"))
     GENERATION_DIR.mkdir(parents=True, exist_ok=True)
@@ -188,8 +172,6 @@ def main():
         generation_cfg=generation_cfg,
         dataset_dir=DATASET_DIR,
         chunks_dir=CHUNKS_DIR,
-        embed_dir=EMBED_DIR,
-        search_dir=SEARCH_DIR,
         rerank_dir=RERANK_DIR,
         generation_dir=GENERATION_DIR,
     )

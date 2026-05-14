@@ -1,13 +1,13 @@
 from typing import Callable, Dict, List
 
-RerankerFn = Callable[[str], List[str]]
+GeneratorFn = Callable[[str], List[str]]
 
-RERANKERS: Dict[str, RerankerFn] = {}
+GENERATORS: Dict[str, GeneratorFn] = {}
 
 
-def register_reranker(name: str):
-    def decorator(fn: RerankerFn):
-        RERANKERS[name] = fn
+def register_generator(name: str):
+    def decorator(fn: GeneratorFn):
+        GENERATORS[name] = fn
         return fn
 
     return decorator

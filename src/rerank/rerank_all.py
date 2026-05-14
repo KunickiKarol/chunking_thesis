@@ -121,7 +121,6 @@ def rerank_all(
         rerank_one(
             rerank_name,
             rerank_preset_params,
-            split,
             task_input_dir,
             chunks_input_dir,
             embed_input_dir,

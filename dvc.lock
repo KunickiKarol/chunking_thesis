@@ -5,13 +5,13 @@ stages:
     deps:
     - path: params.yaml
       hash: md5
-      md5: 7015e86c79fb91003f498443cdda8545
-      size: 2596
+      md5: 4e2072595f2726e9dce84e88e8060af6
+      size: 2594
       isexec: true
     - path: src/download_datasets/download_datasets_all.py
       hash: md5
-      md5: b983d2dce70583d30a14903014d3bd5e
-      size: 1839
+      md5: 29354d39e1d41be0e397e24c2da5dcf0
+      size: 1841
       isexec: true
     params:
       params.yaml:
@@ -20,26 +20,26 @@ stages:
     outs:
     - path: data/downloads/
       hash: md5
-      md5: 9ff7bdcc22ea8db485d2ad2045226936.dir
-      size: 1635703929
+      md5: fa366c6456e294d155b04f211d797292.dir
+      size: 1635710954
       nfiles: 8218
   preprocess_datasets:
     cmd: python -m src.preprocess_datasets.preprocess_datasets_all
     deps:
     - path: data/downloads/
       hash: md5
-      md5: 9ff7bdcc22ea8db485d2ad2045226936.dir
-      size: 1635703929
+      md5: fa366c6456e294d155b04f211d797292.dir
+      size: 1635710954
       nfiles: 8218
     - path: params.yaml
       hash: md5
-      md5: 7015e86c79fb91003f498443cdda8545
-      size: 2596
+      md5: 4e2072595f2726e9dce84e88e8060af6
+      size: 2594
       isexec: true
     - path: src/preprocess_datasets/preprocess_datasets_all.py
       hash: md5
-      md5: f68861d67a7827037f2221eaf3face34
-      size: 2293
+      md5: fd542dc90fb8248616a40b8ee5327523
+      size: 2231
       isexec: true
     params:
       params.yaml:
@@ -52,29 +52,41 @@ stages:
               presets_file: configs/preprocess_dataset/literaryQA.yaml
               use_presets:
               - default
+            novelQA:
+              presets_file: configs/preprocess_dataset/novelQA.yaml
+              use_presets:
+              - default
+            infiniteBenchQA:
+              presets_file: configs/preprocess_dataset/infiniteBenchQA.yaml
+              use_presets:
+              - default
+            infiniteBenchChoice:
+              presets_file: configs/preprocess_dataset/infiniteBenchChoice.yaml
+              use_presets:
+              - default
     outs:
     - path: data/datasets/
       hash: md5
-      md5: c106e6e22d7d7dbbf6e35cc958cf5c77.dir
-      size: 488526545
+      md5: 2de97dd140a04b46834d33f8d4040743.dir
+      size: 488478244
       nfiles: 1742
   chunking_text:
     cmd: python -m src.chunking.chunking_text_all
     deps:
     - path: data/datasets/
       hash: md5
-      md5: c106e6e22d7d7dbbf6e35cc958cf5c77.dir
-      size: 488526545
+      md5: 2de97dd140a04b46834d33f8d4040743.dir
+      size: 488478244
       nfiles: 1742
     - path: params.yaml
       hash: md5
-      md5: 7015e86c79fb91003f498443cdda8545
-      size: 2596
+      md5: 4e2072595f2726e9dce84e88e8060af6
+      size: 2594
       isexec: true
     - path: src/chunking/chunking_text_all.py
       hash: md5
-      md5: 0af49032b67ca7e1e30e64c8a5d2af28
-      size: 2608
+      md5: 96e22ab323d24e16fd4e55ce57a7b37d
+      size: 2438
       isexec: true
     params:
       params.yaml:
@@ -88,29 +100,41 @@ stages:
             presets_file: configs/preprocess_dataset/literaryQA.yaml
             use_presets:
             - default
+          novelQA:
+            presets_file: configs/preprocess_dataset/novelQA.yaml
+            use_presets:
+            - default
+          infiniteBenchQA:
+            presets_file: configs/preprocess_dataset/infiniteBenchQA.yaml
+            use_presets:
+            - default
+          infiniteBenchChoice:
+            presets_file: configs/preprocess_dataset/infiniteBenchChoice.yaml
+            use_presets:
+            - default
     outs:
     - path: data/chunks/
       hash: md5
-      md5: 2a0286020584285ecf5199869e9bd1e9.dir
-      size: 1750482
-      nfiles: 4
+      md5: b4b7d56f936cd8cbbcaad0320704965d.dir
+      size: 17728223
+      nfiles: 16
   embed_chunks:
     cmd: python -m src.embed_chunks.embed_chunks_all
     deps:
     - path: data/chunks/
       hash: md5
-      md5: 2a0286020584285ecf5199869e9bd1e9.dir
-      size: 1750482
-      nfiles: 4
+      md5: b4b7d56f936cd8cbbcaad0320704965d.dir
+      size: 17728223
+      nfiles: 16
     - path: params.yaml
       hash: md5
-      md5: 7015e86c79fb91003f498443cdda8545
-      size: 2596
+      md5: 4e2072595f2726e9dce84e88e8060af6
+      size: 2594
       isexec: true
     - path: src/embed_chunks/embed_chunks_all.py
       hash: md5
-      md5: 50c160b818fd5e5933e750068fe2bcbc
-      size: 3217
+      md5: 1b421a16805eda0e5f278eccb32c99ef
+      size: 3112
       isexec: true
     params:
       params.yaml:
@@ -122,6 +146,18 @@ stages:
         preprocess_datasets.datasets:
           literaryQA:
             presets_file: configs/preprocess_dataset/literaryQA.yaml
+            use_presets:
+            - default
+          novelQA:
+            presets_file: configs/preprocess_dataset/novelQA.yaml
+            use_presets:
+            - default
+          infiniteBenchQA:
+            presets_file: configs/preprocess_dataset/infiniteBenchQA.yaml
+            use_presets:
+            - default
+          infiniteBenchChoice:
+            presets_file: configs/preprocess_dataset/infiniteBenchChoice.yaml
             use_presets:
             - default
         vector_embed.methods:
@@ -133,26 +169,26 @@ stages:
     outs:
     - path: data/vector_db/
       hash: md5
-      md5: 8659b03a0881370362d045392bfcc76a.dir
-      size: 15319382
-      nfiles: 14
+      md5: 955c84f86722cf5c3fd9d85ab27ba697.dir
+      size: 153927633
+      nfiles: 56
   search:
     cmd: python -m src.search.search_all
     deps:
     - path: data/vector_db/
       hash: md5
-      md5: 8659b03a0881370362d045392bfcc76a.dir
-      size: 15319382
-      nfiles: 14
+      md5: 955c84f86722cf5c3fd9d85ab27ba697.dir
+      size: 153927633
+      nfiles: 56
     - path: params.yaml
       hash: md5
-      md5: 7015e86c79fb91003f498443cdda8545
-      size: 2596
+      md5: 4e2072595f2726e9dce84e88e8060af6
+      size: 2594
       isexec: true
     - path: src/search/search_all.py
       hash: md5
-      md5: d50af5be6db9a4451e7f6d392767cffa
-      size: 4285
+      md5: 467abf66d3ce26bcc1bb1ac757b9d5ff
+      size: 4173
       isexec: true
     params:
       params.yaml:
@@ -164,6 +200,18 @@ stages:
         preprocess_datasets.datasets:
           literaryQA:
             presets_file: configs/preprocess_dataset/literaryQA.yaml
+            use_presets:
+            - default
+          novelQA:
+            presets_file: configs/preprocess_dataset/novelQA.yaml
+            use_presets:
+            - default
+          infiniteBenchQA:
+            presets_file: configs/preprocess_dataset/infiniteBenchQA.yaml
+            use_presets:
+            - default
+          infiniteBenchChoice:
+            presets_file: configs/preprocess_dataset/infiniteBenchChoice.yaml
             use_presets:
             - default
         search.methods:
@@ -180,16 +228,16 @@ stages:
     outs:
     - path: data/search_result/
       hash: md5
-      md5: bc4234582030ac1b12194a3755d790f5.dir
-      size: 58047
-      nfiles: 6
+      md5: 6f2a00363051b2fb8cd12bd24ab3b4d6.dir
+      size: 155240
+      nfiles: 24
   rerank:
     cmd: python -m src.rerank.rerank_all
     deps:
     - path: data/search_result/
       hash: md5
-      md5: bc4234582030ac1b12194a3755d790f5.dir
-      size: 58047
+      md5: 1e68fbdfbce7a959a816de309e529d83.dir
+      size: 58071
       nfiles: 6
     - path: params.yaml
       hash: md5
@@ -198,8 +246,8 @@ stages:
       isexec: true
     - path: src/rerank/rerank_all.py
       hash: md5
-      md5: 24fc3ecabae4e4da501a98d8e3148a70
-      size: 5529
+      md5: 591bea23f27005bf969be9c21c9ba3ce
+      size: 5340
     params:
       params.yaml:
         chunking.methods:
@@ -237,6 +285,6 @@ stages:
     outs:
     - path: data/rerank_result/
       hash: md5
-      md5: 6c6d42402f967a11bd288e07a4b360a4.dir
+      md5: 8c3193d9fadd0617b6f0531622192122.dir
       size: 33174
       nfiles: 16

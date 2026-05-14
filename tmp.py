@@ -13,6 +13,9 @@
 # from src.search.search_all import main
 # main()
 
-from src.rerank.rerank_all import main
+# from src.rerank.rerank_all import main
+# main()
+
+from src.generation.generation_all import main
 
 main()

@@ -1,6 +1,0 @@
-presets:
-  - name: default
-    params:
-      model: Qwen3.5-4B
-      token_limit: 8192
-

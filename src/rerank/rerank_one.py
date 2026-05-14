@@ -9,7 +9,6 @@ from src.tools.find_content import find_chunk_by_retreived_id, find_query_by_id
 def rerank_one(
     rerank_name,
     rerank_preset_params,
-    split,
     task_input_dir: Path,
     chunks_input_dir: Path,
     embed_input_dir: Path,

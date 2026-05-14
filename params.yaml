@@ -12,18 +12,18 @@ preprocess_datasets:
       presets_file: configs/preprocess_dataset/literaryQA.yaml
       use_presets:
         - default  # 'chapter' or 'page' or 'none'
-    # novelQA:
-    #   presets_file: configs/preprocess_dataset/novelQA.yaml
-    #   use_presets:
-    #     - default  # 'chapter' or 'page' or 'none'
-    # infiniteBenchQA:
-    #   presets_file: configs/preprocess_dataset/infiniteBenchQA.yaml
-    #   use_presets:
-    #     - default  # 'chapter' or 'page' or 'none'
-    # infiniteBenchChoice:
-    #   presets_file: configs/preprocess_dataset/infiniteBenchChoice.yaml
-    #   use_presets:
-    #     - default  # 'chapter' or 'page' or 'none'
+    novelQA:
+      presets_file: configs/preprocess_dataset/novelQA.yaml
+      use_presets:
+        - default  # 'chapter' or 'page' or 'none'
+    infiniteBenchQA:
+      presets_file: configs/preprocess_dataset/infiniteBenchQA.yaml
+      use_presets:
+        - default  # 'chapter' or 'page' or 'none'
+    infiniteBenchChoice:
+      presets_file: configs/preprocess_dataset/infiniteBenchChoice.yaml
+      use_presets:
+        - default  # 'chapter' or 'page' or 'none'
 
 chunking:
   splits: ["examples"]
@@ -92,7 +92,7 @@ rerank:
 
 generation:
   methods:
-    fixed_token:
-      presets_file: configs/generation/fixed_token.yaml
+    generate_fixed_token:
+      presets_file: configs/generation/generate_fixed_token.yaml
       use_presets:
-        - default
+        - nemotron_9b

@@ -48,10 +48,10 @@ class NovelQAPreprocessor:
         self._annotate_bookmeta(bookmeta, split_map, example_map)
         self._save_bookmeta(bookmeta)
 
-        docs_count, total_token_len = self._copy_files_by_split(
+        docs_count, total_token_len = self._copy_books_by_split(
             self.books_src, books_dst, split_map, example_map, ".txt", do_tokenize=True
         )
-        tasks_count, _ = self._copy_files_by_split(self.tasks_src, tasks_dst, split_map, example_map, ".json")
+        tasks_count, _ = self._copy_tasks_by_split(self.tasks_src, tasks_dst, split_map, example_map, ".json")
 
         print("✅ novelQA preprocessing finished")
         self._save_meta(total_token_len, docs_count, tasks_count, n_test, n_val, n_train)
@@ -142,7 +142,7 @@ class NovelQAPreprocessor:
         with open(self.dataset_path / "meta.json", "w", encoding="utf-8") as f:
             json.dump(meta, f, ensure_ascii=False, indent=2)
 
-    def _copy_files_by_split(
+    def _copy_books_by_split(
         self,
         src_dir: Path,
         dst_dir: Path,
@@ -175,6 +175,57 @@ class NovelQAPreprocessor:
             if do_tokenize:
                 with open(file_path, "r", encoding="utf-8") as f:
                     content = f.read()
+                total_token_len += tokenizer.tokenize(content)["token_count"]
+
+        return docs_count, total_token_len
+
+    def _copy_tasks_by_split(
+        self,
+        src_dir: Path,
+        dst_dir: Path,
+        split_map: Dict[str, str],
+        example_map: Dict[str, list[str]],
+        extension: str,
+        do_tokenize: bool = False,
+    ):
+        docs_count = 0
+        total_token_len = 0
+
+        if do_tokenize:
+            tokenizer = TokenizerService()
+
+        extra_splits = {}
+        for split_name, ids in example_map.items():
+            for bookid in ids:
+                extra_splits.setdefault(bookid, []).append(split_name)
+
+        for file_path in src_dir.rglob(f"*{extension}"):
+            bookid = file_path.stem
+            base_split = split_map.get(bookid, "train")
+            docs_count += 1
+
+            # Wczytaj JSON
+            with open(file_path, "r", encoding="utf-8") as f:
+                data = json.load(f)
+
+            # Zamień Options dict -> list
+            for question_data in data.values():
+                if "Options" in question_data and isinstance(question_data["Options"], dict):
+                    question_data["Options"] = list(question_data["Options"].values())
+
+            # Zapisz do splitu bazowego
+            output_path = dst_dir / base_split / file_path.name
+            with open(output_path, "w", encoding="utf-8") as f:
+                json.dump(data, f, ensure_ascii=False, indent=4)
+
+            # Zapisz do dodatkowych splitów
+            for extra_split in extra_splits.get(bookid, []):
+                output_path = dst_dir / extra_split / file_path.name
+                with open(output_path, "w", encoding="utf-8") as f:
+                    json.dump(data, f, ensure_ascii=False, indent=4)
+
+            if do_tokenize:
+                content = json.dumps(data, ensure_ascii=False)
                 total_token_len += tokenizer.tokenize(content)["token_count"]
 
         return docs_count, total_token_len
