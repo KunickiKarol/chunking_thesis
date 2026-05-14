@@ -13,7 +13,7 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 from tqdm import tqdm
 
 from src.generation.methods.register import register_generator
-from src.generation.prompts.all_prompts import generate_prompt
+from src.generation.prompts.all_generation import generate_prompt
 from src.tools.extract_llm import _extract_answer
 from src.tools.tokenizer_service import TokenizerService
 

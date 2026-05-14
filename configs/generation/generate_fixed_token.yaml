@@ -1,13 +1,13 @@
 presets:
-  - name: nemotron_9b
+  - name: qwen_4b
     params:
       inference_mode: hf
-      model: nvidia/NVIDIA-Nemotron-Nano-9B-v2
+      model: Qwen/Qwen3-4B-Instruct-2507
       token_limit: 8192
       max_new_tokens: 512
       prompt_template: default_prompt
-      tokenizer_backend: tiktoken
-      tokenizer_model_name: gpt-4
+      tokenizer_backend: Qwen/Qwen3-4B-Instruct-2507
+      tokenizer_model_name: hf
   - name: deepseek_1_5b
     params:
       inference_mode: hf  
@@ -15,6 +15,6 @@ presets:
       token_limit: 8192
       max_new_tokens: 512
       prompt_template: default_prompt
-      tokenizer_backend: tiktoken
-      tokenizer_model_name: gpt-4
+      tokenizer_backend: Qwen/Qwen3-4B-Instruct-2507
+      tokenizer_model_name: hf
 

@@ -84,7 +84,7 @@ stages:
   generation:
     cmd: python -m src.generation.generation_all
     deps:
-      - data/search_result/
+      - data/rerank_result/
       - src/generation/generation_all.py
       - params.yaml
     outs:
@@ -97,5 +97,23 @@ stages:
       - search.methods
       - rerank.methods
       - generation.methods
+
+  evaluate_generator:
+    cmd: python -m src.evaluate_generator.evaluate_generator_all
+    deps:
+      - data/generation_result/
+      - src/evaluate_generator/evaluate_generator_all.py
+      - params.yaml
+    outs:
+      - data/evaluate_generator_result/:
+          persist: true
+    params:
+      - preprocess_datasets.datasets
+      - chunking.methods
+      - vector_embed.methods
+      - search.methods
+      - rerank.methods
+      - generation.methods
+      - evaluate_generator.methods
 
 
