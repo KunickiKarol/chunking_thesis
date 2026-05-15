@@ -45,22 +45,22 @@ chunking:
     #   presets_file: configs/chunking/neural.yaml
     #   use_presets:
     #     - default
-    # chonkie_semantic:
-    #   presets_file: configs/chunking/chonkie_semantic.yaml
-    #   use_presets:
-    #     - default
+    chonkie_semantic:
+      presets_file: configs/chunking/chonkie_semantic.yaml
+      use_presets:
+        - default
     # lumber:
     #   presets_file: configs/chunking/lumber.yaml
     #   use_presets:
     #     - default
-    # max_min:
-    #   presets_file: configs/chunking/max_min.yaml
-    #   use_presets:
-    #     - liberal
-    # sequential_hac:
-    #   presets_file: configs/chunking/sequential_hac.yaml
-    #   use_presets:
-    #     - liberal
+    max_min:
+      presets_file: configs/chunking/max_min.yaml
+      use_presets:
+        - liberal
+    sequential_hac:
+      presets_file: configs/chunking/sequential_hac.yaml
+      use_presets:
+        - liberal
 
 vector_embed:
   methods:
@@ -75,7 +75,7 @@ search:
     faiss:
       presets_file: configs/search/faiss.yaml
       use_presets:
-        - default_top5
+        - default_top10
 
 rerank:
   methods:
@@ -87,12 +87,19 @@ rerank:
     reranker:
       presets_file: configs/rerank/reranker.yaml
       use_presets:
-        - default_top3
+        - default_top5
         # - default_top3_op
 
 generation:
   methods:
     generate_fixed_token:
       presets_file: configs/generation/generate_fixed_token.yaml
+      use_presets:
+        - qwen_4b
+
+evaluate_generator:
+  methods:
+    llm_as_a_judge:
+      presets_file: configs/evaluate_generator/llm_as_a_judge.yaml
       use_presets:
         - qwen_4b

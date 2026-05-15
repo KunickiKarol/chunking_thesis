@@ -1,7 +1,8 @@
 import importlib
 import pkgutil
 
-from src.generation.prompts.register import PROMPTS
+from src.evaluate_generator.prompts.register import PROMPTS
+
 
 
 def load_prompt():
@@ -10,9 +11,9 @@ def load_prompt():
     żeby dekoratory @register_prompt się odpaliły.
     """
 
-    package = "src.generation.prompts"
+    package = "src.evaluate_generator.prompts"
     for _, module_name, _ in pkgutil.iter_modules(importlib.import_module(package).__path__):
-        if module_name in {"register", "all_generation"}:
+        if module_name in {"register", "all_prompts"}:
             continue
 
         importlib.import_module(f"{package}.{module_name}")
@@ -22,9 +23,9 @@ def load_prompt():
 load_prompt()
 
 
-def generate_prompt(prompt_name: str, question_text, question_options, are_options, chunks):
+def generate_prompt(prompt_name: str, question_text, gold_answers_text, llm_answer):
     try:
         fn = PROMPTS[prompt_name]
     except KeyError:
         raise ValueError(f"Unknown prompt type: {prompt_name}")
-    return fn(question_text, question_options, are_options, chunks)
+    return fn(question_text, gold_answers_text, llm_answer)

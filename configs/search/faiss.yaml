@@ -3,4 +3,7 @@ presets:
     params:
       embbeder: all-MiniLM-L6-v2
       top_k: 5
-
+  - name: default_top10
+    params:
+      embbeder: all-MiniLM-L6-v2
+      top_k: 10

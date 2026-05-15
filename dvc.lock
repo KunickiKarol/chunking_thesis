@@ -5,8 +5,8 @@ stages:
     deps:
     - path: params.yaml
       hash: md5
-      md5: 50d44a41cdfe4b9cd77fe4b6b97ec27c
-      size: 2618
+      md5: 4f5bd66de6640b224f565d4b2b1f1d39
+      size: 2781
       isexec: true
     - path: src/download_datasets/download_datasets_all.py
       hash: md5
@@ -33,8 +33,8 @@ stages:
       nfiles: 8218
     - path: params.yaml
       hash: md5
-      md5: 50d44a41cdfe4b9cd77fe4b6b97ec27c
-      size: 2618
+      md5: 4f5bd66de6640b224f565d4b2b1f1d39
+      size: 2781
       isexec: true
     - path: src/preprocess_datasets/preprocess_datasets_all.py
       hash: md5
@@ -72,8 +72,8 @@ stages:
       nfiles: 1742
     - path: params.yaml
       hash: md5
-      md5: 50d44a41cdfe4b9cd77fe4b6b97ec27c
-      size: 2618
+      md5: 4f5bd66de6640b224f565d4b2b1f1d39
+      size: 2781
       isexec: true
     - path: src/chunking/chunking_text_all.py
       hash: md5
@@ -112,8 +112,8 @@ stages:
       nfiles: 8
     - path: params.yaml
       hash: md5
-      md5: 50d44a41cdfe4b9cd77fe4b6b97ec27c
-      size: 2618
+      md5: 4f5bd66de6640b224f565d4b2b1f1d39
+      size: 2781
       isexec: true
     - path: src/embed_chunks/embed_chunks_all.py
       hash: md5
@@ -158,8 +158,8 @@ stages:
       nfiles: 28
     - path: params.yaml
       hash: md5
-      md5: 50d44a41cdfe4b9cd77fe4b6b97ec27c
-      size: 2618
+      md5: 4f5bd66de6640b224f565d4b2b1f1d39
+      size: 2781
       isexec: true
     - path: src/search/search_all.py
       hash: md5
@@ -209,8 +209,8 @@ stages:
       nfiles: 12
     - path: params.yaml
       hash: md5
-      md5: 50d44a41cdfe4b9cd77fe4b6b97ec27c
-      size: 2618
+      md5: 4f5bd66de6640b224f565d4b2b1f1d39
+      size: 2781
       isexec: true
     - path: src/rerank/rerank_all.py
       hash: md5
@@ -264,13 +264,13 @@ stages:
       nfiles: 8
     - path: params.yaml
       hash: md5
-      md5: 50d44a41cdfe4b9cd77fe4b6b97ec27c
-      size: 2618
+      md5: 4f5bd66de6640b224f565d4b2b1f1d39
+      size: 2781
       isexec: true
     - path: src/generation/generation_all.py
       hash: md5
-      md5: beb605c54997c3dff384c067315058d4
-      size: 5456
+      md5: 6323325c3194a90d6d391aac9a2b84e1
+      size: 5437
     params:
       params.yaml:
         chunking.methods:
@@ -313,4 +313,69 @@ stages:
       hash: md5
       md5: 0aca2ce04e1214dd13713d119f0ccd24.dir
       size: 12121
+      nfiles: 8
+  evaluate_generator:
+    cmd: python -m src.evaluate_generator.evaluate_generator_all
+    deps:
+    - path: data/generation_result/
+      hash: md5
+      md5: 0aca2ce04e1214dd13713d119f0ccd24.dir
+      size: 12121
+      nfiles: 8
+    - path: params.yaml
+      hash: md5
+      md5: 4f5bd66de6640b224f565d4b2b1f1d39
+      size: 2781
+      isexec: true
+    - path: src/evaluate_generator/evaluate_generator_all.py
+      hash: md5
+      md5: ac8e47767d3955ba77013aecd87f9770
+      size: 5938
+    params:
+      params.yaml:
+        chunking.methods:
+          fixed_size:
+            presets_file: configs/chunking/fixed_size.yaml
+            use_presets:
+            - fs_512_64_char
+        evaluate_generator.methods:
+          llm_as_a_judge:
+            presets_file: configs/evaluate_generator/llm_as_a_judge.yaml
+            use_presets:
+            - qwen_4b
+        generation.methods:
+          generate_fixed_token:
+            presets_file: configs/generation/generate_fixed_token.yaml
+            use_presets:
+            - qwen_4b
+        preprocess_datasets.datasets:
+          infiniteBenchQA:
+            presets_file: configs/preprocess_dataset/infiniteBenchQA.yaml
+            use_presets:
+            - default
+          infiniteBenchChoice:
+            presets_file: configs/preprocess_dataset/infiniteBenchChoice.yaml
+            use_presets:
+            - default
+        rerank.methods:
+          reranker:
+            presets_file: configs/rerank/reranker.yaml
+            use_presets:
+            - default_top3
+        search.methods:
+          faiss:
+            presets_file: configs/search/faiss.yaml
+            use_presets:
+            - default_top5
+        vector_embed.methods:
+          FAISS:
+            presets_file: configs/vector_embed/faiss.yaml
+            use_presets:
+            - default_global
+            - default_local
+    outs:
+    - path: data/evaluate_generator_result/
+      hash: md5
+      md5: 6ea92286d4ca03e536817cae1b641e83.dir
+      size: 4103
       nfiles: 8

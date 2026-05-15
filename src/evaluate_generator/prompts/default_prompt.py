@@ -1,80 +1,71 @@
-import re
-from src.generation.prompts.register import register_prompt
-
+from src.evaluate_generator.prompts.register import register_prompt
 
 @register_prompt("default_prompt")
-def default_prompt(question_text, question_options, are_options, chunks):
-    context = "\n".join([f"[{i+1}] {chunk}" for i, chunk in enumerate(chunks)])
+def default_prompt(
+    question_text,
+    gold_answers_text,
+    llm_answer
+):
 
-    if are_options:
-        options_text = "\n".join([f"{chr(65+i)}. {opt}" for i, opt in enumerate(question_options)])
+    system_prompt = """\
+You are a highly strict and reliable evaluation engine for answer correctness.
 
-        system_prompt = """\
-You are a precise literary analysis assistant. Your ONLY job is to output the correct answer letter.
+Your role is to act as an LLM-as-a-judge that compares a candidate answer against a set of reference (gold) answers and decides whether it is correct.
 
-STRICT OUTPUT FORMAT — no exceptions:
-Answer: <single letter>
+You do NOT solve the question. You only evaluate semantic equivalence.
 
-Examples of CORRECT output:
-Answer: B
-Answer: D
+========================
+EVALUATION PRINCIPLES
+========================
 
-Examples of INCORRECT output (NEVER do this):
-- "The answer is B because..."
-- "Based on the context, B"
-- "Let me think... Answer: B"
-- Any text before or after "Answer: X"
+1. Semantic equivalence is required:
+   - The candidate answer is correct if it expresses the same meaning as ANY one gold answer.
+   - Paraphrases, reordering, and minor syntactic differences are acceptable.
 
-Rules:
-- Read the context carefully before answering.
-- Use process of elimination on wrong options.
-- Output EXACTLY one line: Answer: <letter>
-- Do NOT include any reasoning, explanation, preamble, or postamble.\
+2. No guessing:
+   - If equivalence is uncertain → mark INCORRECT.
+
+3. Ignore style:
+   - Ignore grammar, formatting, verbosity, and tone.
+
+4. Focus ONLY on meaning:
+   - Do not be influenced by length, confidence, or persuasion.
+
+========================
+OUTPUT CONSTRAINTS (HARD RULE)
+========================
+
+Return ONLY one line:
+
+Verdict: correct
+OR
+Verdict: incorrect
+
+No explanations.
+No additional text.
+No punctuation variations.
+No extra lines.
+
+Any deviation is invalid.
 """
 
-        user_prompt = f"""\
+    user_prompt = f"""\
 Question:
 {question_text}
 
-Options:
-{options_text}
+Gold answers (reference set, ANY one is sufficient):
+{gold_answers_text}
 
-Context:
-{context}
+Candidate answer:
+{llm_answer}
 
-Which option is correct? Output only: Answer: <letter>"""
+Task:
+Compare the candidate answer with the gold answers and decide if it is semantically equivalent to at least one of them.
 
-    else:
-        system_prompt = """\
-You are a precise literary analysis assistant. Your ONLY job is to output a short, factual answer.
-
-STRICT OUTPUT FORMAT — no exceptions:
-Answer: <your concise answer>
-
-Examples of CORRECT output:
-Answer: Sarrasine plans to kidnap Zambinella during the performance.
-Answer: The theme is the conflict between illusion and reality.
-
-Examples of INCORRECT output (NEVER do this):
-- Long paragraphs before "Answer:"
-- "Based on the context, the answer is..."
-- Any reasoning, thinking steps, or commentary
-- Repeating the question
-
-Rules:
-- Answer must be 1-2 sentences maximum.
-- Use only information from the provided context.
-- Output EXACTLY one line starting with "Answer:"
-- Do NOT include any text before or after that line.\
+Return only:
+Verdict: correct
+or
+Verdict: incorrect
 """
-
-        user_prompt = f"""\
-Question:
-{question_text}
-
-Context:
-{context}
-
-Provide only: Answer: <concise answer>"""
 
     return system_prompt, user_prompt

@@ -1,6 +1,3 @@
-#!/usr/bin/env python
-import argparse
-import json
 import os
 from itertools import product
 from pathlib import Path
@@ -8,8 +5,7 @@ from pathlib import Path
 import yaml
 from dotenv import load_dotenv
 
-from src.generation.generation_one import generation_one
-from src.rerank.rerank_one import rerank_one
+from src.evaluate_generator.evaluate_generator_one import evaluate_generator_one
 from src.tools.presets import iter_cfg_with_presets
 
 
@@ -21,10 +17,10 @@ def generation_all(
     search_cfg,
     rerank_cfg,
     generation_cfg,
+    evaluator_cfg,
     dataset_dir: Path,
-    chunks_dir: Path,
-    rerank_dir: Path,
     generation_dir: Path,
+    evaluator_dir: Path,
 ):
     print(f"➡️ Generation: {generation_dir}")
     for (
@@ -34,6 +30,7 @@ def generation_all(
         (search_name, search_preset),
         (rerank_name, rerank_preset),
         (generation_name, generation_preset),
+        (evaluator_name, evaluator_preset),
         split,
     ) in product(
         iter_cfg_with_presets(datasets_cfg),
@@ -42,6 +39,7 @@ def generation_all(
         iter_cfg_with_presets(search_cfg),
         iter_cfg_with_presets(rerank_cfg),
         iter_cfg_with_presets(generation_cfg),
+        iter_cfg_with_presets(evaluator_cfg),
         splits,
     ):
 
@@ -51,32 +49,14 @@ def generation_all(
         search_preset_name = search_preset["name"]
         generation_preset_name = generation_preset["name"]
         rerank_preset_name = rerank_preset["name"]
+        evaluator_preset_name = evaluator_preset["name"]
 
         task_type = dataset_preset["params"]["task_type"]
         generation_preset_params = generation_preset["params"]
 
         task_input_dir = dataset_dir / dataset_name / dataset_preset_name / "Tasks" / task_type / split
 
-        chunks_input_dir = (
-            chunks_dir / dataset_name / dataset_preset_name / chunking_name / chunking_preset_name / split / "Books"
-        )
-
-        rerank_input_dir = (
-            rerank_dir
-            / dataset_name
-            / dataset_preset_name
-            / chunking_name
-            / chunking_preset_name
-            / embed_name
-            / embed_preset_name
-            / search_name
-            / search_preset_name
-            / rerank_name
-            / rerank_preset_name
-            / split
-        )
-
-        result_dir = (
+        generation_input_dir = (
             generation_dir
             / dataset_name
             / dataset_preset_name
@@ -93,16 +73,31 @@ def generation_all(
             / split
         )
 
+        result_dir = (
+            evaluator_dir
+            / dataset_name
+            / dataset_preset_name
+            / chunking_name
+            / chunking_preset_name
+            / embed_name
+            / embed_preset_name
+            / search_name
+            / search_preset_name
+            / rerank_name
+            / rerank_preset_name
+            / generation_name
+            / generation_preset_name
+            / evaluator_name
+            / evaluator_preset_name
+            / split
+        )
+
         if not task_input_dir.exists():
             print(f"❌ Brak zadań: {task_input_dir}, pomijam...")
             continue
 
-        if not chunks_input_dir.exists():
-            print(f"❌ Brak chunków: {chunks_input_dir}, pomijam...")
-            continue
-
-        if not rerank_input_dir.exists():
-            print(f"❌ Brak rerank: {rerank_input_dir}, pomijam...")
+        if not generation_input_dir.exists():
+            print(f"❌ Brak generacji: {generation_input_dir}, pomijam...")
             continue
 
         if result_dir.exists() and any(p.is_file() for p in result_dir.iterdir()):
@@ -111,13 +106,11 @@ def generation_all(
 
         result_dir.mkdir(parents=True, exist_ok=True)
 
-        generation_one(
+        evaluate_generator_one(
             generation_name,
             generation_preset_params,
-            split,
             task_input_dir,
-            chunks_input_dir,
-            rerank_input_dir,
+            generation_input_dir,
             result_dir,
         )
 
@@ -126,10 +119,9 @@ def main():
     load_dotenv()
 
     DATASET_DIR = Path(os.getenv("DATASETS_DIR"))
-    CHUNKS_DIR = Path(os.getenv("CHUNKS_DIR"))
-    RERANK_DIR = Path(os.getenv("RERANK_DIR"))
     GENERATION_DIR = Path(os.getenv("GENERATION_DIR"))
-    GENERATION_DIR.mkdir(parents=True, exist_ok=True)
+    EVALUATION_DIR = Path(os.getenv("EVALUATION_DIR"))
+    EVALUATION_DIR.mkdir(parents=True, exist_ok=True)
 
     with open("params.yaml", "r", encoding="utf-8") as f:
         params = yaml.safe_load(f)
@@ -157,6 +149,10 @@ def main():
     generation_cfg = params.get("generation").get("methods")
     if not generation_cfg:
         raise ValueError("Nie znaleziono generation_methods w params.yaml")
+    
+    evaluator_cfg = params.get("evaluation").get("methods")
+    if not evaluator_cfg:
+        raise ValueError("Nie znaleziono evaluation_methods w params.yaml")
 
     splits = params.get("chunking").get("splits")
     if not splits:
@@ -170,10 +166,10 @@ def main():
         search_cfg=search_cfg,
         rerank_cfg=rerank_cfg,
         generation_cfg=generation_cfg,
+        evaluator_cfg=evaluator_cfg,
         dataset_dir=DATASET_DIR,
-        chunks_dir=CHUNKS_DIR,
-        rerank_dir=RERANK_DIR,
         generation_dir=GENERATION_DIR,
+        evaluator_dir=EVALUATION_DIR,
     )
 
 

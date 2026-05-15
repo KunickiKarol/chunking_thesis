@@ -12,42 +12,10 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 
 from tqdm import tqdm
 
-from src.generation.methods.register import register_generator
-from src.generation.prompts.all_generation import generate_prompt
-from src.tools.extract_llm import _extract_answer
+from src.evaluate_generator.methods.register import register_evaluator_generator
+from src.evaluate_generator.prompts.all_prompts import generate_prompt
+from src.tools.extract_llm import extract_verdict
 from src.tools.tokenizer_service import TokenizerService
-
-# ---------------------------------------------------------------------------
-# Token counting helper
-# ---------------------------------------------------------------------------
-
-
-def _count_tokens(tokenizer, text: str) -> int:
-    """Count tokens for a given text using the tokenizer."""
-    return len(tokenizer.encode(text))
-
-
-def _select_chunks_within_limit(
-    chunks: List[str],
-    token_limit: int,
-    tokenizer,
-    prompt_overhead: int = 0,
-) -> List[str]:
-    """
-    Dodawaj kolejne chunki dopóki nie przekroczymy token_limit.
-    prompt_overhead to liczba tokenów zajętych już przez prompt bez chunków.
-    """
-    selected = []
-    used_tokens = prompt_overhead
-
-    for chunk in chunks:
-        chunk_tokens = _count_tokens(tokenizer, chunk)
-        if used_tokens + chunk_tokens > token_limit:
-            break
-        selected.append(chunk)
-        used_tokens += chunk_tokens
-
-    return selected
 
 
 # ---------------------------------------------------------------------------
@@ -249,26 +217,6 @@ def _get_or_build_backend(params: dict) -> _InferenceBackend:
         _BACKEND_CACHE[cache_key] = _build_backend(params)
     return _BACKEND_CACHE[cache_key]
 
-
-# ---------------------------------------------------------------------------
-# Tokenizer helper — również buforowany
-# ---------------------------------------------------------------------------
-
-_TOKENIZER_CACHE: Dict[str, object] = {}
-
-
-def _get_or_build_tokenizer(params: dict):
-    backend = params.get("tokenizer_backend", "tiktoken")
-    model_name = params.get("tokenizer_model_name", "gpt-4")
-    cache_key = f"{backend}::{model_name}"
-
-    if cache_key not in _TOKENIZER_CACHE:
-        tokenizer_service = TokenizerService(backend=backend, model_name=model_name)
-        _TOKENIZER_CACHE[cache_key] = tokenizer_service.get_tokenizer()
-
-    return _TOKENIZER_CACHE[cache_key]
-
-
 # ---------------------------------------------------------------------------
 # Główna funkcja generowania odpowiedzi dla jednego pytania
 # ---------------------------------------------------------------------------
@@ -281,63 +229,30 @@ def _get_or_build_tokenizer(params: dict):
 # z pustym system promptem.
 
 
-def generate_final_answer(
+def evaluate_final_answer(
     question_text: str,
     question_options: Optional[List[str]],
-    are_options: bool,
-    chunks: List[str],
+    gold_answers_text: List[str],
+    mapped_answer: str,
     generation_preset_params: dict,
-) -> str:
+):
     """
-    Generuje odpowiedź modelu dla pojedynczego pytania.
+    Ewaluje odpowiedź modelu dla pojedynczego pytania.
 
     Kroki:
     1. Pobierz/zbuduj tokenizer i backend (z cache).
-    2. Oblicz overhead promptu (bez chunków) i dobierz tyle chunków
-       ile mieści się w token_limit.
-    3. Zbuduj finalny prompt i wyślij do backendu.
+    2. Zbuduj finalny prompt i wyślij do backendu.
     """
     params = generation_preset_params
-    token_limit: int = params.get("token_limit", 8192)
 
-    tokenizer = _get_or_build_tokenizer(params)
     backend = _get_or_build_backend(params)
-
-    # --- Ustal overhead promptu bez chunków ----------------------------
-    # Wywołujemy generate_prompt z pustą listą chunków żeby zmierzyć
-    # ile tokenów "kosztuje" sam szablon (instrukcje, pytanie, opcje).
-    empty_prompt = generate_prompt(
-        params.get("prompt_template", "default_prompt"),
-        question_text,
-        question_options,
-        are_options,
-        [],  # brak chunków — tylko overhead
-    )
-
-    # generate_prompt może zwracać str lub (system_str, user_str)
-    if isinstance(empty_prompt, tuple):
-        system_prompt_empty, user_content_empty = empty_prompt
-        overhead = _count_tokens(tokenizer, system_prompt_empty) + _count_tokens(tokenizer, user_content_empty)
-    else:
-        system_prompt_empty = ""
-        user_content_empty = empty_prompt
-        overhead = _count_tokens(tokenizer, user_content_empty)
-
-    # --- Dobierz chunki mieszczące się w limicie ----------------------
-    selected_chunks = _select_chunks_within_limit(
-        chunks=chunks,
-        token_limit=token_limit,
-        tokenizer=tokenizer,
-        prompt_overhead=overhead,
-    )
 
     # --- Zbuduj finalny prompt z wybranymi chunkami ------------------
     final_prompt = generate_prompt(
         params.get("prompt_template", "default_prompt"),
         question_text,
-        question_options,
-        are_options,
-        selected_chunks,
+        gold_answers_text,
+        mapped_answer,
     )
 
     if isinstance(final_prompt, tuple):
@@ -351,55 +266,50 @@ def generate_final_answer(
     max_new_tokens: int = params.get("max_new_tokens", 512)
 
     raw = backend.generate(system_prompt, user_content, max_new_tokens)
-    return raw, _extract_answer(raw)
-
+    return {"raw": raw, "verdict": extract_verdict(raw)}
 
 # ---------------------------------------------------------------------------
 # Funkcja batch — model ładuje się raz, pętla po pytaniach
 # ---------------------------------------------------------------------------
-@register_generator("generate_fixed_token")
+@register_evaluator_generator("generate_fixed_token")
 def generate_fixed_token(
-    rerank_results: Dict[str, List[str]],
+    generation_results,
     tasks: Dict[str, dict],
-    all_chunks: Dict[str, str],
-    generation_preset_params: dict,
-) -> Tuple[Dict[str, str], float]:
+    evaluation_preset_params: dict,
+):
     """
     Generuje odpowiedzi dla wszystkich pytań.
     Backend (model) jest inicjalizowany raz dzięki _get_or_build_backend.
     """
     # Wymuś wczesną inicjalizację backendu i tokenizera —
     # żeby czas ładowania nie wchodził do mierzonych czasów odpowiedzi.
-    _get_or_build_backend(generation_preset_params)
-    _get_or_build_tokenizer(generation_preset_params)
+    _get_or_build_backend(evaluation_preset_params)
 
-    answers: Dict[str, str] = {}
+    results = {}
     total_time = 0.0
 
-    for query_key, retrieved_chunks in tqdm(rerank_results.items(), desc="Generating answers"):
-        query_data = tasks[query_key]
-        chunks = [all_chunks[chunk_id] for chunk_id in retrieved_chunks]
+    for generation_task_id, generation_result in tqdm(generation_results.items(), desc="Evaluating generator"):
+        task_data = tasks.get(generation_task_id)
 
-        question_text = query_data["Question"]
-        question_options = query_data.get("Options", None)
-        are_options = question_options is not None  # True = open, False = MCQ
+        if not task_data:
+            raise ValueError(f"Brak danych zadania dla ID {generation_task_id}")
 
+        question_text = task_data["Question"]
+        question_options = task_data.get("Options")
+        gold_answers_text = task_data["Answers"]
+        answer = generation_result["extracted"]
+        mapped_answer = extract_verdict(answer)
         start_time = time_module.perf_counter()
-        raw_answer, extracted_answer = generate_final_answer(
+        metrics = evaluate_final_answer(
             question_text,
             question_options,
-            are_options,
-            chunks,
-            generation_preset_params,
+            gold_answers_text,
+            mapped_answer,
+            evaluation_preset_params
         )
         answer_time = time_module.perf_counter() - start_time
-        result = {
-            "raw": raw_answer,
-            "extracted": extracted_answer,
-            "time": answer_time,}
-        print(result)
 
         total_time += answer_time
-        answers[query_key] = result
+        results[generation_task_id] = metrics
 
-    return answers, total_time
+    return results, total_time

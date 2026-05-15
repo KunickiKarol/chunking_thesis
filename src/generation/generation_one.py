@@ -6,7 +6,6 @@ from src.generation.methods.all_generation import generate_text
 def generation_one(
     generation_name,
     generation_preset_params,
-    split,
     task_input_dir,
     chunks_input_dir,
     rerank_input_dir,
