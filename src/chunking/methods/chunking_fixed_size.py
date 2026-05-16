@@ -1,10 +1,11 @@
 from typing import List, Literal
 
 import yaml
-from chonkie import TokenChunker
+from chonkie import SentenceChunker, TokenChunker
 from langchain_text_splitters import CharacterTextSplitter
 
 from src.chunking.methods.register import register_chunker
+from src.tools.chunk import Chunk
 from src.tools.tokenizer_service import TokenizerService
 
 
@@ -35,13 +36,14 @@ def chunking_fixed_size(
     # CHAR MODE (bez zmian)
     # =========================
     if mode == "char":
-        splitter = CharacterTextSplitter(
-            separator=" ",
-            chunk_size=chunk_size,
-            chunk_overlap=overlap,
-            length_function=len,
+        splitter = SentenceChunker(
+            tokenizer="character",     # Default tokenizer (or use "gpt2", etc.)
+            chunk_size=chunk_size,           # Maximum tokens per chunk
+            chunk_overlap=overlap,         # Overlap between chunks
+            min_sentences_per_chunk=1  # Minimum sentences in each chunk
         )
-        return splitter.split_text(text)
+        chunks = splitter.chunk(text)
+        return [Chunk(chunk.text, chunk.start_index, chunk.end_index - 1) for chunk in chunks]
 
     # =========================
     # TOKEN MODE (Chonkie + TokenizerService)
@@ -66,7 +68,7 @@ def chunking_fixed_size(
         )
 
         chunks = chunker.chunk(text)
-        return [c.text for c in chunks]
+        return [Chunk(text=chunk.text, start_index=chunk.start_index, end_index=chunk.end_index - 1) for chunk in chunks]
 
     else:
         raise ValueError("mode must be 'char' or 'token'")

@@ -1,18 +1,19 @@
 import importlib
 import pkgutil
 
-from src.generation.methods.register import GENERATORS
+from src.evaluate_generator.methods.register import EVALUATORS_GENERATORS
+
 
 
 def load_generator():
     """
     Auto-import wszystkich modułów w folderze methods/
-    żeby dekoratory @register_generator się odpaliły.
+    żeby dekoratory @register_evaluator_generator się odpaliły.
     """
 
-    package = "src.generation.methods"
+    package = "src.evaluate_generator.methods"
     for _, module_name, _ in pkgutil.iter_modules(importlib.import_module(package).__path__):
-        if module_name in {"register", "all_generation"}:
+        if module_name in {"register", "all_evaluate_generator"}:
             continue
 
         importlib.import_module(f"{package}.{module_name}")
@@ -22,9 +23,9 @@ def load_generator():
 load_generator()
 
 
-def generate_text(generator_name: str, rerank_results, tasks, all_chunks, generation_preset_params):
+def evaluate_generator(generator_name: str, generation_results, tasks, evaluation_preset_params):
     try:
-        fn = GENERATORS[generator_name]
+        fn = EVALUATORS_GENERATORS[generator_name]
     except KeyError:
         raise ValueError(f"Unknown generator type: {generator_name}")
-    return fn(rerank_results, tasks, all_chunks, generation_preset_params)
+    return fn(generation_results, tasks, evaluation_preset_params)

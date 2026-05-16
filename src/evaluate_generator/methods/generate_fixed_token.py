@@ -17,6 +17,38 @@ from src.evaluate_generator.prompts.all_prompts import generate_prompt
 from src.tools.extract_llm import extract_verdict
 from src.tools.tokenizer_service import TokenizerService
 
+def map_answer_to_option(answer, question_options):
+    """
+    Mapuje odpowiedź typu 'A', 'B', 'C'... na odpowiednią opcję.
+    Jeśli nie da się zmapować, zwraca oryginalny answer.
+    """
+    if not question_options or not isinstance(answer, str):
+        return answer
+
+    normalized = answer.strip().upper()
+    if len(normalized) != 1:
+        return answer
+
+    letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+
+    if normalized not in letters:
+        return answer
+
+    idx = letters.index(normalized)
+
+    try:
+        if isinstance(question_options, list):
+            return question_options[idx]
+        if isinstance(question_options, dict):
+            return (
+                question_options.get(normalized)
+                or question_options.get(normalized.lower())
+                or answer
+            )
+    except (IndexError, KeyError, TypeError):
+        return answer
+
+    return answer
 
 # ---------------------------------------------------------------------------
 # Backend abstraction (z dokumentu + lazy singleton per wywołanie generate_fixed_token)
@@ -231,7 +263,6 @@ def _get_or_build_backend(params: dict) -> _InferenceBackend:
 
 def evaluate_final_answer(
     question_text: str,
-    question_options: Optional[List[str]],
     gold_answers_text: List[str],
     mapped_answer: str,
     generation_preset_params: dict,
@@ -298,11 +329,10 @@ def generate_fixed_token(
         question_options = task_data.get("Options")
         gold_answers_text = task_data["Answers"]
         answer = generation_result["extracted"]
-        mapped_answer = extract_verdict(answer)
+        mapped_answer = map_answer_to_option(answer, question_options)
         start_time = time_module.perf_counter()
         metrics = evaluate_final_answer(
             question_text,
-            question_options,
             gold_answers_text,
             mapped_answer,
             evaluation_preset_params

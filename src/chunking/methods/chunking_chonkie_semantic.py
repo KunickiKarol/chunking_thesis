@@ -3,6 +3,7 @@ from typing import List
 from chonkie import NeuralChunker, SemanticChunker, TokenChunker
 from transformers import AutoTokenizer
 
+from src.chunking.methods.chunking_lumber import Chunk
 from src.chunking.methods.register import register_chunker
 
 
@@ -33,4 +34,4 @@ def chunking_neural(
 
     final_chunks = chunker.chunk(text)
 
-    return [chunk.text for chunk in final_chunks]
+    return [Chunk(text=chunk.text, start_index=chunk.start_index, end_index=chunk.end_index-1)for chunk in final_chunks]

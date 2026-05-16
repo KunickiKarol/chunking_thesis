@@ -32,13 +32,13 @@ def _select_chunks_within_limit(
     token_limit: int,
     tokenizer,
     prompt_overhead: int = 0,
-) -> List[str]:
+) -> Tuple[List[str], int]:
     """
     Dodawaj kolejne chunki dopóki nie przekroczymy token_limit.
     prompt_overhead to liczba tokenów zajętych już przez prompt bez chunków.
     """
     selected = []
-    used_tokens = prompt_overhead
+    used_tokens = 0
 
     for chunk in chunks:
         chunk_tokens = _count_tokens(tokenizer, chunk)
@@ -47,7 +47,7 @@ def _select_chunks_within_limit(
         selected.append(chunk)
         used_tokens += chunk_tokens
 
-    return selected
+    return selected, used_tokens
 
 
 # ---------------------------------------------------------------------------
@@ -324,11 +324,10 @@ def generate_final_answer(
         overhead = _count_tokens(tokenizer, user_content_empty)
 
     # --- Dobierz chunki mieszczące się w limicie ----------------------
-    selected_chunks = _select_chunks_within_limit(
+    selected_chunks, selected_chunks_tokens_len = _select_chunks_within_limit(
         chunks=chunks,
         token_limit=token_limit,
         tokenizer=tokenizer,
-        prompt_overhead=overhead,
     )
 
     # --- Zbuduj finalny prompt z wybranymi chunkami ------------------
@@ -351,7 +350,7 @@ def generate_final_answer(
     max_new_tokens: int = params.get("max_new_tokens", 512)
 
     raw = backend.generate(system_prompt, user_content, max_new_tokens)
-    return raw, extract_answer(raw)
+    return raw, extract_answer(raw), len(selected_chunks), selected_chunks_tokens_len
 
 
 # ---------------------------------------------------------------------------
@@ -385,7 +384,7 @@ def generate_fixed_token(
         are_options = question_options is not None  # True = open, False = MCQ
 
         start_time = time_module.perf_counter()
-        raw_answer, extracted_answer = generate_final_answer(
+        raw_answer, extracted_answer, selected_chunks_len, selected_chunks_tokens_len = generate_final_answer(
             question_text,
             question_options,
             are_options,
@@ -396,8 +395,10 @@ def generate_fixed_token(
         result = {
             "raw": raw_answer,
             "extracted": extracted_answer,
-            "time": answer_time,}
-        print(result)
+            "time": answer_time,
+            "num_chunks": selected_chunks_len,
+            "chunk_tokens": selected_chunks_tokens_len,
+        }
 
         total_time += answer_time
         answers[query_key] = result

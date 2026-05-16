@@ -150,9 +150,9 @@ def main():
     if not generation_cfg:
         raise ValueError("Nie znaleziono generation_methods w params.yaml")
     
-    evaluator_cfg = params.get("evaluation").get("methods")
+    evaluator_cfg = params.get("evaluate_generator").get("methods")
     if not evaluator_cfg:
-        raise ValueError("Nie znaleziono evaluation_methods w params.yaml")
+        raise ValueError("Nie znaleziono evaluate_generator_methods w params.yaml")
 
     splits = params.get("chunking").get("splits")
     if not splits:

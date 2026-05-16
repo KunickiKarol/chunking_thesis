@@ -1,5 +1,6 @@
 import json
 
+from src.evaluate_generator.methods.all_evaluate_generator import evaluate_generator
 from src.generation.methods.all_generation import generate_text
 
 
@@ -19,7 +20,7 @@ def evaluate_generator_one(
             task_data = json.load(f)
         tasks.update(task_data)
 
-    results_metrics, time = generate_text(evaluation_name, generation_results, tasks, evaluation_preset_params)
+    results_metrics, time = evaluate_generator(evaluation_name, generation_results, tasks, evaluation_preset_params)
 
     with open(result_dir / "generation_results.json", "w", encoding="utf-8") as f:
         json.dump(results_metrics, f, ensure_ascii=False, indent=4)

@@ -1,7 +1,8 @@
 from typing import List
 
-from langchain_text_splitters import RecursiveCharacterTextSplitter
+from chonkie import RecursiveChunker, RecursiveRules
 
+from src.chunking.methods.chunking_lumber import Chunk
 from src.chunking.methods.register import register_chunker
 
 
@@ -10,7 +11,7 @@ def chunking_recursive(
     text: str,
     *,
     chunk_size: int,
-    overlap: int,
+    min_characters_per_chunk: int,
 ) -> List[str]:
     """
     Dzieli tekst metodą recursive chunking.
@@ -18,31 +19,18 @@ def chunking_recursive(
     Args:
         text (str): tekst wejściowy
         chunk_size (int): maksymalny rozmiar chunka
-        overlap (int): overlap między chunkami
+        min_characters_per_chunk (int): minimalna liczba znaków per chunk
 
     Returns:
         List[str]: lista chunków
     """
 
-    if overlap >= chunk_size:
-        raise ValueError("overlap musi być mniejszy niż chunk_size")
+    if min_characters_per_chunk >= chunk_size:
+        raise ValueError("min_characters_per_chunk must be smaller than chunk_size")
 
-    splitter = RecursiveCharacterTextSplitter(
+    chunker = RecursiveChunker(tokenizer="character",
         chunk_size=chunk_size,
-        chunk_overlap=overlap,
-        separators=[
-            "\n\n",
-            "\n",
-            " ",
-            ".",
-            ",",
-            "\u200b",  # zero-width space
-            "\uff0c",  # fullwidth comma
-            "\u3001",  # ideographic comma
-            "\uff0e",  # fullwidth full stop
-            "\u3002",  # ideographic full stop
-            "",
-        ],
+        rules=RecursiveRules(),
+        min_characters_per_chunk=min_characters_per_chunk,
     )
-
-    return splitter.split_text(text)
+    return [Chunk(text=chunk.text, start_index=chunk.start_index, end_index=chunk.end_index-1) for chunk in chunker.chunk(text)]

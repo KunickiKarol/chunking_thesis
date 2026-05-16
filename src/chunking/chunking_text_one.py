@@ -72,7 +72,9 @@ def chunk_text_one(
                     record = {
                         "source_file": bookid,
                         "chunk_id": chunk_id,
-                        "text": chunk,
+                        "start_index": chunk.start_index,
+                        "end_index": chunk.end_index,
+                        "text": chunk.text,
                         "split": split,
                         "chunking_method": chunking_type,
                         "chunking_params": params,

@@ -5,8 +5,8 @@ stages:
     deps:
     - path: params.yaml
       hash: md5
-      md5: 4f5bd66de6640b224f565d4b2b1f1d39
-      size: 2781
+      md5: 034b6c7573b5d57019dcc0cd5aa4b7f3
+      size: 2741
       isexec: true
     - path: src/download_datasets/download_datasets_all.py
       hash: md5
@@ -20,7 +20,7 @@ stages:
     outs:
     - path: data/downloads/
       hash: md5
-      md5: fa366c6456e294d155b04f211d797292.dir
+      md5: 71eb83e5c7f2d7d7d7ae5a2603a66dd2.dir
       size: 1635710954
       nfiles: 8218
   preprocess_datasets:
@@ -28,19 +28,18 @@ stages:
     deps:
     - path: data/downloads/
       hash: md5
-      md5: fa366c6456e294d155b04f211d797292.dir
+      md5: 71eb83e5c7f2d7d7d7ae5a2603a66dd2.dir
       size: 1635710954
       nfiles: 8218
     - path: params.yaml
       hash: md5
-      md5: 4f5bd66de6640b224f565d4b2b1f1d39
-      size: 2781
+      md5: 034b6c7573b5d57019dcc0cd5aa4b7f3
+      size: 2741
       isexec: true
     - path: src/preprocess_datasets/preprocess_datasets_all.py
       hash: md5
       md5: fd542dc90fb8248616a40b8ee5327523
       size: 2231
-      isexec: true
     params:
       params.yaml:
         preprocess_datasets:
@@ -48,10 +47,6 @@ stages:
             backend: tiktoken
             model_name: gpt-4
           datasets:
-            infiniteBenchQA:
-              presets_file: configs/preprocess_dataset/infiniteBenchQA.yaml
-              use_presets:
-              - default
             infiniteBenchChoice:
               presets_file: configs/preprocess_dataset/infiniteBenchChoice.yaml
               use_presets:
@@ -72,14 +67,13 @@ stages:
       nfiles: 1742
     - path: params.yaml
       hash: md5
-      md5: 4f5bd66de6640b224f565d4b2b1f1d39
-      size: 2781
+      md5: 034b6c7573b5d57019dcc0cd5aa4b7f3
+      size: 2741
       isexec: true
     - path: src/chunking/chunking_text_all.py
       hash: md5
       md5: 96e22ab323d24e16fd4e55ce57a7b37d
       size: 2438
-      isexec: true
     params:
       params.yaml:
         chunking.methods:
@@ -87,11 +81,32 @@ stages:
             presets_file: configs/chunking/fixed_size.yaml
             use_presets:
             - fs_512_64_char
-        preprocess_datasets.datasets:
-          infiniteBenchQA:
-            presets_file: configs/preprocess_dataset/infiniteBenchQA.yaml
+            - fs_512_64_token
+          recursive:
+            presets_file: configs/chunking/recursive.yaml
+            use_presets:
+            - r_512_64
+          neural:
+            presets_file: configs/chunking/neural.yaml
             use_presets:
             - default
+          chonkie_semantic:
+            presets_file: configs/chunking/chonkie_semantic.yaml
+            use_presets:
+            - default
+          lumber:
+            presets_file: configs/chunking/lumber.yaml
+            use_presets:
+            - default
+          max_min:
+            presets_file: configs/chunking/max_min.yaml
+            use_presets:
+            - liberal
+          sequential_hac:
+            presets_file: configs/chunking/sequential_hac.yaml
+            use_presets:
+            - liberal
+        preprocess_datasets.datasets:
           infiniteBenchChoice:
             presets_file: configs/preprocess_dataset/infiniteBenchChoice.yaml
             use_presets:
@@ -99,27 +114,26 @@ stages:
     outs:
     - path: data/chunks/
       hash: md5
-      md5: 31373acad2243e100b17a48992fad9b3.dir
-      size: 11531303
-      nfiles: 8
+      md5: 5f29ead86bad143038e171caaa001e33.dir
+      size: 7970579
+      nfiles: 16
   embed_chunks:
     cmd: python -m src.embed_chunks.embed_chunks_all
     deps:
     - path: data/chunks/
       hash: md5
-      md5: 31373acad2243e100b17a48992fad9b3.dir
-      size: 11531303
-      nfiles: 8
+      md5: 94302a4a5e4c72835e2285d380a83402.dir
+      size: 7963879
+      nfiles: 16
     - path: params.yaml
       hash: md5
-      md5: 4f5bd66de6640b224f565d4b2b1f1d39
-      size: 2781
+      md5: 034b6c7573b5d57019dcc0cd5aa4b7f3
+      size: 2741
       isexec: true
     - path: src/embed_chunks/embed_chunks_all.py
       hash: md5
       md5: 1b421a16805eda0e5f278eccb32c99ef
       size: 3112
-      isexec: true
     params:
       params.yaml:
         chunking.methods:
@@ -127,11 +141,32 @@ stages:
             presets_file: configs/chunking/fixed_size.yaml
             use_presets:
             - fs_512_64_char
-        preprocess_datasets.datasets:
-          infiniteBenchQA:
-            presets_file: configs/preprocess_dataset/infiniteBenchQA.yaml
+            - fs_512_64_token
+          recursive:
+            presets_file: configs/chunking/recursive.yaml
+            use_presets:
+            - r_512_64
+          neural:
+            presets_file: configs/chunking/neural.yaml
             use_presets:
             - default
+          chonkie_semantic:
+            presets_file: configs/chunking/chonkie_semantic.yaml
+            use_presets:
+            - default
+          lumber:
+            presets_file: configs/chunking/lumber.yaml
+            use_presets:
+            - default
+          max_min:
+            presets_file: configs/chunking/max_min.yaml
+            use_presets:
+            - liberal
+          sequential_hac:
+            presets_file: configs/chunking/sequential_hac.yaml
+            use_presets:
+            - liberal
+        preprocess_datasets.datasets:
           infiniteBenchChoice:
             presets_file: configs/preprocess_dataset/infiniteBenchChoice.yaml
             use_presets:
@@ -141,25 +176,24 @@ stages:
             presets_file: configs/vector_embed/faiss.yaml
             use_presets:
             - default_global
-            - default_local
     outs:
     - path: data/vector_db/
       hash: md5
-      md5: fc4b4b51faba13ecd1c043716948c9f8.dir
-      size: 100194171
-      nfiles: 28
+      md5: 3e21d80884a69f83658e98c9f75d9f23.dir
+      size: 27897186
+      nfiles: 29
   search:
     cmd: python -m src.search.search_all
     deps:
     - path: data/vector_db/
       hash: md5
-      md5: fc4b4b51faba13ecd1c043716948c9f8.dir
-      size: 100194171
-      nfiles: 28
+      md5: 3e21d80884a69f83658e98c9f75d9f23.dir
+      size: 27897186
+      nfiles: 29
     - path: params.yaml
       hash: md5
-      md5: 4f5bd66de6640b224f565d4b2b1f1d39
-      size: 2781
+      md5: 034b6c7573b5d57019dcc0cd5aa4b7f3
+      size: 2741
       isexec: true
     - path: src/search/search_all.py
       hash: md5
@@ -173,11 +207,32 @@ stages:
             presets_file: configs/chunking/fixed_size.yaml
             use_presets:
             - fs_512_64_char
-        preprocess_datasets.datasets:
-          infiniteBenchQA:
-            presets_file: configs/preprocess_dataset/infiniteBenchQA.yaml
+            - fs_512_64_token
+          recursive:
+            presets_file: configs/chunking/recursive.yaml
+            use_presets:
+            - r_512_64
+          neural:
+            presets_file: configs/chunking/neural.yaml
             use_presets:
             - default
+          chonkie_semantic:
+            presets_file: configs/chunking/chonkie_semantic.yaml
+            use_presets:
+            - default
+          lumber:
+            presets_file: configs/chunking/lumber.yaml
+            use_presets:
+            - default
+          max_min:
+            presets_file: configs/chunking/max_min.yaml
+            use_presets:
+            - liberal
+          sequential_hac:
+            presets_file: configs/chunking/sequential_hac.yaml
+            use_presets:
+            - liberal
+        preprocess_datasets.datasets:
           infiniteBenchChoice:
             presets_file: configs/preprocess_dataset/infiniteBenchChoice.yaml
             use_presets:
@@ -186,31 +241,30 @@ stages:
           faiss:
             presets_file: configs/search/faiss.yaml
             use_presets:
-            - default_top5
+            - default_top10
         vector_embed.methods:
           FAISS:
             presets_file: configs/vector_embed/faiss.yaml
             use_presets:
             - default_global
-            - default_local
     outs:
     - path: data/search_result/
       hash: md5
-      md5: 0dcef90d2ec33e930ff427599a0146f2.dir
-      size: 18869
-      nfiles: 12
+      md5: 9a1414975a3717aaa9f1e4a6cb829677.dir
+      size: 14721
+      nfiles: 14
   rerank:
     cmd: python -m src.rerank.rerank_all
     deps:
     - path: data/search_result/
       hash: md5
-      md5: 0dcef90d2ec33e930ff427599a0146f2.dir
-      size: 18869
-      nfiles: 12
+      md5: 9a1414975a3717aaa9f1e4a6cb829677.dir
+      size: 14721
+      nfiles: 14
     - path: params.yaml
       hash: md5
-      md5: 4f5bd66de6640b224f565d4b2b1f1d39
-      size: 2781
+      md5: 034b6c7573b5d57019dcc0cd5aa4b7f3
+      size: 2741
       isexec: true
     - path: src/rerank/rerank_all.py
       hash: md5
@@ -223,11 +277,32 @@ stages:
             presets_file: configs/chunking/fixed_size.yaml
             use_presets:
             - fs_512_64_char
-        preprocess_datasets.datasets:
-          infiniteBenchQA:
-            presets_file: configs/preprocess_dataset/infiniteBenchQA.yaml
+            - fs_512_64_token
+          recursive:
+            presets_file: configs/chunking/recursive.yaml
+            use_presets:
+            - r_512_64
+          neural:
+            presets_file: configs/chunking/neural.yaml
             use_presets:
             - default
+          chonkie_semantic:
+            presets_file: configs/chunking/chonkie_semantic.yaml
+            use_presets:
+            - default
+          lumber:
+            presets_file: configs/chunking/lumber.yaml
+            use_presets:
+            - default
+          max_min:
+            presets_file: configs/chunking/max_min.yaml
+            use_presets:
+            - liberal
+          sequential_hac:
+            presets_file: configs/chunking/sequential_hac.yaml
+            use_presets:
+            - liberal
+        preprocess_datasets.datasets:
           infiniteBenchChoice:
             presets_file: configs/preprocess_dataset/infiniteBenchChoice.yaml
             use_presets:
@@ -236,36 +311,35 @@ stages:
           reranker:
             presets_file: configs/rerank/reranker.yaml
             use_presets:
-            - default_top3
+            - default_top5
         search.methods:
           faiss:
             presets_file: configs/search/faiss.yaml
             use_presets:
-            - default_top5
+            - default_top10
         vector_embed.methods:
           FAISS:
             presets_file: configs/vector_embed/faiss.yaml
             use_presets:
             - default_global
-            - default_local
     outs:
     - path: data/rerank_result/
       hash: md5
-      md5: 35ee4e897bb326995f0e6c0fc40fee2c.dir
-      size: 2724
-      nfiles: 8
+      md5: 24ec8790ae8314fb92807d5791e41302.dir
+      size: 2082
+      nfiles: 16
   generation:
     cmd: python -m src.generation.generation_all
     deps:
     - path: data/rerank_result/
       hash: md5
-      md5: 35ee4e897bb326995f0e6c0fc40fee2c.dir
-      size: 2724
-      nfiles: 8
+      md5: 24ec8790ae8314fb92807d5791e41302.dir
+      size: 2082
+      nfiles: 16
     - path: params.yaml
       hash: md5
-      md5: 4f5bd66de6640b224f565d4b2b1f1d39
-      size: 2781
+      md5: 034b6c7573b5d57019dcc0cd5aa4b7f3
+      size: 2741
       isexec: true
     - path: src/generation/generation_all.py
       hash: md5
@@ -278,16 +352,37 @@ stages:
             presets_file: configs/chunking/fixed_size.yaml
             use_presets:
             - fs_512_64_char
+            - fs_512_64_token
+          recursive:
+            presets_file: configs/chunking/recursive.yaml
+            use_presets:
+            - r_512_64
+          neural:
+            presets_file: configs/chunking/neural.yaml
+            use_presets:
+            - default
+          chonkie_semantic:
+            presets_file: configs/chunking/chonkie_semantic.yaml
+            use_presets:
+            - default
+          lumber:
+            presets_file: configs/chunking/lumber.yaml
+            use_presets:
+            - default
+          max_min:
+            presets_file: configs/chunking/max_min.yaml
+            use_presets:
+            - liberal
+          sequential_hac:
+            presets_file: configs/chunking/sequential_hac.yaml
+            use_presets:
+            - liberal
         generation.methods:
           generate_fixed_token:
             presets_file: configs/generation/generate_fixed_token.yaml
             use_presets:
             - qwen_4b
         preprocess_datasets.datasets:
-          infiniteBenchQA:
-            presets_file: configs/preprocess_dataset/infiniteBenchQA.yaml
-            use_presets:
-            - default
           infiniteBenchChoice:
             presets_file: configs/preprocess_dataset/infiniteBenchChoice.yaml
             use_presets:
@@ -296,41 +391,40 @@ stages:
           reranker:
             presets_file: configs/rerank/reranker.yaml
             use_presets:
-            - default_top3
+            - default_top5
         search.methods:
           faiss:
             presets_file: configs/search/faiss.yaml
             use_presets:
-            - default_top5
+            - default_top10
         vector_embed.methods:
           FAISS:
             presets_file: configs/vector_embed/faiss.yaml
             use_presets:
             - default_global
-            - default_local
     outs:
     - path: data/generation_result/
       hash: md5
-      md5: 0aca2ce04e1214dd13713d119f0ccd24.dir
-      size: 12121
-      nfiles: 8
+      md5: 18dbeee7c493cf9ec9cf3d98b4c48869.dir
+      size: 4968
+      nfiles: 16
   evaluate_generator:
     cmd: python -m src.evaluate_generator.evaluate_generator_all
     deps:
     - path: data/generation_result/
       hash: md5
-      md5: 0aca2ce04e1214dd13713d119f0ccd24.dir
-      size: 12121
-      nfiles: 8
+      md5: 18dbeee7c493cf9ec9cf3d98b4c48869.dir
+      size: 4968
+      nfiles: 16
     - path: params.yaml
       hash: md5
-      md5: 4f5bd66de6640b224f565d4b2b1f1d39
-      size: 2781
+      md5: 034b6c7573b5d57019dcc0cd5aa4b7f3
+      size: 2741
       isexec: true
     - path: src/evaluate_generator/evaluate_generator_all.py
       hash: md5
-      md5: ac8e47767d3955ba77013aecd87f9770
-      size: 5938
+      md5: 2086ee5573549d2e0e5a074abb7e4ce5
+      size: 5509
     params:
       params.yaml:
         chunking.methods:
@@ -338,6 +432,31 @@ stages:
             presets_file: configs/chunking/fixed_size.yaml
             use_presets:
             - fs_512_64_char
+            - fs_512_64_token
+          recursive:
+            presets_file: configs/chunking/recursive.yaml
+            use_presets:
+            - r_512_64
+          neural:
+            presets_file: configs/chunking/neural.yaml
+            use_presets:
+            - default
+          chonkie_semantic:
+            presets_file: configs/chunking/chonkie_semantic.yaml
+            use_presets:
+            - default
+          lumber:
+            presets_file: configs/chunking/lumber.yaml
+            use_presets:
+            - default
+          max_min:
+            presets_file: configs/chunking/max_min.yaml
+            use_presets:
+            - liberal
+          sequential_hac:
+            presets_file: configs/chunking/sequential_hac.yaml
+            use_presets:
+            - liberal
         evaluate_generator.methods:
           llm_as_a_judge:
             presets_file: configs/evaluate_generator/llm_as_a_judge.yaml
@@ -349,10 +468,6 @@ stages:
             use_presets:
             - qwen_4b
         preprocess_datasets.datasets:
-          infiniteBenchQA:
-            presets_file: configs/preprocess_dataset/infiniteBenchQA.yaml
-            use_presets:
-            - default
           infiniteBenchChoice:
             presets_file: configs/preprocess_dataset/infiniteBenchChoice.yaml
             use_presets:
@@ -361,21 +476,20 @@ stages:
           reranker:
             presets_file: configs/rerank/reranker.yaml
             use_presets:
-            - default_top3
+            - default_top5
         search.methods:
           faiss:
             presets_file: configs/search/faiss.yaml
             use_presets:
-            - default_top5
+            - default_top10
         vector_embed.methods:
           FAISS:
             presets_file: configs/vector_embed/faiss.yaml
             use_presets:
             - default_global
-            - default_local
     outs:
     - path: data/evaluate_generator_result/
       hash: md5
-      md5: 6ea92286d4ca03e536817cae1b641e83.dir
-      size: 4103
-      nfiles: 8
+      md5: 3205307ae0e1da986b8d7ddc59e207d6.dir
+      size: 2757
+      nfiles: 16

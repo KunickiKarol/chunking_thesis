@@ -7,3 +7,4 @@ presets:
     params:
       embbeder: all-MiniLM-L6-v2
       top_k: 10
+

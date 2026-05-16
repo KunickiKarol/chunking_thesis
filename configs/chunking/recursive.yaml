@@ -2,12 +2,12 @@ presets:
   - name: r_512_64
     params:
       chunk_size: 512
-      overlap: 64
+      min_characters_per_chunk: 32
   - name: r_1024_128
     params:
       chunk_size: 1024
-      overlap: 128
+      min_characters_per_chunk: 64
   - name: r_2048_256
     params:
       chunk_size: 2048
-      overlap: 256
+      min_characters_per_chunk: 256

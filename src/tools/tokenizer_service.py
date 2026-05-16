@@ -63,7 +63,7 @@ class TokenizerService:
             self.tokenizer = tiktoken.encoding_for_model(self.model_name)
 
         else:
-            raise ValueError("backend musi być: 'hf' albo 'tiktoken'")
+            raise ValueError(f'backend musi być: "hf" albo "tiktoken". Jest podany {self.backend}')
 
     def tokenize(self, context: str) -> Dict[str, Any]:
 
