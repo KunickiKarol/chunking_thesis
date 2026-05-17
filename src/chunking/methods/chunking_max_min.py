@@ -124,7 +124,7 @@ def _build_chunks(
             Chunk(
                 text=chunk_text,
                 start_index=start_index,
-                end_index=end_index,
+                end_index=end_index-1,
             )
         )
 

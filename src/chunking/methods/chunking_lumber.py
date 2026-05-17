@@ -314,6 +314,6 @@ def chunking_lumber(text: str, **params) -> List[Chunk]:
 
         chunk_text = text[char_start:char_end]
         if chunk_text.strip():
-            chunks.append(Chunk(text=chunk_text, start_index=char_start, end_index=char_end))
+            chunks.append(Chunk(text=chunk_text, start_index=char_start, end_index=char_end-1))
 
     return chunks

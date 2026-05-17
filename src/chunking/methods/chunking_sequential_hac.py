@@ -50,7 +50,7 @@ def chunking_sequential_hac(text: str, **params) -> List[Chunk]:
 
     if n_sentences == 1:
         start, end = sentence_spans[0]
-        return [Chunk(text=sentences[0], start_index=start, end_index=end)]
+        return [Chunk(text=sentences[0], start_index=start, end_index=end-1)]
 
     # Wczytanie modelu (cache dla wielokrotnego użycia)
     if model_name not in _model_cache:
@@ -96,7 +96,7 @@ def chunking_sequential_hac(text: str, **params) -> List[Chunk]:
             chunks.append(Chunk(
                 text=chunk_text,
                 start_index=current_spans[0][0],
-                end_index=current_spans[-1][1],
+                end_index=current_spans[-1][1]-1,
             ))
             current_sentences = [sentences[i]]
             current_spans = [sentence_spans[i]]
@@ -107,7 +107,7 @@ def chunking_sequential_hac(text: str, **params) -> List[Chunk]:
         chunks.append(Chunk(
             text=chunk_text,
             start_index=current_spans[0][0],
-            end_index=current_spans[-1][1],
+            end_index=current_spans[-1][1]-1,
         ))
 
     return chunks

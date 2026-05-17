@@ -37,10 +37,10 @@ chunking:
       presets_file: configs/chunking/recursive.yaml
       use_presets:
         - r_512_64
-    # recursive_semantic:
-    #   presets_file: configs/chunking/recursive_semantic.yaml
-    #   use_presets:
-    #     - paper_based
+    recursive_semantic:
+      presets_file: configs/chunking/recursive_semantic.yaml
+      use_presets:
+        - paper_based
     neural:
       presets_file: configs/chunking/neural.yaml
       use_presets:

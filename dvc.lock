@@ -5,8 +5,8 @@ stages:
     deps:
     - path: params.yaml
       hash: md5
-      md5: 034b6c7573b5d57019dcc0cd5aa4b7f3
-      size: 2741
+      md5: 63e1aca7c72dc090c0bc5bbe12f508e9
+      size: 2733
       isexec: true
     - path: src/download_datasets/download_datasets_all.py
       hash: md5
@@ -33,8 +33,8 @@ stages:
       nfiles: 8218
     - path: params.yaml
       hash: md5
-      md5: 034b6c7573b5d57019dcc0cd5aa4b7f3
-      size: 2741
+      md5: 63e1aca7c72dc090c0bc5bbe12f508e9
+      size: 2733
       isexec: true
     - path: src/preprocess_datasets/preprocess_datasets_all.py
       hash: md5
@@ -67,8 +67,8 @@ stages:
       nfiles: 1742
     - path: params.yaml
       hash: md5
-      md5: 034b6c7573b5d57019dcc0cd5aa4b7f3
-      size: 2741
+      md5: 63e1aca7c72dc090c0bc5bbe12f508e9
+      size: 2733
       isexec: true
     - path: src/chunking/chunking_text_all.py
       hash: md5
@@ -86,6 +86,10 @@ stages:
             presets_file: configs/chunking/recursive.yaml
             use_presets:
             - r_512_64
+          recursive_semantic:
+            presets_file: configs/chunking/recursive_semantic.yaml
+            use_presets:
+            - paper_based
           neural:
             presets_file: configs/chunking/neural.yaml
             use_presets:
@@ -114,9 +118,9 @@ stages:
     outs:
     - path: data/chunks/
       hash: md5
-      md5: 5f29ead86bad143038e171caaa001e33.dir
-      size: 7970579
-      nfiles: 16
+      md5: 05a89a2d38d6d704e679bed17d827631.dir
+      size: 8924306
+      nfiles: 18
   embed_chunks:
     cmd: python -m src.embed_chunks.embed_chunks_all
     deps:
