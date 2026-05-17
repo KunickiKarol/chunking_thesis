@@ -2,14 +2,14 @@ from typing import List
 
 from chonkie import NeuralChunker
 from src.chunking.methods.register import register_chunker
-from src.tools.chunk import Chunk
+from src.tools.chunk import Chunk, trim_bounds
 
 
 @register_chunker("neural")
 def chunking_neural(
     text: str,
     **params,
-) -> List[str]:
+) -> List[Chunk]:
     """
     Semantic chunking using Chonkie NeuralChunker.
 
@@ -37,7 +37,7 @@ def chunking_neural(
         chunks = neural_chunker.chunk(text)
 
         return [
-            Chunk(chunk.text, chunk.start_index, chunk.end_index-1)
+            Chunk(*trim_bounds(chunk.text, chunk.start_index, chunk.end_index))
             for chunk in chunks
             if chunk.text and chunk.text.strip()
         ]
@@ -46,4 +46,9 @@ def chunking_neural(
         print(f"[ERROR] NeuralChunker failed: {e}")
 
         # fallback
-        return [Chunk(text, 0, len(text) - 1)] if text.strip() else []
+        if not text.strip():
+            return []
+
+        text_stripped, start, end = trim_bounds(text, 0, len(text))
+
+        return [Chunk(text_stripped, start, end)]

@@ -8,7 +8,7 @@ from sentence_transformers import SentenceTransformer
 from sklearn.metrics.pairwise import cosine_similarity
 
 from src.chunking.methods.register import register_chunker
-from src.tools.chunk import Chunk
+from src.tools.chunk import Chunk, trim_bounds
 
 
 @dataclass
@@ -120,11 +120,17 @@ def _build_chunks(
 
         chunk_text = text[start_index:end_index]
 
+        chunk_text, start_index, end_index = trim_bounds(
+            chunk_text,
+            start_index,
+            end_index,
+        )
+
         chunks.append(
             Chunk(
                 text=chunk_text,
                 start_index=start_index,
-                end_index=end_index-1,
+                end_index=end_index,
             )
         )
 

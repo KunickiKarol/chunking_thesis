@@ -5,6 +5,7 @@ from transformers import AutoTokenizer
 
 from src.chunking.methods.chunking_lumber import Chunk
 from src.chunking.methods.register import register_chunker
+from src.tools.chunk import trim_bounds
 
 
 @register_chunker("chonkie_semantic")
@@ -34,4 +35,7 @@ def chunking_neural(
 
     final_chunks = chunker.chunk(text)
 
-    return [Chunk(text=chunk.text, start_index=chunk.start_index, end_index=chunk.end_index-1)for chunk in final_chunks]
+    return [
+        Chunk(*trim_bounds(chunk.text, chunk.start_index, chunk.end_index))
+        for chunk in final_chunks
+    ]

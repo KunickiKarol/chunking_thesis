@@ -5,7 +5,7 @@ from scipy.sparse import diags
 from sentence_transformers import SentenceTransformer
 from sklearn.cluster import AgglomerativeClustering
 from src.chunking.methods.register import register_chunker
-from src.tools.chunk import Chunk
+from src.tools.chunk import Chunk, trim_bounds
 
 
 _model_cache: Dict[str, SentenceTransformer] = {}
@@ -96,7 +96,7 @@ def chunking_sequential_hac(text: str, **params) -> List[Chunk]:
             chunks.append(Chunk(
                 text=chunk_text,
                 start_index=current_spans[0][0],
-                end_index=current_spans[-1][1]-1,
+                end_index=current_spans[-1][1],
             ))
             current_sentences = [sentences[i]]
             current_spans = [sentence_spans[i]]
@@ -107,7 +107,7 @@ def chunking_sequential_hac(text: str, **params) -> List[Chunk]:
         chunks.append(Chunk(
             text=chunk_text,
             start_index=current_spans[0][0],
-            end_index=current_spans[-1][1]-1,
+            end_index=current_spans[-1][1],
         ))
 
-    return chunks
+    return [Chunk(*trim_bounds(chunk.text, chunk.start_index, chunk.end_index)) for chunk in chunks]

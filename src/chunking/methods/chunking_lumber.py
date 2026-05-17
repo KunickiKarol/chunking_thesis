@@ -22,6 +22,7 @@ from typing import Callable, Dict, List
 from nltk.tokenize import sent_tokenize
 
 from src.chunking.methods.register import register_chunker
+from src.tools.chunk import trim_bounds
 
 
 @dataclass
@@ -310,10 +311,23 @@ def chunking_lumber(text: str, **params) -> List[Chunk]:
 
         # Character offsets: first char of first sentence … last char of last sentence
         char_start = sentence_spans[start_idx][0]
-        char_end = sentence_spans[end_idx - 1][1]  # end_idx is exclusive → -1
+        char_end = sentence_spans[end_idx - 1][1]  # exclusive
 
         chunk_text = text[char_start:char_end]
-        if chunk_text.strip():
-            chunks.append(Chunk(text=chunk_text, start_index=char_start, end_index=char_end-1))
+
+        chunk_text, char_start, char_end = trim_bounds(
+            chunk_text,
+            char_start,
+            char_end,
+        )
+
+        if chunk_text:
+            chunks.append(
+                Chunk(
+                    text=chunk_text,
+                    start_index=char_start,
+                    end_index=char_end,
+                )
+            )
 
     return chunks

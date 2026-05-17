@@ -118,8 +118,8 @@ stages:
     outs:
     - path: data/chunks/
       hash: md5
-      md5: 05a89a2d38d6d704e679bed17d827631.dir
-      size: 8924306
+      md5: 1dad36348d52e62d155aaaddc10a44f5.dir
+      size: 8788363
       nfiles: 18
   embed_chunks:
     cmd: python -m src.embed_chunks.embed_chunks_all

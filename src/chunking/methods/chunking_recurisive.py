@@ -4,6 +4,7 @@ from chonkie import RecursiveChunker, RecursiveRules
 
 from src.chunking.methods.chunking_lumber import Chunk
 from src.chunking.methods.register import register_chunker
+from src.tools.chunk import trim_bounds
 
 
 @register_chunker("recursive")
@@ -33,4 +34,7 @@ def chunking_recursive(
         rules=RecursiveRules(),
         min_characters_per_chunk=min_characters_per_chunk,
     )
-    return [Chunk(text=chunk.text, start_index=chunk.start_index, end_index=chunk.end_index-1) for chunk in chunker.chunk(text)]
+    return [
+        Chunk(*trim_bounds(chunk.text, chunk.start_index, chunk.end_index))
+        for chunk in chunker.chunk(text)
+    ]

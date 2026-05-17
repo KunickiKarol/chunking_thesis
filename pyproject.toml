@@ -37,7 +37,10 @@ dependencies = [
     "openai",
     "transformers==4.57.6",
     "FlagEmbedding==1.4.0",
-    "outlines"
+    "bs4>=0.0.2",
+    "chardet>=5.2.0",
+    "ftfy>=6.3.1",
+    "loguru>=0.7.3",
 ]
 
 [tool.uv.sources]

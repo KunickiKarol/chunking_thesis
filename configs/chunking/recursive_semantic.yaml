@@ -10,4 +10,7 @@ presets:
       embedding_model: sentence-transformers/all-MiniLM-L6-v2
 
       breakpoint_threshold_type: percentile
-      initial_breakpoint_threshold: 95
+      initial_breakpoint_threshold: 0.95
+      semantic_filter_window: 1
+      semantic_filter_polyorder: 0
+      semantic_filter_tolerance: 0.0001
