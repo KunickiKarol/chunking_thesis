@@ -27,7 +27,7 @@ class LiteraryQAPreprocessor:
         self.annotations_src = self.data_src / "annotations"
 
     def run(self) -> Tuple[Path, Path, Path]:
-        books_dst, tasks_dst, bookmeta_dst, meta_path = self._prepare_output_dirs()
+        books_dst, tasks_dst, tags_dst, bookmeta_dst, meta_path = self._prepare_output_dirs()
 
         (
             docs_count,
@@ -38,6 +38,7 @@ class LiteraryQAPreprocessor:
             book_token_lengths,
             train_books_order,
             book_path_map,
+            book_char_lengths
         ) = self._copy_books(self.books_src, books_dst)
 
         print(f"📚 Skopiowano książki do {books_dst}")
@@ -46,14 +47,19 @@ class LiteraryQAPreprocessor:
             self.annotations_src,
             tasks_dst,
             book_token_lengths,
+            book_char_lengths
         )
+
+        tag_file_map =self._copy_tags(self.books_src, tags_dst)
 
         self._create_additional_splits(
             books_dst=books_dst,
             tasks_dst=tasks_dst,
+            tags_dst=tags_dst,
             train_books_order=train_books_order,
             book_path_map=book_path_map,
             task_file_map=task_file_map,
+            tag_file_map=tag_file_map,
             bookmeta=bookmeta,
         )
 
@@ -72,7 +78,7 @@ class LiteraryQAPreprocessor:
 
         print("✅ Preprocessing literaryQA zakończony")
 
-        return books_dst, tasks_dst, bookmeta_dst
+        return books_dst, tasks_dst, tags_dst, bookmeta_dst
 
     @staticmethod
     def _load_env_config() -> Path:
@@ -84,13 +90,15 @@ class LiteraryQAPreprocessor:
 
         books_dir = base_dir / "Books"
         tasks_dir = base_dir / "Tasks" / self.task_type
+        tags_dir = base_dir / "Tags" / self.task_type
         bookmeta_path = base_dir / "bookmeta.json"
         meta_path = base_dir / "meta.json"
 
         books_dir.mkdir(parents=True, exist_ok=True)
         tasks_dir.mkdir(parents=True, exist_ok=True)
+        tags_dir.mkdir(parents=True, exist_ok=True)
 
-        return books_dir, tasks_dir, bookmeta_path, meta_path
+        return books_dir, tasks_dir, tags_dir, bookmeta_path, meta_path
 
     def _save_meta(
         self,
@@ -116,6 +124,19 @@ class LiteraryQAPreprocessor:
         with open(meta_path, "w", encoding="utf-8") as f:
             json.dump(meta, f, ensure_ascii=False, indent=2)
 
+    def _copy_tags(self, src_dir: Path, dst_dir: Path):
+        tag_map = {}
+        for json_file in src_dir.rglob("*.tagmap.json"):
+            relative_path = json_file.relative_to(src_dir)
+            new_name = json_file.name.replace(".tagmap", "")
+
+            dest_file = dst_dir / relative_path.parent / new_name
+            dest_file.parent.mkdir(parents=True, exist_ok=True)
+
+            shutil.copy2(json_file, dest_file)
+            tag_map[relative_path.stem.replace(".tagmap", '')] = dest_file
+        return tag_map
+
     @staticmethod
     def _copy_books(src_dir: Path, dst_dir: Path):
         total_token_len = 0
@@ -126,6 +147,7 @@ class LiteraryQAPreprocessor:
         n_val = 0
 
         book_token_lengths = {}
+        book_char_lengths = {}
         train_books_order: List[str] = []
         book_path_map: Dict[str, Path] = {}
 
@@ -164,7 +186,7 @@ class LiteraryQAPreprocessor:
             total_token_len += token_count
 
             book_token_lengths[book_id] = token_count
-
+            book_char_lengths[book_id] = len(content)
         return (
             docs_count,
             total_token_len,
@@ -174,6 +196,7 @@ class LiteraryQAPreprocessor:
             book_token_lengths,
             train_books_order,
             book_path_map,
+            book_char_lengths
         )
 
     @staticmethod
@@ -181,6 +204,7 @@ class LiteraryQAPreprocessor:
         annotations_dir: Path,
         tasks_dir: Path,
         book_token_lengths: Dict[str, int],
+        book_char_lengths: Dict[str, int],
     ) -> Tuple[Dict[str, dict], int, Dict[str, dict], Dict[str, Path]]:
 
         bookmeta = {}
@@ -211,6 +235,7 @@ class LiteraryQAPreprocessor:
                         "summary": summary,
                         "summary_token_len": tokenizer.tokenize(summary)["token_count"],
                         "tokenlen": book_token_lengths.get(book_id),
+                        "charlen": book_char_lengths.get(book_id),
                         # 🔥 DODAJ TO:
                         "example": False,
                         "examples": False,
@@ -246,13 +271,18 @@ class LiteraryQAPreprocessor:
         self,
         books_dst: Path,
         tasks_dst: Path,
+        tags_dst: Path,
         train_books_order: List[str],
         book_path_map: Dict[str, Path],
         task_file_map: Dict[str, Path],
+        tag_file_map: Dict[str, Path],
         bookmeta: Dict[str, dict],
     ):
         example_books_dir = books_dst / "example"
         examples_books_dir = books_dst / "examples"
+
+        example_tags_dir = tags_dst / "example"
+        examples_tags_dir = tags_dst / "examples"
 
         example_tasks_dir = tasks_dst / "example"
         examples_tasks_dir = tasks_dst / "examples"
@@ -261,11 +291,13 @@ class LiteraryQAPreprocessor:
         examples_books_dir.mkdir(parents=True, exist_ok=True)
         example_tasks_dir.mkdir(parents=True, exist_ok=True)
         examples_tasks_dir.mkdir(parents=True, exist_ok=True)
+        example_tags_dir.mkdir(parents=True, exist_ok=True)
+        examples_tags_dir.mkdir(parents=True, exist_ok=True)
 
         example_ids = set(train_books_order[:1])
         examples_ids = set(train_books_order[:3])
 
-        def copy(book_id: str, books_target: Path, tasks_target: Path):
+        def copy(book_id: str, books_target: Path, tasks_target: Path, tags_target: Path):
             # BOOKS
             src_book = book_path_map.get(book_id)
             if src_book and src_book.exists():
@@ -280,6 +312,12 @@ class LiteraryQAPreprocessor:
                 dest_task.parent.mkdir(parents=True, exist_ok=True)
                 shutil.copy2(src_task, dest_task)
 
+            src_tag = tag_file_map.get(book_id)
+            if src_tag and src_tag.exists():
+                dest_tag = tags_target / src_tag.name
+                dest_tag.parent.mkdir(parents=True, exist_ok=True)
+                shutil.copy2(src_tag, dest_tag)
+
             # METADATA FLAGS
             meta = bookmeta.get(book_id)
             if meta is not None:
@@ -293,8 +331,8 @@ class LiteraryQAPreprocessor:
 
         # example = 1 książka train
         for book_id in example_ids:
-            copy(book_id, example_books_dir, example_tasks_dir)
+            copy(book_id, example_books_dir, example_tasks_dir, example_tags_dir)
 
         # examples = 3 książki train
         for book_id in examples_ids:
-            copy(book_id, examples_books_dir, examples_tasks_dir)
+            copy(book_id, examples_books_dir, examples_tasks_dir, examples_tags_dir)

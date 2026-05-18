@@ -45,12 +45,13 @@ class NovelQAPreprocessor:
         bookmeta = self._load_bookmeta()
         split_map, n_test, n_val, n_train, example_map = self._compute_splits(list(bookmeta.keys()))
 
-        self._annotate_bookmeta(bookmeta, split_map, example_map)
-        self._save_bookmeta(bookmeta)
 
-        docs_count, total_token_len = self._copy_books_by_split(
+
+        docs_count, total_token_len, books_char_len, books_token_len = self._copy_books_by_split(
             self.books_src, books_dst, split_map, example_map, ".txt", do_tokenize=True
         )
+        self._annotate_bookmeta(bookmeta, split_map, example_map, books_char_len, books_token_len)
+        self._save_bookmeta(bookmeta)
         tasks_count, _ = self._copy_tasks_by_split(self.tasks_src, tasks_dst, split_map, example_map, ".json")
 
         print("✅ novelQA preprocessing finished")
@@ -111,14 +112,15 @@ class NovelQAPreprocessor:
         return split_map, n_test, n_val, len(train_ids), example_map
 
     @staticmethod
-    def _annotate_bookmeta(bookmeta: Dict, split_map: Dict[str, str], example_map: Dict[str, list[str]]):
+    def _annotate_bookmeta(bookmeta: Dict, split_map: Dict[str, str], example_map: Dict[str, list[str]], books_char_len: Dict[str, int], books_token_len: Dict[str, int]):
         example_set = set(example_map.get("example", []))
         examples_set = set(example_map.get("examples", []))
 
         for bookid, meta in bookmeta.items():
             if isinstance(meta, dict):
-                meta["split"] = split_map.get(bookid, "train")
-
+                meta["split"] = split_map.get(bookid)
+                meta["tokenlen"] = books_token_len.get(bookid)
+                meta["charlen"] = books_char_len.get(bookid)
                 # flagi example / examples
                 meta["example"] = bookid in example_set
                 meta["examples"] = bookid in examples_set
@@ -153,7 +155,8 @@ class NovelQAPreprocessor:
     ):
         docs_count = 0
         total_token_len = 0
-
+        books_char_len = {}
+        books_token_len = {}
         if do_tokenize:
             tokenizer = TokenizerService()
 
@@ -175,9 +178,13 @@ class NovelQAPreprocessor:
             if do_tokenize:
                 with open(file_path, "r", encoding="utf-8") as f:
                     content = f.read()
-                total_token_len += tokenizer.tokenize(content)["token_count"]
+                book_token_len = tokenizer.tokenize(content)["token_count"]
+                total_token_len += book_token_len
+                books_char_len[bookid] = len(content)
+                books_token_len[bookid] = book_token_len
 
-        return docs_count, total_token_len
+
+        return docs_count, total_token_len, books_char_len, books_token_len
 
     def _copy_tasks_by_split(
         self,

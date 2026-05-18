@@ -5,8 +5,8 @@ stages:
     deps:
     - path: params.yaml
       hash: md5
-      md5: 63e1aca7c72dc090c0bc5bbe12f508e9
-      size: 2733
+      md5: 9af086571033832838ac906887a833d0
+      size: 2971
       isexec: true
     - path: src/download_datasets/download_datasets_all.py
       hash: md5
@@ -16,25 +16,25 @@ stages:
     params:
       params.yaml:
         datasets_download:
-        - infiniteBench
+        - literaryQA
     outs:
     - path: data/downloads/
       hash: md5
-      md5: 71eb83e5c7f2d7d7d7ae5a2603a66dd2.dir
-      size: 1635710954
-      nfiles: 8218
+      md5: 4f1888690dcb8869d9709caa8b27d269.dir
+      size: 1772284600
+      nfiles: 8873
   preprocess_datasets:
     cmd: python -m src.preprocess_datasets.preprocess_datasets_all
     deps:
     - path: data/downloads/
       hash: md5
-      md5: 71eb83e5c7f2d7d7d7ae5a2603a66dd2.dir
-      size: 1635710954
-      nfiles: 8218
+      md5: 4f1888690dcb8869d9709caa8b27d269.dir
+      size: 1772284600
+      nfiles: 8873
     - path: params.yaml
       hash: md5
-      md5: 63e1aca7c72dc090c0bc5bbe12f508e9
-      size: 2733
+      md5: 9af086571033832838ac906887a833d0
+      size: 2971
       isexec: true
     - path: src/preprocess_datasets/preprocess_datasets_all.py
       hash: md5
@@ -47,28 +47,28 @@ stages:
             backend: tiktoken
             model_name: gpt-4
           datasets:
-            infiniteBenchChoice:
-              presets_file: configs/preprocess_dataset/infiniteBenchChoice.yaml
+            literaryQA:
+              presets_file: configs/preprocess_dataset/literaryQA.yaml
               use_presets:
               - default
     outs:
     - path: data/datasets/
       hash: md5
-      md5: 2de97dd140a04b46834d33f8d4040743.dir
-      size: 488478244
-      nfiles: 1742
+      md5: 65ef4afb301a2eb0190464c17e3f50c9.dir
+      size: 574612110
+      nfiles: 2396
   chunking_text:
     cmd: python -m src.chunking.chunking_text_all
     deps:
     - path: data/datasets/
       hash: md5
-      md5: 2de97dd140a04b46834d33f8d4040743.dir
-      size: 488478244
-      nfiles: 1742
+      md5: 65ef4afb301a2eb0190464c17e3f50c9.dir
+      size: 574612110
+      nfiles: 2396
     - path: params.yaml
       hash: md5
-      md5: 63e1aca7c72dc090c0bc5bbe12f508e9
-      size: 2733
+      md5: 9af086571033832838ac906887a833d0
+      size: 2971
       isexec: true
     - path: src/chunking/chunking_text_all.py
       hash: md5
@@ -80,47 +80,22 @@ stages:
           fixed_size:
             presets_file: configs/chunking/fixed_size.yaml
             use_presets:
-            - fs_512_64_char
             - fs_512_64_token
-          recursive:
-            presets_file: configs/chunking/recursive.yaml
-            use_presets:
-            - r_512_64
-          recursive_semantic:
-            presets_file: configs/chunking/recursive_semantic.yaml
-            use_presets:
-            - paper_based
           neural:
             presets_file: configs/chunking/neural.yaml
             use_presets:
             - default
-          chonkie_semantic:
-            presets_file: configs/chunking/chonkie_semantic.yaml
-            use_presets:
-            - default
-          lumber:
-            presets_file: configs/chunking/lumber.yaml
-            use_presets:
-            - default
-          max_min:
-            presets_file: configs/chunking/max_min.yaml
-            use_presets:
-            - liberal
-          sequential_hac:
-            presets_file: configs/chunking/sequential_hac.yaml
-            use_presets:
-            - liberal
         preprocess_datasets.datasets:
-          infiniteBenchChoice:
-            presets_file: configs/preprocess_dataset/infiniteBenchChoice.yaml
+          literaryQA:
+            presets_file: configs/preprocess_dataset/literaryQA.yaml
             use_presets:
             - default
     outs:
     - path: data/chunks/
       hash: md5
-      md5: 1dad36348d52e62d155aaaddc10a44f5.dir
-      size: 8788363
-      nfiles: 18
+      md5: c034dd9ce58d2a2db8a5dbbae572a950.dir
+      size: 7159097
+      nfiles: 13
   embed_chunks:
     cmd: python -m src.embed_chunks.embed_chunks_all
     deps:
@@ -497,3 +472,47 @@ stages:
       md5: 3205307ae0e1da986b8d7ddc59e207d6.dir
       size: 2757
       nfiles: 16
+  analyze_split_point:
+    cmd: python -m src.analyze_split_point.analyze_split_point_all
+    deps:
+    - path: data/chunks/
+      hash: md5
+      md5: c034dd9ce58d2a2db8a5dbbae572a950.dir
+      size: 7159097
+      nfiles: 13
+    - path: params.yaml
+      hash: md5
+      md5: 9af086571033832838ac906887a833d0
+      size: 2971
+      isexec: true
+    - path: src/analyze_split_point/analyze_split_point_all.py
+      hash: md5
+      md5: 503d8068e8a57b07f7cd72814b623ed8
+      size: 3995
+    params:
+      params.yaml:
+        analyze_split_points.methods:
+          analyze_split_point:
+            presets_file: configs/analyze_split_point/analyze_split_point.yaml
+            use_presets:
+            - sentence
+        chunking.methods:
+          fixed_size:
+            presets_file: configs/chunking/fixed_size.yaml
+            use_presets:
+            - fs_512_64_token
+          neural:
+            presets_file: configs/chunking/neural.yaml
+            use_presets:
+            - default
+        preprocess_datasets.datasets:
+          literaryQA:
+            presets_file: configs/preprocess_dataset/literaryQA.yaml
+            use_presets:
+            - default
+    outs:
+    - path: data/analyze_split_points/
+      hash: md5
+      md5: 4f853316fdc6046bf3005d3df58752bf.dir
+      size: 10570
+      nfiles: 2

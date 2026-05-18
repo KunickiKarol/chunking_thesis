@@ -116,4 +116,16 @@ stages:
       - generation.methods
       - evaluate_generator.methods
 
-
+  analyze_split_point:
+    cmd: python -m src.analyze_split_point.analyze_split_point_all
+    deps:
+      - data/chunks/
+      - src/analyze_split_point/analyze_split_point_all.py
+      - params.yaml
+    outs:
+      - data/analyze_split_points/:
+          persist: true
+    params:
+      - preprocess_datasets.datasets
+      - chunking.methods
+      - analyze_split_points.methods

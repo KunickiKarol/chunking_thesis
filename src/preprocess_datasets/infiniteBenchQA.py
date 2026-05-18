@@ -106,6 +106,7 @@ class infiniteBenchQAPreprocessor:
                     "title": content[:20],
                     "source": "infinityBench",
                     "tokenlen": content_token_len,
+                    "charlen": len(content),
                 }
 
         deduplicated = {}
@@ -215,7 +216,7 @@ class infiniteBenchQAPreprocessor:
 
     def _save_meta(self, total_token_len, docs_count, tasks_count, n_test, n_val, n_train):
         meta = {
-            "dataset_name": "novelQA",
+            "dataset_name": "infiniteBenchQA",
             "task_type": "Short Answer",
             "docs_count": docs_count,
             "tasks_count": tasks_count,

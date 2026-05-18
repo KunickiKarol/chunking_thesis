@@ -1,0 +1,4 @@
+presets:
+  - name: sentence
+    params:
+      analyze_type: sentence
