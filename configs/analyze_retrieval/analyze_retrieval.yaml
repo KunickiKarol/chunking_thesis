@@ -1,0 +1,4 @@
+presets:
+  - name: default
+    params:
+      analyze_type: default

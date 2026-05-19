@@ -45,6 +45,8 @@ dependencies = [
     "loguru>=0.7.3",
     "rouge-score>=0.1.2",
     "typed-argument-parser>=1.11.0",
+    "matplotlib",
+    "ipykernel"
 ]
 
 [tool.uv.sources]

@@ -6,6 +6,13 @@ from src.chunking.methods.chunking_lumber import Chunk
 from src.chunking.methods.register import register_chunker
 from src.tools.chunk import trim_bounds
 
+import warnings
+
+warnings.filterwarnings(
+    "ignore",
+    category=FutureWarning,
+    module="chonkie.*"
+)
 
 @register_chunker("recursive")
 def chunking_recursive(

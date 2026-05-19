@@ -350,7 +350,8 @@ def generate_final_answer(
     max_new_tokens: int = params.get("max_new_tokens", 512)
 
     raw = backend.generate(system_prompt, user_content, max_new_tokens)
-    return raw, extract_answer(raw), len(selected_chunks), selected_chunks_tokens_len
+    extracted_answer = extract_answer(raw)
+    return raw, extracted_answer, len(selected_chunks), selected_chunks_tokens_len
 
 
 # ---------------------------------------------------------------------------

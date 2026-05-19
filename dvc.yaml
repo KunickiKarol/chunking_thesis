@@ -129,3 +129,21 @@ stages:
       - preprocess_datasets.datasets
       - chunking.methods
       - analyze_split_points.methods
+
+  analyze_retrieval:
+    cmd: python -m src.analyze_retrieval.analyze_retrieval_all
+    deps:
+      - data/rerank_result/
+      - src/analyze_retrieval/analyze_retrieval_all.py
+      - params.yaml
+    outs:
+      - data/analyze_retrieval/:
+          persist: true
+    params:
+      - preprocess_datasets.datasets
+      - chunking.methods
+      - vector_embed.methods
+      - search.methods
+      - rerank.methods
+      - analyze_retrieval.methods
+

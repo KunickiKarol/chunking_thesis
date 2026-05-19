@@ -2,3 +2,6 @@ presets:
   - name: sentence
     params:
       analyze_type: sentence
+  - name: html_tag
+    params:
+      analyze_type: html_tag

@@ -43,10 +43,10 @@ def extract_answer(raw: str) -> str:
         r"</think>",
         original_raw,
         flags=re.IGNORECASE,
-    ).strip()
+    )
 
     if len(after_think) > 0:
-        result = after_think[-1]
+        result = after_think[-1].strip()
         if result:
             return result
 

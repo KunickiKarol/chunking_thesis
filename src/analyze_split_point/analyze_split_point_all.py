@@ -73,7 +73,7 @@ def analyze_split_points_all(
             continue
 
         result_dir.mkdir(parents=True, exist_ok=True)
-        print(f"➡️ Szukam query: {result_dir}")
+        print(f"➡️ Analizuję split points w {result_dir}")
         analyze_split_point_one(
             analyze_type,
             analyze_preset_params,

@@ -1,4 +1,9 @@
 presets:
+  - name: default_top10
+    params:
+      top_k: 10
+      order_preverse: false
+      model_name: BAAI/bge-reranker-v2-m3
   - name: default_top5
     params:
       top_k: 5

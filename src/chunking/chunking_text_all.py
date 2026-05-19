@@ -35,7 +35,13 @@ def chunking_text_all(
 
         result_dir = chunking_dir / dataset_name / dataset_preset_name / chunking_name / chunking_preset_name
 
-        if result_dir.exists() and any(p.is_file() for p in result_dir.glob("**/*")):
+        non_existing_splits = [
+            split
+            for split in splits
+            if not any(p.is_file() for p in (result_dir / split).glob("**/*"))
+        ]
+
+        if result_dir.exists() and not non_existing_splits:
             print(f"⏭️ Pomijam {result_dir} – już istnieje")
             continue
 
@@ -48,7 +54,7 @@ def chunking_text_all(
             chunking_type=chunking_name,
             params=chunking_preset_params,
             dataset_name=dataset_name,
-            splits=splits,
+            splits=non_existing_splits,
             input_dir=input_dir,
             output_dir=result_dir,
         )

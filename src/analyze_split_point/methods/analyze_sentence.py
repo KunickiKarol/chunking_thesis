@@ -2,7 +2,7 @@ import json
 from pathlib import Path
 import re
 from collections import defaultdict
-
+import time
 from src.analyze_split_point.methods.register import register_analyze_split_point
 
 SENTENCE_END_REGEX = re.compile(r"[\.!\?…]")
@@ -114,14 +114,16 @@ def is_good_boundary(prev_text: str, between_text: str, next_text: str) -> bool:
         return True
     if next_text.startswith("—"):
         return True
-    if next_text.startswith((". ", "! ", "? ")) and between_text == "" and prev_text[-1].islower():
+    # if next_text.startswith((". ", "! ", "? ", ":\n", ".\n", "?\n", "!\n")) and between_text == "" and prev_text[-1].islower():
+    #     return True
+    if prev_text.endswith((":")) and between_text in (" ", "\n") and next_text[0].isupper():
         return True
     return False
 
 
 @register_analyze_split_point("sentence")
 def analyze_sentence(chunks_files, books_files, tags_files, analyze_preset_params):
-
+    start_time = time.perf_counter()
     books_map = {f.stem: f for f in books_files}
 
 
@@ -170,9 +172,5 @@ def analyze_sentence(chunks_files, books_files, tags_files, analyze_preset_param
             "total_incorrect": len(incorrect_after_chunk_id),
             "incorrect_after_chunk_id": incorrect_after_chunk_id,
         }
-    return chunks_analyze
-
-
-# --- użycie ---
-# result = analyze_files(Path("chunks_dir"), Path("books_dir"))
-# print(json.dumps(result, ensure_ascii=False, indent=2))
+    total_time = time.perf_counter() - start_time
+    return chunks_analyze, total_time
