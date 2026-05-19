@@ -426,13 +426,13 @@ stages:
     deps:
     - path: data/chunks/
       hash: md5
-      md5: ae980f7d43d1c2fa0790940b2ccd685b.dir
-      size: 82928690
-      nfiles: 171
+      md5: 09704aa2c6ed47a1fe0d89535f83471b.dir
+      size: 84672813
+      nfiles: 175
     - path: params.yaml
       hash: md5
-      md5: 7e12471d3766e8ed23775653239b61ba
-      size: 3137
+      md5: fed1aebf8c89c2c083838005356ed281
+      size: 3203
       isexec: true
     - path: src/analyze_split_point/analyze_split_point_all.py
       hash: md5
@@ -472,9 +472,9 @@ stages:
     outs:
     - path: data/analyze_split_points/
       hash: md5
-      md5: f11cfbe00f5f12d1d3e6282df04a1b96.dir
-      size: 287776
-      nfiles: 10
+      md5: 0e99fc9884cf53a71e6bab286263d200.dir
+      size: 3244470
+      nfiles: 40
   analyze_retrieval:
     cmd: python -m src.analyze_retrieval.analyze_retrieval_all
     deps:
