@@ -20,8 +20,8 @@ def find_chunk_id_by_retreived_id(embed_input_dir, retrieved_key, source_id=None
     for path in metadata_dir.glob("*.json"):
         with open(path, encoding="utf-8") as f:
             for meta in json.load(f):
-                if meta.get("id") == retrieved_key and (source_id is None or meta.get("source") == source_id):
-                    return source_id if source_id else meta.get("source"), meta.get("chunk_id")
+                if meta.get("id") == retrieved_key and (source_id is None or meta.get("source_file") == source_id):
+                    return source_id if source_id else meta.get("source_file"), meta.get("chunk_id")
     raise ValueError(f"Nie znaleziono chunku o source_id={source_id} i retrieved_key={retrieved_key}")
 
 

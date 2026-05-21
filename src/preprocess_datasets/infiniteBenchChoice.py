@@ -105,7 +105,7 @@ class infiniteBenchChoicePreprocessor:
                 metadata[old_id] = {
                     "old_id": old_id,
                     "title": content[:20],
-                    "source": "infinityBench",
+                    "source_dataset": "infinityBench",
                     "tokenlen": content_token_len,
                     "charlen": len(content),
                 }

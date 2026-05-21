@@ -5,8 +5,8 @@ stages:
     deps:
     - path: params.yaml
       hash: md5
-      md5: fed1aebf8c89c2c083838005356ed281
-      size: 3203
+      md5: 4a888c1bee47d0267ba753ae2d060fb0
+      size: 3193
       isexec: true
     - path: src/download_datasets/download_datasets_all.py
       hash: md5
@@ -16,6 +16,7 @@ stages:
     params:
       params.yaml:
         datasets_download:
+        - novelQA
         - literaryQA
     outs:
     - path: data/downloads/
@@ -33,8 +34,8 @@ stages:
       nfiles: 8873
     - path: params.yaml
       hash: md5
-      md5: fed1aebf8c89c2c083838005356ed281
-      size: 3203
+      md5: 4a888c1bee47d0267ba753ae2d060fb0
+      size: 3193
       isexec: true
     - path: src/preprocess_datasets/preprocess_datasets_all.py
       hash: md5
@@ -49,6 +50,10 @@ stages:
           datasets:
             literaryQA:
               presets_file: configs/preprocess_dataset/literaryQA.yaml
+              use_presets:
+              - default
+            novelQA:
+              presets_file: configs/preprocess_dataset/novelQA.yaml
               use_presets:
               - default
     outs:
@@ -67,8 +72,8 @@ stages:
       nfiles: 2396
     - path: params.yaml
       hash: md5
-      md5: fed1aebf8c89c2c083838005356ed281
-      size: 3203
+      md5: 4a888c1bee47d0267ba753ae2d060fb0
+      size: 3193
       isexec: true
     - path: src/chunking/chunking_text_all.py
       hash: md5
@@ -99,24 +104,28 @@ stages:
             presets_file: configs/preprocess_dataset/literaryQA.yaml
             use_presets:
             - default
+          novelQA:
+            presets_file: configs/preprocess_dataset/novelQA.yaml
+            use_presets:
+            - default
     outs:
     - path: data/chunks/
       hash: md5
-      md5: 09704aa2c6ed47a1fe0d89535f83471b.dir
-      size: 84672813
-      nfiles: 175
+      md5: 22347d1caeea0c387a570e15e862fe67.dir
+      size: 108931412
+      nfiles: 205
   embed_chunks:
     cmd: python -m src.embed_chunks.embed_chunks_all
     deps:
     - path: data/chunks/
       hash: md5
-      md5: 09704aa2c6ed47a1fe0d89535f83471b.dir
-      size: 84672813
-      nfiles: 175
+      md5: 22347d1caeea0c387a570e15e862fe67.dir
+      size: 108931412
+      nfiles: 205
     - path: params.yaml
       hash: md5
-      md5: fed1aebf8c89c2c083838005356ed281
-      size: 3203
+      md5: 4a888c1bee47d0267ba753ae2d060fb0
+      size: 3193
       isexec: true
     - path: src/embed_chunks/embed_chunks_all.py
       hash: md5
@@ -147,6 +156,10 @@ stages:
             presets_file: configs/preprocess_dataset/literaryQA.yaml
             use_presets:
             - default
+          novelQA:
+            presets_file: configs/preprocess_dataset/novelQA.yaml
+            use_presets:
+            - default
         vector_embed.methods:
           FAISS:
             presets_file: configs/vector_embed/faiss.yaml
@@ -155,9 +168,9 @@ stages:
     outs:
     - path: data/vector_db/
       hash: md5
-      md5: 2d7504654667fc445f94404383e3b460.dir
-      size: 78021177
-      nfiles: 143
+      md5: a7c7d1d86acc0c45a4f7a6dd4edf635d.dir
+      size: 76868467
+      nfiles: 80
   search:
     cmd: python -m src.search.search_all
     deps:

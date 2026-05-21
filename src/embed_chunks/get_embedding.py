@@ -110,7 +110,7 @@ def embed_chunks(embed_name, embed_preset_params, chunks_input_dir, result_dir):
 
             metadata_item = {
                 "id": embed_index if embed_type == "global" else i,
-                "source": chunk["source_file"],
+                "source_file": chunk["source_file"],
                 "chunk_id": chunk["chunk_id"],
                 "embed_time": embed_time,
             }

@@ -7,8 +7,8 @@
 # from src.chunking.chunking_text_all import main
 # main()
 
-# from src.embed_chunks.embed_chunks_all import main
-# main()
+from src.embed_chunks.embed_chunks_all import main
+main()
 
 # from src.search.search_all import main
 # main()
@@ -22,8 +22,8 @@
 # from src.analyze_split_point.analyze_split_point_all import main
 # main()
 
-from src.analyze_retrieval.analyze_retrieval_all import main
-main()
+# from src.analyze_retrieval.analyze_retrieval_all import main
+# main()
 
 # from pathlib import Path
 

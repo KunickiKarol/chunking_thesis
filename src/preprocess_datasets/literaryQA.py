@@ -228,6 +228,7 @@ class LiteraryQAPreprocessor:
                         "title": record.get("title"),
                         "author": record.get("metadata", {}).get("author"),
                         "split": record.get("split"),
+                        "source_dataset": "literaryQA",
                         "publication_date": record.get("metadata", {}).get("publication_date"),
                         "genre_tags": record.get("metadata", {}).get("genre_tags"),
                         "text_url": record.get("metadata", {}).get("text_url"),

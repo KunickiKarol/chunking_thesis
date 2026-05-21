@@ -1,6 +1,6 @@
 datasets_download:
   # - "infiniteBench"
-  # - "novelQA"
+  - "novelQA"
   - "literaryQA"
 
 preprocess_datasets:
@@ -12,21 +12,21 @@ preprocess_datasets:
       presets_file: configs/preprocess_dataset/literaryQA.yaml
       use_presets:
         - default  # 'chapter' or 'page' or 'none'
-    # novelQA:
-    #   presets_file: configs/preprocess_dataset/novelQA.yaml
-    #   use_presets:
-    #     - default  # 'chapter' or 'page' or 'none'
-    # infiniteBenchQA:
-    #   presets_file: configs/preprocess_dataset/infiniteBenchQA.yaml
-    #   use_presets:
-    #     - default  # 'chapter' or 'page' or 'none'
+    novelQA:
+      presets_file: configs/preprocess_dataset/novelQA.yaml
+      use_presets:
+        - default  # 'chapter' or 'page' or 'none'
+    infiniteBenchQA:
+      presets_file: configs/preprocess_dataset/infiniteBenchQA.yaml
+      use_presets:
+        - default  # 'chapter' or 'page' or 'none'
     # infiniteBenchChoice:
     #   presets_file: configs/preprocess_dataset/infiniteBenchChoice.yaml
     #   use_presets:
     #     - default  # 'chapter' or 'page' or 'none'
 
 chunking:
-  splits: ["example", 'examples']
+  splits: ["example"]
   methods:
     fixed_size:
       presets_file: configs/chunking/fixed_size.yaml
@@ -120,3 +120,10 @@ analyze_retrieval:
       presets_file: configs/analyze_retrieval/analyze_retrieval.yaml
       use_presets:
         - default
+
+analyze_embeddings:
+  methods:
+    analyze_embeddings:
+      presets_file: configs/analyze_embeddings/analyze_datasets.yaml
+      use_presets:
+        - normalized

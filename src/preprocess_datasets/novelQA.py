@@ -81,8 +81,15 @@ class NovelQAPreprocessor:
     def _load_bookmeta(self) -> Dict:
         with open(self.bookmeta_src, encoding="utf-8") as f:
             data = json.load(f)
-
-        return {k: v for k, v in data.items() if v.get("copyright") == "PublicDomain"}
+        bookmeta = {
+            k: {
+                **v,
+                "source_file": "novelQA"
+            }
+            for k, v in data.items()
+            if v.get("copyright") == "PublicDomain"
+        }
+        return bookmeta
 
     def _compute_splits(self, book_ids: list[str]) -> Tuple[Dict[str, str], int, int, int, Dict[str, list[str]]]:
         random.seed(self.random_state)
@@ -131,7 +138,7 @@ class NovelQAPreprocessor:
 
     def _save_meta(self, total_token_len, docs_count, tasks_count, n_test, n_val, n_train):
         meta = {
-            "dataset_name": "novelQA",
+            "source_dataset": "novelQA",
             "task_type": "Multiple Choice",
             "docs_count": docs_count,
             "tasks_count": tasks_count,
