@@ -4,7 +4,6 @@ import pkgutil
 from src.evaluate_generator.methods.register import EVALUATORS_GENERATORS
 
 
-
 def load_generator():
     """
     Auto-import wszystkich modułów w folderze methods/

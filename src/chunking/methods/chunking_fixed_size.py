@@ -2,7 +2,6 @@ from typing import List, Literal
 
 import yaml
 from chonkie import SentenceChunker, TokenChunker
-from langchain_text_splitters import CharacterTextSplitter
 
 from src.chunking.methods.register import register_chunker
 from src.tools.chunk import Chunk, trim_bounds
@@ -37,10 +36,10 @@ def chunking_fixed_size(
     # =========================
     if mode == "char":
         splitter = SentenceChunker(
-            tokenizer="character",     # Default tokenizer (or use "gpt2", etc.)
-            chunk_size=chunk_size,           # Maximum tokens per chunk
-            chunk_overlap=overlap,         # Overlap between chunks
-            min_sentences_per_chunk=1  # Minimum sentences in each chunk
+            tokenizer="character",  # Default tokenizer (or use "gpt2", etc.)
+            chunk_size=chunk_size,  # Maximum tokens per chunk
+            chunk_overlap=overlap,  # Overlap between chunks
+            min_sentences_per_chunk=1,  # Minimum sentences in each chunk
         )
         chunks = splitter.chunk(text)
         return [Chunk(*trim_bounds(chunk.text, chunk.start_index, chunk.end_index)) for chunk in chunks]

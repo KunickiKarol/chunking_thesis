@@ -1,3 +1,4 @@
+import logging
 import os
 from itertools import product
 from pathlib import Path
@@ -6,7 +7,11 @@ import yaml
 from dotenv import load_dotenv
 
 from src.evaluate_generator.evaluate_generator_one import evaluate_generator_one
+from src.tools.logging_config import setup_logging
 from src.tools.presets import iter_cfg_with_presets
+
+setup_logging()
+logger = logging.getLogger(__name__)
 
 
 def generation_all(
@@ -22,7 +27,7 @@ def generation_all(
     generation_dir: Path,
     evaluator_dir: Path,
 ):
-    print(f"➡️ Generation: {generation_dir}")
+    logger.info(f"➡️ Generation: {generation_dir}")
     for (
         (dataset_name, dataset_preset),
         (chunking_name, chunking_preset),
@@ -92,20 +97,24 @@ def generation_all(
             / split
         )
 
+        if dataset_name == "novelQA":
+            logger.info(f"❌ Pomijam ponieważ novelQA nie ma Answers")
+            continue
+
         if not task_input_dir.exists():
-            print(f"❌ Brak zadań: {task_input_dir}, pomijam...")
+            logger.info(f"❌ Brak zadań: {task_input_dir}, pomijam...")
             continue
 
         if not generation_input_dir.exists():
-            print(f"❌ Brak generacji: {generation_input_dir}, pomijam...")
+            logger.info(f"❌ Brak generacji: {generation_input_dir}, pomijam...")
             continue
 
         if result_dir.exists() and any(p.is_file() for p in result_dir.iterdir()):
-            print(f"⏭️ Pomijam {result_dir}, generation już istnieje")
+            logger.info(f"⏭️ Pomijam {result_dir}, generation już istnieje")
             continue
 
         result_dir.mkdir(parents=True, exist_ok=True)
-
+        logger.info(f"▶ Evaluating generator: {result_dir}")
         evaluate_generator_one(
             generation_name,
             generation_preset_params,
@@ -149,7 +158,7 @@ def main():
     generation_cfg = params.get("generation").get("methods")
     if not generation_cfg:
         raise ValueError("Nie znaleziono generation_methods w params.yaml")
-    
+
     evaluator_cfg = params.get("evaluate_generator").get("methods")
     if not evaluator_cfg:
         raise ValueError("Nie znaleziono evaluate_generator_methods w params.yaml")

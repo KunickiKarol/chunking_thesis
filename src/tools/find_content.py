@@ -1,4 +1,5 @@
 import json
+from pathlib import Path
 
 
 def find_query_by_id(task_input_dir, query_key):
@@ -39,3 +40,98 @@ def find_chunk_by_id(chunks_input_dir, source_id, chunk_id):
                     return chunk_data
 
     raise ValueError(f"Nie znaleziono chunku o source_id={source_id} i chunk_id={chunk_id}")
+
+
+def load_all_queries_fast(task_input_dir: Path) -> dict:
+    """{ query_key -> (source_id, query_data) }"""
+    result = {}
+    for path in task_input_dir.glob("*.json"):
+        with open(path, encoding="utf-8") as f:
+            for query_key, query_data in json.load(f).items():
+                result[query_key] = (path.stem, query_data)
+    return result
+
+
+def load_all_queries_fast_source(task_input_dir: Path) -> dict:
+    """{ source_id -> [(query_key, query_data)] }"""
+    result = {}
+    for path in task_input_dir.glob("*.json"):
+        with open(path, encoding="utf-8") as f:
+            for query_key, query_data in json.load(f).items():
+                if path.stem not in result:
+                    result[path.stem] = []
+                result[path.stem].append((query_key, query_data))
+    return result
+
+
+def load_all_chunk_metadata_fast(embed_input_dir: Path) -> dict:
+    """{ source_id: -> {retrieved_key: chunk_id} }"""
+    result = {}
+    metadata_dir = embed_input_dir / "Metadatas"
+    for path in metadata_dir.glob("*.json"):
+        with open(path, encoding="utf-8") as f:
+            for meta in json.load(f):
+                rid = meta.get("id")
+                if meta.get("source_file") not in result:
+                    result[meta.get("source_file")] = {}
+                result[meta.get("source_file")][rid] = meta.get("chunk_id")
+    return result
+
+
+def load_all_chunk_metadata_fast_global(embed_input_dir: Path) -> dict:
+    """{ source_id: -> {retrieved_key: chunk_id} }"""
+    result = {}
+    result["global"] = {}
+    metadata_dir = embed_input_dir / "Metadatas"
+    for path in metadata_dir.glob("*.json"):
+        with open(path, encoding="utf-8") as f:
+            for meta in json.load(f):
+                rid = meta.get("id")
+                result["global"][rid] = meta.get("chunk_id")
+    return result
+
+
+def load_all_chunks_fast(chunks_input_dir: Path) -> dict:
+    """{ chunk_id -> chunk_data }"""
+    result = {}
+    for path in chunks_input_dir.glob("*.jsonl"):
+        with open(path, encoding="utf-8") as f:
+            for line in f:
+                line = line.strip()
+                if not line:
+                    continue
+                chunk_data = json.loads(line)
+                cid = chunk_data.get("chunk_id")
+                if cid is not None:
+                    result[cid] = chunk_data
+    return result
+
+
+# ─── Szybkie wyszukiwania (O(1) zamiast O(n * pliki)) ─────────────────────────
+
+
+def find_query_by_id_fast(query_index: dict, query_key: str):
+    try:
+        return query_index[query_key]  # (source_id, query_data)
+    except KeyError:
+        raise ValueError(f"Nie znaleziono query o query_key={query_key}")
+
+
+def find_chunk_by_retrieved_id_fast(
+    metadata_index: dict,
+    chunk_index: dict,
+    retrieved_key: int,
+    source_id: str | None = None,
+):
+    source_metadata = metadata_index.get(source_id)
+    if not source_metadata:
+        raise ValueError(f"Nie znaleziono metadanych dla source_id={source_id}")
+
+    chunk_id = source_metadata.get(retrieved_key)
+    if chunk_id is None:
+        raise ValueError(f"Nie znaleziono chunku o retrieved_key={retrieved_key} dla source_id={source_id}")
+
+    chunk = chunk_index.get(chunk_id)
+    if chunk is None:
+        raise ValueError(f"Nie znaleziono chunku {chunk_id} w chunk_index")
+    return chunk

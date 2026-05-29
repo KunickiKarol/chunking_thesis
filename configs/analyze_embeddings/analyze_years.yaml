@@ -1,0 +1,45 @@
+presets:
+  - name: year_normalized_none
+    params:
+      analyze_type: 'analyze_years'
+      metrics: ['mantel_test', 'knn_temporal_consistency', 'ridge']
+      normalize_map: [true, true, true, true, true]
+      pca_dim: 0
+      dim_red: ['pca', 'umap'] #, 'tsne', 'phate', 'pacmap']
+  - name: year_normalized_50
+    params:
+      analyze_type: 'analyze_years'
+      metrics: ['mantel_test', 'knn_temporal_consistency', 'ridge']
+      normalize_map: [true, true, true, true, true]
+      pca_dim: 50
+      dim_red: ['pca' , 'umap'] #, 'tsne', 'phate', 'pacmap']
+  - name: year_normalized_100
+    params:
+      analyze_type: 'analyze_years'
+      metrics: ['mantel_test', 'knn_temporal_consistency', 'ridge']
+      normalize_map: [true, true, true, true, true]
+      pca_dim: 100
+      dim_red: ['pca', 'umap'] #, 'tsne', 'phate', 'pacmap']
+  - name: year_no_normalized_none
+    params:
+      analyze_type: 'analyze_years'
+      metrics: ['mantel_test', 'knn_temporal_consistency', 'ridge']
+      normalize_map: [false, false, false, false, false]
+      pca_dim: 0
+      dim_red: ['pca', 'umap'] #, 'tsne', 'phate', 'pacmap']
+  - name: year_no_normalized_50
+    params:
+      analyze_type: 'analyze_years'
+      metrics: ['mantel_test', 'knn_temporal_consistency', 'ridge']
+      normalize_map: [false, false, false, false, false]
+      pca_dim: 50
+      dim_red: ['pca', 'umap'] #, 'tsne', 'phate', 'pacmap']
+  - name: year_no_normalized_100
+    params:
+      analyze_type: 'analyze_years'
+      metrics: ['mantel_test', 'knn_temporal_consistency', 'ridge']
+      normalize_map: [false, false, false, false, false]
+      pca_dim: 100 
+      dim_red: ['pca', 'umap'] #, 'tsne', 'phate', 'pacmap']
+
+

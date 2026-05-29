@@ -1,11 +1,8 @@
 from src.evaluate_generator.prompts.register import register_prompt
 
+
 @register_prompt("default_prompt")
-def default_prompt(
-    question_text,
-    gold_answers_text,
-    llm_answer
-):
+def default_prompt(question_text, gold_answers_text, llm_answer):
 
     system_prompt = """\
 You are a highly strict and reliable evaluation engine for answer correctness.

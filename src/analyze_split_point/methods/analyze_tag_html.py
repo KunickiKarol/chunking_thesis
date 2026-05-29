@@ -1,5 +1,6 @@
 import json
 import time
+
 from src.analyze_split_point.methods.register import register_analyze_split_point
 
 
@@ -29,14 +30,14 @@ def analyze_html_tags(chunks_files, books_files, tags_files, analyze_preset_para
         stats = {}
         for tag in TRACKED_TAGS:
             stats[tag] = {
-                "inside":  {"num": 0, "tag_ids": []},  # (tag_id, chunk_id)
+                "inside": {"num": 0, "tag_ids": []},  # (tag_id, chunk_id)
                 "splited": {"num": 0, "tag_ids": []},  # (tag_id, chunk_id)
             }
         stats["split_point"] = {
             # chunk whose start_index aligns with a tag boundary
             "good_start": {"num": 0, "chunks_id": []},
             # chunk whose end_index aligns with a tag boundary
-            "good_end":   {"num": 0, "chunks_id": []},
+            "good_end": {"num": 0, "chunks_id": []},
         }
 
         # ── Helpers ─────────────────────────────────────────────────────────
@@ -52,8 +53,8 @@ def analyze_html_tags(chunks_files, books_files, tags_files, analyze_preset_para
             if chunk_idx == 0:
                 return None
             g_start = chunks[chunk_idx - 1]["end_index"] + 1
-            g_end   = chunks[chunk_idx]["start_index"] - 1
-            if g_start > g_end:   # chunks are adjacent, no gap
+            g_end = chunks[chunk_idx]["start_index"] - 1
+            if g_start > g_end:  # chunks are adjacent, no gap
                 return None
             return (g_start, g_end)
 
@@ -67,7 +68,7 @@ def analyze_html_tags(chunks_files, books_files, tags_files, analyze_preset_para
             if chunk_idx >= len(chunks) - 1:
                 return None
             g_start = chunks[chunk_idx]["end_index"] + 1
-            g_end   = chunks[chunk_idx + 1]["start_index"] - 1
+            g_end = chunks[chunk_idx + 1]["start_index"] - 1
             if g_start > g_end:
                 return None
             return (g_start, g_end)
@@ -106,17 +107,17 @@ def analyze_html_tags(chunks_files, books_files, tags_files, analyze_preset_para
         # multiple (chunk, category) pairs.
 
         for tag_id, tag_info in tags_data.items():
-            tag_name  = tag_info["tag_name"]
+            tag_name = tag_info["tag_name"]
             tag_start = tag_info["tag_start"]
-            tag_end   = tag_info["tag_end"]
+            tag_end = tag_info["tag_end"]
 
             if tag_name not in stats:
                 continue
 
             for chunk in chunks:
-                chunk_id    = chunk["chunk_id"]
+                chunk_id = chunk["chunk_id"]
                 chunk_start = chunk["start_index"]
-                chunk_end   = chunk["end_index"]
+                chunk_end = chunk["end_index"]
 
                 # Does this tag overlap this chunk at all?
                 # Overlap: tag_start <= chunk_end  AND  tag_end >= chunk_start
@@ -126,11 +127,11 @@ def analyze_html_tags(chunks_files, books_files, tags_files, analyze_preset_para
                 # INSIDE: tag is fully contained within the chunk
                 if tag_start >= chunk_start and tag_end <= chunk_end:
                     stats[tag_name]["inside"]["num"] += 1
-                    stats[tag_name]["inside"]["tag_ids"].append({'tag_id': tag_id, 'chunk_id': chunk_id})
+                    stats[tag_name]["inside"]["tag_ids"].append({"tag_id": tag_id, "chunk_id": chunk_id})
                 else:
                     # SPLITED: tag overlaps the chunk but bleeds outside it
                     stats[tag_name]["splited"]["num"] += 1
-                    stats[tag_name]["splited"]["tag_ids"].append({'tag_id': tag_id, 'chunk_id': chunk_id})
+                    stats[tag_name]["splited"]["tag_ids"].append({"tag_id": tag_id, "chunk_id": chunk_id})
 
         # ── Split-point classification (good_start / good_end) ──────────────
         # For each chunk, check whether any tracked tag begins at its start
@@ -138,9 +139,9 @@ def analyze_html_tags(chunks_files, books_files, tags_files, analyze_preset_para
         # The gap adjacent to the boundary counts as part of that boundary.
         total_chunks = len(chunks)
         for chunk_idx, chunk in enumerate(chunks):
-            chunk_id    = chunk["chunk_id"]
+            chunk_id = chunk["chunk_id"]
             chunk_start = chunk["start_index"]
-            chunk_end   = chunk["end_index"]
+            chunk_end = chunk["end_index"]
 
             # Effective start zone: [gap_before_start … chunk_start] (inclusive)
             gb = gap_before(chunk_idx)
@@ -153,14 +154,14 @@ def analyze_html_tags(chunks_files, books_files, tags_files, analyze_preset_para
             end_zone_hi = ga[1] if ga else chunk_end
 
             good_start_found = False
-            good_end_found   = False
+            good_end_found = False
 
             for tag_id, tag_info in tags_data.items():
                 if tag_info["tag_name"] not in TRACKED_TAGS:
                     continue
 
                 t_start = tag_info["tag_start"]
-                t_end   = tag_info["tag_end"]
+                t_end = tag_info["tag_end"]
 
                 # good_start: a tag opens exactly at (or in the gap before) this chunk
                 if not good_start_found:

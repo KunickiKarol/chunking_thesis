@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+import logging
 import os
 from itertools import product
 from pathlib import Path
@@ -7,7 +8,11 @@ import yaml
 from dotenv import load_dotenv
 
 from src.analyze_retrieval.analyze_retrieval_one import analyze_retrieval_one
+from src.tools.logging_config import setup_logging
 from src.tools.presets import iter_cfg_with_presets
+
+setup_logging()
+logger = logging.getLogger(__name__)
 
 
 def analyze_retrieval_all(
@@ -23,7 +28,7 @@ def analyze_retrieval_all(
     rerank_dir: Path,
     analyze_retrieval_dir: Path,
 ):
-    print(f"➡️ Analyze Retrieval: {analyze_retrieval_dir}")
+    logger.info(f"➡️ Analyze Retrieval: {analyze_retrieval_dir}")
     for (
         (dataset_name, dataset_preset),
         (chunking_name, chunking_preset),
@@ -41,7 +46,7 @@ def analyze_retrieval_all(
         iter_cfg_with_presets(analyze_retrieval_cfg),
         splits,
     ):
-    
+
         dataset_preset_name = dataset_preset["name"]
         chunking_preset_name = chunking_preset["name"]
         embed_preset_name = embed_preset["name"]
@@ -51,8 +56,10 @@ def analyze_retrieval_all(
 
         task_type = dataset_preset["params"]["task_type"]
         analyze_retrieval_preset_params = analyze_retrieval_preset["params"]
-        if embed_preset["params"]["embed_type"] != 'global':
-            print(f"⚠️ Pomijam {analyze_retrieval_name} {analyze_retrieval_preset_name}, bo embed_type != global ({embed_preset["params"]["embed_type"]})")
+        if embed_preset["params"]["embed_type"] != "global":
+            logger.warning(
+                f"⚠️ Pomijam {analyze_retrieval_name} {analyze_retrieval_preset_name}, bo embed_type != global ({embed_preset["params"]["embed_type"]})"
+            )
             continue
         task_input_dir = dataset_dir / dataset_name / dataset_preset_name / "Tasks" / task_type / split
 
@@ -93,25 +100,25 @@ def analyze_retrieval_all(
         )
 
         if not task_input_dir.exists():
-            print(f"❌ Brak zadań: {task_input_dir}, pomijam...")
+            logger.info(f"❌ Brak zadań: {task_input_dir}, pomijam...")
             continue
 
         if not chunks_input_dir.exists():
-            print(f"❌ Brak chunków: {chunks_input_dir}, pomijam...")
+            logger.info(f"❌ Brak chunków: {chunks_input_dir}, pomijam...")
             continue
 
         if not rerank_input_dir.exists():
-            print(f"❌ Brak rerank: {rerank_input_dir}, pomijam...")
+            logger.info(f"❌ Brak rerank: {rerank_input_dir}, pomijam...")
             continue
 
         if result_dir.exists() and any(p.is_file() for p in result_dir.iterdir()):
-            print(f"⏭️ Pomijam {result_dir}, generation już istnieje")
+            logger.info(f"⏭️ Pomijam {result_dir}, generation już istnieje")
             continue
 
         result_dir.mkdir(parents=True, exist_ok=True)
-
+        logger.info(f"➡️ Analizuję retrieval w {result_dir}")
         analyze_retrieval_one(
-            analyze_retrieval_preset_params['analyze_type'],
+            analyze_retrieval_preset_params["analyze_type"],
             analyze_retrieval_preset_params,
             task_input_dir,
             chunks_input_dir,

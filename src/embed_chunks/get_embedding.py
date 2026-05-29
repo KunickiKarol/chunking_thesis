@@ -8,6 +8,10 @@ from sentence_transformers import SentenceTransformer
 
 _MODELS = {}
 
+import logging
+
+logger = logging.getLogger(__name__)
+
 
 def get_model(model_name: str):
     if model_name not in _MODELS:
@@ -84,7 +88,7 @@ def embed_chunks(embed_name, embed_preset_params, chunks_input_dir, result_dir):
         chunks = load_chunks_from_file(input_path)
 
         if not chunks:
-            print(f"⚠️  Plik {input_path} nie zawiera chunków, pomijam.")
+            logger.info(f"⚠️  Plik {input_path} nie zawiera chunków, pomijam.")
             continue
 
         texts = [c["text"] for c in chunks]

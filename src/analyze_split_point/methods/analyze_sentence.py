@@ -1,20 +1,17 @@
 import json
-from pathlib import Path
 import re
-from collections import defaultdict
 import time
+
 from src.analyze_split_point.methods.register import register_analyze_split_point
 
 SENTENCE_END_REGEX = re.compile(r"[\.!\?…]")
-DIALOG_BOUNDARY_REGEX = re.compile(r'[:;,\.\?!]\s*[-—]\s*$')
+DIALOG_BOUNDARY_REGEX = re.compile(r"[:;,\.\?!]\s*[-—]\s*$")
 
 import re
 
 SENTENCE_END_REGEX = re.compile(r"[\.!\?…]")
 
-DIALOG_BOUNDARY_REGEX = re.compile(
-    r'[:;,\.\?!]\s*[-—]["\'»”’\)\]\}]*\s*$'
-)
+DIALOG_BOUNDARY_REGEX = re.compile(r'[:;,\.\?!]\s*[-—]["\'»”’\)\]\}]*\s*$')
 
 
 def is_good_boundary(prev_text: str, between_text: str, next_text: str) -> bool:
@@ -31,45 +28,27 @@ def is_good_boundary(prev_text: str, between_text: str, next_text: str) -> bool:
     # 1. Koniec zdania
     # ---------------------------------
 
-    prev_ends_sentence = bool(
-        re.search(
-            r'[\.!\?…]["\'»”’\)\]\}]*\s*$',
-            prev_text
-        )
-    )
+    prev_ends_sentence = bool(re.search(r'[\.!\?…]["\'»”’\)\]\}]*\s*$', prev_text))
 
     # ---------------------------------
     # 2. Boundary dialogowe typu :—
     # ---------------------------------
 
-    prev_has_dialog_boundary = bool(
-        DIALOG_BOUNDARY_REGEX.search(prev_text)
-    )
+    prev_has_dialog_boundary = bool(DIALOG_BOUNDARY_REGEX.search(prev_text))
 
     # ---------------------------------
     # 3. Czy między chunkami są tylko neutralne znaki
     # ---------------------------------
 
-    clean_between = re.sub(
-        r'[\s"\'„”«»\(\)\[\]\{\}-—]+',
-        "",
-        between_text
-    )
+    clean_between = re.sub(r'[\s"\'„”«»\(\)\[\]\{\}-—]+', "", between_text)
 
     between_is_clean = clean_between == ""
-
-
 
     # ---------------------------------
     # 5. Czy next wygląda jak początek zdania/dialogu
     # ---------------------------------
 
-    next_starts_sentence_like = bool(
-        re.match(
-            r'^[\s"\'„”«»\(\[]*[A-ZĄĆĘŁŃÓŚŹŻ]',
-            next_text
-        )
-    )
+    next_starts_sentence_like = bool(re.match(r'^[\s"\'„”«»\(\[]*[A-ZĄĆĘŁŃÓŚŹŻ]', next_text))
 
     # ---------------------------------
     # HARD FAIL
@@ -77,7 +56,6 @@ def is_good_boundary(prev_text: str, between_text: str, next_text: str) -> bool:
 
     if not between_is_clean:
         return False
-
 
     # ---------------------------------
     # POPRAWNE SPLITY
@@ -96,21 +74,16 @@ def is_good_boundary(prev_text: str, between_text: str, next_text: str) -> bool:
         return True
 
     # 1345 LiteraryQA
-    if (
-        prev_text.endswith("!")
-        and between_text == ' '
-        and next_text
-        and next_text[0].islower()
-    ):
+    if prev_text.endswith("!") and between_text == " " and next_text and next_text[0].islower():
         return True
-    
-    if re.search(r'\n[IVXLCDM]+$', prev_text) and between_text == '\n':
+
+    if re.search(r"\n[IVXLCDM]+$", prev_text) and between_text == "\n":
         return True
-    
+
     if prev_text.endswith('—"'):
         return True
-    
-    if prev_text[-1] == ';' and between_text == ' ' and next_text[0] in ("'", '"'):
+
+    if prev_text[-1] == ";" and between_text == " " and next_text[0] in ("'", '"'):
         return True
     if next_text.startswith("—"):
         return True
@@ -125,7 +98,6 @@ def is_good_boundary(prev_text: str, between_text: str, next_text: str) -> bool:
 def analyze_sentence(chunks_files, books_files, tags_files, analyze_preset_params):
     start_time = time.perf_counter()
     books_map = {f.stem: f for f in books_files}
-
 
     chunks_analyze = {}
 
@@ -153,13 +125,13 @@ def analyze_sentence(chunks_files, books_files, tags_files, analyze_preset_param
             start2, end2 = c2["start_index"], c2["end_index"]
 
             # tekst chunków
-            prev_text = book_text[start1:end1 + 1]
-            next_text = book_text[start2:end2 + 1]
+            prev_text = book_text[start1 : end1 + 1]
+            next_text = book_text[start2 : end2 + 1]
 
             # fragment między chunkami (może być luka np. +5 indeksów)
             between_text = ""
             if end1 + 1 < start2:
-                between_text = book_text[end1 + 1:start2]
+                between_text = book_text[end1 + 1 : start2]
 
             is_correct = is_good_boundary(prev_text, between_text, next_text)
 

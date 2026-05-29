@@ -1,9 +1,12 @@
 import json
+import logging
 import time
 from pathlib import Path
 from typing import List
 
 from src.chunking.methods.all_chunker import chunk_text
+
+logger = logging.getLogger(__name__)
 
 
 def chunk_text_one(
@@ -109,9 +112,9 @@ def chunk_text_one(
         with open(output_dir / split / "meta.json", "w", encoding="utf-8") as f:
             json.dump(meta, f, ensure_ascii=False, indent=2)
 
-        print(f"✅ Split: {split} | time: {split_times[split]:.4f}s | chunks: {split_chunks}")
+        logger.info(f"✅ Split: {split} | time: {split_times[split]:.4f}s | chunks: {split_chunks}")
 
-    print(
+    logger.info(
         f"\n🔥 DATASET SUMMARY {dataset_name}\n"
         f"Total chunks: {total_chunks}\n"
         f"Train: {chunks_train_num}, Test: {chunks_test_num}, Val: {chunks_validation_num}"

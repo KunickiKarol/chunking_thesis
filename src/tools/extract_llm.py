@@ -1,11 +1,12 @@
 import re
 
+
 def extract_answer(raw: str) -> str:
     """
     Wyciąga tekst po ostatnim wystąpieniu:
     - "Answer:"
     - "Answers:"
-    
+
     Obsługuje:
     - różne wielkości liter
     - bloki <think>...</think>

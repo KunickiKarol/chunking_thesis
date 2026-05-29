@@ -49,6 +49,11 @@ dependencies = [
     "ipykernel",
     "hdbscan",
     "scikit-bio",
+    "phate",
+    "umap-learn",
+    "pacmap",
+    "dataframe_image",
+    "playwright"
 ]
 
 [tool.uv.sources]

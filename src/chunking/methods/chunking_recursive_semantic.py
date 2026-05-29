@@ -1,18 +1,20 @@
 import re
-from typing import List, Optional
+from typing import List
 
 import nltk
 import numpy as np
-import torch
 from chonkie import SemanticChunker
 from sklearn.metrics.pairwise import cosine_similarity as sklearn_cosine
 
 from src.chunking.methods.chunking_lumber import Chunk
 from src.chunking.methods.register import register_chunker
 from src.tools.chunk import trim_bounds
+from src.tools.models_cache import get_semantic_chunker, get_sentence_transformer
+
 
 def tokenize_sentences(text_: str) -> List[str]:
-    return re.findall(r'[^.!?]+[.!?]*\s*', text_, re.DOTALL)
+    return re.findall(r"[^.!?]+[.!?]*\s*", text_, re.DOTALL)
+
 
 @register_chunker("recursive_semantic")
 def chunking_semantic_recursive(
@@ -31,12 +33,12 @@ def chunking_semantic_recursive(
     merge_threshold = params.get("merge_threshold")
     delta = params.get("delta")
     embedding_model = params.get("embedding_model")
-    breakpoint_threshold_type = params.get("breakpoint_threshold_type")
     initial_breakpoint_threshold = params.get("initial_breakpoint_threshold")
-    embeddings = params.get("embeddings")
-    semantic_filter_window = params.get("semantic_filter_window", 1)
-    semantic_filter_polyorder = params.get("semantic_filter_polyorder", 0)
-    semantic_filter_tolerance = params.get("semantic_filter_tolerance", 0.0001)
+    semantic_filter_window = params.get("semantic_filter_window")
+    semantic_filter_polyorder = params.get("semantic_filter_polyorder")
+    semantic_filter_tolerance = params.get("semantic_filter_tolerance")
+    semantic_similarity_window = params.get("semantic_similarity_window", 3)
+    semantic_skip_window = params.get("semantic_skip_window", 0)
 
     if not text or not text.strip():
         return []
@@ -52,18 +54,12 @@ def chunking_semantic_recursive(
 
     nltk.download("punkt_tab", quiet=True)
 
-    device = "cuda" if torch.cuda.is_available() else "cpu"
+    # device = "cuda" if torch.cuda.is_available() else "cpu"
 
-    if embeddings is not None:
-        def _embed(texts: List[str]) -> np.ndarray:
-            return np.array(embeddings.embed_documents(texts))
-    else:
-        from sentence_transformers import SentenceTransformer
+    _st_model = get_sentence_transformer(embedding_model)  # , device=device)
 
-        _st_model = SentenceTransformer(embedding_model, device=device)
-
-        def _embed(texts: List[str]) -> np.ndarray:
-            return _st_model.encode(texts, convert_to_numpy=True)
+    def _embed(texts: List[str]) -> np.ndarray:
+        return _st_model.encode(texts, convert_to_numpy=True, show_progress_bar=False)
 
     # ------------------------------------------------------------------ #
     # chonkie SemanticChunker factory (cached by threshold)
@@ -73,17 +69,16 @@ def chunking_semantic_recursive(
 
     def _get_chunker(chunk_size: int) -> SemanticChunker:
         key = chunk_size
-        if key not in _chunker_cache:
-            _chunker_cache[key] = SemanticChunker(
-                embedding_model=embedding_model if embeddings is None else embeddings,
-                chunk_size=chunk_size,
-                threshold=initial_breakpoint_threshold,
-                threshold_type=breakpoint_threshold_type,
-                filter_window=semantic_filter_window,
-                filter_polyorder=semantic_filter_polyorder,
-                filter_tolerance=semantic_filter_tolerance,
-            )
-        return _chunker_cache[key]
+        return get_semantic_chunker(
+            embedding_model_name=embedding_model,
+            chunk_size=chunk_size,
+            threshold=initial_breakpoint_threshold,
+            similarity_window=semantic_similarity_window,
+            skip_window=semantic_skip_window,
+            filter_window=semantic_filter_window,
+            filter_polyorder=semantic_filter_polyorder,
+            filter_tolerance=semantic_filter_tolerance,
+        )
 
     # ------------------------------------------------------------------ #
     # Sentence tokenizer
@@ -105,36 +100,35 @@ def chunking_semantic_recursive(
     # Always starts searching from `search_from` to avoid false earlier matches.
     # ------------------------------------------------------------------ #
 
-
     def _locate(chunk_text: str, search_from: int = 0) -> tuple[int, int]:
         """Return (start, end) absolute positions of chunk_text in `text`."""
         # Try exact match first
         idx = text.find(chunk_text, search_from)
-        
+
         if idx == -1:
             # Try normalized whitespace match
             normalized_chunk = chunk_text
             normalized_text = text[search_from:]
-            
+
             idx_in_normalized = normalized_text.find(normalized_chunk)
             if idx_in_normalized != -1:
                 # Map back to original text by counting characters
                 # This is approximate but better than -1
                 idx = search_from + idx_in_normalized
-        
+
         if idx == -1:
             # Last resort: search from beginning (for edge cases)
             idx = text.find(chunk_text)
-            
+
             if idx == -1:
                 # Try normalized from beginning
                 normalized_chunk = chunk_text
                 normalized_text = text
                 idx = normalized_text.find(normalized_chunk)
-        
+
         if idx == -1:
             return (-1, -1)
-        
+
         return idx, idx + len(chunk_text)
 
     # ------------------------------------------------------------------ #
@@ -163,12 +157,12 @@ def chunking_semantic_recursive(
                 if current_parts:
                     seg_text = "".join(current_parts)
                     start, end = _locate(seg_text, cursor)
-                    
+
                     # Fallback to approximate position
                     if start == -1:
                         start = cursor
                         end = cursor + len(seg_text)
-                    
+
                     segments.append((seg_text, start, end))
                     cursor = end
                     current_parts = []
@@ -176,14 +170,14 @@ def chunking_semantic_recursive(
 
                 # Split oversized sentence into fixed-size pieces
                 for chunk_start_offset in range(0, slen, max_chunk_size):
-                    piece = sentence[chunk_start_offset: chunk_start_offset + max_chunk_size]
+                    piece = sentence[chunk_start_offset : chunk_start_offset + max_chunk_size]
                     start, end = _locate(piece, cursor)
-                    
+
                     # Fallback to approximate position
                     if start == -1:
                         start = cursor
                         end = cursor + len(piece)
-                    
+
                     segments.append((piece, start, end))
                     cursor = end
 
@@ -192,12 +186,12 @@ def chunking_semantic_recursive(
             if current_len + slen > max_chunk_size:
                 seg_text = "".join(current_parts)
                 start, end = _locate(seg_text, cursor)
-                
+
                 # Fallback to approximate position
                 if start == -1:
                     start = cursor
                     end = cursor + len(seg_text)
-                
+
                 segments.append((seg_text, start, end))
                 cursor = end
                 current_parts = []
@@ -209,12 +203,12 @@ def chunking_semantic_recursive(
         if current_parts:
             seg_text = "".join(current_parts)
             start, end = _locate(seg_text, cursor)
-            
+
             # Fallback to approximate position
             if start == -1:
                 start = cursor
                 end = cursor + len(seg_text)
-            
+
             segments.append((seg_text, start, end))
 
         return segments
@@ -250,12 +244,12 @@ def chunking_semantic_recursive(
             else:
                 # Fallback: search forward from cursor
                 abs_start, abs_end = _locate(chunk_text, cursor)
-                
+
                 # If _locate failed, use approximate position based on cursor
                 if abs_start == -1:
                     abs_start = cursor
                     abs_end = cursor + len(chunk_text)
-                
+
                 cursor = abs_end
 
             result.append((chunk_text, abs_start, abs_end))
@@ -292,9 +286,7 @@ def chunking_semantic_recursive(
         result: List[tuple[str, int, int]] = []
 
         for sub_text, sub_start, sub_end in sub_chunks:
-            result.extend(
-                recursive_semantic_split(sub_text, sub_start, next_chunk_size)
-            )
+            result.extend(recursive_semantic_split(sub_text, sub_start, next_chunk_size))
 
         return result
 
@@ -305,9 +297,7 @@ def chunking_semantic_recursive(
     #      row indices perfectly in sync with `merged`.
     # ------------------------------------------------------------------ #
 
-    def merge_small_chunks(
-        chunks: List[tuple[str, int, int]]
-    ) -> List[tuple[str, int, int]]:
+    def merge_small_chunks(chunks: List[tuple[str, int, int]]) -> List[tuple[str, int, int]]:
         if len(chunks) <= 1:
             return chunks
 
@@ -388,7 +378,7 @@ def chunking_semantic_recursive(
                         abs_end = chunk_start + sc.end_index
                     else:
                         abs_start, abs_end = _locate(sc.text, local_cursor)
-                        
+
                         # Fallback to approximate position
                         if abs_start == -1:
                             abs_start = local_cursor
@@ -437,7 +427,5 @@ def chunking_semantic_recursive(
     final_tuples = final_size_adjustment(final_tuples)
 
     return [
-        Chunk(*trim_bounds(chunk_text, start, end))
-        for chunk_text, start, end in final_tuples
-        if chunk_text.strip()
+        Chunk(*trim_bounds(chunk_text, start, end)) for chunk_text, start, end in final_tuples if chunk_text.strip()
     ]

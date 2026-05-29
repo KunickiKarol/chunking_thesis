@@ -1,6 +1,0 @@
-presets:
-  - name: normalized
-    params:
-      metrics: ['caliński_harabasz', 'davies_bouldin', 'silhouette_score', 'dbcv_score', 'inter_intra']
-      normalized_map: [true, true, true, true, true]
-

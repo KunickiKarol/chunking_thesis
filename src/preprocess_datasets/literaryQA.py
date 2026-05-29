@@ -1,4 +1,5 @@
 import json
+import logging
 import os
 import shutil
 from pathlib import Path
@@ -7,6 +8,8 @@ from typing import Dict, List, Tuple
 from dotenv import load_dotenv
 
 from src.tools.tokenizer_service import TokenizerService
+
+logger = logging.getLogger(__name__)
 
 
 class LiteraryQAPreprocessor:
@@ -38,19 +41,16 @@ class LiteraryQAPreprocessor:
             book_token_lengths,
             train_books_order,
             book_path_map,
-            book_char_lengths
+            book_char_lengths,
         ) = self._copy_books(self.books_src, books_dst)
 
-        print(f"📚 Skopiowano książki do {books_dst}")
+        logger.info(f"📚 Skopiowano książki do {books_dst}")
 
         bookmeta, tasks_count, tasks_by_book, task_file_map = self._process_annotations(
-            self.annotations_src,
-            tasks_dst,
-            book_token_lengths,
-            book_char_lengths
+            self.annotations_src, tasks_dst, book_token_lengths, book_char_lengths
         )
 
-        tag_file_map =self._copy_tags(self.books_src, tags_dst)
+        tag_file_map = self._copy_tags(self.books_src, tags_dst)
 
         self._create_additional_splits(
             books_dst=books_dst,
@@ -76,7 +76,7 @@ class LiteraryQAPreprocessor:
             n_val,
         )
 
-        print("✅ Preprocessing literaryQA zakończony")
+        logger.info("✅ Preprocessing literaryQA zakończony")
 
         return books_dst, tasks_dst, tags_dst, bookmeta_dst
 
@@ -134,7 +134,7 @@ class LiteraryQAPreprocessor:
             dest_file.parent.mkdir(parents=True, exist_ok=True)
 
             shutil.copy2(json_file, dest_file)
-            tag_map[relative_path.stem.replace(".tagmap", '')] = dest_file
+            tag_map[relative_path.stem.replace(".tagmap", "")] = dest_file
         return tag_map
 
     @staticmethod
@@ -196,7 +196,7 @@ class LiteraryQAPreprocessor:
             book_token_lengths,
             train_books_order,
             book_path_map,
-            book_char_lengths
+            book_char_lengths,
         )
 
     @staticmethod

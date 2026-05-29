@@ -1,5 +1,5 @@
 datasets_download:
-  # - "infiniteBench"
+  - "infiniteBench"
   - "novelQA"
   - "literaryQA"
 
@@ -20,47 +20,47 @@ preprocess_datasets:
       presets_file: configs/preprocess_dataset/infiniteBenchQA.yaml
       use_presets:
         - default  # 'chapter' or 'page' or 'none'
-    # infiniteBenchChoice:
-    #   presets_file: configs/preprocess_dataset/infiniteBenchChoice.yaml
-    #   use_presets:
-    #     - default  # 'chapter' or 'page' or 'none'
+    infiniteBenchChoice:
+      presets_file: configs/preprocess_dataset/infiniteBenchChoice.yaml
+      use_presets:
+        - default  # 'chapter' or 'page' or 'none'
 
 chunking:
-  splits: ["example"]
+  splits: ["validation"]
   methods:
     fixed_size:
       presets_file: configs/chunking/fixed_size.yaml
       use_presets:
         - fs_512_64_char
-        - fs_512_64_token
+        # - fs_512_64_token
     # recursive:
     #   presets_file: configs/chunking/recursive.yaml
     #   use_presets:
     #     - r_512_64
-    recursive_semantic:
-      presets_file: configs/chunking/recursive_semantic.yaml
-      use_presets:
-        - paper_based
-    # neural:
-    #   presets_file: configs/chunking/neural.yaml
+    # recursive_semantic:
+    #   presets_file: configs/chunking/recursive_semantic.yaml
     #   use_presets:
-    #     - default
+    #     - paper_based
+    neural:
+      presets_file: configs/chunking/neural.yaml
+      use_presets:
+        - default
     # chonkie_semantic:
     #   presets_file: configs/chunking/chonkie_semantic.yaml
     #   use_presets:
     #     - default
-    # lumber:
-    #   presets_file: configs/chunking/lumber.yaml
+    lumber:
+      presets_file: configs/chunking/lumber.yaml
+      use_presets:
+        - default
+    # max_min:
+    #   presets_file: configs/chunking/max_min.yaml
     #   use_presets:
-    #     - default
-    max_min:
-      presets_file: configs/chunking/max_min.yaml
-      use_presets:
-        - liberal
-    sequential_hac:
-      presets_file: configs/chunking/sequential_hac.yaml
-      use_presets:
-        - liberal
+    #     - liberal
+    # sequential_hac:
+    #   presets_file: configs/chunking/sequential_hac.yaml
+    #   use_presets:
+    #     - liberal
 
 vector_embed:
   methods:
@@ -68,7 +68,7 @@ vector_embed:
       presets_file: configs/vector_embed/faiss.yaml
       use_presets:
         - default_global
-        # - default_local
+        - default_local
 
 search:
   methods:
@@ -83,14 +83,18 @@ rerank:
     # nothing:
     #   presets_file: configs/rerank/nothing.yaml
     #   use_presets:
-    #     - default_top3
-    #     - default_top3_op
+    #     - default_top5
+    #     - default_top5_op
+    #     - default_top10_op
+    #     - default_top10
+
     reranker:
       presets_file: configs/rerank/reranker.yaml
       use_presets:
-        # - default_top5
-        - default_top10
-        # - default_top3_op
+        - default_top5
+        # - default_top10
+        # - default_top5_op
+        # - default_top10_op
 
 generation:
   methods:
@@ -124,6 +128,11 @@ analyze_retrieval:
 analyze_embeddings:
   methods:
     analyze_embeddings:
-      presets_file: configs/analyze_embeddings/analyze_datasets.yaml
+      presets_file: configs/analyze_embeddings/analyze_years.yaml
       use_presets:
-        - normalized
+        # - normalized_none
+        - year_normalized_50
+        # - normalized_100
+        # - no_normalized_none
+        # - no_normalized_50
+        # - no_normalized_100

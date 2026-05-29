@@ -1,13 +1,15 @@
 import json
+import logging
 import os
 import random
-import shutil
 from pathlib import Path
 from typing import Any, Dict, Tuple
 
 from dotenv import load_dotenv
 
 from src.tools.tokenizer_service import TokenizerService
+
+logger = logging.getLogger(__name__)
 
 
 class infiniteBenchQAPreprocessor:
@@ -56,7 +58,7 @@ class infiniteBenchQAPreprocessor:
 
         self._save_meta(total_token_len, docs_count, tasks_count, n_test, n_val, n_train)
 
-        print("✅ infiniteBenchQA preprocessing finished")
+        logger.info("✅ infiniteBenchQA preprocessing finished")
 
         return books_dst, tasks_dst, self.dataset_path
 
@@ -356,7 +358,7 @@ class infiniteBenchQAPreprocessor:
             with open(split_dir / f"{content_id}.json", "w", encoding="utf-8") as out:
                 json.dump(data, out, ensure_ascii=False, indent=2)
 
-            tasks_count += 1
+            tasks_count += len(data.keys())
 
             # extra split
             matching_splits = extra_splits.get(content_id, [])

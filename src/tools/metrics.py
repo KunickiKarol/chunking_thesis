@@ -1,5 +1,5 @@
-
 import numpy as np
+
 
 def build_membership_matrix(labels, normalize_by_label_count=True):
     """

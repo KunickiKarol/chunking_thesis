@@ -4,6 +4,7 @@ from scipy.spatial.distance import cdist
 from src.analyze_embeddings.metrics.register import register_embed_metric
 from src.tools.metrics import build_membership_matrix
 
+
 @register_embed_metric("soft_fuzzy_dunn")
 def soft_fuzzy_dunn(
     X,
@@ -17,7 +18,7 @@ def soft_fuzzy_dunn(
 
     U, _ = build_membership_matrix(labels, normalize_by_label_count)
 
-    um = U ** m
+    um = U**m
 
     centroids = (um.T @ X) / (um.sum(axis=0)[:, None] + eps)
 
@@ -34,4 +35,4 @@ def soft_fuzzy_dunn(
         diam = np.sum(um[:, k] * dist[:, k]) / denom
         diameters.append(diam)
 
-    return { "soft_fuzzy_dunn": float(intercluster / (np.max(diameters) + eps)) }
+    return {"soft_fuzzy_dunn": float(intercluster / (np.max(diameters) + eps))}

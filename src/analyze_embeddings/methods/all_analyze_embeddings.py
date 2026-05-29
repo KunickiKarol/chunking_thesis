@@ -4,7 +4,6 @@ import pkgutil
 from src.analyze_embeddings.methods.register import ANALYZE_EMBEDDINGS
 
 
-
 def load_analyze_embeddings():
     """
     Auto-import wszystkich modułów w folderze methods/
@@ -23,9 +22,9 @@ def load_analyze_embeddings():
 load_analyze_embeddings()
 
 
-def get_analyze_embeddings(analyze_embedding_name: str, analyze_preset_params, result_dir, df_embedding, df_bookmeta):
+def get_analyze_embeddings(analyze_embedding_name: str, analyze_preset_params, df_embedding, df_bookmeta):
     try:
         fn = ANALYZE_EMBEDDINGS[analyze_embedding_name]
     except KeyError:
         raise ValueError(f"Unknown analyze embeddings type: {analyze_embedding_name}")
-    return fn(analyze_preset_params, result_dir, df_embedding, df_bookmeta)
+    return fn(analyze_preset_params, df_embedding, df_bookmeta)

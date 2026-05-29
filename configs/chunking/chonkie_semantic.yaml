@@ -6,6 +6,9 @@ presets:
       similarity_window: 3
       skip_window: 0
       threshold: 0.8
+      filter_window: 5
+      filter_polyorder: 3
+      filter_tolerance: 0.02
 
   - name: skip_window
     params:
@@ -14,3 +17,6 @@ presets:
       similarity_window: 3
       skip_window: 1
       threshold: 0.8
+      filter_window: 5
+      filter_polyorder: 3
+      filter_tolerance: 0.02

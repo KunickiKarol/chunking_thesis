@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 import argparse
 import json
+import logging
 import os
 from itertools import product
 from pathlib import Path
@@ -10,7 +11,11 @@ from dotenv import load_dotenv
 
 from src.generation.generation_one import generation_one
 from src.rerank.rerank_one import rerank_one
+from src.tools.logging_config import setup_logging
 from src.tools.presets import iter_cfg_with_presets
+
+setup_logging()
+logger = logging.getLogger(__name__)
 
 
 def generation_all(
@@ -26,7 +31,7 @@ def generation_all(
     rerank_dir: Path,
     generation_dir: Path,
 ):
-    print(f"➡️ Generation: {generation_dir}")
+    logger.info(f"➡️ Generation: {generation_dir}")
     for (
         (dataset_name, dataset_preset),
         (chunking_name, chunking_preset),
@@ -94,23 +99,23 @@ def generation_all(
         )
 
         if not task_input_dir.exists():
-            print(f"❌ Brak zadań: {task_input_dir}, pomijam...")
+            logger.info(f"❌ Brak zadań: {task_input_dir}, pomijam...")
             continue
 
         if not chunks_input_dir.exists():
-            print(f"❌ Brak chunków: {chunks_input_dir}, pomijam...")
+            logger.info(f"❌ Brak chunków: {chunks_input_dir}, pomijam...")
             continue
 
         if not rerank_input_dir.exists():
-            print(f"❌ Brak rerank: {rerank_input_dir}, pomijam...")
+            logger.info(f"❌ Brak rerank: {rerank_input_dir}, pomijam...")
             continue
 
         if result_dir.exists() and any(p.is_file() for p in result_dir.iterdir()):
-            print(f"⏭️ Pomijam {result_dir}, generation już istnieje")
+            logger.info(f"⏭️ Pomijam {result_dir}, generation już istnieje")
             continue
 
         result_dir.mkdir(parents=True, exist_ok=True)
-
+        logger.info(f"▶ Generation: {result_dir}")
         generation_one(
             generation_name,
             generation_preset_params,

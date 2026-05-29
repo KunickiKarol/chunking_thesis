@@ -29,5 +29,5 @@ def get_list_of_presets(cfg):
     pairs = list(iter_cfg_with_presets(cfg))
 
     names = [name for name, _ in pairs]
-    params_list = [preset for _, preset in pairs]
+    params_list = [preset["name"] for _, preset in pairs]
     return names, params_list

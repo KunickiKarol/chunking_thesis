@@ -1,9 +1,12 @@
+import logging
 import os
 import shutil
 from pathlib import Path
 
 from dotenv import load_dotenv
 from huggingface_hub import snapshot_download
+
+logger = logging.getLogger(__name__)
 
 
 def download_infiniteBench():
@@ -30,11 +33,11 @@ def download_infiniteBench():
 
     # 3️⃣ Usuń istniejący folder
     if repo_path.exists():
-        print(f"Usuwam istniejące repozytorium: {repo_path}")
+        logger.info(f"Usuwam istniejące repozytorium: {repo_path}")
         shutil.rmtree(repo_path)
 
     # 4️⃣ Klonowanie repozytorium z tokenem
-    print(f"Klonuję repozytorium {repo_url} do {repo_path}...")
+    logger.info(f"Klonuję repozytorium {repo_url} do {repo_path}...")
     snapshot_download(
         repo_id="xinrongzhang2022/InfiniteBench",
         repo_type="dataset",
@@ -47,7 +50,7 @@ def download_infiniteBench():
             "longbook_qa_eng.jsonl",
         ],
     )
-    print("Klonowanie zakończone!")
+    logger.info("Klonowanie zakończone!")
     return repo_path
 
 

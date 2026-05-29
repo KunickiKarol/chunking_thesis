@@ -1,7 +1,7 @@
-from pathlib import Path
 import json
+from pathlib import Path
+
 import pandas as pd
-from itertools import product
 
 
 def load_bookmeta_dataframe(
@@ -10,12 +10,7 @@ def load_bookmeta_dataframe(
     dataset_params_name: str,
 ) -> pd.DataFrame:
 
-    bookmeta_path = (
-        Path(data_dir)
-        / dataset_name
-        / dataset_params_name
-        / "bookmeta.json"
-    )
+    bookmeta_path = Path(data_dir) / dataset_name / dataset_params_name / "bookmeta.json"
 
     if not bookmeta_path.exists():
         raise FileNotFoundError(f"Brak pliku: {bookmeta_path}")
@@ -33,9 +28,7 @@ def load_bookmeta_dataframe(
 
     df = pd.DataFrame(rows)
 
-    df = df.set_index(
-        ["dataset_name", "dataset_params_name", "source_file"]
-    ).sort_index()
+    df = df.set_index(["dataset_name", "dataset_params_name", "source_file"]).sort_index()
 
     return df
 
@@ -48,16 +41,7 @@ def load_multiple_bookmeta_dataframes(
 
     all_dfs = []
 
-    combinations = product(
-        dataset_names,
-        dataset_params_names,
-    )
-
-    for (
-        dataset_name,
-        dataset_params_name,
-    ) in combinations:
-
+    for dataset_name, dataset_params_name in zip(dataset_names, dataset_params_names):
         df = load_bookmeta_dataframe(
             data_dir=data_dir,
             dataset_name=dataset_name,

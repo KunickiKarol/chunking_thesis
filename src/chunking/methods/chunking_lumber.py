@@ -11,18 +11,21 @@ Switch by passing  inference_mode=<"hf"|"offline"|"api">  in **params.
 
 from __future__ import annotations
 
+import logging
 import os
 import re
 import textwrap
 import time
 from abc import ABC, abstractmethod
 from dataclasses import dataclass
-from typing import Callable, Dict, List
+from typing import List
 
 from nltk.tokenize import sent_tokenize
 
 from src.chunking.methods.register import register_chunker
 from src.tools.chunk import trim_bounds
+
+logger = logging.getLogger(__name__)
 
 
 @dataclass
@@ -93,23 +96,30 @@ class _HuggingFaceBackend(_InferenceBackend):
         from transformers import AutoModelForCausalLM, AutoTokenizer
 
         self._tokenizer = AutoTokenizer.from_pretrained(
-            model_id, token=hf_token, trust_remote_code=True,
+            model_id,
+            token=hf_token,
+            trust_remote_code=True,
         )
         dtype = torch.float16 if torch.cuda.is_available() else torch.float32
         self._model = AutoModelForCausalLM.from_pretrained(
-            model_id, dtype=dtype, device_map="auto", token=hf_token,
+            model_id,
+            dtype=dtype,
+            device_map="auto",
+            token=hf_token,
         )
 
     def generate(self, document_block: str, max_new_tokens: int) -> str:
         messages = _build_messages(document_block)
         text = self._tokenizer.apply_chat_template(
-            messages, tokenize=False, add_generation_prompt=True, enable_thinking=False,
+            messages,
+            tokenize=False,
+            add_generation_prompt=True,
+            enable_thinking=False,
         )
         model_inputs = self._tokenizer([text], return_tensors="pt").to(self._model.device)
         generated_ids = self._model.generate(**model_inputs, max_new_tokens=max_new_tokens)
         generated_ids = [
-            output_ids[len(input_ids):]
-            for input_ids, output_ids in zip(model_inputs.input_ids, generated_ids)
+            output_ids[len(input_ids) :] for input_ids, output_ids in zip(model_inputs.input_ids, generated_ids)
         ]
         return self._tokenizer.batch_decode(generated_ids, skip_special_tokens=True)[0].strip()
 
@@ -175,7 +185,7 @@ def _llm_prompt(
             return backend.generate(document_block, max_new_tokens)
         except Exception as exc:
             last_exception = exc
-            print(f"LLM call failed (attempt {attempt + 1}/{max_retries}): {exc}")
+            logger.info(f"LLM call failed (attempt {attempt + 1}/{max_retries}): {exc}")
             time.sleep(sleep_seconds)
 
     raise RuntimeError("LLM prompt failed after retries") from last_exception
@@ -285,7 +295,7 @@ def chunking_lumber(text: str, **params) -> List[Chunk]:
                 sleep_seconds=sleep_seconds,
             )
         except RuntimeError as exc:
-            print(f"LLM prompt failed for chunk starting at ID {chunk_number}. Error: {exc}")
+            logger.info(f"LLM prompt failed for chunk starting at ID {chunk_number}. Error: {exc}")
             chunk_number += 1
             continue
 
@@ -295,6 +305,7 @@ def chunking_lumber(text: str, **params) -> List[Chunk]:
 
         match = re.search(r"Answer: ID \w+", llm_output)
         if match is None:
+            logger.info(f"LLM output does not match expected format for chunk starting at ID {chunk_number}.")
             chunk_number += 1
         else:
             id_match = re.search(r"\d+", match.group(0))

@@ -12,7 +12,21 @@ def rank_nothing(query_tuple, **rerank_preset_params):
     # )
 
     retrieved_chunks = query_tuple[1]
-    retrieved_chunks = [list(x.keys())[0] for x in retrieved_chunks[:top_k]]
+
+    # bierzemy top_k
+    sliced = retrieved_chunks[:top_k]
+
+    # klucze
+    keys = [x[0] for x in sliced]
+
+    # sztuczne score (brak rerankingu -> neutralne 1.0)
+    scores = [1.0 for _ in keys]
+
     if order_preverse:
-        retrieved_chunks = sorted(retrieved_chunks)
-    return retrieved_chunks
+        # sortujemy razem, żeby nie rozjechały się listy
+        combined = sorted(zip(keys, scores), key=lambda x: x[0])
+        keys, scores = zip(*combined) if combined else ([], [])
+        keys = list(keys)
+        scores = list(scores)
+
+    return keys, scores

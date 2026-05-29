@@ -3,6 +3,7 @@ from sklearn.neighbors import NearestNeighbors
 
 from src.analyze_embeddings.metrics.register import register_embed_metric
 
+
 @register_embed_metric("knn_temporal_consistency")
 def knn_temporal_consistency(
     X,
@@ -49,9 +50,7 @@ def knn_temporal_consistency(
     neighbor_years = labels[neighbor_indices]
 
     # broadcasting
-    temporal_gaps = np.abs(
-        labels[:, None] - neighbor_years
-    )
+    temporal_gaps = np.abs(labels[:, None] - neighbor_years)
 
     # mean gap per sample
     scores = temporal_gaps.mean(axis=1)
@@ -67,4 +66,4 @@ def knn_temporal_consistency(
     if return_per_sample:
         return global_score, scores
 
-    return { "knn_temporal_consistency": global_score }
+    return {"knn_temporal_consistency": global_score}

@@ -1,9 +1,12 @@
+import logging
 import os
 import shutil
 import subprocess
 from pathlib import Path
 
 from dotenv import load_dotenv
+
+logger = logging.getLogger(__name__)
 
 
 def download_literaryQA():
@@ -33,11 +36,11 @@ def download_literaryQA():
 
     # Usuń stare repo
     if repo_path.exists():
-        print(f"Usuwam istniejące repozytorium: {repo_path}")
+        logger.info(f"Usuwam istniejące repozytorium: {repo_path}")
         shutil.rmtree(repo_path)
 
     # Klonowanie repo
-    print(f"Klonuję repozytorium {repo_url}...")
+    logger.info(f"Klonuję repozytorium {repo_url}...")
     subprocess.run(
         ["git", "clone", repo_url, str(repo_path)],
         check=True,
@@ -49,7 +52,7 @@ def download_literaryQA():
         raise FileNotFoundError(f"Nie znaleziono {pyproject_file}")
 
     # Tworzenie tymczasowego środowiska
-    print("Tworzę tymczasowe środowisko uv...")
+    logger.info("Tworzę tymczasowe środowisko uv...")
 
     subprocess.run(
         ["uv", "venv", str(temp_venv), "--clear"],
@@ -64,7 +67,7 @@ def download_literaryQA():
         python_bin = temp_venv / "bin" / "python"
 
     # Instalacja dependencies z pyproject.toml
-    print("Instaluję zależności...")
+    logger.info("Instaluję zależności...")
 
     subprocess.run(
         [
@@ -85,7 +88,7 @@ def download_literaryQA():
     output_dir.mkdir(parents=True, exist_ok=True)
 
     # Uruchomienie skryptu
-    print("Uruchamiam download_and_clean_books.py...")
+    logger.info("Uruchamiam download_and_clean_books.py...")
     script_path = Path("scripts") / "download_and_clean_books.py"
 
     subprocess.run(
@@ -101,11 +104,11 @@ def download_literaryQA():
     )
 
     # Cleanup
-    print("Usuwam tymczasowe środowisko...")
+    logger.info("Usuwam tymczasowe środowisko...")
 
     shutil.rmtree(temp_venv, ignore_errors=True)
 
-    print("Pobieranie LiteraryQA zakończone!")
+    logger.info("Pobieranie LiteraryQA zakończone!")
 
     return repo_path, output_dir
 

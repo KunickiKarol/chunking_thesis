@@ -1,7 +1,8 @@
 import numpy as np
-
-from metrics.all_embed_metrics import get_metric
 from sklearn.preprocessing import normalize
+
+from src.analyze_embeddings.metrics.all_embed_metrics import get_metric
+
 
 def get_metrics(metrics, normalize_map, X, labels):
     """
@@ -22,11 +23,10 @@ def get_metrics(metrics, normalize_map, X, labels):
         X_normalized = normalize(X, norm="l2", axis=1)
 
     results = {}
-    for metric, should_normalize in zip(metrics, normalize_map.values()):
+    for metric, should_normalize in zip(metrics, normalize_map):
         if should_normalize:
             metric_result = get_metric(metric, X_normalized, labels)
         else:
             metric_result = get_metric(metric, X, labels)
         results.update(metric_result)
     return results
-

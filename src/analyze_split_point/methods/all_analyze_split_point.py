@@ -4,8 +4,6 @@ import pkgutil
 from src.analyze_split_point.methods.register import ANALYZE_SPLIT_POINTS
 
 
-
-
 def load_generator():
     """
     Auto-import wszystkich modułów w folderze methods/

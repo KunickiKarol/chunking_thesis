@@ -1,16 +1,14 @@
 import os
 import time as time_module
 from abc import ABC, abstractmethod
-from pathlib import Path
-from time import time
 from typing import Dict, List, Optional, Tuple
+
+import torch
+from openai import OpenAI
+from tqdm import tqdm
+from transformers import AutoModelForCausalLM, AutoTokenizer
 from vllm import LLM  # lazy import — not needed for API mode
 from vllm import SamplingParams
-from openai import OpenAI
-import torch
-from transformers import AutoModelForCausalLM, AutoTokenizer
-
-from tqdm import tqdm
 
 from src.generation.methods.register import register_generator
 from src.generation.prompts.all_prompts import generate_prompt
@@ -70,7 +68,6 @@ def _build_messages_from_parts(system_prompt: str, user_content: str) -> List[di
 
 class _ApiBackend(_InferenceBackend):
     def __init__(self, model_id: str, base_url: str, api_key: str) -> None:
-        
 
         self._model_id = model_id
         self._client = OpenAI(base_url=base_url, api_key=api_key)
@@ -86,40 +83,43 @@ class _ApiBackend(_InferenceBackend):
         )
         return response.choices[0].message.content.strip()
 
+
 class _OfflineBackend(_InferenceBackend):
     """
     vllm offline inference backend (in-process, no HTTP server required).
     Uses vllm.LLM + SamplingParams directly.
     """
+
     def __init__(self, model_id: str, hf_token: str | None) -> None:
 
         self._SamplingParams = SamplingParams
         self._llm = LLM(
-        model=model_id,
-        tokenizer=model_id,
-        trust_remote_code=True,
-        # Pass HF token via env if provided; vllm picks it up automatically
-                )
+            model=model_id,
+            tokenizer=model_id,
+            trust_remote_code=True,
+            # Pass HF token via env if provided; vllm picks it up automatically
+        )
         if hf_token:
             os.environ.setdefault("HUGGING_FACE_HUB_TOKEN", hf_token)
+
     def generate(self, system_prompt, user_content, max_new_tokens) -> str:
         from vllm import SamplingParams
+
         messages = _build_messages_from_parts(system_prompt, user_content)
         # vllm.LLM.chat() accepts the OpenAI messages format directly
         outputs = self._llm.chat(
-        messages=[messages],
-        sampling_params=SamplingParams(
-                            max_tokens=max_new_tokens,
-                            temperature=0.0,
-                                        ),
-        use_tqdm=False,
-                )
+            messages=[messages],
+            sampling_params=SamplingParams(
+                max_tokens=max_new_tokens,
+                temperature=0.0,
+            ),
+            use_tqdm=False,
+        )
         return outputs[0].outputs[0].text.strip()
 
 
 class _HuggingFaceBackend(_InferenceBackend):
     def __init__(self, model_id: str, hf_token: Optional[str]) -> None:
-
 
         self._tokenizer = AutoTokenizer.from_pretrained(model_id, token=hf_token, trust_remote_code=True)
         if self._tokenizer.pad_token is None:

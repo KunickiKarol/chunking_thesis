@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 import argparse
+import logging
 import os
 from itertools import product
 from pathlib import Path
@@ -8,20 +9,24 @@ import yaml
 from dotenv import load_dotenv
 
 from src.embed_chunks.get_embedding import embed_chunks
+from src.tools.logging_config import setup_logging
 from src.tools.presets import iter_cfg_with_presets
+
+setup_logging()
+logger = logging.getLogger(__name__)
 
 
 def embed_chunks_all(datasets_cfg, chunking_cfg, splits, embed_cfg, chunks_dir: Path, embed_dir: Path):
-    print(f"➡️ Embedding: {embed_dir}")
+    logger.info(f"➡️ Embedding: {embed_dir}")
     for (
+        (embed_name, embed_preset),
         (dataset_name, dataset_preset),
         (chunking_name, chunking_preset),
-        (embed_name, embed_preset),
         split,
     ) in product(
+        iter_cfg_with_presets(embed_cfg),
         iter_cfg_with_presets(datasets_cfg),
         iter_cfg_with_presets(chunking_cfg),
-        iter_cfg_with_presets(embed_cfg),
         splits,
     ):
         dataset_preset_name = dataset_preset["name"]
@@ -45,15 +50,15 @@ def embed_chunks_all(datasets_cfg, chunking_cfg, splits, embed_cfg, chunks_dir: 
         )
 
         if not chunks_input_dir.exists():
-            print(f"❌ Brak chunków: {chunks_input_dir}, pomijam...")
+            logger.info(f"❌ Brak chunków: {chunks_input_dir}, pomijam...")
             continue
 
         if result_dir.exists() and any(p.is_file() for p in result_dir.iterdir()):
-            print(f"⏭️ Pomijam {result_dir}, vector db już istnieje")
+            logger.info(f"⏭️ Pomijam {result_dir}, vector db już istnieje")
             continue
 
         result_dir.mkdir(parents=True, exist_ok=True)
-
+        logger.info(f"▶ Embedding {result_dir}")
         embed_chunks(
             embed_name,
             embed_preset_params,

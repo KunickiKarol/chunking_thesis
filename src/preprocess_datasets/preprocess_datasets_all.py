@@ -1,10 +1,10 @@
-import argparse
-import json
 import os
 from pathlib import Path
 
 import yaml
 from dotenv import load_dotenv
+
+from src.tools.logging_config import setup_logging
 
 from ..tools.presets import iter_cfg_with_presets
 from .infiniteBenchChoice import infiniteBenchChoicePreprocessor
@@ -13,6 +13,11 @@ from .literaryQA import LiteraryQAPreprocessor
 
 # jawne importy datasetów
 from .novelQA import NovelQAPreprocessor
+
+setup_logging()
+import logging
+
+logger = logging.getLogger(__name__)
 
 PREPROCESSOR_MAP = {
     "novelQA": NovelQAPreprocessor,
@@ -31,7 +36,7 @@ def preprocess_datasets_all(datasets_cfg, datasets_dir: Path):
         try:
             PreprocessorCls = PREPROCESSOR_MAP[dataset_name]
         except KeyError:
-            print(f"⚠️ Brak preprocessora dla {dataset_name}, pomijam")
+            logger.warning(f"⚠️ Brak preprocessora dla {dataset_name}, pomijam")
             continue
 
         preset_name = preset["name"]
@@ -40,12 +45,12 @@ def preprocess_datasets_all(datasets_cfg, datasets_dir: Path):
         dataset_path = datasets_dir / dataset_name / preset_name
 
         if dataset_path.exists() and any(p.is_file() for p in dataset_path.iterdir()):
-            print(f"⏭️ Pomijam {dataset_name}/{preset_name} – już istnieje")
+            logger.info(f"⏭️ Pomijam {dataset_name}/{preset_name} – już istnieje")
             continue
 
         dataset_path.mkdir(parents=True, exist_ok=True)
 
-        print(f"▶ Preprocessing {dataset_name} | preset={preset_name}")
+        logger.info(f"▶ Preprocessing {dataset_name} | preset={preset_name}")
 
         preprocessor = PreprocessorCls(
             dataset_path=dataset_path,

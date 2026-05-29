@@ -1,6 +1,5 @@
 #!/usr/bin/env python
-import argparse
-import json
+import logging
 import os
 from itertools import product
 from pathlib import Path
@@ -9,7 +8,11 @@ import yaml
 from dotenv import load_dotenv
 
 from src.rerank.rerank_one import rerank_one
+from src.tools.logging_config import setup_logging
 from src.tools.presets import iter_cfg_with_presets
+
+setup_logging()
+logger = logging.getLogger(__name__)
 
 
 def rerank_all(
@@ -25,7 +28,7 @@ def rerank_all(
     search_dir: Path,
     rerank_dir: Path,
 ):
-    print(f"➡️ Raranking: {rerank_dir}")
+    logger.info(f"➡️ Raranking: {rerank_dir}")
     for (
         (dataset_name, dataset_preset),
         (chunking_name, chunking_preset),
@@ -97,27 +100,27 @@ def rerank_all(
         )
 
         if not task_input_dir.exists():
-            print(f"❌ Brak zadań: {task_input_dir}, pomijam...")
+            logger.warning(f"❌ Brak zadań: {task_input_dir}, pomijam...")
             continue
 
         if not chunks_input_dir.exists():
-            print(f"❌ Brak chunków: {chunks_input_dir}, pomijam...")
+            logger.warning(f"❌ Brak chunków: {chunks_input_dir}, pomijam...")
             continue
 
         if not embed_input_dir.exists():
-            print(f"❌ Brak embeddingów: {embed_input_dir}, pomijam...")
+            logger.warning(f"❌ Brak embeddingów: {embed_input_dir}, pomijam...")
             continue
 
         if not search_input_dir.exists():
-            print(f"❌ Brak search: {search_input_dir}, pomijam...")
+            logger.warning(f"❌ Brak search: {search_input_dir}, pomijam...")
             continue
 
         if result_dir.exists() and any(p.is_file() for p in result_dir.iterdir()):
-            print(f"⏭️ Pomijam {result_dir}, vector db już istnieje")
+            logger.info(f"⏭️ Pomijam {result_dir}, vector db już istnieje")
             continue
 
         result_dir.mkdir(parents=True, exist_ok=True)
-
+        logger.info(f"▶ Reranking {result_dir}")
         rerank_one(
             rerank_name,
             rerank_preset_params,

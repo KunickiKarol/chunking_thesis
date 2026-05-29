@@ -1,4 +1,5 @@
 import argparse
+import logging
 import os
 from pathlib import Path
 
@@ -8,6 +9,10 @@ from dotenv import load_dotenv
 from src.download_datasets.infiniteBench import download_infiniteBench
 from src.download_datasets.literaryQA import download_literaryQA
 from src.download_datasets.novelQA import download_novelQA
+from src.tools.logging_config import setup_logging
+
+setup_logging()
+logger = logging.getLogger(__name__)
 
 
 def download_datasets_all(datasets_download, downloads_dir: Path) -> None:
@@ -20,11 +25,11 @@ def download_datasets_all(datasets_download, downloads_dir: Path) -> None:
 
         # Sprawdzenie czy folder istnieje i nie jest pusty
         if dataset_path.exists() and any(p.is_file() for p in dataset_path.iterdir()):
-            print(f"⏭️ {dataset} już pobrany w {dataset_path}, pomijam.")
+            logger.info(f"⏭️ {dataset} już pobrany w {dataset_path}, pomijam.")
             continue
 
         dataset_path.mkdir(parents=True, exist_ok=True)
-        print(f"⬇️ Pobieram {dataset}...")
+        logger.info(f"⬇️ Pobieram {dataset}...")
 
         # Wywołanie odpowiedniej funkcji pobierającej
         if dataset == "novelQA":
@@ -34,7 +39,7 @@ def download_datasets_all(datasets_download, downloads_dir: Path) -> None:
         elif dataset == "infiniteBench":
             download_infiniteBench()
         else:
-            print(f"❌ Nie ma obsługi pobierania dla datasetu {dataset}")
+            logger.error(f"❌ Nie ma obsługi pobierania dla datasetu {dataset}")
 
 
 def main() -> None:

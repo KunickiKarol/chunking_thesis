@@ -1,14 +1,18 @@
+import logging
 from dataclasses import dataclass
 from typing import List
 
 import numpy as np
+import torch
 from nltk.tokenize import PunktSentenceTokenizer
 from scipy.special import expit
-from sentence_transformers import SentenceTransformer
 from sklearn.metrics.pairwise import cosine_similarity
 
 from src.chunking.methods.register import register_chunker
 from src.tools.chunk import Chunk, trim_bounds
+from src.tools.models_cache import get_sentence_transformer
+
+logger = logging.getLogger(__name__)
 
 
 @dataclass
@@ -62,11 +66,7 @@ def _process_sentences(
                 cluster_embeddings,
             )[0]
 
-            adjusted_threshold = (
-                pairwise_min
-                * c
-                * expit((cluster_end - cluster_start) - 1)
-            )
+            adjusted_threshold = pairwise_min * c * expit((cluster_end - cluster_start) - 1)
 
             new_sentence_similarity = np.max(new_sentence_similarities)
 
@@ -81,7 +81,9 @@ def _process_sentences(
             pairwise_min = cosine_similarity(
                 embeddings[i].reshape(1, -1),
                 cluster_embeddings,
-            )[0][0]
+            )[
+                0
+            ][0]
 
             new_sentence_similarity = init_constant * pairwise_min
 
@@ -139,10 +141,6 @@ def _build_chunks(
 
 @register_chunker("max_min")
 def chunking_max_min(text: str, **params) -> List[Chunk]:
-    """
-    Dzieli tekst na semantyczne chunki algorytmem MaxMin.
-    """
-
     model_name = params.get("model_name")
     hard_threshold = float(params.get("hard_threshold"))
     c_param = float(params.get("c_param"))
@@ -153,11 +151,29 @@ def chunking_max_min(text: str, **params) -> List[Chunk]:
     if not sentences:
         return []
 
-    model = SentenceTransformer(model_name)
+    model = get_sentence_transformer(model_name)
 
-    embeddings = model.encode(
-        [s.text for s in sentences]
-    )
+    batch_size = 32
+
+    while batch_size >= 1:
+        try:
+            embeddings = model.encode([s.text for s in sentences], batch_size=batch_size, show_progress_bar=False)
+            break
+
+        except RuntimeError as e:
+            if "out of memory" not in str(e).lower():
+                raise
+
+            torch.cuda.empty_cache()
+
+            if batch_size == 1:
+                raise
+
+            batch_size //= 2
+
+            logger.info(f"CUDA OOM -> retrying with batch_size={batch_size}")
+    else:
+        raise RuntimeError("Failed to encode embeddings")
 
     paragraphs = _process_sentences(
         sentences=sentences,

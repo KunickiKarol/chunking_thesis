@@ -2,6 +2,7 @@ from sklearn.metrics import silhouette_score as sk_silhouette_score
 
 from src.analyze_embeddings.metrics.register import register_embed_metric
 
+
 @register_embed_metric("silhouette_score")
 def silhouette_score(X, labels):
     """
@@ -14,4 +15,4 @@ def silhouette_score(X, labels):
     Returns:
     - float: silhouette score
     """
-    return { "silhouette_score": sk_silhouette_score(X, labels, metric="cosine") }
+    return {"silhouette_score": sk_silhouette_score(X, labels, metric="cosine")}

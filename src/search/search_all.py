@@ -1,6 +1,5 @@
 #!/usr/bin/env python
-import argparse
-import json
+import logging
 import os
 from itertools import product
 from pathlib import Path
@@ -8,9 +7,12 @@ from pathlib import Path
 import yaml
 from dotenv import load_dotenv
 
-from src.embed_chunks.get_embedding import embed_chunks
 from src.search.search_query import search_query
+from src.tools.logging_config import setup_logging
 from src.tools.presets import iter_cfg_with_presets
+
+setup_logging()
+logger = logging.getLogger(__name__)
 
 
 def search_all(
@@ -40,6 +42,10 @@ def search_all(
 
         task_input_dir = dataset_dir / dataset_name / dataset_preset_name / "Tasks" / task_type / split
 
+        chunks_input_dir = (
+            dataset_dir / dataset_name / dataset_preset_name / chunking_name / chunking_preset_name / split / "Books"
+        )
+
         embed_input_dir = (
             embed_dir
             / dataset_name
@@ -65,22 +71,23 @@ def search_all(
         )
 
         if not task_input_dir.exists():
-            print(f"❌ Brak zadań: {task_input_dir}, pomijam...")
+            logger.warning(f"❌ Brak zadań: {task_input_dir}, pomijam...")
             continue
         elif not embed_input_dir.exists():
-            print(f"❌ Brak embeddingów: {embed_input_dir}, pomijam...")
+            logger.warning(f"❌ Brak embeddingów: {embed_input_dir}, pomijam...")
             continue
 
         if result_dir.exists() and any(p.is_file() for p in result_dir.iterdir()):
-            print(f"⏭️ Pomijam {result_dir}, search dir już istnieje")
+            logger.info(f"⏭️ Pomijam {result_dir}, search dir już istnieje")
             continue
 
         result_dir.mkdir(parents=True, exist_ok=True)
-        print(f"➡️ Szukam query: {result_dir}")
+        logger.info(f"➡️ Szukam query: {result_dir}")
         search_query(
             embed_type,
             search_preset_params,
             task_input_dir,
+            chunks_input_dir,
             embed_input_dir,
             result_dir,
         )

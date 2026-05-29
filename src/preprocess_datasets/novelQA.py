@@ -1,4 +1,5 @@
 import json
+import logging
 import os
 import random
 import shutil
@@ -8,6 +9,8 @@ from typing import Dict, Tuple
 from dotenv import load_dotenv
 
 from src.tools.tokenizer_service import TokenizerService
+
+logger = logging.getLogger(__name__)
 
 
 class NovelQAPreprocessor:
@@ -45,8 +48,6 @@ class NovelQAPreprocessor:
         bookmeta = self._load_bookmeta()
         split_map, n_test, n_val, n_train, example_map = self._compute_splits(list(bookmeta.keys()))
 
-
-
         docs_count, total_token_len, books_char_len, books_token_len = self._copy_books_by_split(
             self.books_src, books_dst, split_map, example_map, ".txt", do_tokenize=True
         )
@@ -54,7 +55,7 @@ class NovelQAPreprocessor:
         self._save_bookmeta(bookmeta)
         tasks_count, _ = self._copy_tasks_by_split(self.tasks_src, tasks_dst, split_map, example_map, ".json")
 
-        print("✅ novelQA preprocessing finished")
+        logger.info("✅ novelQA preprocessing finished")
         self._save_meta(total_token_len, docs_count, tasks_count, n_test, n_val, n_train)
         return books_dst, tasks_dst, self.dataset_path
 
@@ -81,14 +82,7 @@ class NovelQAPreprocessor:
     def _load_bookmeta(self) -> Dict:
         with open(self.bookmeta_src, encoding="utf-8") as f:
             data = json.load(f)
-        bookmeta = {
-            k: {
-                **v,
-                "source_file": "novelQA"
-            }
-            for k, v in data.items()
-            if v.get("copyright") == "PublicDomain"
-        }
+        bookmeta = {k: {**v, "source_file": "novelQA"} for k, v in data.items() if v.get("copyright") == "PublicDomain"}
         return bookmeta
 
     def _compute_splits(self, book_ids: list[str]) -> Tuple[Dict[str, str], int, int, int, Dict[str, list[str]]]:
@@ -119,7 +113,13 @@ class NovelQAPreprocessor:
         return split_map, n_test, n_val, len(train_ids), example_map
 
     @staticmethod
-    def _annotate_bookmeta(bookmeta: Dict, split_map: Dict[str, str], example_map: Dict[str, list[str]], books_char_len: Dict[str, int], books_token_len: Dict[str, int]):
+    def _annotate_bookmeta(
+        bookmeta: Dict,
+        split_map: Dict[str, str],
+        example_map: Dict[str, list[str]],
+        books_char_len: Dict[str, int],
+        books_token_len: Dict[str, int],
+    ):
         example_set = set(example_map.get("example", []))
         examples_set = set(example_map.get("examples", []))
 
@@ -189,7 +189,6 @@ class NovelQAPreprocessor:
                 total_token_len += book_token_len
                 books_char_len[bookid] = len(content)
                 books_token_len[bookid] = book_token_len
-
 
         return docs_count, total_token_len, books_char_len, books_token_len
 

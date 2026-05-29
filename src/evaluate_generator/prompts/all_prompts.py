@@ -4,7 +4,6 @@ import pkgutil
 from src.evaluate_generator.prompts.register import PROMPTS
 
 
-
 def load_prompt():
     """
     Auto-import wszystkich modułów w folderze prompts/

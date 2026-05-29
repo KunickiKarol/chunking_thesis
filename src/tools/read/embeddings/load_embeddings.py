@@ -1,8 +1,11 @@
-from pathlib import Path
 import json
+import logging
+from pathlib import Path
+
 import numpy as np
 import pandas as pd
-from itertools import product
+
+logger = logging.getLogger(__name__)
 
 
 def load_multiple_embeddings_dataframes(
@@ -18,38 +21,27 @@ def load_multiple_embeddings_dataframes(
 
     all_dfs = []
 
-    combinations = product(
-        dataset_names,
-        dataset_params_names,
-        chunking_names,
-        chunking_params_names,
-        embed_names,
-        embed_params_names,
-        split_names,
-    )
-
-    for (
-        dataset_name,
-        dataset_params_name,
-        chunking_name,
-        chunking_params_name,
-        embed_name,
-        embed_params_name,
-        split_name,
-    ) in combinations:
-
-        df = load_embeddings_dataframe(
-            embed_dir=embed_dir,
-            dataset_name=dataset_name,
-            dataset_params_name=dataset_params_name,
-            chunking_name=chunking_name,
-            chunking_params_name=chunking_params_name,
-            embed_name=embed_name,
-            embed_params_name=embed_params_name,
-            split_name=split_name,
-        )
-
-        all_dfs.append(df)
+    for dataset_name, dataset_params_name in zip(dataset_names, dataset_params_names):
+        for chunking_name, chunking_params_name in zip(chunking_names, chunking_params_names):
+            for embed_name, embed_params_name in zip(embed_names, embed_params_names):
+                for split_name in split_names:
+                    try:
+                        df = load_embeddings_dataframe(
+                            embed_dir=embed_dir,
+                            dataset_name=dataset_name,
+                            dataset_params_name=dataset_params_name,
+                            chunking_name=chunking_name,
+                            chunking_params_name=chunking_params_name,
+                            embed_name=embed_name,
+                            embed_params_name=embed_params_name,
+                            split_name=split_name,
+                        )
+                        all_dfs.append(df)
+                    except FileNotFoundError:
+                        logger.warning(
+                            f"⚠️ Brak pliku dla kombinacji: {dataset_name}, {dataset_params_name}, {chunking_name}, {chunking_params_name}, {embed_name}, {embed_params_name}, {split_name}. Pomijam."
+                        )
+                        continue
 
     if not all_dfs:
         return pd.DataFrame()
@@ -58,7 +50,7 @@ def load_multiple_embeddings_dataframes(
 
 
 def load_embeddings_dataframe(
-    embed_dir: str,
+    embed_dir: Path,
     dataset_name: str,
     dataset_params_name: str,
     chunking_name: str,
@@ -67,9 +59,8 @@ def load_embeddings_dataframe(
     embed_params_name: str,
     split_name: str,
 ) -> pd.DataFrame:
-
     base_path = (
-        Path(embed_dir)
+        embed_dir
         / dataset_name
         / dataset_params_name
         / chunking_name

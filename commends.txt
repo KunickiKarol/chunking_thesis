@@ -8,6 +8,7 @@ source .venv/Scripts/activate
 uv sync
 
 dvc repro
+uv run playwright install chromium
 
 ./linter.sh
 

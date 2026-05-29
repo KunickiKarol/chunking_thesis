@@ -1,10 +1,11 @@
 import numpy as np
+from scipy.spatial.distance import cdist
 
 from src.analyze_embeddings.metrics.register import register_embed_metric
 from src.tools.metrics import build_membership_matrix
-from scipy.spatial.distance import cdist
 
-@register_embed_metric("soft_fuzzy_silhouette") 
+
+@register_embed_metric("soft_fuzzy_silhouette")
 def soft_fuzzy_silhouette(
     X,
     labels,
@@ -18,7 +19,7 @@ def soft_fuzzy_silhouette(
 
     U, _ = build_membership_matrix(labels, normalize_by_label_count)
 
-    um = U ** m
+    um = U**m
 
     centroids = (um.T @ X) / (um.sum(axis=0)[:, None] + eps)
 
@@ -37,4 +38,4 @@ def soft_fuzzy_silhouette(
     top2 = np.partition(U, -2, axis=1)[:, -2:]
     weights = (top2[:, 1] - top2[:, 0]) ** alpha
 
-    return { "soft_fuzzy_silhouette": float(np.sum(weights * s) / (np.sum(weights) + eps)) }
+    return {"soft_fuzzy_silhouette": float(np.sum(weights * s) / (np.sum(weights) + eps))}

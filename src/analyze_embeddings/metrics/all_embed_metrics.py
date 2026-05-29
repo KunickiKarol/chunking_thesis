@@ -22,9 +22,9 @@ def load_embed_metric():
 load_embed_metric()
 
 
-def get_metric(embed_metric_name: str, rerank_results, tasks, all_chunks, generation_preset_params):
+def get_metric(embed_metric_name: str, X, labels):
     try:
         fn = EMBED_METRICS[embed_metric_name]
     except KeyError:
         raise ValueError(f"Unknown embed metric type: {embed_metric_name}")
-    return fn(rerank_results, tasks, all_chunks, generation_preset_params)
+    return fn(X, labels)

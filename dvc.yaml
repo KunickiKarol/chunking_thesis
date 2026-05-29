@@ -147,3 +147,19 @@ stages:
       - rerank.methods
       - analyze_retrieval.methods
 
+  analyze_embeddings:
+    cmd: python -m src.analyze_embeddings.analyze_embeddings_all
+    deps:
+      - data/vector_db/
+      - data/datasets/
+      - src/analyze_embeddings/analyze_embeddings_all.py
+      - params.yaml
+    outs:
+      - data/analyze_embeddings/:
+          persist: true
+    params:
+      - preprocess_datasets.datasets
+      - chunking.methods
+      - vector_embed.methods
+      - analyze_embeddings.methods
+

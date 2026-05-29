@@ -1,21 +1,19 @@
 import os
 import time as time_module
 from abc import ABC, abstractmethod
-from pathlib import Path
-from time import time
-from typing import Dict, List, Optional, Tuple
+from typing import Dict, List, Optional
+
+import torch
+from openai import OpenAI
+from tqdm import tqdm
+from transformers import AutoModelForCausalLM, AutoTokenizer
 from vllm import LLM  # lazy import — not needed for API mode
 from vllm import SamplingParams
-from openai import OpenAI
-import torch
-from transformers import AutoModelForCausalLM, AutoTokenizer
-
-from tqdm import tqdm
 
 from src.evaluate_generator.methods.register import register_evaluator_generator
 from src.evaluate_generator.prompts.all_prompts import generate_prompt
 from src.tools.extract_llm import extract_verdict
-from src.tools.tokenizer_service import TokenizerService
+
 
 def map_answer_to_option(answer, question_options):
     """
@@ -40,15 +38,12 @@ def map_answer_to_option(answer, question_options):
         if isinstance(question_options, list):
             return question_options[idx]
         if isinstance(question_options, dict):
-            return (
-                question_options.get(normalized)
-                or question_options.get(normalized.lower())
-                or answer
-            )
+            return question_options.get(normalized) or question_options.get(normalized.lower()) or answer
     except (IndexError, KeyError, TypeError):
         return answer
 
     return answer
+
 
 # ---------------------------------------------------------------------------
 # Backend abstraction (z dokumentu + lazy singleton per wywołanie generate_fixed_token)
@@ -70,7 +65,6 @@ def _build_messages_from_parts(system_prompt: str, user_content: str) -> List[di
 
 class _ApiBackend(_InferenceBackend):
     def __init__(self, model_id: str, base_url: str, api_key: str) -> None:
-        
 
         self._model_id = model_id
         self._client = OpenAI(base_url=base_url, api_key=api_key)
@@ -86,40 +80,43 @@ class _ApiBackend(_InferenceBackend):
         )
         return response.choices[0].message.content.strip()
 
+
 class _OfflineBackend(_InferenceBackend):
     """
     vllm offline inference backend (in-process, no HTTP server required).
     Uses vllm.LLM + SamplingParams directly.
     """
+
     def __init__(self, model_id: str, hf_token: str | None) -> None:
 
         self._SamplingParams = SamplingParams
         self._llm = LLM(
-        model=model_id,
-        tokenizer=model_id,
-        trust_remote_code=True,
-        # Pass HF token via env if provided; vllm picks it up automatically
-                )
+            model=model_id,
+            tokenizer=model_id,
+            trust_remote_code=True,
+            # Pass HF token via env if provided; vllm picks it up automatically
+        )
         if hf_token:
             os.environ.setdefault("HUGGING_FACE_HUB_TOKEN", hf_token)
+
     def generate(self, system_prompt, user_content, max_new_tokens) -> str:
         from vllm import SamplingParams
+
         messages = _build_messages_from_parts(system_prompt, user_content)
         # vllm.LLM.chat() accepts the OpenAI messages format directly
         outputs = self._llm.chat(
-        messages=[messages],
-        sampling_params=SamplingParams(
-                            max_tokens=max_new_tokens,
-                            temperature=0.0,
-                                        ),
-        use_tqdm=False,
-                )
+            messages=[messages],
+            sampling_params=SamplingParams(
+                max_tokens=max_new_tokens,
+                temperature=0.0,
+            ),
+            use_tqdm=False,
+        )
         return outputs[0].outputs[0].text.strip()
 
 
 class _HuggingFaceBackend(_InferenceBackend):
     def __init__(self, model_id: str, hf_token: Optional[str]) -> None:
-
 
         self._tokenizer = AutoTokenizer.from_pretrained(model_id, token=hf_token, trust_remote_code=True)
         if self._tokenizer.pad_token is None:
@@ -249,6 +246,7 @@ def _get_or_build_backend(params: dict) -> _InferenceBackend:
         _BACKEND_CACHE[cache_key] = _build_backend(params)
     return _BACKEND_CACHE[cache_key]
 
+
 # ---------------------------------------------------------------------------
 # Główna funkcja generowania odpowiedzi dla jednego pytania
 # ---------------------------------------------------------------------------
@@ -299,6 +297,7 @@ def evaluate_final_answer(
     raw = backend.generate(system_prompt, user_content, max_new_tokens)
     return {"raw": raw, "verdict": extract_verdict(raw)}
 
+
 # ---------------------------------------------------------------------------
 # Funkcja batch — model ładuje się raz, pętla po pytaniach
 # ---------------------------------------------------------------------------
@@ -331,12 +330,7 @@ def generate_fixed_token(
         answer = generation_result["extracted"]
         mapped_answer = map_answer_to_option(answer, question_options)
         start_time = time_module.perf_counter()
-        metrics = evaluate_final_answer(
-            question_text,
-            gold_answers_text,
-            mapped_answer,
-            evaluation_preset_params
-        )
+        metrics = evaluate_final_answer(question_text, gold_answers_text, mapped_answer, evaluation_preset_params)
         answer_time = time_module.perf_counter() - start_time
 
         total_time += answer_time
