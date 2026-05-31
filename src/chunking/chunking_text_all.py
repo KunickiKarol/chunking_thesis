@@ -12,11 +12,12 @@ from dotenv import load_dotenv
 
 from src.chunking.chunking_text_one import chunk_text_one
 from src.tools.logging_config import setup_logging
-from src.tools.models_cache import clear_all_caches
+from src.tools.models_cache import clear_all_caches, get_tokenizer_service
 from src.tools.presets import iter_cfg_with_presets
 
 setup_logging()
 logger = logging.getLogger(__name__)
+
 
 
 def chunking_text_all(
@@ -27,6 +28,7 @@ def chunking_text_all(
     chunking_dir: Path,
 ):
     is_all = False
+    
 
     if splits == ["all"]:
         splits = ["train", "validation", "test"]
@@ -46,6 +48,7 @@ def chunking_text_all(
         iter_cfg_with_presets(datasets_cfg),
     ):
         clear_all_caches()
+        tokenizer = get_tokenizer_service()
         dataset_preset_name = dataset_preset["name"]
 
         chunking_preset_name = chunking_preset["name"]
@@ -74,6 +77,7 @@ def chunking_text_all(
             splits=non_existing_splits,
             input_dir=input_dir,
             output_dir=result_dir,
+            tokenizer=tokenizer
         )
     if is_all:
         for (

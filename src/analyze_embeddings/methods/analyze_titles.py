@@ -40,7 +40,7 @@ def analyze_titles(analyze_preset_params, df_embedding, df_bookmeta):
             embed_params_name,
         ) = group_keys
 
-        key = f"{chunking_name}_" f"{chunking_params_name}_" f"{embed_name}_" f"{embed_params_name}"
+        key = f"{chunking_name}-" f"{chunking_params_name}-" f"{embed_name}-" f"{embed_params_name}"
 
         X = np.stack(group_df["embedding"].values)
 

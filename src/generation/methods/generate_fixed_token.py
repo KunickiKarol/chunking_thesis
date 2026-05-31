@@ -13,6 +13,7 @@ from vllm import SamplingParams
 from src.generation.methods.register import register_generator
 from src.generation.prompts.all_prompts import generate_prompt
 from src.tools.extract_llm import extract_answer
+from src.tools.models_cache import get_tokenizer_service
 from src.tools.tokenizer_service import TokenizerService
 
 # ---------------------------------------------------------------------------
@@ -22,7 +23,7 @@ from src.tools.tokenizer_service import TokenizerService
 
 def _count_tokens(tokenizer, text: str) -> int:
     """Count tokens for a given text using the tokenizer."""
-    return len(tokenizer.encode(text))
+    return tokenizer.encode(text)['token_count']
 
 
 def _select_chunks_within_limit(
@@ -251,25 +252,6 @@ def _get_or_build_backend(params: dict) -> _InferenceBackend:
 
 
 # ---------------------------------------------------------------------------
-# Tokenizer helper — również buforowany
-# ---------------------------------------------------------------------------
-
-_TOKENIZER_CACHE: Dict[str, object] = {}
-
-
-def _get_or_build_tokenizer(params: dict):
-    backend = params.get("tokenizer_backend", "tiktoken")
-    model_name = params.get("tokenizer_model_name", "gpt-4")
-    cache_key = f"{backend}::{model_name}"
-
-    if cache_key not in _TOKENIZER_CACHE:
-        tokenizer_service = TokenizerService(backend=backend, model_name=model_name)
-        _TOKENIZER_CACHE[cache_key] = tokenizer_service.get_tokenizer()
-
-    return _TOKENIZER_CACHE[cache_key]
-
-
-# ---------------------------------------------------------------------------
 # Główna funkcja generowania odpowiedzi dla jednego pytania
 # ---------------------------------------------------------------------------
 
@@ -299,8 +281,9 @@ def generate_final_answer(
     """
     params = generation_preset_params
     token_limit: int = params.get("token_limit", 8192)
-
-    tokenizer = _get_or_build_tokenizer(params)
+    tokenizer_backend_name = generation_preset_params.get("tokenizer_backend", "tiktoken")
+    model_name = generation_preset_params.get("tokenizer_model_name", "gpt-4")
+    tokenizer = get_tokenizer_service(backend=tokenizer_backend_name, model_name=model_name)
     backend = _get_or_build_backend(params)
 
     # --- Ustal overhead promptu bez chunków ----------------------------
@@ -371,7 +354,9 @@ def generate_fixed_token(
     # Wymuś wczesną inicjalizację backendu i tokenizera —
     # żeby czas ładowania nie wchodził do mierzonych czasów odpowiedzi.
     _get_or_build_backend(generation_preset_params)
-    _get_or_build_tokenizer(generation_preset_params)
+    backend = generation_preset_params.get("tokenizer_backend", "tiktoken")
+    model_name = generation_preset_params.get("tokenizer_model_name", "gpt-4")
+    get_tokenizer_service(backend=backend, model_name=model_name)
 
     answers: Dict[str, str] = {}
     total_time = 0.0

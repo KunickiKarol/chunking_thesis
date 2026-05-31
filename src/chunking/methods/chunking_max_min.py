@@ -22,6 +22,23 @@ class SentenceSpan:
     end: int
 
 
+def size_factor(n, pivot=20, steepness_left=0.09, steepness_right=0.5):
+    """
+    Asymetryczny softplus:
+    - wolniej rośnie do pivota (steepness_left)
+    - szybciej rośnie po pivocie (steepness_right)
+    - size_factor(pivot) = 1.0
+    """
+    def softplus(x, s):
+        return np.log1p(np.exp(s * x))
+    
+    norm_at_pivot = softplus(0, 1)  # = log(2), wspólny punkt
+    if n <= pivot:
+        return expit(n)
+    else:
+        return softplus(n - pivot, steepness_right) / norm_at_pivot
+
+
 def _tokenize_with_spans(text: str) -> List[SentenceSpan]:
     """
     Tokenizuje tekst i zachowuje oryginalne indeksy zdań.
@@ -61,12 +78,17 @@ def _process_sentences(
         cluster_embeddings = embeddings[cluster_start:cluster_end]
 
         if cluster_end - cluster_start > 1:
+            if cluster_end - cluster_start > 50:
+                print(1)
             new_sentence_similarities = cosine_similarity(
                 embeddings[i].reshape(1, -1),
                 cluster_embeddings,
             )[0]
 
-            adjusted_threshold = pairwise_min * c * expit((cluster_end - cluster_start) - 1)
+            adjusted_threshold = max(
+                pairwise_min * c * size_factor((cluster_end - cluster_start) - 1),
+                0.0,  # próg nigdy nie spada poniżej zera
+            )
 
             new_sentence_similarity = np.max(new_sentence_similarities)
 

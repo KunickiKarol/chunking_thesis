@@ -14,7 +14,8 @@ def analyze_retrieval_one(
     with open(rerank_input_dir / "rerank_results.json", "r", encoding="utf-8") as f:
         rerank_results = json.load(f)
     chunks_used = {x for values in rerank_results.values() for x in values}
-
+    with open(rerank_input_dir / "meta.json", "r", encoding="utf-8") as f:
+        rerank_result_meta = json.load(f)
     tasks = {}
 
     for task_file in task_input_dir.glob("*.json"):
@@ -36,7 +37,7 @@ def analyze_retrieval_one(
     answers, time = analyze_retrieval(
         analyze_retrieval_name, rerank_results, tasks, all_chunks, analyze_retrieval_preset_params
     )
-
+    answers['rerank_result_time'] = rerank_result_meta['global_rerank_time']
     with open(result_dir / "analyze_retrieval_results.json", "w", encoding="utf-8") as f:
         json.dump(answers, f, ensure_ascii=False, indent=4)
 

@@ -7,6 +7,52 @@ import pandas as pd
 logger = logging.getLogger(__name__)
 
 
+def plot_histogram(
+    values,
+    bins="auto",
+    figsize=(12, 6)
+):
+    """
+    Tworzy histogram dla lat / wieku.
+
+    Parameters
+    ----------
+    values : array-like
+        Dane wejściowe (np. lata).
+
+    bins : int lub str
+        Sposób wyznaczania przedziałów.
+        
+        Możliwe opcje:
+        - int      -> liczba binów
+        - "auto"   -> matplotlib sam dobiera przedziały
+        - "fd"     -> Freedman–Diaconis
+        - "sturges"
+        - "sqrt"
+
+    figsize : tuple
+        Rozmiar wykresu.
+
+    Returns
+    -------
+    fig, ax
+    """
+
+    import matplotlib.pyplot as plt
+
+    fig, ax = plt.subplots(figsize=figsize)
+
+    ax.hist(values, bins=bins)
+
+    ax.set_xlabel("Year")
+    ax.set_ylabel("Frequency")
+    ax.set_title("Year histogram")
+
+    plt.tight_layout()
+
+    return fig, ax
+
+
 def plot_label_counts(label_counts, figsize=(12, 6)):
     """
     Tworzy wykres liczności klas.
@@ -76,16 +122,18 @@ def save_metrics_figure_png(df: pd.DataFrame, path: str = "metrics.png"):
             styled.loc["__MIN__"] = "background-color: #ffd6d6; font-weight: bold"
 
         return styled
+    if not df.empty:
+        styled = df.style.apply(lambda _: style_df(df), axis=None)
 
-    styled = df.style.apply(lambda _: style_df(df), axis=None)
+        # zapis do PNG
+        styled.to_html("temp.html")  # fallback (czasem debug)
+        import dataframe_image as dfi
 
-    # zapis do PNG
-    styled.to_html("temp.html")  # fallback (czasem debug)
-    import dataframe_image as dfi
+        dfi.export(styled, path)
 
-    dfi.export(styled, path)
-
-    logger.info(f"Saved: {path}")
+        logger.info(f"Saved: {path}")
+    else:
+        logger.info(f'Df with metrics with table empty to save to {path}')
 
 
 def plot_value_distribution(label_counts, figsize=(10, 6)):

@@ -5,6 +5,7 @@ from pathlib import Path
 from typing import List
 
 from src.chunking.methods.all_chunker import chunk_text
+from src.tools.tokenizer_service import TokenizerService
 
 logger = logging.getLogger(__name__)
 
@@ -16,6 +17,7 @@ def chunk_text_one(
     splits: List,
     input_dir: Path,
     output_dir: Path,
+    tokenizer: TokenizerService
 ):
     """
     Chunkuje dataset_name na podstawie: input_dir
@@ -42,6 +44,7 @@ def chunk_text_one(
     split_times = {split: 0.0 for split in splits}
     chunk_id = 0
     for split in splits:
+        avg_token_len = 0
         split_out_dir = output_dir / split
         split_books_dir = split_out_dir / "Books"
 
@@ -49,7 +52,6 @@ def chunk_text_one(
         start_split = time.perf_counter()
 
         is_example = split in ("example", "examples")
-
         for txt_file in books_dir.rglob("*.txt"):
             bookid = txt_file.stem
             meta = bookmeta.get(bookid)
@@ -72,11 +74,14 @@ def chunk_text_one(
             out_file = split_books_dir / f"{bookid}.jsonl"
             with out_file.open("w", encoding="utf-8") as out:
                 for chunk in chunks:
+                    tokens_len = tokenizer.tokenize(chunk.text)['token_count']
+                    avg_token_len += tokens_len
                     record = {
                         "source_file": bookid,
                         "chunk_id": chunk_id,
                         "start_index": chunk.start_index,
                         "end_index": chunk.end_index,
+                        "tokens_len": tokens_len,
                         "text": chunk.text,
                         "split": split,
                         "chunking_method": chunking_type,
@@ -100,6 +105,7 @@ def chunk_text_one(
         end_split = time.perf_counter()
 
         # zapis meta dla splitu
+        avg_token_len = avg_token_len // split_chunks
         meta = {
             "split": split,
             "chunking_method": chunking_type,
@@ -107,6 +113,7 @@ def chunk_text_one(
             "total_chunking_time": split_times[split],
             "total_wall_time": end_split - start_split,
             "chunks_num": split_chunks,
+            'avg_token_len': avg_token_len
         }
 
         with open(output_dir / split / "meta.json", "w", encoding="utf-8") as f:

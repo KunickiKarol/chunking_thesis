@@ -1,9 +1,10 @@
+import os
 import re
 from typing import List
 
 import nltk
 import numpy as np
-from chonkie import SemanticChunker
+from tqdm import tqdm
 from sklearn.metrics.pairwise import cosine_similarity as sklearn_cosine
 
 from src.chunking.methods.chunking_lumber import Chunk
@@ -61,24 +62,6 @@ def chunking_semantic_recursive(
     def _embed(texts: List[str]) -> np.ndarray:
         return _st_model.encode(texts, convert_to_numpy=True, show_progress_bar=False)
 
-    # ------------------------------------------------------------------ #
-    # chonkie SemanticChunker factory (cached by threshold)
-    # ------------------------------------------------------------------ #
-
-    _chunker_cache: dict = {}
-
-    def _get_chunker(chunk_size: int) -> SemanticChunker:
-        key = chunk_size
-        return get_semantic_chunker(
-            embedding_model_name=embedding_model,
-            chunk_size=chunk_size,
-            threshold=initial_breakpoint_threshold,
-            similarity_window=semantic_similarity_window,
-            skip_window=semantic_skip_window,
-            filter_window=semantic_filter_window,
-            filter_polyorder=semantic_filter_polyorder,
-            filter_tolerance=semantic_filter_tolerance,
-        )
 
     # ------------------------------------------------------------------ #
     # Sentence tokenizer
@@ -224,7 +207,16 @@ def chunking_semantic_recursive(
         chunk_size: int,
         search_from: int = 0,
     ) -> List[tuple[str, int, int]]:
-        chunker = _get_chunker(chunk_size)
+        chunker = get_semantic_chunker(
+            embedding_model_name=embedding_model,
+            chunk_size=chunk_size,
+            threshold=initial_breakpoint_threshold,
+            similarity_window=semantic_similarity_window,
+            skip_window=semantic_skip_window,
+            filter_window=semantic_filter_window,
+            filter_polyorder=semantic_filter_polyorder,
+            filter_tolerance=semantic_filter_tolerance,
+        )
         chunks = chunker.chunk(text_)
 
         result: List[tuple[str, int, int]] = []

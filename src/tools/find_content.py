@@ -106,6 +106,14 @@ def load_all_chunks_fast(chunks_input_dir: Path) -> dict:
                     result[cid] = chunk_data
     return result
 
+def load_all_chunks_meta_fast(chunks_input_dir: Path) -> dict:
+    with open(chunks_input_dir / "meta.json", "r", encoding="utf-8") as f:
+        data = json.load(f)
+
+    return {
+        "total_chunking_time": data.get("total_chunking_time")
+    }
+
 
 # ─── Szybkie wyszukiwania (O(1) zamiast O(n * pliki)) ─────────────────────────
 

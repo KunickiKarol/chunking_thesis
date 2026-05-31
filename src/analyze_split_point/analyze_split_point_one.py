@@ -25,4 +25,4 @@ def analyze_split_point_one(
     with open(result_dir / "meta.json", "w", encoding="utf-8") as f:
         json.dump({"analyze_split_point_time": time}, f, ensure_ascii=False, indent=4)
 
-    return results_metrics
+    return results_metrics, time

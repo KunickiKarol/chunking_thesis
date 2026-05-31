@@ -20,3 +20,14 @@ presets:
       filter_window: 5
       filter_polyorder: 3
       filter_tolerance: 0.02
+  
+  - name: norm
+    params:
+      embedding_model: minishlab/potion-base-32M
+      chunk_size: 2048
+      similarity_window: 3
+      skip_window: 0
+      threshold: 0.79
+      filter_window: 5
+      filter_polyorder: 3
+      filter_tolerance: 0.025

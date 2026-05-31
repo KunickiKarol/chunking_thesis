@@ -29,11 +29,11 @@ setup_logging()
 # from src.analyze_split_point.analyze_split_point_all import main
 # main()
 
-# from src.analyze_retrieval.analyze_retrieval_all import main
-# main()
-
-from src.analyze_embeddings.analyze_embeddings_all import main
+from src.analyze_retrieval.analyze_retrieval_all import main
 main()
+
+# from src.analyze_embeddings.analyze_embeddings_all import main
+# main()
 
 # from pathlib import Path
 # import os

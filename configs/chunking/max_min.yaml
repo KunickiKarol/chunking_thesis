@@ -11,3 +11,9 @@ presets:
       hard_threshold: 0.52
       c_param: 0.6
       init_const: 2
+  - name: norm
+    params:
+      model_name: BAAI/bge-m3
+      hard_threshold: 0.44
+      c_param: 0.9
+      init_const: 2

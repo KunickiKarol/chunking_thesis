@@ -16,3 +16,20 @@ presets:
       semantic_filter_tolerance: 0.0001
       semantic_similarity_window: 3
       semantic_skip_window: 1
+  - name: norm
+    params:
+      max_chunk_size: 10000
+      recursive_threshold: 1000
+      final_threshold: 1700
+      merge_threshold: 450
+      delta: 3
+
+      embedding_model: sentence-transformers/all-MiniLM-L6-v2
+
+      breakpoint_threshold_type: percentile
+      initial_breakpoint_threshold: 0.9
+      semantic_filter_window: 1
+      semantic_filter_polyorder: 0
+      semantic_filter_tolerance: 0.0001
+      semantic_similarity_window: 3
+      semantic_skip_window: 1

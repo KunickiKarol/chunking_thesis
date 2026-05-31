@@ -8,7 +8,7 @@ from sklearn.cluster import AgglomerativeClustering
 
 from src.chunking.methods.register import register_chunker
 from src.tools.chunk import Chunk, trim_bounds
-from src.tools.models_cache import get_sentence_transformer
+from src.tools.models_cache import get_sentence_transformer, get_tokenizer_service
 
 logger = logging.getLogger(__name__)
 
@@ -32,8 +32,17 @@ def chunking_sequential_hac(text: str, **params) -> List[Chunk]:
         List[Chunk]: Lista chunków z tekstem i indeksami w oryginalnym tekście.
     """
     model_name = params.get("model_name")
-    distance_threshold = float(params.get("distance_threshold"))
+    distance_threshold = params.get("distance_threshold")
+    if distance_threshold:
+        distance_threshold = float(distance_threshold)
     batch_size = int(params.get("batch_size"))
+    linkage = params.get('linkage')
+    avg_chunk_size = params.get('avg_chunk_size')
+    n_components = None
+    if avg_chunk_size and distance_threshold is None:
+        tokenizer = get_tokenizer_service()
+        tokens_len = tokenizer.tokenize(text)['token_count']
+        n_components = tokens_len // avg_chunk_size
 
     # Segmentacja na zdania
     sentences = sent_tokenize(text)
@@ -100,10 +109,10 @@ def chunking_sequential_hac(text: str, **params) -> List[Chunk]:
 
     # Clustering
     clustering = AgglomerativeClustering(
-        n_clusters=None,
+        n_clusters=n_components,
         distance_threshold=distance_threshold,
         metric="cosine",
-        linkage="single",
+        linkage=linkage,
         connectivity=connectivity,
     )
 

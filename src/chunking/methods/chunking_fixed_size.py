@@ -5,7 +5,7 @@ from chonkie import SentenceChunker, TokenChunker
 
 from src.chunking.methods.register import register_chunker
 from src.tools.chunk import Chunk, trim_bounds
-from src.tools.tokenizer_service import TokenizerService
+from src.tools.models_cache import get_tokenizer_service
 
 
 def load_params(path: str = "params.yaml") -> dict:
@@ -53,15 +53,11 @@ def chunking_fixed_size(
         model_name = kwargs.get("model_name") or tokenizer_cfg.get("model_name")
 
         # 🔥 Twój service
-        tokenizer_service = TokenizerService(
-            backend=backend,
-            model_name=model_name,
-        )
 
-        tokenizer = tokenizer_service.get_tokenizer()
+        tokenizer = get_tokenizer_service(backend, model_name)
 
         chunker = TokenChunker(
-            tokenizer=tokenizer,
+            tokenizer=tokenizer.get_tokenizer(),
             chunk_size=chunk_size,
             chunk_overlap=overlap,
         )

@@ -8,7 +8,7 @@ from sklearn.decomposition import PCA
 from src.analyze_embeddings.dim_reduction_plots import get_dim_reduction_plots_temporal
 from src.analyze_embeddings.methods.register import register_analyze_embeddings
 from src.analyze_embeddings.tools import get_metrics
-from src.tools.read.embeddings.plots import plot_label_counts
+from src.tools.read.embeddings.plots import plot_histogram, plot_label_counts
 
 logger = logging.getLogger(__name__)
 
@@ -20,6 +20,10 @@ def analyze_years(analyze_preset_params, df_embedding, df_bookmeta):
         how="left",
         validate="many_to_one",
     )
+    for col in ["publication_date", "yearpub"]:
+        if col not in df_merged.columns:
+            df_merged[col] = np.nan
+
     df_merged = df_merged[
         df_merged.index.get_level_values("dataset_name").isin(["novelQA", "literaryQA"])
     ]
@@ -53,7 +57,7 @@ def analyze_years(analyze_preset_params, df_embedding, df_bookmeta):
             embed_params_name,
         ) = group_keys
 
-        key = f"{chunking_name}_" f"{chunking_params_name}_" f"{embed_name}_" f"{embed_params_name}"
+        key = f"{chunking_name}-" f"{chunking_params_name}-" f"{embed_name}-" f"{embed_params_name}"
 
         X = np.stack(group_df["embedding"].values)
 
@@ -103,11 +107,12 @@ def analyze_years(analyze_preset_params, df_embedding, df_bookmeta):
         # ── label counts plot ──────────────────────────────────────────────
         unique_ids, counts = np.unique(labels_id, return_counts=True)
         label_counts = {id_to_label[i]: int(count) for i, count in zip(unique_ids, counts)}
-        fig_num_per_class = plot_label_counts(label_counts)[0]
+        fig_num_per_class = plot_histogram(label_counts)[0]
 
         # ── dimensionality-reduction plots ─────────────────────────────────
         dim_red_methods = analyze_preset_params.get("dim_red") or []
         dim_red_plots = []
+        plot_titles = []
         if dim_red_methods:
             dim_red_plots, plot_titles = get_dim_reduction_plots_temporal(
                 method_names=dim_red_methods,
@@ -151,9 +156,11 @@ def analyze_years(analyze_preset_params, df_embedding, df_bookmeta):
     # normalna tabela
     df = pd.DataFrame.from_dict(rows, orient="index")
 
-    # dodatkowe wiersze
-    df.loc["__MAX__"] = global_max
-    df.loc["__MIN__"] = global_min
+    if global_max:
+        df.loc["__MAX__"] = global_max
+    if global_min: 
+        df.loc["__MIN__"] = global_min
+
 
     metrics_figure = df
 

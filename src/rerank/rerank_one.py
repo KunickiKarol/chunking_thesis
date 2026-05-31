@@ -31,15 +31,10 @@ def rerank_one(
             search_data = json.load(f)
 
         for query_key, query_data in search_data.items():
-            _, question_data = find_query_by_id_fast(query_index, query_key)
-            question_text = question_data["Question"]
-
-            retrieved_chunks = []
-            for retrieved_key in query_data.get("chunks"):
-                chunk = chunk_index[retrieved_key]
-                retrieved_chunks.append((chunk["chunk_id"], chunk["text"]))
-
-            result[query_key] = (question_text, retrieved_chunks)
+            query_text = query_index[query_key][1]['Question']
+            chunks = query_data['chunks']
+            chunks_texts = [(chunk_index[x]['chunk_id'], chunk_index[x]['text']) for x in chunks]
+            result[query_key] = (query_text, chunks_texts)
 
     # reranking + pomiar czasu
     rerank_results = {}

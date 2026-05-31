@@ -7,7 +7,7 @@ from typing import Any, Dict, Tuple
 
 from dotenv import load_dotenv
 
-from src.tools.tokenizer_service import TokenizerService
+from src.tools.models_cache import get_tokenizer_service
 
 logger = logging.getLogger(__name__)
 
@@ -84,7 +84,7 @@ class infiniteBenchChoicePreprocessor:
 
     def _load_bookmeta(self) -> Dict:
         metadata = {}
-        tokenizer = TokenizerService()
+        tokenizer = get_tokenizer_service()
 
         docs_count = 0
         total_token_len = 0

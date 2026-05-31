@@ -29,11 +29,9 @@ def rank_bge_reranker(query_tuple, **rerank_preset_params):
     pairs = []
     metadata = []
 
-    for chunk in retrieved_chunks:
-        key = chunk[0]
-        text = chunk[1]
+    for chunks_id, text in retrieved_chunks:
 
-        metadata.append(key)
+        metadata.append(chunks_id)
         pairs.append([question_text, text])
 
     scores = reranker.compute_score(pairs)

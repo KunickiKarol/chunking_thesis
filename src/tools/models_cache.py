@@ -3,6 +3,8 @@ from FlagEmbedding import FlagReranker
 from sentence_transformers import SentenceTransformer
 from wrapt import lru_cache
 
+from src.tools.tokenizer_service import TokenizerService
+
 
 @lru_cache(maxsize=1)
 def get_neural_chunker(
@@ -14,6 +16,17 @@ def get_neural_chunker(
         model=neural_model,
         stride=stride,
         min_characters_per_chunk=min_characters_per_chunk,
+    )
+
+
+@lru_cache(maxsize=2)
+def get_tokenizer_service(
+    backend: str = None,
+    model_name: str = None,
+) -> TokenizerService:
+    return TokenizerService(
+        backend=backend,
+        model_name=model_name,
     )
 
 

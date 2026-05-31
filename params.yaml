@@ -1,66 +1,66 @@
 datasets_download:
   - "infiniteBench"
-  - "novelQA"
-  - "literaryQA"
+  # - "novelQA"
+  # - "literaryQA"
 
 preprocess_datasets:
   tokenizer:
     backend: tiktoken
     model_name: gpt-4
   datasets:
-    literaryQA:
-      presets_file: configs/preprocess_dataset/literaryQA.yaml
-      use_presets:
-        - default  # 'chapter' or 'page' or 'none'
-    novelQA:
-      presets_file: configs/preprocess_dataset/novelQA.yaml
-      use_presets:
-        - default  # 'chapter' or 'page' or 'none'
-    infiniteBenchQA:
-      presets_file: configs/preprocess_dataset/infiniteBenchQA.yaml
-      use_presets:
-        - default  # 'chapter' or 'page' or 'none'
+    # literaryQA:
+    #   presets_file: configs/preprocess_dataset/literaryQA.yaml
+    #   use_presets:
+    #     - default  # 'chapter' or 'page' or 'none'
+    # novelQA:
+    #   presets_file: configs/preprocess_dataset/novelQA.yaml
+    #   use_presets:
+    #     - default  # 'chapter' or 'page' or 'none'
+    # infiniteBenchQA:
+    #   presets_file: configs/preprocess_dataset/infiniteBenchQA.yaml
+    #   use_presets:
+    #     - default  # 'chapter' or 'page' or 'none'
     infiniteBenchChoice:
       presets_file: configs/preprocess_dataset/infiniteBenchChoice.yaml
       use_presets:
         - default  # 'chapter' or 'page' or 'none'
 
 chunking:
-  splits: ["validation"]
+  splits: ["example"]
   methods:
     fixed_size:
       presets_file: configs/chunking/fixed_size.yaml
       use_presets:
-        - fs_512_64_char
-        # - fs_512_64_token
-    # recursive:
-    #   presets_file: configs/chunking/recursive.yaml
-    #   use_presets:
-    #     - r_512_64
+        # - norm_char
+        - norm_token
+    recursive:
+      presets_file: configs/chunking/recursive.yaml
+      use_presets:
+        - norm
     # recursive_semantic:
     #   presets_file: configs/chunking/recursive_semantic.yaml
     #   use_presets:
-    #     - paper_based
-    neural:
-      presets_file: configs/chunking/neural.yaml
-      use_presets:
-        - default
+    #     - norm
+    # neural:
+    #   presets_file: configs/chunking/neural.yaml
+    #   use_presets:
+    #     - default
     # chonkie_semantic:
     #   presets_file: configs/chunking/chonkie_semantic.yaml
     #   use_presets:
-    #     - default
-    lumber:
-      presets_file: configs/chunking/lumber.yaml
-      use_presets:
-        - default
+    #     - norm
+    # lumber:
+    #   presets_file: configs/chunking/lumber.yaml
+    #   use_presets:
+    #     - norm
     # max_min:
     #   presets_file: configs/chunking/max_min.yaml
     #   use_presets:
-    #     - liberal
+    #     - norm
     # sequential_hac:
     #   presets_file: configs/chunking/sequential_hac.yaml
     #   use_presets:
-    #     - liberal
+    #     - norm
 
 vector_embed:
   methods:
@@ -127,11 +127,47 @@ analyze_retrieval:
 
 analyze_embeddings:
   methods:
-    analyze_embeddings:
+    analyze_years:
       presets_file: configs/analyze_embeddings/analyze_years.yaml
       use_presets:
         # - normalized_none
         - year_normalized_50
+        # - normalized_100
+        # - no_normalized_none
+        # - no_normalized_50
+        # - no_normalized_100
+    analyze_genres:
+      presets_file: configs/analyze_embeddings/analyze_genres.yaml
+      use_presets:
+        # - normalized_none
+        - genre_normalized_50
+        # - normalized_100
+        # - no_normalized_none
+        # - no_normalized_50
+        # - no_normalized_100
+    analyze_periods:
+      presets_file: configs/analyze_embeddings/analyze_periods.yaml
+      use_presets:
+        # - normalized_none
+        - period_normalized_50
+        # - normalized_100
+        # - no_normalized_none
+        # - no_normalized_50
+        # - no_normalized_100
+    analyze_titles:
+      presets_file: configs/analyze_embeddings/analyze_titles.yaml
+      use_presets:
+        # - normalized_none
+        - title_normalized_50
+        # - normalized_100
+        # - no_normalized_none
+        # - no_normalized_50
+        # - no_normalized_100
+    analyz_datasets:
+      presets_file: configs/analyze_embeddings/analyze_datasets.yaml
+      use_presets:
+        # - normalized_none
+        - dataset_normalized_50
         # - normalized_100
         # - no_normalized_none
         # - no_normalized_50
