@@ -8,8 +8,8 @@ setup_logging()
 # from src.preprocess_datasets.preprocess_datasets_all import main
 # main()
 
-# from src.chunking.chunking_text_all import main
-# main()
+from src.chunking.chunking_text_all import main
+main()
 
 # from src.embed_chunks.embed_chunks_all import main
 # main()
@@ -29,8 +29,8 @@ setup_logging()
 # from src.analyze_split_point.analyze_split_point_all import main
 # main()
 
-from src.analyze_retrieval.analyze_retrieval_all import main
-main()
+# from src.analyze_retrieval.analyze_retrieval_all import main
+# main()
 
 # from src.analyze_embeddings.analyze_embeddings_all import main
 # main()

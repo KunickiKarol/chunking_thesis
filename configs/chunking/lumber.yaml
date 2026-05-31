@@ -7,6 +7,14 @@ presets:
       sleep_seconds: 20
       max_new_tokens: 100
       inference_mode: hf
+  - name: default_vllm
+    params:
+      model: Qwen/Qwen3-4B-Instruct-2507
+      group_size_threshold: 350
+      max_retries: 3
+      sleep_seconds: 20
+      max_new_tokens: 100
+      inference_mode: api
 
   - name: norm
     params:

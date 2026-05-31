@@ -28,15 +28,15 @@ preprocess_datasets:
 chunking:
   splits: ["example"]
   methods:
-    fixed_size:
-      presets_file: configs/chunking/fixed_size.yaml
-      use_presets:
-        # - norm_char
-        - norm_token
-    recursive:
-      presets_file: configs/chunking/recursive.yaml
-      use_presets:
-        - norm
+    # fixed_size:
+    #   presets_file: configs/chunking/fixed_size.yaml
+    #   use_presets:
+    #     # - norm_char
+    #     - norm_token
+    # recursive:
+    #   presets_file: configs/chunking/recursive.yaml
+    #   use_presets:
+    #     - norm
     # recursive_semantic:
     #   presets_file: configs/chunking/recursive_semantic.yaml
     #   use_presets:
@@ -49,10 +49,10 @@ chunking:
     #   presets_file: configs/chunking/chonkie_semantic.yaml
     #   use_presets:
     #     - norm
-    # lumber:
-    #   presets_file: configs/chunking/lumber.yaml
-    #   use_presets:
-    #     - norm
+    lumber:
+      presets_file: configs/chunking/lumber.yaml
+      use_presets:
+        - default
     # max_min:
     #   presets_file: configs/chunking/max_min.yaml
     #   use_presets:

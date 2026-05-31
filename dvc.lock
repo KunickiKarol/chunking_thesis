@@ -5,8 +5,8 @@ stages:
     deps:
     - path: params.yaml
       hash: md5
-      md5: d7aad75890a1c2c13c2c994d08813392
-      size: 4753
+      md5: 10c21fe970a8e459e5689c7c01bca5d3
+      size: 4766
       isexec: true
     - path: src/download_datasets/download_datasets_all.py
       hash: md5
@@ -33,8 +33,8 @@ stages:
       nfiles: 8878
     - path: params.yaml
       hash: md5
-      md5: d7aad75890a1c2c13c2c994d08813392
-      size: 4753
+      md5: 10c21fe970a8e459e5689c7c01bca5d3
+      size: 4766
       isexec: true
     - path: src/preprocess_datasets/preprocess_datasets_all.py
       hash: md5
@@ -67,8 +67,8 @@ stages:
       nfiles: 2396
     - path: params.yaml
       hash: md5
-      md5: d7aad75890a1c2c13c2c994d08813392
-      size: 4753
+      md5: 10c21fe970a8e459e5689c7c01bca5d3
+      size: 4766
       isexec: true
     - path: src/chunking/chunking_text_all.py
       hash: md5
@@ -77,14 +77,10 @@ stages:
     params:
       params.yaml:
         chunking.methods:
-          fixed_size:
-            presets_file: configs/chunking/fixed_size.yaml
+          lumber:
+            presets_file: configs/chunking/lumber.yaml
             use_presets:
-            - norm_token
-          recursive:
-            presets_file: configs/chunking/recursive.yaml
-            use_presets:
-            - norm
+            - default
         preprocess_datasets.datasets:
           infiniteBenchChoice:
             presets_file: configs/preprocess_dataset/infiniteBenchChoice.yaml
@@ -93,9 +89,9 @@ stages:
     outs:
     - path: data/chunks/
       hash: md5
-      md5: bc863328f61dde51d5311392cd3f7172.dir
-      size: 3311817578
-      nfiles: 4005
+      md5: 9aacd6b13d48b5ab843efc5682595f5c.dir
+      size: 3313611499
+      nfiles: 4009
   embed_chunks:
     cmd: python -m src.embed_chunks.embed_chunks_all
     deps:
