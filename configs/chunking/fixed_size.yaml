@@ -24,8 +24,8 @@ presets:
 
   - name: norm_char
     params:
-      chunk_size: 1350
-      overlap: 140
+      chunk_size: 1150
+      overlap: 134
       mode: char
 
   # =========================
@@ -58,8 +58,8 @@ presets:
 
   - name: norm_token
     params:
-      chunk_size: 344
-      overlap: 48
+      chunk_size: 280
+      overlap: 38
       mode: token
       backend: tiktoken
       model_name: gpt-4

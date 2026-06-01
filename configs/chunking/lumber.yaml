@@ -23,4 +23,4 @@ presets:
       max_retries: 3
       sleep_seconds: 20
       max_new_tokens: 125
-      inference_mode: hf
+      inference_mode: api

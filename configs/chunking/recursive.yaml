@@ -13,5 +13,5 @@ presets:
       min_characters_per_chunk: 128
   - name: norm
     params:
-      chunk_size: 1550
-      min_characters_per_chunk: 96
+      chunk_size: 1300
+      min_characters_per_chunk: 82

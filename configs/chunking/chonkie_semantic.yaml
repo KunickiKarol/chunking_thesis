@@ -27,7 +27,7 @@ presets:
       chunk_size: 2048
       similarity_window: 3
       skip_window: 0
-      threshold: 0.79
+      threshold: 0.85
       filter_window: 5
       filter_polyorder: 3
-      filter_tolerance: 0.025
+      filter_tolerance: 0.036
