@@ -15,5 +15,7 @@ __pycache__/
 /datasets
 /chunks
 /vector_db
+/models
+/old
 
 .vscode/
