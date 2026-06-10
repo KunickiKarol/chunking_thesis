@@ -2,6 +2,7 @@ import os
 import time as time_module
 from abc import ABC, abstractmethod
 from typing import Dict, List, Optional, Tuple
+import logging
 
 import torch
 from openai import OpenAI
@@ -10,11 +11,15 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 from vllm import LLM  # lazy import — not needed for API mode
 from vllm import SamplingParams
 
+from src.tools.logging_config import setup_logging
 from src.generation.methods.register import register_generator
 from src.generation.prompts.all_prompts import generate_prompt
 from src.tools.extract_llm import extract_answer
 from src.tools.models_cache import get_tokenizer_service
+from src.tools.tokenizer_service import TokenizerService
 
+setup_logging()
+logger = logging.getLogger(__name__)
 # ---------------------------------------------------------------------------
 # Token counting helper
 # ---------------------------------------------------------------------------
@@ -79,8 +84,23 @@ class _ApiBackend(_InferenceBackend):
             messages=messages,
             max_tokens=max_new_tokens,
             temperature=0.0,
-            extra_body={"chat_template_kwargs": {"enable_thinking": False}},
+            extra_body={"chat_template_kwargs": {"enable_thinking": False, "include_reasoning": False, }},
+            reasoning_effort="low"
         )
+        # logger.info(f"API response: {response}")
+        if response.choices[0].message.content is None:
+            logger.warning(f"API response content is None. Full response: {response}")
+            response = self._client.chat.completions.create(
+                model=self._model_id,
+                messages=messages,
+                max_tokens=max_new_tokens*2,
+                temperature=0.0,
+                extra_body={"chat_template_kwargs": {"enable_thinking": False, "include_reasoning": False, }},
+                reasoning_effort="low"
+            )
+            if response.choices[0].message.content is None:
+                logger.warning(f"AGAIN API response content is None. Full response: {response}")
+                return "" 
         return response.choices[0].message.content.strip()
 
 
