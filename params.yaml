@@ -1,7 +1,7 @@
 datasets_download:
   - "infiniteBench"
-  # - "novelQA"
-  # - "literaryQA"
+  - "novelQA"
+  - "literaryQA"
 
 preprocess_datasets:
   tokenizer:
@@ -12,55 +12,55 @@ preprocess_datasets:
     #   presets_file: configs/preprocess_dataset/literaryQA.yaml
     #   use_presets:
     #     - default  # 'chapter' or 'page' or 'none'
-    # novelQA:
-    #   presets_file: configs/preprocess_dataset/novelQA.yaml
-    #   use_presets:
-    #     - default  # 'chapter' or 'page' or 'none'
-    # infiniteBenchQA:
-    #   presets_file: configs/preprocess_dataset/infiniteBenchQA.yaml
-    #   use_presets:
-    #     - default  # 'chapter' or 'page' or 'none'
+    novelQA:
+      presets_file: configs/preprocess_dataset/novelQA.yaml
+      use_presets:
+        - default  # 'chapter' or 'page' or 'none'
+    infiniteBenchQA:
+      presets_file: configs/preprocess_dataset/infiniteBenchQA.yaml
+      use_presets:
+        - default  # 'chapter' or 'page' or 'none'
     infiniteBenchChoice:
       presets_file: configs/preprocess_dataset/infiniteBenchChoice.yaml
       use_presets:
         - default  # 'chapter' or 'page' or 'none'
 
 chunking:
-  splits: ["example"]
+  splits: ["all"]
   methods:
-    # fixed_size:
-    #   presets_file: configs/chunking/fixed_size.yaml
-    #   use_presets:
-    #     # - norm_char
-    #     - norm_token
-    # recursive:
-    #   presets_file: configs/chunking/recursive.yaml
-    #   use_presets:
-    #     - norm
-    # recursive_semantic:
-    #   presets_file: configs/chunking/recursive_semantic.yaml
-    #   use_presets:
-    #     - norm
-    # neural:
-    #   presets_file: configs/chunking/neural.yaml
-    #   use_presets:
-    #     - default
-    # chonkie_semantic:
-    #   presets_file: configs/chunking/chonkie_semantic.yaml
-    #   use_presets:
-    #     - norm
+    fixed_size:
+      presets_file: configs/chunking/fixed_size.yaml
+      use_presets:
+        # - norm_char
+        - norm_token
+    recursive:
+      presets_file: configs/chunking/recursive.yaml
+      use_presets:
+        - norm
+    recursive_semantic:
+      presets_file: configs/chunking/recursive_semantic.yaml
+      use_presets:
+        - norm
+    neural:
+      presets_file: configs/chunking/neural.yaml
+      use_presets:
+        - default
+    chonkie_semantic:
+      presets_file: configs/chunking/chonkie_semantic.yaml
+      use_presets:
+        - norm
     lumber:
       presets_file: configs/chunking/lumber.yaml
       use_presets:
-        - default
-    # max_min:
-    #   presets_file: configs/chunking/max_min.yaml
-    #   use_presets:
-    #     - norm
-    # sequential_hac:
-    #   presets_file: configs/chunking/sequential_hac.yaml
-    #   use_presets:
-    #     - norm
+        - default_vllm
+    max_min:
+      presets_file: configs/chunking/max_min.yaml
+      use_presets:
+        - norm
+    sequential_hac:
+      presets_file: configs/chunking/sequential_hac.yaml
+      use_presets:
+        - norm
 
 vector_embed:
   methods:
@@ -68,7 +68,7 @@ vector_embed:
       presets_file: configs/vector_embed/faiss.yaml
       use_presets:
         - default_global
-        - default_local
+        # - default_local
 
 search:
   methods:
@@ -80,19 +80,18 @@ search:
 
 rerank:
   methods:
-    # nothing:
-    #   presets_file: configs/rerank/nothing.yaml
-    #   use_presets:
+    nothing:
+      presets_file: configs/rerank/nothing.yaml
+      use_presets:
     #     - default_top5
     #     - default_top5_op
-    #     - default_top10_op
-    #     - default_top10
-
+        - default_top20_op
+        - default_top20
     reranker:
       presets_file: configs/rerank/reranker.yaml
       use_presets:
-        - default_top5
-        # - default_top10
+        # - default_top5
+        - default_top20
         # - default_top5_op
         # - default_top10_op
 

@@ -26,6 +26,7 @@ from src.chunking.methods.register import register_chunker
 from src.tools.chunk import trim_bounds
 
 logger = logging.getLogger(__name__)
+logging.getLogger("httpx").setLevel(logging.WARNING)
 
 
 @dataclass
@@ -269,16 +270,33 @@ def chunking_lumber(text: str, **params) -> List[Chunk]:
     # --- main LumberChunker loop ---
     chunk_number = 0
     boundary_ids: List[int] = []
+    total_segments = len(full_segments)
+    max_iterations = total_segments
+    iteration = 0
 
-    while chunk_number < len(full_segments) - 5:
+    while chunk_number < total_segments - 5:
+        iteration += 1
+        if iteration > max_iterations:
+            logger.error(
+                f"Infinite loop guard triggered at chunk_number={chunk_number}. "
+                f"Forcing remaining segments into one final chunk."
+            )
+            break
+
+        position_before_iteration = chunk_number
         word_count = 0
         i = 0
 
-        while word_count < group_size_threshold and (i + chunk_number) < len(full_segments) - 1:
+        while word_count < group_size_threshold and (i + chunk_number) < total_segments - 1:
             i += 1
             candidate = "\n".join(full_segments[k] for k in range(chunk_number, i + chunk_number))
             word_count = _count_words(candidate)
 
+        if i == 0:
+            logger.warning(f"Inner loop did not advance at chunk_number={chunk_number}, forcing skip.")
+            chunk_number += 1
+            continue
+            
         if i == 1:
             final_document = "\n".join(full_segments[k] for k in range(chunk_number, i + chunk_number))
         else:
@@ -303,17 +321,40 @@ def chunking_lumber(text: str, **params) -> List[Chunk]:
             chunk_number += 1
             continue
 
-        match = re.search(r"Answer: ID \w+", llm_output)
-        if match is None:
-            logger.info(f"LLM output does not match expected format for chunk starting at ID {chunk_number}.")
-            chunk_number += 1
-        else:
-            id_match = re.search(r"\d+", match.group(0))
-            chunk_number = int(id_match.group())
-            boundary_ids.append(chunk_number)
-            chunk_number += 1
+        match = re.search(r"Answer:\s*ID\s*(\d+)", llm_output)
 
-    boundary_ids.append(len(full_segments))
+        if match is None:
+            match = re.search(r"\bID\s+(\d+)\b", llm_output)
+            if match:
+                logger.info(
+                    f"Used fallback ID extraction for chunk {chunk_number}. "
+                    f"Raw output: {llm_output!r}"
+                )
+
+        if match is None:
+            logger.warning(
+                f"LLM output does not match expected format for chunk {chunk_number}. "
+                f"Raw output: {llm_output!r}"
+            )
+            chunk_number = max(chunk_number + 1, position_before_iteration + 1)
+        else:
+            parsed_id = int(match.group(1))
+
+            # POPRAWKA 5: Odrzucamy parsed_id, który nie gwarantuje postępu
+            # (nieujemny to za mało – musi być > position_before_iteration).
+            if parsed_id < position_before_iteration:
+                logger.warning(
+                    f"Parsed ID {parsed_id} does not advance beyond {position_before_iteration}, "
+                    f"forcing skip."
+                )
+                chunk_number = position_before_iteration + 1
+            else:
+                # POPRAWKA 6: Pilnujemy też, żeby nie wyskoczyć poza tablicę.
+                chunk_number = min(parsed_id, total_segments - 1)
+                boundary_ids.append(chunk_number)
+                chunk_number += 1
+
+    boundary_ids.append(total_segments)
 
     # --- assemble Chunk objects using pre-computed character spans ---
     chunks: List[Chunk] = []
@@ -340,5 +381,4 @@ def chunking_lumber(text: str, **params) -> List[Chunk]:
                     end_index=char_end,
                 )
             )
-
     return chunks

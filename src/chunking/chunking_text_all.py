@@ -17,7 +17,7 @@ from src.tools.presets import iter_cfg_with_presets
 
 setup_logging()
 logger = logging.getLogger(__name__)
-
+load_dotenv()
 
 
 def chunking_text_all(
@@ -28,7 +28,7 @@ def chunking_text_all(
     chunking_dir: Path,
 ):
     is_all = False
-    
+    load_dotenv()
 
     if splits == ["all"]:
         splits = ["train", "validation", "test"]

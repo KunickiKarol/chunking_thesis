@@ -6,13 +6,13 @@ from pathlib import Path
 
 import faiss
 import numpy as np
-from sentence_transformers import SentenceTransformer
 
 from src.tools.find_content import (
     load_all_chunk_metadata_fast,
     load_all_chunk_metadata_fast_global,
     load_all_queries_fast_source,
 )
+from src.tools.models_cache import get_sentence_transformer
 
 
 def search_query(
@@ -38,7 +38,7 @@ def _search(
     embed_input_dir: Path,
     result_dir: Path,
 ):
-    model = SentenceTransformer(embedder_name)
+    model = get_sentence_transformer(embedder_name)
     index_path = embed_input_dir / "Indexes"
     query_index = load_all_queries_fast_source(task_input_dir)
     if embed_type == "global":

@@ -14,4 +14,26 @@ uv run playwright install chromium
 
 dvc repro preprocess_datasets --force
 
-python -m vllm.entrypoints.openai.api_server   --model Qwen/Qwen3-4B-Instruct-2507   --served-model-name Qwen/Qwen3-4B-Instruct-2507   --host 0.0.0.0   --port 8000   --max-model-len 16384   --gpu-memory-utilization 0.9328
+python -m vllm.entrypoints.openai.api_server   --model /workspace/chunking_thesis/models/Qwen/Qwen2.5-14B-Instruct   --served-model-name Qwen/Qwen2.5-14B-Instruct   --host 0.0.0.0   --port 8000   --max-model-len 16384   --gpu-memory-utilization 0.9328
+
+hf download mirth/chonky_modernbert_large_1 --local-dir /workspace/chunking_thesis/models/mirth/chonky_modernbert_large_1
+hf download BAAI/bge-m3 --local-dir /workspace/chunking_thesis/models/BAAI/bge-m3
+hf download Qwen/Qwen3-4B-Instruct-2507 --local-dir /workspace/chunking_thesis/models/Qwen/Qwen3-4B-Instruct-2507
+hf download minishlab/potion-base-32M --local-dir /workspace/chunking_thesis/models/minishlab/potion-base-32M
+hf download sentence-transformers/all-MiniLM-L6-v2 --local-dir /workspace/chunking_thesis/models/sentence-transformers/all-MiniLM-L6-v2
+hf download Unbabel/M-Prometheus-7B --local-dir /workspace/chunking_thesis/models/Unbabel/M-Prometheus-7B
+hf download Unbabel/M-Prometheus-14B --local-dir /workspace/chunking_thesis/models/Unbabel/M-Prometheus-14B
+hf download Qwen/Qwen3-4B-Instruct-2507 --local-dir /workspace/chunking_thesis/models/Qwen/Qwen3-4B-Instruct-2507
+
+
+nohup python -m vllm.entrypoints.openai.api_server \
+  --model /workspace/chunking_thesis/models/Qwen/Qwen3-4B-Instruct-2507 \
+  --served-model-name Qwen/Qwen3-4B-Instruct-2507\
+  --host 0.0.0.0 \
+  --port 8000 \
+  --max-model-len 16384 \
+  --gpu-memory-utilization 0.95 \
+  --max-num-seqs 1 \
+  --max-num-batched-tokens 16384 \
+  > vllm.log 2>&1 &
+tail -f vllm.log

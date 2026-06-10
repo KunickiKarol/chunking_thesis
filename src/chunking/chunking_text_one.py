@@ -54,6 +54,8 @@ def chunk_text_one(
         is_example = split in ("example", "examples")
         for txt_file in books_dir.rglob("*.txt"):
             bookid = txt_file.stem
+            # if bookid != 'B17':
+            #     continue
             meta = bookmeta.get(bookid)
 
             if is_example:
@@ -65,10 +67,12 @@ def chunk_text_one(
 
             with txt_file.open("r", encoding="utf-8") as f:
                 text = f.read()
+            logger.info(f"START Chunking {txt_file} (length: {len(text)})")
             start = time.perf_counter()
             chunks = chunk_text(chunking_type, text, **params)
             end = time.perf_counter()
             chunking_time = end - start
+            logger.info(f"END Chunking {txt_file} chunking_time = {chunking_time:.4f}s")
             split_times[split] += chunking_time
 
             out_file = split_books_dir / f"{bookid}.jsonl"

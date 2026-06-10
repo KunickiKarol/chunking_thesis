@@ -14,7 +14,6 @@ from src.generation.methods.register import register_generator
 from src.generation.prompts.all_prompts import generate_prompt
 from src.tools.extract_llm import extract_answer
 from src.tools.models_cache import get_tokenizer_service
-from src.tools.tokenizer_service import TokenizerService
 
 # ---------------------------------------------------------------------------
 # Token counting helper
@@ -23,7 +22,7 @@ from src.tools.tokenizer_service import TokenizerService
 
 def _count_tokens(tokenizer, text: str) -> int:
     """Count tokens for a given text using the tokenizer."""
-    return tokenizer.encode(text)['token_count']
+    return tokenizer.tokenize(text)['token_count']
 
 
 def _select_chunks_within_limit(

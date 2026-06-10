@@ -4,8 +4,12 @@ from sentence_transformers import SentenceTransformer
 from wrapt import lru_cache
 
 from src.tools.tokenizer_service import TokenizerService
+from dotenv import load_dotenv
+load_dotenv()
 
 
+import os
+os.environ["HF_HUB_OFFLINE"] = "1"
 @lru_cache(maxsize=1)
 def get_neural_chunker(
     neural_model: str,
@@ -37,6 +41,9 @@ def get_sentence_transformer(model_name: str) -> SentenceTransformer:
     - model_name
     - device_name
     """
+    print(os.environ.get('HF_HOME'))
+    print(os.environ.get('HF_HUB_CACHE'))
+    print(model_name)
     return SentenceTransformer(model_name)
 
 
@@ -47,7 +54,7 @@ def get_sentence_transformer_embeddings(model_name: str) -> SentenceTransformerE
     - model_name
     - device_name
     """
-    return SentenceTransformerEmbeddings(model_name)
+    return SentenceTransformerEmbeddings(model_name, local_files_only=True)
 
 
 @lru_cache(maxsize=1)
@@ -75,7 +82,8 @@ def get_semantic_chunker(
         skip_window=skip_window,
         filter_window=filter_window,
         filter_polyorder=filter_polyorder,
-        filter_tolerance=filter_tolerance,
+        filter_tolerance=filter_tolerance, 
+        local_files_only=True
     )
 
 

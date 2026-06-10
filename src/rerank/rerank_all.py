@@ -30,18 +30,18 @@ def rerank_all(
 ):
     logger.info(f"➡️ Raranking: {rerank_dir}")
     for (
+        (rerank_name, rerank_preset),
         (dataset_name, dataset_preset),
         (chunking_name, chunking_preset),
         (embed_name, embed_preset),
         (search_name, search_preset),
-        (rerank_name, rerank_preset),
         split,
     ) in product(
+        iter_cfg_with_presets(rerank_cfg),
         iter_cfg_with_presets(datasets_cfg),
         iter_cfg_with_presets(chunking_cfg),
         iter_cfg_with_presets(embed_cfg),
         iter_cfg_with_presets(search_cfg),
-        iter_cfg_with_presets(rerank_cfg),
         splits,
     ):
 
