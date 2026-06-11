@@ -301,7 +301,7 @@ def evaluate_final_answer(
 # ---------------------------------------------------------------------------
 # Funkcja batch — model ładuje się raz, pętla po pytaniach
 # ---------------------------------------------------------------------------
-@register_evaluator_generator("generate_fixed_token")
+@register_evaluator_generator("llm_as_a_judge")
 def generate_fixed_token(
     generation_results,
     tasks: Dict[str, dict],

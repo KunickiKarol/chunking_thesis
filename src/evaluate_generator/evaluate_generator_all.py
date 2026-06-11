@@ -58,6 +58,8 @@ def generation_all(
 
         task_type = dataset_preset["params"]["task_type"]
         generation_preset_params = generation_preset["params"]
+        evaluator_preset_params = evaluator_preset["params"]
+
 
         task_input_dir = dataset_dir / dataset_name / dataset_preset_name / "Tasks" / task_type / split
 
@@ -116,8 +118,8 @@ def generation_all(
         result_dir.mkdir(parents=True, exist_ok=True)
         logger.info(f"▶ Evaluating generator: {result_dir}")
         evaluate_generator_one(
-            generation_name,
-            generation_preset_params,
+            evaluator_name,
+            evaluator_preset_params,
             task_input_dir,
             generation_input_dir,
             result_dir,
