@@ -1,0 +1,175 @@
+datasets_download:
+  # - "infiniteBench"
+  # - "novelQA"
+  - "literaryQA"
+
+preprocess_datasets:
+  tokenizer:
+    backend: tiktoken
+    model_name: gpt-4
+  datasets:
+    literaryQA:
+      presets_file: configs/preprocess_dataset/literaryQA.yaml
+      use_presets:
+        - default  # 'chapter' or 'page' or 'none'
+    # novelQA:
+    #   presets_file: configs/preprocess_dataset/novelQA.yaml
+    #   use_presets:
+    #     - default  # 'chapter' or 'page' or 'none'
+    # infiniteBenchQA:
+    #   presets_file: configs/preprocess_dataset/infiniteBenchQA.yaml
+    #   use_presets:
+    #     - default  # 'chapter' or 'page' or 'none'
+    # infiniteBenchChoice:
+    #   presets_file: configs/preprocess_dataset/infiniteBenchChoice.yaml
+    #   use_presets:
+    #     - default  # 'chapter' or 'page' or 'none'
+
+chunking:
+  splits: ["test"]
+  methods:
+    fixed_size:
+      presets_file: configs/chunking/fixed_size.yaml
+      use_presets:
+        # - norm_char
+        - norm_token
+    recursive:
+      presets_file: configs/chunking/recursive.yaml
+      use_presets:
+        - norm
+    recursive_semantic:
+      presets_file: configs/chunking/recursive_semantic.yaml
+      use_presets:
+        - norm
+    neural:
+      presets_file: configs/chunking/neural.yaml
+      use_presets:
+        - default
+    chonkie_semantic:
+      presets_file: configs/chunking/chonkie_semantic.yaml
+      use_presets:
+        - norm
+    lumber:
+      presets_file: configs/chunking/lumber.yaml
+      use_presets:
+        - default_vllm
+    max_min:
+      presets_file: configs/chunking/max_min.yaml
+      use_presets:
+        - norm
+    sequential_hac:
+      presets_file: configs/chunking/sequential_hac.yaml
+      use_presets:
+        - norm
+
+vector_embed:
+  methods:
+    FAISS:
+      presets_file: configs/vector_embed/faiss.yaml
+      use_presets:
+        - default_global
+        # - default_local
+
+search:
+  methods:
+    faiss:
+      presets_file: configs/search/faiss.yaml
+      use_presets:
+        # - default_top10
+        - default_top20
+
+rerank:
+  methods:
+    nothing:
+      presets_file: configs/rerank/nothing.yaml
+      use_presets:
+    #     - default_top5
+    #     - default_top5_op
+        - default_top20_op
+        - default_top20
+    reranker:
+      presets_file: configs/rerank/reranker.yaml
+      use_presets:
+        # - default_top5
+        - default_top20
+        - default_top20_op
+        # - default_top5_op
+        # - default_top10_op
+
+generation:
+  methods:
+    generate_fixed_token:
+      presets_file: configs/generation/generate_fixed_token.yaml
+      use_presets:
+        - gpt_20b_2048
+        - gpt_20b_4096
+
+evaluate_generator:
+  methods:
+    llm_as_a_judge:
+      presets_file: configs/evaluate_generator/llm_as_a_judge.yaml
+      use_presets:
+        - qwen_4b
+
+analyze_split_points:
+  methods:
+    analyze_split_point:
+      presets_file: configs/analyze_split_point/analyze_split_point.yaml
+      use_presets:
+        - sentence
+        - html_tag
+        
+analyze_retrieval:
+  methods:
+    analyze_retrieval:
+      presets_file: configs/analyze_retrieval/analyze_retrieval.yaml
+      use_presets:
+        - default
+
+analyze_embeddings:
+  methods:
+    analyze_years:
+      presets_file: configs/analyze_embeddings/analyze_years.yaml
+      use_presets:
+        # - normalized_none
+        - year_normalized_50
+        # - normalized_100
+        # - no_normalized_none
+        # - no_normalized_50
+        # - no_normalized_100
+    analyze_genres:
+      presets_file: configs/analyze_embeddings/analyze_genres.yaml
+      use_presets:
+        # - normalized_none
+        - genre_normalized_50
+        # - normalized_100
+        # - no_normalized_none
+        # - no_normalized_50
+        # - no_normalized_100
+    analyze_periods:
+      presets_file: configs/analyze_embeddings/analyze_periods.yaml
+      use_presets:
+        # - normalized_none
+        - period_normalized_50
+        # - normalized_100
+        # - no_normalized_none
+        # - no_normalized_50
+        # - no_normalized_100
+    analyze_titles:
+      presets_file: configs/analyze_embeddings/analyze_titles.yaml
+      use_presets:
+        # - normalized_none
+        - title_normalized_50
+        # - normalized_100
+        # - no_normalized_none
+        # - no_normalized_50
+        # - no_normalized_100
+    analyz_datasets:
+      presets_file: configs/analyze_embeddings/analyze_datasets.yaml
+      use_presets:
+        # - normalized_none
+        - dataset_normalized_50
+        # - normalized_100
+        # - no_normalized_none
+        # - no_normalized_50
+        # - no_normalized_100
