@@ -1,7 +1,7 @@
 presets:
   - name: default
     params:
-      embedding_model: minishlab/potion-base-32M
+      embedding_model: /home/mahuk/chunking-thesis/models/minishlab/potion-base-32M
       chunk_size: 2048
       similarity_window: 3
       skip_window: 0
@@ -12,7 +12,7 @@ presets:
 
   - name: skip_window
     params:
-      embedding_model: minishlab/potion-base-32M
+      embedding_model: /home/mahuk/chunking-thesis/models/minishlab/potion-base-32M
       chunk_size: 2048
       similarity_window: 3
       skip_window: 1
@@ -23,7 +23,7 @@ presets:
   
   - name: norm
     params:
-      embedding_model: minishlab/potion-base-32M
+      embedding_model: /home/mahuk/chunking-thesis/models/minishlab/potion-base-32M
       chunk_size: 2048
       similarity_window: 3
       skip_window: 0

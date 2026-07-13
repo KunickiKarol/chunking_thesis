@@ -19,6 +19,7 @@ stages:
     outs:
       - data/datasets/:
           persist: true
+          cache: false
     params:
       - preprocess_datasets
 
@@ -32,6 +33,7 @@ stages:
     outs:
       - data/chunks/:
           persist: true
+          cache: false
     params:
       - preprocess_datasets.datasets
       - chunking.methods
@@ -45,6 +47,7 @@ stages:
     outs:
       - data/vector_db/:
           persist: true
+          cache: false
     params:
       - preprocess_datasets.datasets
       - chunking.methods
@@ -59,6 +62,7 @@ stages:
     outs:
       - data/search_result/:
           persist: true
+          cache: false
     params:
       - preprocess_datasets.datasets
       - chunking.methods
@@ -74,6 +78,7 @@ stages:
     outs:
       - data/rerank_result/:
           persist: true
+          cache: false
     params:
       - preprocess_datasets.datasets
       - chunking.methods
@@ -90,6 +95,7 @@ stages:
     outs:
       - data/generation_result/:
           persist: true
+          cache: false
     params:
       - preprocess_datasets.datasets
       - chunking.methods
@@ -107,6 +113,7 @@ stages:
     outs:
       - data/evaluate_generator_result/:
           persist: true
+          cache: false
     params:
       - preprocess_datasets.datasets
       - chunking.methods
