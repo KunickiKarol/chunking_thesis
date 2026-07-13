@@ -2,26 +2,42 @@ import os
 import json
 import pandas as pd
 from pathlib import Path
+from concurrent.futures import ThreadPoolExecutor, as_completed
+
+
+def _process_file(json_path: Path, root_dir: Path, depth: int):
+    try:
+        rel = json_path.relative_to(root_dir)
+        parts = rel.parts
+
+        if len(parts) != depth + 1:
+            return None
+
+        key = parts[:depth]
+
+        with open(json_path, "r", encoding="utf-8") as f:
+            data = json.load(f)
+
+        # szybciej: list comprehension bez if w środku
+        verdicts = [
+            v.get("verdict")
+            for v in data.values()
+            if "verdict" in v
+        ]
+
+        if not verdicts:
+            return None
+
+        correct = verdicts.count("correct")
+        ratio = correct * 100 / len(verdicts)
+
+        return (*key, ratio)
+
+    except Exception:
+        return None
 
 
 def load_evaluation_results(root_dir: str) -> pd.DataFrame:
-    """
-    Wczytuje wyniki ewaluacji z plików generation_results.json
-    i zwraca DataFrame z MultiIndex.
-
-    Poziomy MultiIndex (w kolejności):
-        dataset_name, dataset_params_name,
-        chunking_name, chunking_params_name,
-        embed_name, embed_params_name,
-        search_name, search_params_name,
-        rerank_name, rerank_params_name,
-        generator_name, generator_params_name,
-        judge_name, judge_params_name,
-        split_name
-
-    Kolumna:
-        answers_ratio  –  % verdictów == 'correct' spośród wszystkich
-    """
     index_names = [
         "dataset_name",
         "dataset_params_name",
@@ -39,38 +55,121 @@ def load_evaluation_results(root_dir: str) -> pd.DataFrame:
         "judge_params_name",
         "split_name",
     ]
-    DEPTH = len(index_names)  # 15 poziomów
+
+    root = Path(root_dir)
+    depth = len(index_names)
+
+    json_files = [
+        p for p in root.rglob("generation_results.json")
+        if len(p.relative_to(root).parts) == depth + 1
+    ]
+
+    if not json_files:
+        raise ValueError(f"Nie znaleziono plików w: {root_dir}")
 
     records = []
 
-    for json_path in Path(root_dir).rglob("generation_results.json"):
-        # Relatywna ścieżka względem root_dir
+    # ThreadPool → idealne dla I/O (czytanie plików)
+    max_workers = min(32, (os.cpu_count() or 4) * 4)
+
+    with ThreadPoolExecutor(max_workers=max_workers) as ex:
+        futures = [
+            ex.submit(_process_file, p, root, depth)
+            for p in json_files
+        ]
+
+        for fut in as_completed(futures):
+            res = fut.result()
+            if res is not None:
+                records.append(res)
+
+    df = pd.DataFrame(records, columns=index_names + ["answers_ratio"])
+    return df.set_index(index_names).sort_index()
+
+
+import os
+import json
+import pandas as pd
+from pathlib import Path
+from concurrent.futures import ThreadPoolExecutor, as_completed
+
+
+def _process_file_raw(json_path: Path, root_dir: Path, depth: int):
+    try:
         rel = json_path.relative_to(root_dir)
-        parts = rel.parts  # ostatni element to "generation_results.json"
+        parts = rel.parts
 
-        if len(parts) != DEPTH + 1:
-            print(f"Pomijam (nieoczekiwana głębokość {len(parts)-1}): {rel}")
-            continue
+        if len(parts) != depth + 1:
+            return None
 
-        key = parts[:DEPTH]  # 15 segmentów ścieżki
+        key = parts[:depth]
 
-        with open(json_path, encoding="utf-8") as f:
+        with open(json_path, "r", encoding="utf-8") as f:
             data = json.load(f)
 
-        verdicts = [v["verdict"] for v in data.values() if "verdict" in v]
-        if not verdicts:
-            continue
+        rows = []
 
-        correct = sum(1 for v in verdicts if v == "correct")
-        ratio = correct / len(verdicts) * 100
+        for question, item in data.items():
+            verdict = item.get("verdict")
+            if verdict is None:
+                continue
 
-        records.append((*key, ratio))
+            rows.append((*key, question, 1 if verdict == "correct" else 0))
 
-    if not records:
-        raise ValueError(f"Nie znaleziono żadnych plików generation_results.json w: {root_dir}")
+        return rows
 
-    columns = index_names + ["answers_ratio"]
-    df = pd.DataFrame(records, columns=columns)
-    df = df.set_index(index_names).sort_index()
+    except Exception:
+        return None
 
-    return df
+
+def load_evaluation_results_raw(root_dir: str) -> pd.DataFrame:
+    index_names = [
+        "dataset_name",
+        "dataset_params_name",
+        "chunking_name",
+        "chunking_params_name",
+        "embed_name",
+        "embed_params_name",
+        "search_name",
+        "search_params_name",
+        "rerank_name",
+        "rerank_params_name",
+        "generator_name",
+        "generator_params_name",
+        "judge_name",
+        "judge_params_name",
+        "split_name",
+    ]
+
+    root = Path(root_dir)
+    depth = len(index_names)
+
+    json_files = [
+        p for p in root.rglob("generation_results.json")
+        if len(p.relative_to(root).parts) == depth + 1
+    ]
+
+    if not json_files:
+        raise ValueError(f"Nie znaleziono plików w: {root_dir}")
+
+    records = []
+
+    max_workers = min(32, (os.cpu_count() or 4) * 4)
+
+    with ThreadPoolExecutor(max_workers=max_workers) as ex:
+        futures = [
+            ex.submit(_process_file_raw, p, root, depth)
+            for p in json_files
+        ]
+
+        for fut in as_completed(futures):
+            res = fut.result()
+            if res:
+                records.extend(res)
+
+    df = pd.DataFrame(
+        records,
+        columns=index_names + ["question", "value"]
+    )
+
+    return df.set_index(index_names).sort_index()

@@ -54,7 +54,7 @@ def analyze_embeddings_all(
             chunking_params_names=chunking_params_names,
             embed_names=embed_names,
             embed_params_names=embed_params_names,
-            split_names=[split],
+            split_names=['test', 'all'],
         )
         df_bookmeta = load_multiple_bookmeta_dataframes(
             data_dir=dataset_dir, dataset_names=dataset_names, dataset_params_names=dataset_params_names

@@ -5,10 +5,10 @@ presets:
       top_k: 5
   - name: default_top10
     params:
-      embbeder: all-MiniLM-L6-v2
+      embbeder: /workspace/chunking_thesis/models/BAAI/bge-m3
       top_k: 10
   - name: default_top20
     params:
-      embbeder: all-MiniLM-L6-v2
+      embbeder: /workspace/chunking_thesis/models/BAAI/bge-m3
       top_k: 20
 

@@ -1,5 +1,5 @@
 presets:
   - name: default
     params:
-      neural_model: mirth/chonky_modernbert_base_1
+      neural_model: /home/mahuk/chunking-thesis/models/mirth/chonky_modernbert_base_1
       min_characters_per_chunk: 10

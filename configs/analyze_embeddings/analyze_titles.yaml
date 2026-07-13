@@ -16,9 +16,9 @@ presets:
   - name: title_normalized_100
     params:
       analyze_type: 'analyze_titles'
-      metrics: ['calinski_harabasz', 'davies_bouldin', 'silhouette_score', 'inter_intra']
+      metrics: ['calinski_harabasz', 'davies_bouldin', 'silhouette_score'] #, 'inter_intra']
       normalize_map: [true, true, true, true, true]
-      pca_dim: 100
+      pca_dim: 50
       dim_red: ['pca', 'umap'] #, 'tsne', 'phate', 'pacmap']
   - name: title_no_normalized_none
     params:

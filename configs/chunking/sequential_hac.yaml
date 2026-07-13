@@ -7,13 +7,13 @@ presets:
       linkage: single
   - name: liberal
     params:
-      model_name: BAAI/bge-m3
+      model_name: /home/mahuk/chunking-thesis/models/BAAI/bge-m3
       distance_threshold: 0.6
       batch_size: 32
       linkage: single
   - name: norm
     params:
-      model_name: BAAI/bge-m3
+      model_name: /home/mahuk/chunking-thesis/models/BAAI/bge-m3
       distance_threshold: 0.65
       batch_size: 32
       linkage: single

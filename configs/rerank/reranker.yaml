@@ -3,31 +3,41 @@ presets:
     params:
       top_k: 10
       order_preverse: false
-      reranker_name: BAAI/bge-reranker-v2-m3
+      reranker_name: /home/mahuk/chunking-thesis/models/BAAI/bge-reranker-v2-m3
   - name: default_top10_op
     params:
       top_k: 10
       order_preverse: true
-      reranker_name: BAAI/bge-reranker-v2-m3
+      reranker_name: /home/mahuk/chunking-thesis/models/BAAI/bge-reranker-v2-m3
   - name: default_top5
     params:
       top_k: 5
       order_preverse: false
-      reranker_name: BAAI/bge-reranker-v2-m3
+      reranker_name: /home/mahuk/chunking-thesis/models/BAAI/bge-reranker-v2-m3
   - name: default_top5_op
     params:
       top_k: 5
       order_preverse: true
-      reranker_name: BAAI/bge-reranker-v2-m3
+      reranker_name: /home/mahuk/chunking-thesis/models/BAAI/bge-reranker-v2-m3
   - name: default_top3
     params:
       top_k: 3
       order_preverse: false
-      reranker_name: BAAI/bge-reranker-v2-m3
+      reranker_name: /home/mahuk/chunking-thesis/models/BAAI/bge-reranker-v2-m3
   - name: default_top3_op
     params:
       top_k: 3
       order_preverse: true
-      reranker_name: BAAI/bge-reranker-v2-m3 
+      reranker_name: /home/mahuk/chunking-thesis/models/BAAI/bge-reranker-v2-m3 
+  - name: default_top20
+    params:
+      top_k: 20
+      order_preverse: false
+      reranker_name: /workspace/chunking_thesis/models/BAAI/bge-reranker-v2-m3
+  - name: default_top20_op
+    params:
+      top_k: 20
+      order_preverse: true
+      reranker_name: /workspace/chunking_thesis/models/BAAI/bge-reranker-v2-m3
 
 

@@ -1,3 +1,4 @@
+
 #!/usr/bin/env python3
 """
 Skrypt przetwarzający foldery rerank_result.

@@ -18,7 +18,7 @@ presets:
       analyze_type: 'analyze_years'
       metrics: ['mantel_test', 'knn_temporal_consistency', 'ridge']
       normalize_map: [true, true, true, true, true]
-      pca_dim: 100
+      pca_dim: 50
       dim_red: ['pca', 'umap'] #, 'tsne', 'phate', 'pacmap']
   - name: year_no_normalized_none
     params:

@@ -7,7 +7,7 @@ presets:
       merge_threshold: 350
       delta: 3
 
-      embedding_model: sentence-transformers/all-MiniLM-L6-v2
+      embedding_model: /home/mahuk/chunking-thesis/models/sentence-transformers/all-MiniLM-L6-v2
 
       breakpoint_threshold_type: percentile
       initial_breakpoint_threshold: 0.95
@@ -24,7 +24,7 @@ presets:
       merge_threshold: 450
       delta: 3
 
-      embedding_model: sentence-transformers/all-MiniLM-L6-v2
+      embedding_model: /home/mahuk/chunking-thesis/models/sentence-transformers/all-MiniLM-L6-v2
 
       breakpoint_threshold_type: percentile
       initial_breakpoint_threshold: 0.95

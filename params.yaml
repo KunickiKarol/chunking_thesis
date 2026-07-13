@@ -1,7 +1,7 @@
 datasets_download:
   - "infiniteBench"
   - "novelQA"
-  - "literaryQA"
+  # - "literaryQA"
 
 preprocess_datasets:
   tokenizer:
@@ -83,8 +83,8 @@ rerank:
     nothing:
       presets_file: configs/rerank/nothing.yaml
       use_presets:
-    #     - default_top5
-    #     - default_top5_op
+        # - default_top5
+        #  - default_top5_op
         - default_top20_op
         - default_top20
     reranker:
@@ -92,6 +92,7 @@ rerank:
       use_presets:
         # - default_top5
         - default_top20
+        - default_top20_op
         # - default_top5_op
         # - default_top10_op
 
@@ -100,7 +101,8 @@ generation:
     generate_fixed_token:
       presets_file: configs/generation/generate_fixed_token.yaml
       use_presets:
-        - qwen_4b
+        # - gpt_20b_2048
+        - gpt_20b_4096
 
 evaluate_generator:
   methods:
@@ -126,48 +128,48 @@ analyze_retrieval:
 
 analyze_embeddings:
   methods:
-    analyze_years:
-      presets_file: configs/analyze_embeddings/analyze_years.yaml
-      use_presets:
+    # analyze_years:
+    #   presets_file: configs/analyze_embeddings/analyze_years.yaml
+    #   use_presets:
+    #     # - normalized_none
+    #     - year_normalized_100
+    #     # - normalized_100
+    #     # - no_normalized_none
+    #     # - no_normalized_50
+    #     # - no_normalized_100
+    # analyze_genres:
+    #   presets_file: configs/analyze_embeddings/analyze_genres.yaml
+      # use_presets:
         # - normalized_none
-        - year_normalized_50
+        # - genre_normalized_100
         # - normalized_100
         # - no_normalized_none
         # - no_normalized_50
         # - no_normalized_100
-    analyze_genres:
-      presets_file: configs/analyze_embeddings/analyze_genres.yaml
-      use_presets:
-        # - normalized_none
-        - genre_normalized_50
-        # - normalized_100
-        # - no_normalized_none
-        # - no_normalized_50
-        # - no_normalized_100
-    analyze_periods:
-      presets_file: configs/analyze_embeddings/analyze_periods.yaml
-      use_presets:
-        # - normalized_none
-        - period_normalized_50
-        # - normalized_100
-        # - no_normalized_none
-        # - no_normalized_50
-        # - no_normalized_100
-    analyze_titles:
-      presets_file: configs/analyze_embeddings/analyze_titles.yaml
-      use_presets:
-        # - normalized_none
-        - title_normalized_50
-        # - normalized_100
-        # - no_normalized_none
-        # - no_normalized_50
-        # - no_normalized_100
+    # analyze_periods:
+    #   presets_file: configs/analyze_embeddings/analyze_periods.yaml
+    #   use_presets:
+    #     # - normalized_none
+    #     - period_normalized_100
+    #     # - normalized_100
+    #     # - no_normalized_none
+    #     # - no_normalized_50
+    #     # - no_normalized_100
+    # analyze_titles:
+    #   presets_file: configs/analyze_embeddings/analyze_titles.yaml
+    #   use_presets:
+    #     # - normalized_none
+    #     - title_normalized_100
+    #     # - normalized_100
+    #     # - no_normalized_none
+    #     # - no_normalized_50
+    #     # - no_normalized_100
     analyz_datasets:
       presets_file: configs/analyze_embeddings/analyze_datasets.yaml
       use_presets:
         # - normalized_none
-        - dataset_normalized_50
-        # - normalized_100
-        # - no_normalized_none
-        # - no_normalized_50
-        # - no_normalized_100
+        - dataset_normalized_100
+    #     # - normalized_100
+    #     # - no_normalized_none
+    #     # - no_normalized_50
+    #     # - no_normalized_100

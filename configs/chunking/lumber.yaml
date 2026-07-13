@@ -1,7 +1,7 @@
 presets:
   - name: default
     params:
-      model: Qwen/Qwen3-4B-Instruct-2507
+      model: /home/mahuk/chunking-thesis/models/Qwen/Qwen3-4B-Instruct-2507
       group_size_threshold: 350
       max_retries: 3
       sleep_seconds: 20
@@ -9,7 +9,7 @@ presets:
       inference_mode: hf
   - name: default_vllm
     params:
-      model: Qwen/Qwen3-4B-Instruct-2507
+      model: /home/mahuk/chunking-thesis/models/Qwen/Qwen3-4B-Instruct-2507
       group_size_threshold: 350
       max_retries: 3
       sleep_seconds: 20
@@ -18,7 +18,7 @@ presets:
 
   - name: norm
     params:
-      model: Qwen/Qwen3-4B-Instruct-2507
+      model: /home/mahuk/chunking-thesis/models/Qwen/Qwen3-4B-Instruct-2507
       group_size_threshold: 480
       max_retries: 3
       sleep_seconds: 20

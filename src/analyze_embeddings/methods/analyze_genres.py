@@ -69,9 +69,12 @@ def analyze_genres(analyze_preset_params, df_embedding, df_bookmeta):
     ]
 
     results = {}
+    print(df_merged.shape, df_embedding.shape, df_bookmeta.shape)
     grouped = df_merged.groupby(level=group_cols)
-
+    if not grouped.ngroups  :
+        print("puste")  
     for group_keys, group_df in grouped:
+        print("DUPA")
         (
             chunking_name,
             chunking_params_name,
